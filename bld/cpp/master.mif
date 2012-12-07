@@ -1,0 +1,28 @@
+proj_name = cpp
+
+!include cproj.mif
+!include defrule.mif
+!include deftarg.mif
+
+.c : ..
+
+inc_dir         = -I"../h"
+
+common_objs     = preproc.obj ppexpr.obj ppmacro.obj ppmem.obj
+
+mkmk_objs       = mkmk.obj $(common_objs)
+testpp_objs     = testpp.obj $(common_objs)
+dumpmac_objs    = dumpmac.obj $(common_objs)
+
+targets         = mkmk.exe testpp.exe dumpmac.exe
+
+all: $(targets) .SYMBOLIC
+
+mkmk.exe : $(mkmk_objs)
+        $(cl) $(clflags) $(mkmk_objs)
+
+testpp.exe : $(testpp_objs)
+        $(cl) $(clflags) $(testpp_objs)
+
+dumpmac.exe : $(dumpmac_objs)
+        $(cl) $(clflags) $(dumpmac_objs)

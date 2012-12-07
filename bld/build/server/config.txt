@@ -1,0 +1,30 @@
+#
+# This is a sample configuration file for the build server.
+#
+
+# The folder where the build system lives. Must be outside the OW source tree.
+HOME=C:\OWBUILD
+
+# The folder where reports are archived.
+REPORTS=C:\www\reports
+
+# The folder where the OW source tree is located.
+OW=C:\OW
+
+# The location of your installed compiler (for doing the build).
+WATCOM=C:\WATCOM
+
+# PATH required by GhostScript for PDF creation on used host OS
+GHOSTSCRIPT=c:\gs\gs7.04\bin;c:\gs\gs7.04\lib
+
+# The location where WWW snapshot is placed, there will be created installers
+# If SNAPSHOTPATH is not defined then no installers will be created
+#SNAPSHOTPATH=\www\snapshot
+
+# File holding the baseline build results. Relative to HOME.
+BLDBASE=bldbase.txt
+BLDBASE2=bldbase2.txt
+
+# File holding the most recent build results. Relative to HOME.
+BLDLAST=bldlast.txt
+BLDLAST2=bldlast2.txt

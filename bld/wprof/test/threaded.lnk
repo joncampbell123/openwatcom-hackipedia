@@ -1,0 +1,3 @@
+OPTION map, verbose
+SYS os2
+FILE threaded

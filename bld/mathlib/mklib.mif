@@ -1,0 +1,44 @@
+.before:
+    @set include=
+
+all : $(objfiles) $(libname).lib .symbolic
+    @%null
+
+$(libname).lib : $(objs) $(libs) $(__MAKEFILES__)
+    @rm -f tmp.def
+    $(librarian) $(lib_flags) $(lib_flags_linkage) $^@ $(objs) $(libs)
+!ifeq linkage dynamic
+    $(sed) -f $(lib_misc_dir)/sed/export.sed tmp.def > tmp2.def
+    cat ../../../export.$(processor) tmp2.def > tmp3.def
+    sort < tmp3.def > tmp4.def
+    uniq tmp4.def > export.def
+    @rm -f tmp.def
+    @rm -f tmp2.def
+    @rm -f tmp3.def
+    @rm -f tmp4.def
+!endif
+!ifdef runtime_library_source
+    if exist sqrt386.obj $(librarian) $(lib_flags) $^@ -+sqrt386.obj
+    if exist sqrt086.obj $(librarian) $(lib_flags) $^@ -+sqrt086.obj
+!endif
+
+.c.obj : .autodepend
+!ifeq verbose 1
+    *$(cc) $[@ -I"$(include_c_path)" $(build_target) $(c_flags) $(c_dbg_flags) $($^&_flags)
+!else
+    @echo mlib_cc $@
+    @*$(cc) $[@ -I"$(include_c_path)" $(build_target) $(c_flags) $(c_dbg_flags) $($^&_flags)
+!endif
+
+.asm.obj : .autodepend
+!ifeq verbose 1
+    *$(as) $[@ $(include_a_path) $(build_target) $(a_flags) $(a_dbg_flags) $($^&_flags)
+!else
+    @echo mlib_as $@
+    @*$(as) $[@ $(include_a_path) $(build_target) $(a_flags) $(a_dbg_flags) $($^&_flags)
+!endif
+
+.c   : ../../../c
+.asm : ../../../a;$(emu286)/asm;$(emu386)/asm
+
+!include $(mathlib_dir)/clean.mif

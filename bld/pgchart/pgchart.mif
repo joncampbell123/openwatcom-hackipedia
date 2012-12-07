@@ -1,0 +1,72 @@
+#
+# WATCOM Presentation Graphics (PGCHART.LIB)
+#
+proj_name = pgchart
+
+pgchart_autodepends = .AUTODEPEND
+pgchart_distrib_lib = 1
+
+suppress_zc = 1
+
+suffix_register = r
+suffix_stack = s
+
+memory_model_i86 = s
+memory_model_386 = s
+!ifeq host_os os2
+memory_model_386 = f
+!else ifeq host_os win
+memory_model_i86 = l
+!endif
+
+fpu_flags_dos_i86 = -fpc
+fpu_flags_dos_386 = -fpc
+fpu_flags_os2_i86 = -fpc
+fpu_flags_os2_386 = -fpc
+fpu_flags_win_i86 = -fpc
+
+objs = &
+        pgancom.obj &
+        pganms.obj &
+        pganpie.obj &
+        pganscms.obj &
+        pgaxis.obj &
+        pgchart.obj &
+        pgchrdef.obj &
+        pgchrtpi.obj &
+        pgdfault.obj &
+        pghlabel.obj &
+        pginit.obj &
+        pglegend.obj &
+        pgmisc.obj &
+        pgpal.obj &
+        pgscale.obj &
+        pgsctter.obj &
+        pgstyle.obj &
+        pgtitle.obj &
+        pgvars.obj &
+        pgvlabel.obj
+
+!include cproj.mif
+!include defrule.mif
+!include deftarg.mif
+
+inc_dirs = -I"../h" -I"$(dev_dir)/graphlib/h" -I"$(mathlib_dir)/h" -I"$(watcom_dir)/h" -I"$(hdr_dir)/dos"
+
+.c: ../c
+
+extra_c_flags = -os -s -zl -d_FARD= -D_ENABLE_AUTODEPEND -nm=$[&$(suffix_$(convention)) -fo=$@
+
+extra_c_flags_386_register = -3r
+extra_c_flags_386_stack = -3s -d__STACK
+extra_c_flags_386 = $(extra_c_flags_386_$(convention)) -d_CGRAPH=
+extra_c_flags_i86 = -nt=GRAPH_TEXT -d_CGRAPH=_loadds
+
+extra_c_flags_win = -zW
+
+$(libname).lib : pgchart.lbc
+        $(librarian) $(libflags) @$<
+
+pgchart.lbc : $(objs)
+        %create $@
+        @for %i in ($<) do @%append $@ +%i

@@ -1,0 +1,183 @@
+proj_name = wspy
+name = wspy
+
+!ifndef wspy_autodepends
+wspy_autodepends = .AUTODEPEND
+!endif
+
+sys_windowed = 1
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+.EXTENSIONS: .res .rc
+
+!ifeq host_os nt
+wspy_dll_prefix = nt
+!else
+wspy_dll_prefix = w
+!endif
+
+dllname = $(wspy_dll_prefix)spyhk
+
+msgfiles = $(sdk_dir)/misc/savelbox.msg &
+           $(sdk_dir)/misc/log.msg $(sdk_dir)/misc/about.msg &
+           $(sdk_dir)/misc/hint.msg
+
+objs_win = spy.obj spyglob.obj spybox.obj spyproc.obj spymsgs.obj &
+           spyfilt.obj spypick.obj spymdlgs.obj spyarray.obj &
+           spymisc.obj spycfg.obj spylog.obj spytool.obj spysel.obj &
+           savelbox.obj toolbr.obj font.obj fontstr.obj mem.obj log.obj &
+           mark.obj about.obj ldstr.obj mstatwnd.obj hint.obj wwinhelp.obj &
+           jdlg.obj inipath.obj ctl3dcvr.obj
+
+objs_nt =  spy.obj spyglob.obj spybox.obj spyproc.obj spymsgs.obj &
+           spyfilt.obj spypick.obj spymdlgs.obj spyarray.obj spyzord.obj &
+           spymisc.obj spycfg.obj spylog.obj spytool.obj spysel.obj &
+           savelbox.obj toolbr.obj font.obj fontstr.obj mem.obj log.obj &
+           mark.obj about.obj desknt.obj ldstr.obj mstatwnd.obj hint.obj &
+           wwinhelp.obj jdlg.obj inipath.obj
+
+objs = $(objs_$(host_os))
+
+dllobjs = spydll.obj
+
+extra_c_flags_mem = -dNO_WPI
+
+extra_c_flags     += -s
+extra_c_flags_i86 += -zu -2 -zW
+extra_c_flags_386 += -4
+!ifeq host_os win
+extra_c_flags_spydll = -bd -mc
+!else ifeq host_os nt
+extra_c_flags_spydll = -bd
+!endif
+extra_c_flags_spy = -fh=spy01.pch
+extra_c_flags_spyglob = -fh=spy01.pch
+extra_c_flags_spybox = -fh=spy01.pch
+extra_c_flags_spyproc = -fh=spy01.pch
+extra_C_flags_spymsgs = -fh=spy01.pch
+extra_c_flags_spyfilt = -fh=spy01.pch
+extra_c_flags_spypick = -fh=spy01.pch
+extra_c_flags_spymdlgs = -fh=spy01.pch
+extra_c_flags_spyarray = -fh=spy01.pch
+extra_c_flags_spyzord = -fh=spy01.pch
+extra_c_flags_spymisc = -fh=spy01.pch
+extra_c_flags_spycfg = -fh=spy01.pch
+extra_c_flags_spylog = -fh=spy01.pch
+extra_c_flags_spytool = -fh=spy01.pch
+extra_c_flags_spysel = -fh=spy01.pch
+extra_c_flags_savelbox = -fh=spy02.pch
+extra_c_flags_toolbr = -fh=spy02.pch
+extra_c_flags_font = -fh=spy02.pch
+extra_c_flags_fontstr = -fh=spy02.pch
+extra_c_flags_log = -fh=spy02.pch
+extra_c_flags_mark = -fh=spy02.pch
+extra_c_flags_desknt = -fh=spy02.pch
+extra_c_flags_ldstr = -fh=spy02.pch
+extra_c_flags_mstatwnd = -fh=spy02.pch
+extra_c_flags_hint = -fh=spy02.pch
+extra_c_flags_wwinhelp = -fh=spy02.pch
+extra_c_flags_jdlg = -fh=spy02.pch
+extra_c_flags_inipath = -fh=spy02.pch
+
+!ifeq release 0
+wspy_non_release_option = option rwr
+dll_debug_all           = debug all
+dll_debug_axp           = debug codeview
+!endif
+
+extra_l_flags_win = option stack=9k, heapsize=2k lib $(dllname).lib
+
+extra_l_flags_nt  = option stack=100k option heapsize=2k &
+                    lib $(dllname).lib
+
+extra_l_flags     = option map
+!ifeq host_cpu  386
+# To maintain cross-version linkability
+extra_l_flags_nt  += alias '_WinMain'='_WinMain@16'
+!endif
+
+wspy_dll_lflags_wini86 = $(dll_debug_$(host_cpu)) &
+                         system windows_dll font mem name $(dllname).dll &
+                         $(wspy_non_release_option) &
+                         lib windows.lib &
+                         option map, rwr &
+                         segment CLASS 'CODE' PRELOAD FIXED &
+                         export WEP RESIDENT &
+                         file { $(dllobjs) }
+
+wspy_dll_lflags_nt386  = $(dll_debug_$(host_cpu)) &
+                         system nt_dll initglobal name $(dllname).dll &
+                         option map &
+                         file { $(dllobjs) }
+
+wspy_dll_lflags_ntaxp  = $(dll_debug_$(host_cpu)) &
+                         system ntaxp_dll initglobal name $(dllname).dll &
+                         option map &
+                         file { $(dllobjs) }
+
+.c: $(wspy_dir);$(sdk_dir)/misc
+.h: $(wspy_dir);$(sdk_dir)/misc
+
+inc_dirs = -I$(wspy_dir) -I"$(sdk_dir)/misc"
+
+wspy_to_build_win = rcstr.gh $(dllname).dll $(name).exe
+
+wspy_to_build_nt = rcstr.gh $(dllname).dll $(name).exe
+
+# systems where version resource must be added to .EXE
+version_res_nt_386 = version.res
+
+all : $(wspy_to_build_$(host_os)) .SYMBOLIC
+        @%null
+
+$(name).exe : $(objs) $(name).res $(dllname).lib $(version_res_$(host_os)_$(host_cpu))
+        %create $^&.lnk
+        @%append $^&.lnk $(lflags)
+        @%append $^&.lnk file { $(objs) }
+        $(linker) name $^@ @$^&.lnk
+!ifeq host_cpu axp
+!ifeq release 0
+        cvpack $(name).exe
+        wstrip -q $(name).exe $(name).exe $(name).sym
+!endif
+!endif
+!ifdef version_res_$(host_os)_$(host_cpu)
+        $(rc) -k $(name).res $^@ -fr=$(version_res_$(host_os)_$(host_cpu))
+!else
+        $(rc) -k $(name).res $^@
+!endif
+!ifeq host_cpu axp
+!ifeq release 0
+        wstrip -q -a wspy.exe . wspy.sym
+!endif
+!endif
+
+rcstr.gh : rcstrmsg.gh
+        $(awk) -f $(misc_dir)/msgtoh.awk $[@ > $^@
+
+rcstrmsg.gh : $(wspy_dir)/spy.msg $(msgfiles)
+        $(cc) $(preproc_opts) $(inc_path) -fo=$^@
+
+$(dllname).lib : $(dllname).dll
+        $(librarian) $(libflags) +$[@
+
+$(dllname).dll : $(dllobjs)
+        $(linker) $(wspy_dll_lflags_$(host_os)$(host_cpu))
+
+$(name).res: ../$(name).rc .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) $[@ -fo=$^@
+
+./genverrc.exe : $(fe_misc_dir)/c/genverrc.c
+        $(bld_cl) $[@ $(wcl_util_opts) -D_VERSION=$(bld_ver)
+
+!ifndef patch_level
+patch_level=0
+!endif
+
+version.res: ./genverrc.exe ../exever.rc $(fe_misc_dir)/c/genverrc.c
+        $[@ ../exever.rc version.rc $$ $(name) $(patch_level)
+        $(rc) $(rc_flags) $(inc_path) version.rc -fo=$^@
+

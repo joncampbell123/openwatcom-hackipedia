@@ -1,0 +1,34 @@
+inc_dirs = -I"$(vi_dir)/h" -I$(rcsdll_dir) -I"$(posix_dir)/h" -I"$(watcom_dir)/h"
+
+!ifeq vi_trmem 1
+inc_dirs += -I$(trmem_dir)
+!endif
+
+
+!ifdef curses
+inc_dirs_dos = -I"$(curses_dir)/h"
+!endif
+
+inc_dirs_unix = -I"$(ncurses_dir)/h" -I"$(ui_dir)/h" -I"$(ui_dir)/unix/h"
+
+inc_dirs_linux = $(inc_dirs_unix)
+inc_dirs_bsd   = $(inc_dirs_unix)
+inc_dirs_osx   = $(inc_dirs_unix)
+
+winstuff = -I"$(sdk_dir)/misc" -I"$(wpi_dir)/h" -I"$(datactl_dir)"
+
+!ifdef sys_windowed
+inc_dirs_nt  = -I"$(vi_dir)/ctl" -I"$(vi_dir)/win" -I"$(sdk_dir)/misc" -I"$(wpi_dir)/h"
+inc_dirs_win = -I"$(vi_dir)/ctl" -I"$(vi_dir)/win" $(winstuff)
+inc_dirs_os2 = -I"$(vi_dir)/ctl" -I"$(vi_dir)/pm" $(winstuff)
+!else
+inc_dirs_win = -I"$(vi_dir)/win"
+!endif
+
+!ifeq host_cpu axp
+! ifdef sys_windowed
+inc_dirs_nt = -I"$(vi_dir)/ctl" -I"$(vi_dir)/win" -I"$(sdk_dir)/misc" -I"$(wpi_dir)/h"
+! else
+inc_dirs_nt = -I"$(watcom_dir)/h"
+! endif
+!endif

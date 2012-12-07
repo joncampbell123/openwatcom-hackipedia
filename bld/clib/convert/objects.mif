@@ -1,0 +1,56 @@
+#                    d16 d32 dpm g16 g32 nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+#==============================================================================================================
+!inject alphabet.obj d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject atoi.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject atol.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject atoll.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc     rdu
+!inject atouni.obj   d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject itoa.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject lltoa.obj    d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject ltoa.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject strtol.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject strtoll.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc     rdu
+!inject uatoi.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject uatol.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject uatoll.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc     rdu
+!inject uitoa.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject ulltoa.obj   d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject ultoa.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject ustrtol.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp rdu
+!inject ustrtoll.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc     rdu
+!inject fdmd086.obj  d16                                            o16     q16     w16
+!inject fdmd386.obj      d32             nt         nvc     nvl         o32     q32     w32     l32         rdu
+!inject fsms086.obj  d16                                            o16     q16     w16
+!inject fsms386.obj      d32             nt         nvc     nvl         o32     q32     w32     l32         rdu
+!inject mdfd086.obj  d16                                            o16     q16     w16
+!inject mdfd386.obj      d32             nt         nvc     nvl         o32     q32     w32     l32         rdu
+!inject msfs086.obj  d16                                            o16     q16     w16
+!inject msfs386.obj      d32             nt         nvc     nvl         o32     q32     w32     l32         rdu
+
+
+!include ../../../../objlist.mif
+
+!ifneq processor axp
+!ifneq processor ppc
+!ifneq processor mps
+itoa_opts  =-zc
+lltoa_opts =-zc
+ltoa_opts  =-zc
+uitoa_opts =-zc
+ulltoa_opts=-zc
+ultoa_opts =-zc
+alphabet_opts=-zc
+!endif
+!endif
+!endif
+
+# BUILD WORKAROUND because of insufficiently smart 1.8 compiler
+!ifeq __VERSION__ 1280
+itoa_postopts   = -wcd112
+ltoa_postopts   = -wcd112
+lltoa_postopts  = -wcd112
+utoa_postopts   = -wcd112
+ultoa_postopts  = -wcd112
+uitoa_postopts  = -wcd112
+ulltoa_postopts = -wcd112
+!endif

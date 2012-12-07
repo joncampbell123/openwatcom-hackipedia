@@ -1,0 +1,38 @@
+
+#
+# Define the name(s) of the program(s) to build.
+#
+!ifeq      host_OS nt
+!   define cl_stub cl.exe
+!else
+!   define cl_stub
+!endif
+
+done: $(cl_stub) cl386.exe claxp.exe clppc.exe
+
+!include ../../master.mif
+
+clstub_objs     = clstub.obj $(mstools_stub_obj) $(mstools_objs)
+cl_common_objs  = macro.obj $(mstools_objs)
+cl386_objs      = cl386.obj mesg386.obj parse386.obj xlate386.obj $(cl_common_objs)
+claxp_objs      = claxp.obj mesgaxp.obj parseaxp.obj xlateaxp.obj $(cl_common_objs)
+clppc_objs      = clppc.obj mesgppc.obj parseppc.obj xlateppc.obj $(cl_common_objs)
+cl386_hdrs      = optp386h.gh
+claxp_hdrs      = optpaxph.gh
+clppc_hdrs      = optpppch.gh
+
+#
+# Instructions for building the executables.
+#
+
+cl.exe :  $(clstub_objs)
+        $(linker) $(lflags) name $^@ file {$(clstub_objs)}
+
+cl386.exe :  $(cl386_hdrs) $(cl386_objs)
+        $(linker) $(lflags) name $^@ file {$(cl386_objs)}
+
+claxp.exe :  $(claxp_hdrs) $(claxp_objs)
+        $(linker) $(lflags) name $^@ file {$(claxp_objs)}
+
+clppc.exe :  $(clppc_hdrs) $(clppc_objs)
+        $(linker) $(lflags) name $^@ file {$(clppc_objs)}

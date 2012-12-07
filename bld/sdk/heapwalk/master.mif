@@ -1,0 +1,60 @@
+proj_name = wheapwlk
+name = wheapwlk
+
+!ifndef wheapwlk_autodepends
+wheapwlk_autodepends = .AUTODEPEND
+!endif
+
+sys_windowed=1
+
+all: $(name).exe .SYMBOLIC
+
+.EXTENSIONS: .res .rc
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+!include $(wdisasm_dir)/mif/disasm.mif
+
+extra_c_flags_i86   = -s-zu-zW
+
+extra_c_flags_ldstr    = -dSPECIAL_STRING_LOADING
+extra_c_flags_mem      = -dNO_WPI
+extra_c_flags_heapwalk = -3
+extra_c_flags_segmem2  = -3
+
+extra_l_flags = op map
+extra_l_flags_win = op stack=7k, heapsize=2k lib stress.lib
+
+inc_dirs = -I.. -I"$(sdk_dir)/misc" $(dis_includes)
+
+.c   : ..;$(sdk_dir)/misc;$(dis_srcs)
+.asm : ..;$(sdk_dir)/misc
+.rc  : ..
+
+objs_win = heapwalk.obj hwlist.obj hwproc.obj hwglob.obj hwsort.obj &
+        hwbox.obj hwdisp.obj hwsave.obj hwobjec.obj hwlocal.obj&
+        hwlsort.obj hwconfig.obj  hwinfo.obj hwalloc.obj hwutil.obj &
+        hwbiglb.obj hwmonit.obj hwtable.obj hwldstr.obj ctl3dcvr.obj &
+        mythelp.obj mem.obj font.obj fontstr.obj segmem.obj segmem2.obj &
+        dlgmod.obj savelbox.obj memwnd.obj memwndcd.obj srchmsg.obj &
+        pushwin.obj sdkasm.obj about.obj ldstr.obj wwinhelp.obj jdlg.obj
+
+objs = $(objs_$(host_os))
+
+msgfiles = $(sdk_dir)/misc/savelbox.msg &
+           $(sdk_dir)/misc/memwnd.msg $(sdk_dir)/misc/about.msg
+
+$(name).exe : rcstr.gh $(dis_prereq) $(objs) $(dis_objs) $(name).res
+        $(linker) $(lflags) name $^@ file {$(objs) $(dis_objs)}
+        $(rc) -k $(name).res $^@
+
+rcstr.gh : rcstrmsg.gh
+        $(awk) -f $(misc_dir)/msgtoh.awk $[@ > $^@
+
+rcstrmsg.gh : ../heapwalk.msg $(msgfiles)
+        $(cc) $(preproc_opts) -I"$(sdk_dir)/misc" $(inc_path) -fo=$^@
+
+.rc.res: .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) $[@ -fo=$^@

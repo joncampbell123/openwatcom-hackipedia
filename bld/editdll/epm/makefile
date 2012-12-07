@@ -1,0 +1,42 @@
+#pmake: build os_os2 cpu_386
+
+host_os  = os2
+host_cpu = 386
+
+proj_name = editdll
+
+editdll_autodepends = .AUTODEPEND
+editdll_distrib_lib = 1
+sys_dll = 1
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+inc_dirs = -I..
+
+extra_l_flags_os2 = initinstance terminstance pm
+extra_l_flags_os2 += op manyautodata
+extra_l_flags_os2 += op map
+
+all: epmlink.dll wedit.lib .SYMBOLIC
+
+epmlink.dll: epmlink.obj dll.lnk
+    $(linker) name $@ @$]@ file $[@
+
+wedit.dll: epmlink.obj dll.lnk
+    $(linker) name $@ @$]@ file $[@
+    
+wedit.lib: wedit.dll
+    $(librarian) $(libflags) +$<
+
+epmtest.exe : epmtest.obj wedit.lib
+    $(linker) d a op st=32k, case sys os2v2_pm file epmtest.obj lib wedit.lib
+
+epmspy.exe : epmspy.obj
+    $(linker) sys os2v2_pm file epmspy.obj
+    
+dll.lnk : $(__MAKEFILES__)
+    @%write  $@ $(lflags)
+    @%append $@ option description 'Open Watcom Editor DLL for EPM'
+

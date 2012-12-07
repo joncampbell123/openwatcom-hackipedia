@@ -1,0 +1,12 @@
+.extensions:
+.extensions: .mif .lst .obj .c .h
+
+../objs.mif : aliases.lst
+    rm -f ../objs.mif ../a/*.asm
+    aliasgen aliases.lst ../a/ ../objs.mif
+
+clean : .symbolic
+    rm -f *.?bj *.err ../a/*.asm ../objs.mif
+
+realclean : .symbolic clean
+    rm -f ../objs.mif ../a/*.asm

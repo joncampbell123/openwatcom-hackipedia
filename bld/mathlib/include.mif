@@ -1,0 +1,43 @@
+include_default =$(mathlib_dir)/h
+include_watcom  =;$(watcom_dir)/h;$(lib_misc_dir)/h;$(comp_cfg_dir)/h
+
+# include_c_(system)
+!ifndef runtime_library_source
+include_c_msdos    =;$(hdr_dir)/dos
+include_c_os2_286  =;$(inc_dirs_sys)
+include_c_os2_287  =;$(inc_dirs_sys)
+include_c_os2_386  =;$(inc_dirs_sys)
+include_c_os2_387  =;$(inc_dirs_sys)
+include_c_os2_ppc  =;$(%watcom)/h/os2ppc
+include_c_os2      =;$(include_c_os2_$(processor));$(hdr_dir)/dos
+include_c_windows  =;$(%watcom)/h/win;$(hdr_dir)/dos
+include_c_winnt    =;$(%watcom)/h/nt;$(hdr_dir)/dos
+include_c_linux    =;$(%watcom)/h/linux;$(hdr_dir)/dos
+include_c_netware  =;$(hdr_dir)/dos
+include_c_qnx      =;$(hdr_dir)/qnx
+!else
+include_c_msdos    =;$(%watcom)/h
+include_c_os2_286  =;$(%watcom)/h/os21x
+include_c_os2_287  =;$(%watcom)/h/os21x
+include_c_os2_386  =;$(%watcom)/h/os2
+include_c_os2_387  =;$(%watcom)/h/os2
+include_c_os2_ppc  =;$(%watcom)/h/os2ppc
+include_c_os2      =;$(include_c_os2_$(processor));$(%watcom)/h
+include_c_windows  =;$(%watcom)/h/win;$(%watcom)/h
+include_c_linux    =;$(%watcom)/h/linux;$(%watcom)/h
+include_c_netware  =;$(%watcom)/h
+include_c_qnx      =;$(%watcom)/qh
+!endif
+
+include_c_path =$(include_default)$(include_c_$(system))$(include_watcom)
+
+# include_a_(processor)
+include_a_286 =;$(emu286)/inc;$(emu386)/inc
+include_a_287 =
+include_a_386 =;$(emu386)/inc
+include_a_387 =
+include_a_axp =
+include_a_ppc =
+include_a_mps =
+
+include_a_path = -I"$(include_default)$(include_watcom)$(include_a_$(processor))"

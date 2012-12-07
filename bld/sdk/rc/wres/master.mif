@@ -1,0 +1,59 @@
+#
+#  Makefile for   WRes library
+#
+# path names used in the script
+
+proj_name = wres
+
+wres_autodepends = .AUTODEPEND
+wres_distrib_lib = 1
+
+!ifeq linkage dynamic
+wres_rtdll = 1
+!endif
+
+memory_model_i86 = $(model)
+memory_model_386 = $(model)
+
+!include cproj.mif
+!include defrule.mif
+!include deftarg.mif
+
+!include $(wres_dir)/wrobjs.mif
+objs = $(wres_core_objs) $(wres_more_objs)
+
+# options to use
+!ifdef IS_GUI
+extra_c_flags = -DMICROSOFT -s -DWIN_GUI
+!else
+extra_c_flags = -DMICROSOFT -s
+!endif
+
+!ifeq convention stack
+extra_c_flags_386 = -3s
+!else
+extra_c_flags_386 = -3r
+!endif
+
+!ifeq host_os os2
+extra_c_flags_i86 = -zdp
+!else ifeq host_os win
+extra_c_flags_i86 = -zw-zu
+!endif
+
+# where to look for various files
+
+.c : $(wres_dir)/c
+
+inc_dirs = -I"$(wres_dir)/h"
+
+# explicit rules
+
+wres.lib : $(objs) $(__MAKEFILES__) .PRECIOUS
+!ifdef bootstrap
+    ar crs $@ $(objs)
+!else
+    %create $^&.lbc
+    @for %i in ($(objs)) do @%append $^&.lbc +%i
+    $(librarian) $(libflags) @$^&.lbc
+!endif

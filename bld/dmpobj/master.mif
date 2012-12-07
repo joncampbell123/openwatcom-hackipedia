@@ -1,0 +1,18 @@
+proj_name = dmpobj
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+inc_dirs = -I"../h"
+
+.c: ../c
+
+objs =                  &
+        dmpobj.obj      &
+        objread.obj     &
+        output.obj      &
+        process.obj
+
+$(proj_name).exe : $(objs) $(cl_objs)
+        $(cl) $(clflags) $< $(cl_libs)

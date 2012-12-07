@@ -1,0 +1,105 @@
+#
+# Master makefile for creating DIPs
+#
+
+proj_name = dip
+
+dip_autodepends = .autodepend
+
+additional_cleanup = *.d32 *.dip
+
+fpu_flags_dos_i86   = -fpc
+fpu_flags_dos_386   = -fpc
+fpu_flags_os2_i86   = -fpc
+fpu_flags_os2_386   = -fpc
+fpu_flags_qnx_i86   = -fpc
+fpu_flags_qnx_386   = -fpc
+fpu_flags_nt_386    = -fpc
+fpu_flags_linux_386 = -fpc
+fpu_flags_win_i86   = -fpc
+fpu_flags_rdos_386  = -fpc
+
+ext_os2_i86     = .dll
+ext_os2_386     = .d32
+ext_qnx_i86     = .dip
+ext_qnx_386     = .dip
+ext_linux_386   = .dip
+ext_win_i86     = .dll
+ext_dos_386     = .dip
+ext_nt_386      = .dll
+ext_nt_axp      = .dll
+ext_rdos_386    = .dll
+
+!ifdef bootstrap
+lib_name = $(name).so
+!else
+lib_name = $(name)$(ext_$(host_os)_$(host_cpu))
+!endif
+
+objs = dipimp.obj $(imp_objs)
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+.c: ../c;../../c;$(extra_srcs)
+
+extra_c_flags   = -s -D__DIP__ $(extra_cflags)
+!ifdef bootstrap
+extra_c_flags += -fPIC
+!else
+extra_c_flags += -s
+extra_c_flags_i86 = -zc -zu
+
+extra_c_flags_dipimp = -zlf
+!endif
+
+inc_dirs = -I"../h" $(extra_incs) -I"$(dig_dir)/h"
+
+lflags_dll_dos_386     = sys pharlap rex disable 1023,1014
+lflags_dll_linux_386   = sys pharlap rex disable 1023,1014
+lflags_dll_qnx_i86     = sys qnx disable 1023
+lflags_dll_qnx_386     = sys pharlap rex disable 1023,1014
+lflags_dll_win_i86     = sys windows op rwr
+
+extra_l_flags_dll = op map
+
+extra_l_flags_dll_nt_386_javavm   = op offset=0x6e800000
+extra_l_flags_dll_nt_386_export   = op offset=0x6ec00000
+extra_l_flags_dll_nt_386_codeview = op offset=0x6ed00000
+extra_l_flags_dll_nt_386_watcom   = op offset=0x6ee00000
+extra_l_flags_dll_nt_386_dwarf    = op offset=0x6ef00000
+
+extra_l_flags_dll_rdos_386_watcom = op offset=0xda000000
+extra_l_flags_dll_rdos_386_dwarf  = op offset=0xda100000
+extra_l_flags_dll_rdos_386_mapsym = op offset=0xda200000
+
+extra_l_flags_dll_nt      = export DIPLOAD op modname=$(name) $(lflags_nt_$(host_cpu)_$(name))
+extra_l_flags_dll_os2     = export DIPLOAD op modname=$(name)
+extra_l_flags_dll_win     = op modname=$(name)
+extra_l_flags_dll_rdos    = export DIPLOAD op modname=$(name) $(lflags_rdos_386_$(name))
+!ifeq __VERSION__ 1280
+extra_l_flags_dll_rdos    += libpath $(clib_dir)/library/rdos.386/mf_r
+!endif
+
+!ifdef bootstrap
+$(lib_name) : $(objs) $(imp_libs) $(cl_libs) $(__MAKEFILES__)
+        $(cl) -shared $(clflags) $(objs) $(imp_libs) $(cl_libs)
+!else
+$(lib_name) : $(objs) $(imp_libs) $(__MAKEFILES__)
+!ifeq __VERSION__ 1280
+!ifeq host_os rdos
+        set WLINK_LNK=$(wlink_dir)/prebuild/wlsystem.lnk
+!ifdef __UNIX__
+linker = *$(wlink_dir)/prebuild/wl.exe op quiet
+!else
+linker = *$(wlink_dir)\prebuild\wl.exe op quiet
+!endif
+!endif
+!endif
+!ifdef imp_libs
+        $(linker) name $^@ $(lflags_dll) file {$(objs)} library {$(imp_libs)}
+!else
+        $(linker) name $^@ $(lflags_dll) file {$(objs)}
+!endif
+!endif

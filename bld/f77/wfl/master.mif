@@ -1,0 +1,40 @@
+proj_name = wfl
+
+!ifndef wfl_autodepends
+wfl_autodepends = .AUTODEPEND
+!endif
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+!include wres.mif
+
+inc_dirs=-I"../h" -I"../../wfc/h" -I"../../h" -I"$(comp_cfg_dir)/h"
+
+extra_c_flags = -D__WFL__
+
+extra_l_flags = op map
+
+.c: ../c;../../wfc/c;../../c
+
+files = &
+    blderr.obj &
+    errgrp.obj &
+    errutil.obj &
+    errrsrc.obj &
+    errrtns.obj &
+    showopts.obj &
+    wfl.obj
+
+exename_i86 = wfl
+exename_386 = wfl386
+exename_axp = wflaxp
+target_exe  = $(exename_$(target_cpu))
+
+$(target_exe).exe : $(files) $(wres_lib) errmsg.res
+    $(linker) $(lflags) name $^@ file { $(files) } lib $(wres_lib)
+    wstrip -q -a -r $^@ . errmsg.res
+
+errmsg.res : ../c/errmsg.rc ../h/errmsgi.rc ../h/errmsg3.rc ../h/errcod.h ../h/errcodi.h ../h/errcod3.h
+    $(rc_aui) -I"../../h" $[@ -fo=$^@ -I"$(comp_cfg_dir)/h"

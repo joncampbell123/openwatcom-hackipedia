@@ -1,0 +1,158 @@
+#                    d16 d32 dpm g16 g32 nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+#==============================================================================================================
+!inject 64fseek.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp
+!inject 64ftell.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp
+!inject allocfp.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject chktty.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject clearerr.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject comtflag.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fclose.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fdopen.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject feof.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject ferror.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fflush.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fgetc.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fgetchar.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fgetpos.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fgets.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject flush.obj    d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject flushall.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fopen.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fopen_s.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject freop_s.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fprintf.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fprntf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fprtf.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fprtf_s.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fputc.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fputchar.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fputs.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fread.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject freefp.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fscanf.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fscanf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fseek.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fsetpos.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject ftell.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fwide.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject fwrite.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject getc.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject getchar.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject gets.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject gets_s.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject getw.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject initfile.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject ioalloc.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject iob.obj      d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject iobaddr.obj  d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject iobptr.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject noefgfmt.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject ntfio.obj                        nt nta ntp
+!inject pclose.obj                       nt nta ntp         o16 o32
+!inject perror.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32         w16 w32 osi l32 lpc lmp rdu
+!inject popen.obj                        nt nta ntp         o16 o32
+!inject printf.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject printf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject prtf.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject prtf_s.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject putc.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject putchar.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject puts.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject putw.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject rewind.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject scanf.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject scanf_s.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject scnf.obj     d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject scnf_s.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject setbuf.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject setefg.obj   d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject setvbuf.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject tmpfl.obj    d16 d32             nt nta ntp nvc     nvl     o16 o32         w16 w32 osi             rdu
+!inject tmpfl_s.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32         w16 w32 osi             rdu
+!inject tmputil.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32         w16 w32 osi             rdu
+!inject tmpflunx.obj                                                q16 q32                     l32 lpc lmp
+!inject ufdopen.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufgetc.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufgetcha.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufgets.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufopen.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufopen_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufreop_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufprintf.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufprnt_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufprtf.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufprtf_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufputc.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufputcha.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufputs.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufscanf.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ufscnf_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ugetc.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ugetchar.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ugets.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject ungetc.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject uperror.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject upopen.obj                       nt nta ntp                 o16 o32
+!inject uprintf.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uprntf_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uprtf.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uprtf_s.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uputc.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uputchar.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uputs.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uscanf.obj   d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uscanf_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uscnf.obj    d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uscnf_s.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uungetc.obj  d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uvfprint.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uvfprt_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uvfscn_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uvprintf.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uvprtf_s.obj d16 d32             nt nta ntp                 o16 o32 q16 q32 w16 w32     l32 lpc lmp
+!inject uvscnf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp
+!inject vfprintf.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject vfprnt_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject vfscnf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject vprintf.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject vprntf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+!inject vscanf_s.obj d16 d32             nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu
+ 
+!include ../../../../objlist.mif
+ 
+#                    d16 d32 dpm g16 g32 nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp
+#==========================================================================================================
+!inject dsetefg.obj                      nt nta ntp                     o32                         lpc lmp
+ 
+objsuffix=files
+!include ../../../../objlist.mif
+objsuffix=
+ 
+comtflag_opts    =-I"$(clib_dir)/startup/h"
+ufgetc_postopts  =-os
+ufgetcha_postopts=-os
+ufgets_postopts  =-os
+ufopen_postopts  =-os
+ufprintf_postopts=-os
+ufprtf_postopts  =-os
+ufputc_postopts  =-os
+ufputcha_postopts=-os
+ufputs_postopts  =-os
+ufscanf_postopts =-os
+ugetc_postopts   =-os
+ugetchar_postopts=-os
+ugets_postopts   =-os
+uperror_postopts =-os
+uprintf_postopts =-os
+uprtf_postopts   =-os
+uputc_postopts   =-os
+uputchar_postopts=-os
+uputs_postopts   =-os
+uscanf_postopts  =-os
+uscnf_postopts   =-os
+uungetc_postopts =-os
+uvfprint_postopts=-os
+uvprintf_postopts=-os
+ufdopen_postopts =-os
+uprtf_s_postopts =-os
+uscnf_s_postopts =-os

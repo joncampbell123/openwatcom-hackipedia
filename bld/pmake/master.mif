@@ -1,0 +1,13 @@
+proj_name = pmake
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+.c : ..
+
+extra_c_flags           = -I..
+
+objs = pmake.obj pmkcmd.obj
+
+!include exetarg.mif

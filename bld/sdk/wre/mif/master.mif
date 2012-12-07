@@ -1,0 +1,157 @@
+proj_name = wre
+name = wre
+
+!ifndef wre_autodepends
+wre_autodepends = .AUTODEPEND
+!endif
+
+sys_windowed = 1
+
+memory_model_i86 = l
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+.EXTENSIONS: .res .rc
+
+WINDOWS = 1
+!include wres.mif
+
+# path names used in the script
+wacc_dir        = $(sdk_dir)/wresedit/waccel
+wmenu_dir       = $(sdk_dir)/wresedit/wmenu
+wstring_dir     = $(sdk_dir)/wresedit/wstring
+
+!ifeq wre_trmem 1
+TRMEM           = -DTRMEM
+!ifneq host_CPU axp
+TRMEM           += -of+
+!endif
+!endif
+
+extra_c_flags     = -DWIN_GUI -s
+
+extra_c_flags_win = -zu-zw-zc
+extra_c_flags_nt  = -DNOUSE3D
+
+extra_c_flags_preproc = -zm
+extra_c_flags_ppexpr  = -zm
+extra_c_flags_ppmacro = -zm
+
+OBJS =  wremain.obj wremem.obj wremsg.obj wreresin.obj wrestat.obj &
+        wregetfn.obj wrestrdp.obj wreselft.obj wreres.obj wrehints.obj &
+        wrelist.obj wrenames.obj wreopts.obj wretoolb.obj wreribbn.obj &
+        wreseted.obj wreftype.obj wregcres.obj wrerenam.obj wrefres.obj &
+        wrememf.obj wredel.obj wrewait.obj wresvobj.obj wrectl3d.obj &
+        wreaccel.obj wremenu.obj wrestr.obj wrenew.obj wre_wres.obj &
+        wredlg.obj wreimg.obj wredde.obj wresvmlt.obj wreimage.obj &
+        wreclip.obj wresym.obj &
+        preproc.obj ppexpr.obj ppmacro.obj &
+        toolbr.obj statwnd.obj ldstr.obj wwinhelp.obj jdlg.obj inipath.obj &
+        about.obj
+
+extra_c_flags_wremain= -fh
+extra_c_flags_wremem= -fh
+extra_c_flags_wremsg= -fh
+extra_c_flags_wreresin= -fh
+extra_c_flags_wrestat= -fh
+extra_c_flags_wregetfn= -fh
+extra_c_flags_wrestrdp= -fh
+extra_c_flags_wreselft= -fh
+extra_c_flags_wreres= -fh
+extra_c_flags_wrehints= -fh
+extra_c_flags_wrelist= -fh
+extra_c_flags_wrenames= -fh
+extra_c_flags_wreopts= -fh
+extra_c_flags_wretoolb= -fh
+extra_c_flags_wreribbn= -fh
+extra_c_flags_wreseted= -fh
+extra_c_flags_wreftype= -fh
+extra_c_flags_wregcres= -fh
+extra_c_flags_wrerenam= -fh
+extra_c_flags_wrefres= -fh
+extra_c_flags_wrememf= -fh
+extra_c_flags_wredel= -fh
+extra_c_flags_wrewait= -fh
+extra_c_flags_wresvobj= -fh
+extra_c_flags_wrectl3d= -fh
+extra_c_flags_wreaccel= -fh
+extra_c_flags_wremenu= -fh
+extra_c_flags_wrestr= -fh
+extra_c_flags_wrenew= -fh
+extra_c_flags_wre_wres= -fh
+extra_c_flags_wredlg= -fh
+extra_c_flags_wreimg= -fh
+extra_c_flags_wredde= -fh
+extra_c_flags_wresvmlt= -fh
+extra_c_flags_wreimage= -fh
+extra_c_flags_wreclip= -fh
+extra_c_flags_wresym=
+
+extra_c_flags_toolbr= -fh
+extra_c_flags_statwnd= -fh
+extra_c_flags_ldstr= -fh
+extra_c_flags_wwinhelp= -fh
+extra_c_flags_jdlg= -fh
+extra_c_flags_about= -DWRCTL3D -fh
+
+!ifeq wre_trmem 1
+OBJS += trmem.tbj trmemcvr.tbj
+!endif
+
+# where to look for various files
+.c         : ../c;$(misc_dir);$(cpp_dir);$(trmem_dir)
+
+inc_dirs  = -Ih -I"../h" -I"$(wstring_dir)/h" -I"$(wmenu_dir)/h" -I"$(wacc_dir)/h"
+inc_dirs += -I"$(wr_dir)/h" -I$(trmem_dir) -I"$(wres_dir)/h" -I$(cpp_dir) -I$(misc_dir)
+
+msgfiles  = $(sdk_dir)/misc/about.msg
+
+xlibs = $(wacc_dir)/$(host_os)$(host_cpu)/wacc.lib &
+        $(wmenu_dir)/$(host_os)$(host_cpu)/wmenu.lib &
+        $(wstring_dir)/$(host_os)$(host_cpu)/wstring.lib &
+        $(wr_dir)/$(host_os)$(host_cpu)/wr.lib &
+        $(wres_lib)
+
+extra_l_flags = op map, v
+extra_l_flags_nt = op stack=100k,heap=16k commit heap=8k
+extra_l_flags_win = op stack=32k,rwr library commdlg,ddeml
+
+# systems where version resource must be added to .EXE
+version_res_nt_386 = version.res
+
+# explicit rules
+#################
+$(name).exe: rcstr.gh $(OBJS) $(name).res $(xlibs) $(version_res_$(host_os)_$(host_cpu))
+        @%create tmp.lnk
+        @%append tmp.lnk $(lflags)
+        @for %i in ($(OBJS)) do @%append tmp.lnk file %i
+        @for %i in ($(xlibs)) do @%append tmp.lnk lib %i
+        $(linker) name $^@ @tmp.lnk
+!ifdef version_res_$(host_os)_$(host_cpu)
+        $(rc) -k $(name).res $^@ -fr=$(version_res_$(host_os)_$(host_cpu))
+!else
+        $(rc) -k $(name).res $^@
+!endif
+
+rcstr.gh: rcstrmsg.gh
+        $(awk) -f $(misc_dir)/msgtoh.awk $[@ > $^@
+
+rcstrmsg.gh: ../h/wre.msg $(msgfiles)
+        $(cc) $(preproc_opts) -I"$(sdk_dir)/misc" $(inc_path) -fo=$^@
+
+$(name).res: ../h/$(name).rc .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) $[@ -fo=$^@
+
+./genverrc.exe : $(fe_misc_dir)/c/genverrc.c
+        $(bld_cl) $[@ $(wcl_util_opts) -D_VERSION=$(bld_ver)
+
+!ifndef patch_level
+patch_level=0
+!endif
+
+version.res: ./genverrc.exe ../h/exever.rc $(fe_misc_dir)/c/genverrc.c
+        $[@ ../h/exever.rc version.rc $$ $(name) $(patch_level)
+        $(rc) $(rc_flags) $(inc_path) version.rc -fo=$^@
+

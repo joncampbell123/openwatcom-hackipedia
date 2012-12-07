@@ -1,0 +1,74 @@
+proj_name = wddespy
+name = wddespy
+
+!ifndef wddespy_autodepends
+wddespy_autodepends = .AUTODEPEND
+!endif
+
+sys_windowed = 1
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+objs =  savelbox.obj mem.obj font.obj fontstr.obj srchmsg.obj log.obj &
+        pushwin.obj alias.obj toolbr.obj mark.obj ldstr.obj hint.obj &
+        mstatwnd.obj wwinhelp.obj jdlg.obj ctl3dcvr.obj &
+        dde.obj ddeproc.obj ddeglob.obj ddemsg.obj ddebox.obj ddetrack.obj &
+        ddeflter.obj ddecfg.obj ddemisc.obj ddetool.obj about.obj inipath.obj
+
+
+extra_c_flags_mem = -DNO_WPI
+extra_c_flags_nt  = -DNOUSE3D
+
+extra_l_flags     = option map
+extra_l_flags_nt  = option stack=100k
+extra_l_flags_win = option stack=7k option heapsize=2k lib ddeml.lib
+
+#extra_l_flags_nt_axp  = lib ctl3d32.lib
+
+.c: ..;$(sdk_dir)/misc
+.h: ..;$(sdk_dir)/misc
+
+inc_dirs  = -I.. -I"$(sdk_dir)/misc"
+
+msgfiles  = $(sdk_dir)/misc/about.msg $(sdk_dir)/misc/log.msg &
+            $(sdk_dir)/misc/savelbox.msg $(sdk_dir)/misc/alias.msg
+
+# systems where version resource must be added to .EXE
+version_res_nt_386 = version.res
+
+$(name).exe : rcstr.gh $(objs) $(name).res $(version_res_$(host_os)_$(host_cpu))
+        $(LINKER) $(lflags) name $^@ file { $(objs) }
+!ifeq host_CPU axp
+!ifeq release 0
+        cvpack $(name).exe
+        wstrip $(name).exe $(name).exe $(name).sym
+!endif
+!endif
+!ifdef version_res_$(host_os)_$(host_cpu)
+        $(rc) -k $(name).res $^@ -fr=$(version_res_$(host_os)_$(host_cpu))
+!else
+        $(rc) -k $(name).res $^@
+!endif
+
+rcstr.gh : rcstrmsg.gh
+        $(awk) -f $(misc_dir)/msgtoh.awk $[@ > $^@
+
+rcstrmsg.gh : ../ddespy.msg $(msgfiles)
+        $(cc) $(preproc_opts) -I"$(sdk_dir)/misc" $(inc_path) -fo=$^@
+
+$(name).res : ../$(name).rc .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk0 -I"../res" $(inc_path) $[@ -fo=$^@
+
+./genverrc.exe : $(fe_misc_dir)/c/genverrc.c
+        $(bld_cl) $[@ $(wcl_util_opts) -D_VERSION=$(bld_ver)
+
+!ifndef patch_level
+patch_level=0
+!endif
+
+version.res: ./genverrc.exe ../exever.rc $(fe_misc_dir)/c/genverrc.c
+        $[@ ../exever.rc version.rc $$ $(name) $(patch_level)
+        $(rc) $(rc_flags) $(inc_path) version.rc -fo=$^@
+

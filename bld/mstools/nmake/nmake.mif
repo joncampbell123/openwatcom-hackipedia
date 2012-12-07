@@ -1,0 +1,19 @@
+done: nmake.exe
+
+!include ../../master.mif
+
+common_objs = parse.obj $(mstools_objs)
+nmake_objs  = nmake.obj message.obj translat.obj $(common_objs)
+nmake_hdrs  = optparsh.gh
+
+extra_c_flags_message = $(targdef)
+extra_c_flags_translat = $(targdef)
+extra_c_flags_nmake = $(targdef)
+
+#
+# Instructions for building the executable.
+#
+
+nmake.exe : $(nmake_hdrs) $(nmake_objs)
+        $(linker) $(lflags) name $^@ file {$(nmake_objs)}
+

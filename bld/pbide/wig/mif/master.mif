@@ -1,0 +1,71 @@
+proj_name = wig
+
+!ifeq sys_dll 1
+xname = pbide.dll
+!else
+xname = wig.exe
+!endif
+
+suppress_zc = 1
+
+.EXTENSIONS: .gh .y
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+objs += keywords.obj &
+        scanner.obj &
+        mem.obj &
+        hashtab.obj &
+        srusuprt.obj &
+        gen_cpp.obj &
+        options.obj &
+        list.obj &
+        filelist.obj &
+        wig.obj
+
+!ifeq release 0
+objs += trmemcvr.obj trmem.obj
+!endif
+
+.h      : ../h;
+.c      : ../c;.;$(trmem_dir)
+.y      : ../c
+
+inc_dirs = -I"../h" -I$(trmem_dir)
+
+lnk = wig.lnk
+
+extra_c_flags =
+!ifeq sys_dll 1
+extra_c_flags += -D__DLL__
+!endif
+!ifeq release 0
+extra_c_flags += -DTRMEM -of+
+!endif
+
+!ifeq sys_dll 1
+extra_c_flags_win = -zw -zu
+!else
+extra_c_flags_win = -zW
+!endif
+
+extra_l_flags = option map
+!ifeq sys_dll 1
+extra_l_flags_win = op rwr export WEP RESIDENT
+!endif
+
+$(xname) : sruparse.gh ytab.gh $(objs) $(__MAKEFILES__)
+        @%create $(lnk)
+        @for %i in ($(libs)) do @@%append $(lnk) library %i
+        @for %i in ($(objs)) do @@%append $(lnk) file %i
+        $(linker) $(lflags) name $^@ @$(lnk)
+
+sruparse.gh ytab.gh: sruparse.y ../c/yydriver.c
+        @wtouch $^@
+        @rm $^@
+        $(byacc) $[@ ../c/yydriver.c > $(nulldevice)
+        @cp ytab.c $^@
+        @cp ytab.h ytab.gh
+        @rm ytab.c ytab.h

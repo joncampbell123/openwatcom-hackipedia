@@ -1,0 +1,93 @@
+#
+#   COMMON:     common definitions of compiler and linker
+#
+
+#
+#   Macros used by this file:
+#
+#   posix_dir   Must point to the root of the posix project.
+#
+#   targos      Must be a valid targos.
+#               i.e. include $(posix_dir)/mif/targos.mif before this file.
+#
+#   cflags      If defined, these options to the compiler override the
+#               defaults selected by this file.
+#
+#   make_lib    If this is defined then wmake was invoked to make posixlib.
+#
+#   if make_lib isn't defined, then the following must be defined:
+#
+#   name        The name of the command which is being built.  The
+#               directory $(posix_dir)/src/$(name) must exist, and
+#               contain the source for the command.
+
+#
+#       some people don't have the linker variable in their makeinit
+#
+
+posix_autodepends = .AUTODEPEND
+
+!ifeq           targos  dosos2
+modelos=c
+!else ifeq      targos  dos
+modelos=c
+!else ifeq      targos  qnx
+modelos=s
+!else ifeq      targos  qnx16
+modelos=c
+!else ifeq      targos  os2386
+modelos=f
+!else ifeq      targos  pharlap
+modelos=f
+!else ifeq      targos  nt386
+modelos=f
+!else ifeq      targos  ntaxp
+modelos=
+!endif
+!ifndef model
+model=$(modelos)
+!endif
+memory_model_i86=$(model)
+memory_model_386=$(model)
+
+!ifdef __UNIX__
+!ifeq targos ntaxp
+posixlibdir=$(posix_dir)/misc/$(targos)/_s
+!else
+posixlibdir=$(posix_dir)/misc/$(targos)/m$(model)
+!endif
+!else
+!ifeq targos ntaxp
+posixlibdir=$(posix_dir)\misc\$(targos)\_s
+!else
+posixlibdir=$(posix_dir)\misc\$(targos)\m$(model)
+!endif
+!endif
+
+!include cproj.mif
+!include defrule.mif
+
+#
+#       compiler options
+#
+
+#
+#       define options for each specific operating system supported
+#
+
+extra_cflags_pharlap = -bt=pharlap
+extra_cflags_ntaxp   = -DWIN32 -D_WIN32
+extra_c_flags = -D__OS_$(targos)__ -DSTANDALONE_RX $(extra_cflags_$(targos)) $(extra_cflags)
+
+!ifndef make_lib
+inc_dirs = -I"$(posix_dir)/src/$(name)" -I"$(posix_dir)/h"
+!else
+inc_dirs = -I"$(posix_dir)/h"
+!endif
+
+!ifndef make_lib
+.c: $(posix_dir)/src/$(name);$(posix_dir)/misc
+!else
+.c: $(posix_dir)/misc;$(lang_root)/src/startup
+!endif
+

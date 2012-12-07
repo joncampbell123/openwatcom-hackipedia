@@ -1,0 +1,34 @@
+# OWL library finder.
+# ~~~~~~~~~~~~~~~~~~
+#
+!ifdef __UNIX__
+__owl_prefix=$(owl_dir)/
+__owl_suffix=/owl.lib
+!else
+__owl_prefix=$(owl_dir)\
+__owl_suffix=\owl.lib
+!endif
+#
+# OWL library
+#
+owl_lib_386 = $(__owl_prefix)osi386$(__owl_suffix)
+owl_lib_axp = $(__owl_prefix)osiaxp$(__owl_suffix)
+owl_lib_ppc = $(__owl_prefix)osippc$(__owl_suffix)
+owl_lib_mps = $(__owl_prefix)osimps$(__owl_suffix)
+
+#
+# OWL run-time DLL used
+#
+!ifeq $(proj_name)_rtdll 1
+owl_lib_nt_386 = $(__owl_prefix)nt386.dll$(__owl_suffix)
+owl_lib_nt_axp = $(__owl_prefix)ntaxp.dll$(__owl_suffix)
+!endif
+
+#
+!ifdef bootstrap
+owl_lib = $(__owl_prefix)$(%OBJDIR)$(__owl_suffix)
+!else ifdef owl_lib_$(host_os)_$(host_cpu)
+owl_lib = $(owl_lib_$(host_os)_$(host_cpu))
+!else
+owl_lib = $(owl_lib_$(host_cpu))
+!endif

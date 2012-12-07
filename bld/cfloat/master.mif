@@ -1,0 +1,37 @@
+proj_name       = cf
+cf_autodepends = .autodepend
+
+inc_dirs        = -I"../h"
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+.c: $(cfloat_dir)/c
+
+cf_objs = &
+    cfconv.obj &
+    cfdiv.obj &
+    cfinvers.obj &
+    cfmath.obj &
+    cfmem.obj &
+    cfmul.obj &
+    cftof.obj &
+    cfutil.obj &
+    u32moddi.obj
+
+!ifeq bootstrap 1
+
+# to be fixed: wlib -fa produces a library that gnu ld can't read
+# can be a bug in wlib or in gnu ld, I don't know right now...
+cf.lib : $(cf_objs)
+        ar crs $^@ $(cf_objs)
+
+!else
+
+cf.lib : $(cf_objs)
+        rm -f $^&.lbc
+        @for %i in ($<) do @%append $^&.lbc +%i
+        $(librarian) $(libflags) @$^&.lbc
+
+!endif

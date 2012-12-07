@@ -1,0 +1,62 @@
+proj_name = dwarfw
+
+!ifndef dwarfw_autodepends
+dwarfw_autodepends = .AUTODEPEND
+!endif
+
+!include cproj.mif
+!include defrule.mif
+!include deftarg.mif
+
+objs = &
+dwabbrev.obj &
+dwarange.obj &
+dwcarve.obj &
+dwdie.obj &
+dwdecl.obj &
+dwgen.obj &
+dwhandle.obj &
+dwinfo.obj &
+dwline.obj &
+dwlngen.obj &
+dwloc.obj &
+dwmac.obj &
+dwmem.obj &
+dwname.obj &
+dwrefer.obj &
+dwsym.obj &
+dwtype.obj &
+dwutils.obj
+
+.c : $(dwarf_dir)/dw/c
+
+inc_dirs = -I. -I"../h"
+
+!ifeq bootstrap 1
+
+# to be fixed: wlib -fa produces a library that gnu ld can't read
+# can be a bug in wlib or in gnu ld, I don't know right now...
+dw.lib : dwabenum.gh $(objs)
+        ar crs $^@ $(objs)
+
+!else
+
+extra_c_flags = -s
+
+dw.lib : dwabenum.gh $(objs)
+        @%create tmp.lbc
+        @for %i in ($(objs)) do @%append tmp.lbc +%i
+        $(librarian) $(libflags) @tmp.lbc
+
+!endif
+
+./dwmakeab.exe : dwmakeab.c
+    $(bld_cl) $(wcl_util_opts) $[@
+
+dwabenum.gh dwabinfo.gh : ./dwmakeab.exe
+        $[@
+
+dwabbrev.obj : dwabbrev.c dwabinfo.gh
+
+testcli.exe : testcli.obj testtest.obj testdump.obj dw.lib
+        $(linker) $(lflags) op quiet,map file testcli,testtest,testdump lib dw.lib

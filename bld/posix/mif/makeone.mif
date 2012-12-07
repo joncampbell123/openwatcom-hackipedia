@@ -1,0 +1,67 @@
+#
+#       This is the common makefile for each individual command.  It
+#       is designed to be activated standalone, or as part of a makeall.
+
+#
+#       The following macros must be defined:
+#
+#       posix_dir       the root of the posix project (no trailing \)
+#
+#       name            the name of the command to be built
+#
+
+!include $(posix_dir)/mif/targos.mif
+!include $(posix_dir)/mif/common.mif
+
+#
+#       define the main target
+#
+$(name).exe: $(objs) $(name).lnk $(posixlibdir)/posix.lib $(__MAKEFILES__)
+        $(linker) @$(name).lnk
+!ifeq targos dosos2
+        $(binder)\bind $(name).exe $(apilib) $(doscalls)
+!else ifeq targos pharlap
+        $(posix_dir)\misc\pharlap\bind386 $(posix_dir)\misc\pharlap\run386b $(name).exp
+!endif
+
+#
+#       create the lnk file
+#
+$(name).lnk : $(objs) $(__MAKEFILES__)
+        @%create $(name).lnk
+        @%append $(name).lnk name $(name).exe
+        @%append $(name).lnk debug all option quiet,map
+!ifeq release 0	
+        @%append $(name).lnk option symfile
+!endif
+        @%append $(name).lnk lib $(posixlibdir)/posix.lib
+!ifeq targos dosos2
+        @%append $(name).lnk system os2 pmc
+        @%append $(name).lnk option heapsize=8k,newfiles
+        @%append $(name).lnk option stack=8k
+        @%append $(name).lnk lib $(doscalls)
+!else ifeq targos dos
+        @%append $(name).lnk system dos
+!else ifeq targos os2386
+        @%append $(name).lnk system os2v2 pmc
+!else ifeq targos pharlap
+        @%append $(name).lnk name $(name).exp
+        @%append $(name).lnk system pharlap
+        @%append $(name).lnk option stack=4096
+        @%append $(name).lnk option offset=16384
+!else ifeq targos nt386
+        @%append $(name).lnk system nt
+!else ifeq targos ntaxp
+        @%append $(name).lnk system ntaxp
+!else ifeq targos qnx
+        @%append $(name).lnk system qnx386
+!else ifeq targos qnx16
+        @%append $(name).lnk system qnx
+!endif
+        @for %i in ($(objs)) do @%append $(name).lnk file %i
+!ifdef extra_lnk
+        @%make $(extra_lnk)
+!endif
+
+clean : .symbolic
+        rm -f *.ex? *.?bj *.map *.lst *.smp *.lnk *.lbc *.lib *.err *.sym

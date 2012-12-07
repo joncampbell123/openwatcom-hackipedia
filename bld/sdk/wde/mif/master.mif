@@ -1,0 +1,219 @@
+proj_name = wde
+name = wde
+
+.EXTENSIONS: .res
+.EXTENSIONS: .rc
+
+wde_winver =
+
+sys_windowed = 1
+
+memory_model_i86 = l
+
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+WINDOWS=1
+!include wres.mif
+
+extra_c_flags     = -DWIN_GUI -s
+
+extra_c_flags_win = -zu-zw-zc
+
+of_386  = -of+
+of_i86  = -of+
+
+TRMEM   = $(of_$(host_cpu))
+!ifeq wde_trmem 1
+TRMEM   += -DTRMEM
+!endif
+
+extra_c_flags_trmem = $(TRMEM)
+extra_c_flags_trmemcvr = $(TRMEM)
+
+extra_c_flags_preproc = -zm
+extra_c_flags_ppexpr = -zm
+extra_c_flags_ppmacro = -zm
+
+OBJS =  wde_wres.obj wdealign.obj wdecsize.obj wdecust.obj  wdedebug.obj &
+        wdedefin.obj wdeedit.obj  wdefbase.obj wdefbutt.obj wdefcbox.obj &
+        wdefcntl.obj wdefcust.obj wdefdiag.obj wdefdlg.obj  wdefedit.obj &
+        wdefinit.obj wdeflbox.obj wdefmenu.obj wdefont.obj  wdefordr.obj &
+        wdefscrl.obj wdefstat.obj wdefutil.obj wdegeted.obj wdegetfn.obj &
+        wdehash.obj  wdehints.obj wdeinfo.obj  wdelist.obj  &
+        wdemain.obj  wdemsgbx.obj wdeopts.obj  &
+        wderes.obj   wderesin.obj wdesdlg.obj  wdesdup.obj  &
+        wdestat.obj  wdestyle.obj &
+        wdesym.obj   wdetest.obj  &
+        wdetfile.obj wdetoolb.obj &
+        wdeppmem.obj wdemem.obj wdewait.obj wdedefsz.obj wdetxtsz.obj &
+        wdetmenu.obj wdectool.obj wdezordr.obj wderibbn.obj &
+        wdeselft.obj wdei2mem.obj wdeldres.obj wdesvres.obj wdesvobj.obj &
+        wdestken.obj wdectl3d.obj wdesvdlg.obj wdedde.obj &
+        wdeclear.obj wdecurr.obj wdegoto.obj wdecctl.obj &
+        wdefsbar.obj wdeflvw.obj wdeftvw.obj wdefhdr.obj wdeftabc.obj &
+        wdefani.obj wdefupdn.obj wdeftrak.obj wdefprog.obj wdefhtky.obj &
+        windlg.obj windlg32.obj &
+        preproc.obj ppexpr.obj ppmacro.obj &
+        toolbr.obj statwnd.obj ldstr.obj wwinhelp.obj jdlg.obj inipath.obj &
+        about.obj
+
+extra_c_flags_nt    = -DNOUSE3D
+
+extra_c_flags_wde_wres= -fh
+extra_c_flags_wdealign= -fh
+extra_c_flags_wdecsize= -fh
+extra_c_flags_wdecust= -fh
+extra_c_flags_wdedebug= -fh
+extra_c_flags_wdedefin= -fh
+extra_c_flags_wdeedit= -fh
+extra_c_flags_wdefbase= -fh
+extra_c_flags_wdefbutt= -fh
+extra_c_flags_wdefcbox= -fh
+extra_c_flags_wdefcntl= -fh
+extra_c_flags_wdefcust= -fh
+extra_c_flags_wdefdiag= -fh
+extra_c_flags_wdefdlg= -fh
+extra_c_flags_wdefedit= -fh
+extra_c_flags_wdefinit= -fh
+extra_c_flags_wdeflbox= -fh
+extra_c_flags_wdefmenu= -fh
+extra_c_flags_wdefont= -fh
+extra_c_flags_wdefordr= -fh
+extra_c_flags_wdefscrl= -fh
+extra_c_flags_wdefstat= -fh
+extra_c_flags_wdefutil= -fh
+extra_c_flags_wdegeted= -fh
+extra_c_flags_wdegetfn= -fh
+extra_c_flags_wdehash= -fh
+
+extra_c_flags_wdehints= -fh
+extra_c_flags_wdeinfo= -fh
+extra_c_flags_wdelist= -fh
+extra_c_flags_wdemain= -fh
+extra_c_flags_wdemsgbx= -fh
+extra_c_flags_wdeopts= -fh
+extra_c_flags_wderes= -fh
+
+extra_c_flags_wderesin= -fh
+extra_c_flags_wdesdlg= -fh
+
+extra_c_flags_wdesdup= -fh
+extra_c_flags_wdestat= -fh
+
+extra_c_flags_wdestyle= -fh
+extra_c_flags_wdesym=
+
+extra_c_flags_wdetest= -fh
+extra_c_flags_wdetfile= -fh
+extra_c_flags_wdetoolb= -fh
+extra_c_flags_wdeppmem= -fh
+extra_c_flags_wdemem= -fh
+extra_c_flags_wdewait= -fh
+extra_c_flags_wdedefsz= -fh
+extra_c_flags_wdetxtsz= -fh
+extra_c_flags_wdetmenu= -fh
+extra_c_flags_wdectool= -fh
+extra_c_flags_wdezordr= -fh
+extra_c_flags_wderibbn= -fh
+extra_c_flags_wdeselft= -fh
+extra_c_flags_wdei2mem= -fh
+extra_c_flags_wdeldres= -fh
+extra_c_flags_wdesvres= -fh
+extra_c_flags_wdesvobj= -fh
+extra_c_flags_wdestken= -fh
+extra_c_flags_wdectl3d= -fh
+extra_c_flags_wdesvdlg= -fh
+extra_c_flags_wdedde= -fh
+extra_c_flags_wdeclear= -fh
+extra_c_flags_wdecurr= -fh
+extra_c_flags_wdegoto= -fh
+extra_c_flags_wdecctl= -fh
+extra_c_flags_wdefsbar= -fh
+extra_c_flags_wdeflvw= -fh
+extra_c_flags_wdeftvw= -fh
+extra_c_flags_wdefhdr= -fh
+extra_c_flags_wdeftabc= -fh
+extra_c_flags_wdefani= -fh
+extra_c_flags_wdefupdn= -fh
+extra_c_flags_wdeftrak= -fh
+extra_c_flags_wdefprog= -fh
+extra_c_flags_wdefhtky= -fh
+extra_c_flags_windlg= -fh
+extra_c_flags_windlg32= -fh
+
+extra_c_flags_toolbr= -fh
+extra_c_flags_statwnd= -fh
+extra_c_flags_ldstr= -fh
+extra_c_flags_wwinhelp= -fh
+extra_c_flags_jdlg= -fh
+extra_c_flags_about= -DWRCTL3D -fh
+
+fmedit_lib = $(fmedit_dir)/$(host_os)$(host_cpu)/fmedit.lib
+wr_lib = $(wr_dir)/$(host_os)$(host_cpu)/wr.lib
+
+# where to look for various files
+.c : c;../c;$(misc_dir);$(cpp_dir)
+
+inc_dirs  = -Ih -I"../h" -I"$(fmedit_dir)/dev" -I"$(wres_dir)/h"
+inc_dirs += -I"$(wr_dir)/h" -I"$(misc_dir)" -I$(cpp_dir)
+
+msgfiles  = $(sdk_dir)/misc/about.msg
+
+all : $(name).exe .SYMBOLIC
+        @%null
+
+deps: .SYMBOLIC
+        @echo making dependencies...
+        @errout ..\bin\mkwdedep > $(nulldevice)
+
+extra_l_flags = op map, v, symfile
+extra_l_flags_nt = op stack=100k, heap=16k commit heap=8k
+extra_l_flags_win  = op stack=32k, rwr
+extra_l_flags_win += library commdlg, ddeml
+
+xlibs = $(wres_lib) $(fmedit_lib) $(wr_lib)
+
+# systems where version resource must be added to .EXE
+version_res_nt_386 = version.res
+
+$(name).exe: rcstr.gh $(OBJS) $(name).res $(xlibs) $(version_res_$(host_os)_$(host_cpu))
+        @%create tmp.lnk
+        @%append tmp.lnk $(lflags)
+        @for %i in ($(OBJS)) do @%append tmp.lnk file %i
+        @for %i in ($(xlibs)) do @%append tmp.lnk lib %i
+        $(linker) name $^@ @tmp.lnk
+!ifdef version_res_$(host_os)_$(host_cpu)
+        $(rc) -k $(name).res $^@ -fr=$(version_res_$(host_os)_$(host_cpu))
+!else
+        $(rc) -k $(name).res $^@
+!endif
+
+# implicit rules
+#################
+.rc.res: .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) $[@ -fo=$^@
+
+# explicit rules
+#################
+rcstr.gh: rcstrmsg.gh
+        $(awk) -f $(misc_dir)/msgtoh.awk $[@ > $^@
+
+rcstrmsg.gh : ../h/wde.msg $(msgfiles)
+        $(cc) $(preproc_opts) -I"$(sdk_dir)/misc" $(inc_path) -fo=$^@
+
+$(name).res: ../h/$(name).rc .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) $[@ -fo=$^@
+
+./genverrc.exe : $(fe_misc_dir)/c/genverrc.c
+        $(bld_cl) $[@ $(wcl_util_opts) -D_VERSION=$(bld_ver)
+
+!ifndef patch_level
+patch_level=0
+!endif
+
+version.res: ./genverrc.exe ../h/exever.rc $(fe_misc_dir)/c/genverrc.c
+        $[@ ../h/exever.rc version.rc $$ $(name) $(patch_level)
+        $(rc) $(rc_flags) $(inc_path) version.rc -fo=$^@
+

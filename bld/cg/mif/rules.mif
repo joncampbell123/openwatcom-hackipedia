@@ -1,0 +1,53 @@
+
+extra_c_flags_386       = -zp4
+
+!ifndef cg_autodepends
+cg_autodepends = .AUTODEPEND
+!endif
+
+!ifeq sys_dll 1
+extra_c_flags   = -D_CGDLL
+!endif
+
+track_flags_i86 = -D_TRACK -of+
+track_flags_386 = -D_TRACK -of+
+track_flags_axp = -D_TRACK
+
+!ifeq cg_trmem 1
+extra_c_flags_memmgt    = $(track_flags_$(host_cpu))
+extra_c_flags_memwrap   = $(track_flags_$(host_cpu))
+extra_c_flags_trmem     = $(track_flags_$(host_cpu))
+!endif
+
+!ifeq release 0
+!else
+std_defines = -DNDEBUG
+!endif
+
+!ifdef %CGEXTRAOPTS
+opt_standard += $(%CGEXTRAOPTS)
+!endif
+
+inc_dirs += -I. $(inc_dirs_targ) -I"$(dwarf_dir)/dw/h" $(mem_include)
+
+.c: $(src_path);$(trmem_dir)
+.h: $(include_path)
+.asm: $(asm_path)
+
+./bitset.exe : $(watcom_dir)/c/bitset.c
+    $(bld_cl) $< $(wcl_util_opts)
+
+gbit.gh : ./bitset.exe $(cg_dir)/mif/cg.mif
+    $[@ $(gbit_size) _GBit global_bit_set $@
+
+lbit.gh : ./bitset.exe $(cg_dir)/mif/cg.mif
+    $[@ $(lbit_size) _LBit local_bit_set $@
+
+dbit.gh : ./bitset.exe $(cg_dir)/mif/cg.mif
+    $[@ $(dbit_size) _DBit dom_bit_set $@
+
+cgprotos.gh : $(cg_dir)/h/cgapicvr.h $(cg_dir)/h/cgfuntab.h
+    $(cc) $(preproc_opts) -I"$(cg_dir)/h" >$@
+
+feprotos.gh : $(cg_dir)/h/cgfecvr.h $(cg_dir)/h/cgfertns.h
+    $(cc) $(preproc_opts) -I"$(cg_dir)/h" >$@

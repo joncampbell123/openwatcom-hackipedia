@@ -1,0 +1,112 @@
+proj_name=hdr
+
+!include ../hfiles.mif
+
+!include cproj.mif
+
+dos_options   = -kDOS -kUNICODE
+linux_options = -kLINUX -t8 -u
+qnx_options   = -kQNX -t8 -u
+
+splice = wsplice -i.. $($(system)_options) ../common.sp $[@ $^@
+psplice = wsplice -i.. $($(system)_options) $(options_$^&) ../common.sp $[@ $^@
+csplice = wsplice -i.. $($(system)_options) $(options_c_$^&) ../common.sp $[@ $^@
+
+.EXTENSIONS
+.EXTENSIONS : . .h .hpp .cnv .mh .mhp
+
+#
+# Handle C++ and cname style headers through .default command.
+#
+
+all : $($(system)_files) .symbolic
+    @%null
+
+dos_path   = ../watcom/dos
+linux_path = ../watcom/linux
+qnx_path   = ../quantum
+
+.mh:  $($(system)_path);../watcom
+.mhp: $($(system)_path);../watcom
+
+.mhp.hpp:
+        $(splice)
+
+.mh.h:
+        $(csplice)
+
+.mh.cnv:
+        $(splice)
+
+.mh.:
+        $(psplice)
+
+#
+# Special case for sys/time.h since there is also a time.h
+#
+!ifeq system qnx
+sys/time.h : ../quantum/sys_time.mh $(packll)
+        $(splice)
+!endif
+!ifeq system linux
+sys/time.h : linux/sys_time.mh ../crwat.sp ../readonly.sp $(cplus) $(packlnxk)
+        $(splice)
+!endif
+#
+# Special case for sys/utime.h since there is also a utime.h
+#
+!ifeq system dos
+sys/utime.h : dos/sys_utim.mh ../crwat.sp ../readonly.sp
+        $(splice)
+!endif
+
+!include ../deps.mif
+
+#
+# Special case for cname style headers
+#
+options_complex  = -kCPPCOMPLEX
+options_exceptio = -kCNAME
+options_fstream  = -kCNAME
+options_iomanip  = -kCNAME
+options_ios      = -kCNAME
+options_iosfwd   = -kCNAME
+options_iostream = -kCNAME
+options_istream  = -kCNAME
+options_limits   = -kCPPLIMITS
+options_locale   = -kCPPLOCALE
+options_memory   = -kCPPMEMORY
+options_new      = -kCNAME
+options_ostream  = -kCNAME
+options_sstream  = -kCNAME
+options_stdexcep = -kCNAME
+options_streambu = -kCNAME
+options_string   = -kCPPSTRING
+options_strstrea = -kCNAME
+options_typeinfo = -kCNAME
+
+#
+# Special case for included C++ cname style headers
+#   for optimize C++ declaration out of C part
+#
+options_c_ctype   = -kCONLY
+options_c_locale  = -kCONLY
+options_c_math    = -kCONLY
+options_c_signal  = -kCONLY
+options_c_stdarg  = -kCONLY
+options_c_stddef  = -kCONLY
+options_c_stdio   = -kCONLY
+options_c_stdlib  = -kCONLY
+options_c_string  = -kCONLY
+options_c_time    = -kCONLY
+options_c_wchar   = -kCONLY
+options_c_wctype  = -kCONLY
+
+
+dos_clean   = win/*.h
+linux_clean = arpa/*.h netinet/*.h
+qnx_clean   =
+
+clean: .SYMBOLIC
+      rm -f *.h sys/*.h *.hpp common.cnv $($(system)_clean)
+      rm -f $(noext)

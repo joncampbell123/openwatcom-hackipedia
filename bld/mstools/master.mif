@@ -1,0 +1,53 @@
+#
+# Standard project stuff.
+#
+proj_name = mstools
+
+!ifndef mstools_autodepends
+mstools_autodepends = .AUTODEPEND
+!endif
+
+!ifeq host_cpu axp
+targdef = -D__TARGET_AXP__
+!else ifeq host_cpu ppc
+targdef = -D__TARGET_PPC__
+!else
+targdef = -D__TARGET_$(host_cpu)__
+!endif
+
+#
+# MSTOOLS macros.
+#
+
+mstools_stub_obj    = stub.obj
+mstools_objs        = cmdline.obj cmdscan.obj context.obj error.obj file.obj memory.obj pathconv.obj
+
+.c :  ../c;../../c
+.h :  ../h;../../h
+
+inc_dirs = -I"../h" -I"../../h" -I"../c"
+
+#
+# Include standard .mif files to do the work.
+#
+!include cproj.mif
+!include deftarg.mif
+!include defrule.mif
+
+optp386c.gh optp386h.gh : ./optencod.exe ../gml/ms.gml
+        $[@ $]@ optp386h.gh optp386c.gh usage386.gh i86
+
+optpaxpc.gh optpaxph.gh :  ./optencod.exe ../gml/ms.gml
+        $[@ $]@ optpaxph.gh optpaxpc.gh usageaxp.gh axp
+
+optpppcc.gh optpppch.gh :  ./optencod.exe ../gml/ms.gml
+        $[@ $]@ optpppch.gh optpppcc.gh usageppc.gh ppc
+
+optparsc.gh optparsh.gh : ./optencod.exe ../gml/ms.gml
+        $[@ $]@ optparsh.gh optparsc.gh usagemsg.gh i86
+
+#
+# Dependencies for source in $(fe_misc_dir).
+#
+./optencod.exe : $(fe_misc_dir)/c/optencod.c
+        $(bld_cl) $(wcl_util_opts) -I"$(fe_misc_dir)/h" -I"$(watcom_dir)/h" $[@

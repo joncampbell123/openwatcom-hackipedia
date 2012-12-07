@@ -1,0 +1,140 @@
+proj_name = drwatcom
+
+sys_windowed = 1
+
+!ifndef drwatcom_autodepends
+drwatcom_autodepends = .AUTODEPEND
+!endif
+
+.EXTENSIONS: .rc .dlg
+
+exc_name = $(proj_name).exe
+
+all: $(exc_name) .SYMBOLIC
+
+!include cproj.mif
+!include defrule.mif
+!include deftarg.mif
+
+!include $(wdisasm_dir)/mif/disasm.mif
+
+!ifndef drwatcom_95
+drwatcom_95 = 0
+!endif
+
+msgfiles = $(sdk_misc)/about.msg $(sdk_misc)/savelbox.msg &
+           $(sdk_misc)/memwnd.msg $(dig_dir)/h/mad.str
+
+link_name = $(proj_name).lnk
+common_dir=../../common
+sdk_misc = $(sdk_dir)/misc
+
+# cflags stuff
+###############
+
+!ifneq host_OS win
+extra_c_flags = -DNOUSE3D
+!endif
+
+extra_c_flags_i86 = -zW -zu -3
+extra_c_flags_axp =
+
+extra_c_flags_mem = -DWANT_MSGS -DNO_WPI
+
+
+# lflags stuff
+###############
+
+extra_l_flags = option map,quiet name $(exc_name)
+
+extra_l_flags_nt = op stack=100k
+extra_l_flags_nt_axp = op start=WinMainCRTStartup ref WinMainCRTStartup
+
+dig_os = $(host_OS)
+!include $(dig_dir)/mif/dipcli.mif
+!include $(dig_dir)/mif/madcli.mif
+
+extra_proj_obj_nt = global.obj param.obj procctl.obj dipcli.obj memory.obj &
+            drproc.obj handler.obj memview.obj proclist.obj thrdctl.obj &
+            pefile.obj autoget.obj lddips.obj srchmsg.obj &
+            madrtn.obj madsys.obj regstr.obj reglist.obj bitman.obj &
+            strcnv.obj regcrt.obj inipath.obj &
+            $(mad_objs)
+!ifeq drwatcom_95 1
+extra_proj_obj_nt += reg95.obj
+extra_c_flags += -DCHICAGO
+extra_l_flags += lib $(%watcom)/lib386/nt/th32.lib
+#$(watcom_dir)/lib/win95/th32.lib why do we need this one?
+!else
+extra_proj_obj_nt += reg.obj
+!endif
+
+extra_proj_obj_win = globals.obj notify.obj winproc.obj debug.obj dump.obj &
+            win32app.obj lddips.obj stack.obj &
+            mythelp.obj intdata.obj inth.obj dbg386.obj sdkasm.obj &
+            ismod32.obj segmem.obj segmem2.obj getsaddr.obj getcsip.obj &
+            $(dis_objs) ctl3dcvr.obj
+
+proj_obj =   mem.obj listbox.obj log.obj wwinhelp.obj stat.obj lognote.obj &
+            drwatcom.obj sym.obj profile.obj fault.obj &
+            font.obj fontstr.obj about.obj savelbox.obj mark.obj dlgmod.obj &
+            memwnd.obj memwndcd.obj ldstr.obj jdlg.obj disasm.obj &
+            $(extra_proj_obj_$(host_OS)) &
+            $(dip_objs)
+
+.asm : .;$(sdk_misc)
+.c : ..;$(common_dir);$(dig_srcs);$(mad_srcs);$(sdk_misc);$(dis_srcs)
+
+inc_dirs = -I. -I.. -I"$(common_dir)" -I"$(dig_dir)/h" -I"$(sdk_misc)" $(dis_includes)
+
+# systems where version resource must be added to .EXE
+version_res_nt_386 = version.res
+
+#explicit rules
+################
+
+$(exc_name) : rcstr.gh $(dis_prereq) $(link_name) $(proj_name).res $(proj_obj) $(version_res_$(host_os)_$(host_cpu))
+        $(linker) @$(link_name)
+!ifdef version_res_$(host_os)_$(host_cpu)
+        $(rc) -k $(proj_name).res $^@ -fr=$(version_res_$(host_os)_$(host_cpu))
+!else
+        $(rc) -k $(proj_name).res $^@
+!endif
+
+$(link_name) : $(__MAKEFILES__)
+        @%write $^@ $(lflags)
+        @%append $^@ file { $(proj_obj) }
+
+!ifeq host_OS win
+$(proj_name).res : ../drwatcom.rc .AUTODEPEND
+        $(rc) $(rc_flags) -ad -zk $(inc_path) $[@ -fo=$^@
+!else
+$(proj_name).res : ../drnt.rc .AUTODEPEND
+!ifeq drwatcom_95 1
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) -DCHICAGO $[@ -fo=$^@
+!else
+        $(rc) $(rc_flags) -ad -zk0 $(inc_path) $[@ -fo=$^@
+!endif
+!endif
+
+rcstr.gh : rcstrmsg.gh
+        $(awk) -f $(misc_dir)/msgtoh.awk $[@ > $^@
+
+rcstrmsg.gh : ../drwatcom.msg $(msgfiles)
+!ifeq drwatcom_95 1
+        $(cc) $(preproc_opts) $(inc_path) -DCHICAGO -fo=$^@
+!else
+        $(cc) $(preproc_opts) $(inc_path) -fo=$^@
+!endif
+
+./genverrc.exe : $(fe_misc_dir)/c/genverrc.c
+        $(bld_cl) $[@ $(wcl_util_opts) -D_VERSION=$(bld_ver)
+
+!ifndef patch_level
+patch_level=0
+!endif
+
+version.res: ./genverrc.exe ../exever.rc $(fe_misc_dir)/c/genverrc.c
+        $[@ ../exever.rc version.rc $$ $(proj_name) $(patch_level)
+        $(rc) $(rc_flags) $(inc_path) version.rc -fo=$^@
+

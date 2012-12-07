@@ -1,0 +1,7 @@
+$(proj_name).exe : $(objs) $(libs) $(cl_objs)
+!ifeq verbose 1
+        $(cl) $(clflags) $< $(cl_libs)
+!else
+        @echo cl $@
+        @$(cl) $(clflags) $< $(cl_libs)
+!endif

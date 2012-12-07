@@ -1,0 +1,67 @@
+os2_objs = &
+    posixio.obj &
+    memlimit.obj &
+    envvar.obj &
+    onexit.obj &
+    pmstubs.obj &
+    doblips.obj &
+    memmgr.obj &
+    stack.obj
+
+osi_objs = &
+    posixio.obj &
+    memlimit.obj &
+    envvar.obj &
+    cgosi.obj &
+    memmgr.obj &
+    stack.obj
+
+nt_objs = &
+    posixio.obj &
+    memlimit.obj &
+    envvar.obj &
+    onexit.obj &
+    pmstubs.obj &
+    ntblips.obj &
+    memmgr.obj &
+    stack.obj
+
+dos_objs = &
+    posixio.obj &
+    memlimit.obj &
+    memmgr.obj &
+    doblips.obj &
+    blip.obj &
+    getenv.obj &
+    onexit.obj &
+    timer.obj &
+    stack.obj
+
+unix_objs = &
+    posixio.obj &
+    memlimit.obj &
+    envvar.obj &
+    onexit.obj &
+    qtimer.obj &
+    qblip.obj &
+    memmgr.obj &
+    doblips.obj &
+    stack.obj
+
+linux_objs = $(unix_objs)
+qnx_objs   = $(unix_objs)
+bsd_objs   = $(unix_objs)
+osx_objs   = $(unix_objs)
+
+!ifeq cg_trmem 1
+mem_include = -I$(trmem_dir)
+mem_objs = &
+    memwrap.obj &
+    memmgt.obj &
+    trmem.obj
+!else
+mem_include =
+mem_objs = &
+    memwrap.obj &
+    memmgt.obj
+!endif

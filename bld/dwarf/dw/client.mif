@@ -1,0 +1,35 @@
+# DWARF DW library finder.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+!ifdef __UNIX__
+__dwarf_dw_prefix=$(dwarf_dir)/dw/
+__dwarf_dw_suffix=/dw.lib
+!else
+__dwarf_dw_prefix=$(dwarf_dir)\dw\
+__dwarf_dw_suffix=\dw.lib
+!endif
+#
+# DWARF library
+#
+dwarf_dw_lib_386     = $(__dwarf_dw_prefix)osi386$(__dwarf_dw_suffix)
+dwarf_dw_lib_axp     = $(__dwarf_dw_prefix)osiaxp$(__dwarf_dw_suffix)
+dwarf_dw_lib_ppc     = $(__dwarf_dw_prefix)osippc$(__dwarf_dw_suffix)
+dwarf_dw_lib_mps     = $(__dwarf_dw_prefix)osimps$(__dwarf_dw_suffix)
+
+#
+# DWARF run-time DLL used
+#
+!ifeq $(proj_name)_rtdll 1
+dwarf_dw_lib_os2_386 = $(__dwarf_dw_prefix)os2386.dll$(__dwarf_dw_suffix)
+dwarf_dw_lib_nt_386  = $(__dwarf_dw_prefix)nt386.dll$(__dwarf_dw_suffix)
+dwarf_dw_lib_nt_axp  = $(__dwarf_dw_prefix)ntaxp.dll$(__dwarf_dw_suffix)
+!endif
+
+#
+!ifdef bootstrap
+dwarf_dw_lib = $(__dwarf_dw_prefix)$(%OBJDIR)$(__dwarf_dw_suffix)
+!else ifdef dwarf_dw_lib_$(host_os)_$(host_cpu)
+dwarf_dw_lib = $(dwarf_dw_lib_$(host_os)_$(host_cpu))
+!else
+dwarf_dw_lib = $(dwarf_dw_lib_$(host_cpu))
+!endif
