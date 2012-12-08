@@ -1,7 +1,0 @@
-( file whelp
-( passes 2
-( setsymbol dohelp 1
-( output (t:2200)wbrw
-( setsymbol dotarget nt
-( setsymbol book wbrw
-( nowarning
