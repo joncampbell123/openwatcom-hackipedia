@@ -10,4 +10,4 @@ all: .symbolic
         @for %i in (../include/GL/*.h) do @wmake -h -f ../fix/new_h.mif file=%i
         @for %i in (../include/ddk/*.h) do @wmake -h -f ../fix/new_h.mif file=%i
         @for %i in (../include/directx/*.h) do @wmake -h -f ../fix/new_h.mif file=%i
-        $(vi) -s ../fix/fix_h.vi
+        #$(vi) -s ../fix/fix_h.vi

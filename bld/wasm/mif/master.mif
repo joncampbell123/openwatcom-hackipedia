@@ -9,11 +9,7 @@ additional_cleanup += *.u *.msg
 
 wasm_trmem = 1
 
-!ifdef bootstrap
 use_text_msgs = 1
-!else ifdef prebuild
-use_text_msgs = 1
-!endif
 
 !include cproj.mif
 !include defrule.mif

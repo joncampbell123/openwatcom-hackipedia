@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ !( -f setvars.sh ) ]]; then
+	echo setvars.sh not found, create it
+fi
+
+find -name \*~ -delete
+find -name \*.log -delete
+find -name \*.lo1 -delete
+. setvars.sh
+./clean.sh
+rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
+
