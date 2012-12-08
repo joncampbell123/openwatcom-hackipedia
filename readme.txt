@@ -1,12 +1,7 @@
-Note: This information and much more is now in the Open Watcom Developer's
-Guide. To produce a PostScript version go to docs\ps and run
 
- wmake hbook=devguide
-
-If you have everything set up correctly, you should end up with devguide.ps
-which you can print or view.
--------------------------------------------------------------------------------
-
+This is NOT the mainline Open Watcom compiler source, this is a
+private "branch" for Jonathan to hack on. Visit openwatcom.org
+for the mainline code.
 
   Getting up to Speed on Open Watcom
   ==================================
