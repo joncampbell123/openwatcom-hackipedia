@@ -10,4 +10,20 @@ find -name \*.lo1 -delete
 . setvars.sh
 ./clean.sh
 rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
+(cd bld && find -name \*.obj -delete)
+(cd bld/browser && find -name \*.exe -delete)
+(cd bld/browser && find -name \*.map -delete)
+(cd bld/browser && find -name \*.sym -delete)
+(cd bld/browser && find -name \*.gh -delete)
+(cd bld/browser && find -name \*.gpp -delete)
+(cd bld/browser && find -name \*.err -delete)
+(cd bld/viper && find -name \*.exe -delete)
+(cd bld/viprdemo && find -name \*.exe -delete)
+(cd bld/viper && find -name \*.map -delete)
+(cd bld/viprdemo && find -name \*.map -delete)
+(cd bld/viper && find -name \*.sym -delete)
+(cd bld/viprdemo && find -name \*.sym -delete)
+(cd bld/wstuba && find -name \*.exe -delete)
+(cd bld/wstuba && find -name \*.sym -delete)
+(cd contrib && find -name \*.obj -delete)
 

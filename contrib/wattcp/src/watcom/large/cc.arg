@@ -1,0 +1,1 @@
+-ml -6 -I../inc;/usr/src/openwatcom-1.9/rel2/h -zq -bt=dos -fr=nul -w4 -fpc -zm -s -oilrtfm

@@ -1,0 +1,138 @@
+!define BLANK ""
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/wpi_win.obj :&
+ /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wpi/c/wpi_win.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../../../wpi/c/wpi_win.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_&
+dir)/h;$(wpi_dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/dbgmem.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/dbgmem.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../dbgmem.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/dll.obj : /mn&
+t/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/dll.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../dll.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_dir&
+)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/gblmem.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/gblmem.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../gblmem.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/global.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/global.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../global.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/locmem.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/locmem.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../locmem.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipe1.obj : /&
+mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/pipe1.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../pipe1.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_d&
+ir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipe2.obj : /&
+mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/pipe2.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../pipe2.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_d&
+ir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipemem.obj :&
+ /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/pipemem.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../pipemem.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi&
+_dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipeobj.obj :&
+ /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/pipeobj.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../pipeobj.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi&
+_dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipeutil.obj &
+: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/pipeutil.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../pipeutil.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wp&
+i_dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/region.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/region.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../region.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/threed.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/threed.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../threed.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/trmem.obj : /&
+mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/trmem.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../trmem.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_d&
+ir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/window.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/window.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../window.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/world3.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/world3.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../world3.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/wpimem.obj : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/wpimem.c
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ *wcc386 ../wpimem.c -i="$(%watcom)/h;$(%watcom)/h/nt;$(watcom_dir)/h;$(wpi_&
+dir)/h;" -w0 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/nt_3d.dll : /&
+mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/wpi_win.obj /m&
+nt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/dbgmem.obj /mnt&
+/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/dll.obj /mnt/sda5&
+/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/gblmem.obj /mnt/sda5/.&
+user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/global.obj /mnt/sda5/.us&
+er/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/locmem.obj /mnt/sda5/.user&
+/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipe1.obj /mnt/sda5/.user/ro&
+ot/src/openwatcom-1.9/bld/viprdemo/threed/nt/pipe2.obj /mnt/sda5/.user/root/&
+src/openwatcom-1.9/bld/viprdemo/threed/nt/pipemem.obj /mnt/sda5/.user/root/s&
+rc/openwatcom-1.9/bld/viprdemo/threed/nt/pipeobj.obj /mnt/sda5/.user/root/sr&
+c/openwatcom-1.9/bld/viprdemo/threed/nt/pipeutil.obj /mnt/sda5/.user/root/sr&
+c/openwatcom-1.9/bld/viprdemo/threed/nt/region.obj /mnt/sda5/.user/root/src/&
+openwatcom-1.9/bld/viprdemo/threed/nt/threed.obj /mnt/sda5/.user/root/src/op&
+enwatcom-1.9/bld/viprdemo/threed/nt/trmem.obj /mnt/sda5/.user/root/src/openw&
+atcom-1.9/bld/viprdemo/threed/nt/window.obj /mnt/sda5/.user/root/src/openwat&
+com-1.9/bld/viprdemo/threed/nt/world3.obj /mnt/sda5/.user/root/src/openwatco&
+m-1.9/bld/viprdemo/threed/nt/wpimem.obj
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/threed/nt/
+ @%write nt_3d.lk1 FIL wpi_win.obj,dbgmem.obj,dll.obj,gblmem.obj,global.obj,&
+locmem.obj,pipe1.obj,pipe2.obj,pipemem.obj,pipeobj.obj,pipeutil.obj,region.o&
+bj,threed.obj,trmem.obj,window.obj,world3.obj,wpimem.obj
+ @%append nt_3d.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b nt_3d.imp 
+ @%append nt_3d.lk1 LIBR nt_3d.imp
+!endif
+!ifneq BLANK ""
+ @%append nt_3d.lk1 
+!endif
+ *wlink name nt_3d sys nt_dll op m libp "$(watcom_dir)/lib;$(%relroot)/lib38&
+6/nt;$(%relroot)/lib386;" libr kernel32.lib libr user32.lib libr gdi32.lib o&
+p maxe=25 op q op symf @nt_3d.lk1
+ wlib -q -n -b nt_3d.lib +nt_3d.dll
+

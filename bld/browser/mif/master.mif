@@ -5,11 +5,6 @@ name = wbrw
 browse_autodepends = .AUTODEPEND
 !endif
 
-additional_cleanup = &
-    $(docs_root)/os2/wbrw.h &
-    $(docs_root)/win/wbrw.h &
-    $(docs_root)/nt/wbrw.h
-
 .extensions: .gpp .res .rc
 
 sys_windowed = 1
@@ -124,11 +119,6 @@ exe_ext = $(exe_ext_$(host_os))
 exe_ext = exe
 !endif
 
-prereq_nt  = $(docs_root)/nt/wbrw.h
-prereq_win = $(docs_root)/win/wbrw.h
-prereq_os2 = $(docs_root)/os2/wbrw.h
-prereq_dos = $(docs_root)/os2/wbrw.h
-
 # systems where version resource must be added to .EXE
 version_res_nt_386 = version.res
 
@@ -159,7 +149,6 @@ curr_dir=$+$(%cwd)$-
 !else
     @cd $(docs_root)/$(host_os)
 !endif
-    @wmake -h hbook=wbrw header=1
     @cd $(curr_dir)
 !endif
 

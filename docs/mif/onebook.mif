@@ -102,7 +102,8 @@ wgml = $(%DOC_ROOT)\gml\dos\wgml
 OS2_TK = dummy
 
 !else ifeq %build_platform linux386
-wgml = dosemu -dumb $(dosemu_wgml_batch)
+#wgml = dosemu -dumb $(dosemu_wgml_batch)
+wgml = true
 OS2_TK = dummy
 
 !else

@@ -1,0 +1,61 @@
+!define BLANK ""
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/drawwin.obj :&
+ /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/drawwin.c .AUTODEP&
+END
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/
+ *wcc386 ../drawwin.c -i="$(%watcom)/h;$(%watcom)/h/nt" -w4 -e25 -zq -otexan&
+ -d1 -6r -bt=nt -fo=.obj -mf
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/box.obj : /mn&
+t/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/box.cpp .AUTODEPEND
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/
+ *wpp386 ../box.cpp -i="$(%watcom)/h;$(%watcom)/h/nt" -w4 -e25 -zq -otexan -&
+d1 -6r -bt=nt -fo=.obj -mf -xs -xr
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/drawroom.obj &
+: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/drawroom.cpp .AUT&
+ODEPEND
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/
+ *wpp386 ../drawroom.cpp -i="$(%watcom)/h;$(%watcom)/h/nt" -w4 -e25 -zq -ote&
+xan -d1 -6r -bt=nt -fo=.obj -mf -xs -xr
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/furnitu.obj :&
+ /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/furnitu.cpp .AUTOD&
+EPEND
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/
+ *wpp386 ../furnitu.cpp -i="$(%watcom)/h;$(%watcom)/h/nt" -w4 -e25 -zq -otex&
+an -d1 -6r -bt=nt -fo=.obj -mf -xs -xr
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/draw.res : /m&
+nt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/draw.rc .AUTODEPEND
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/
+ *wrc ../draw.rc -bt=nt -dWIN32 -d_WIN32 -d__NT__ -i="$[:;$(%watcom)/h;$(%wa&
+tcom)/h/nt" -q -ad -r -fo=draw.res
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/draw32.exe : &
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/back.bmp /mnt/sda5/&
+.user/root/src/openwatcom-1.9/bld/viprdemo/src/brighter.bmp /mnt/sda5/.user/&
+root/src/openwatcom-1.9/bld/viprdemo/src/darker.bmp /mnt/sda5/.user/root/src&
+/openwatcom-1.9/bld/viprdemo/src/down.bmp /mnt/sda5/.user/root/src/openwatco&
+m-1.9/bld/viprdemo/src/forward.bmp /mnt/sda5/.user/root/src/openwatcom-1.9/b&
+ld/viprdemo/src/left.bmp /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdem&
+o/src/right.bmp /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/up.&
+bmp /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/drawwin.o&
+bj /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/box.obj /m&
+nt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/drawroom.obj /m&
+nt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/furnitu.obj /mn&
+t/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/nt_3d.dll /mnt/s&
+da5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/button.lib /mnt/sda&
+5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/draw.res .AUTODEPEND
+ cd /mnt/sda5/.user/root/src/openwatcom-1.9/bld/viprdemo/src/win32/
+ @%write draw32.lk1 FIL drawwin.obj,box.obj,drawroom.obj,furnitu.obj
+ @%append draw32.lk1 LIBR button.lib
+!ifneq BLANK "nt_3d.dll"
+ *wlib -q -n -b draw32.imp nt_3d.dll
+ @%append draw32.lk1 LIBR draw32.imp
+!endif
+!ifneq BLANK "draw.res"
+ @%append draw32.lk1 RES draw.res
+!endif
+ *wlink name draw32 sys nt_win op m op maxe=25 op q op symf @draw32.lk1
+
