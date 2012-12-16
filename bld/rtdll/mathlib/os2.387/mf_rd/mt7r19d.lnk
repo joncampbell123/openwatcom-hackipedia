@@ -1,9 +1,0 @@
-debug dwarf all option symfile sys os2v2 dll initinstance terminstance op manyautodata option impfile=mt7r19d.imp reference __DLLstart_ disable 121 option map,mangle,artificial,verbose
-op map 
-file /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/library/os2.386/mf_rd/clibdo32.obj
-export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/os2.387/mf_rd.dll/export.def }
-export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/export.387 }
-export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/register.387 }
-lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/os2.387/mf_rd.dll/math387r.lib
-lib ../../../clib/os2.386/mf_rd/clbrdlld.lib
-

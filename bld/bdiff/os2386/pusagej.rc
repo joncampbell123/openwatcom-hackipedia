@@ -1,4 +1,0 @@
-MSG_USE_J_BASE-1+1, "使用方法: %s {-p} {-q} {-b} <file>"
-MSG_USE_J_BASE-1+2, "        -p      確認の応答を禁止する"
-MSG_USE_J_BASE-1+3, "        -b      .BAK ファイルの作成を禁止する"
-MSG_USE_J_BASE-1+4, "        -q      ファイルのカレントパッチレベルを出力する"

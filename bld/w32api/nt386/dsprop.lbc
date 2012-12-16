@@ -1,7 +1,0 @@
-++'_ADsPropCheckIfWritable@8'.'DSPROP.DLL'..'ADsPropCheckIfWritable'
-++'_ADsPropCreateNotifyObj@12'.'DSPROP.DLL'..'ADsPropCreateNotifyObj'
-++'_ADsPropGetInitInfo@8'.'DSPROP.DLL'..'ADsPropGetInitInfo'
-++'_ADsPropSendErrorMessage@8'.'DSPROP.DLL'..'ADsPropSendErrorMessage'
-++'_ADsPropSetHwnd@8'.'DSPROP.DLL'..'ADsPropSetHwnd'
-++'_ADsPropSetHwndWithTitle@12'.'DSPROP.DLL'..'ADsPropSetHwndWithTitle'
-++'_ADsPropShowErrorDialog@8'.'DSPROP.DLL'..'ADsPropShowErrorDialog'

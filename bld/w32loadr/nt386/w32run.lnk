@@ -1,3 +1,0 @@
-debug dwarf option symfile sys nt  
-file cstrtwnt.obj, loader.obj,int21.obj,int21nt.obj
-opt map,stack=64k,stub=ntstub.exe

@@ -1,1 +1,0 @@
--f "%+" usage.rc -o "#define USAGE_LAST (USAGE_BASE+%#)%n" usageend.gh

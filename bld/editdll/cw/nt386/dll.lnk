@@ -1,2 +1,0 @@
-debug dwarf option symfile sys nt_dll  op map, elim, verbose, static
-option description 'Open Watcom Editor DLL for Codewright'

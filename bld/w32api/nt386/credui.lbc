@@ -1,6 +1,0 @@
-++'_SspiGetCredUIContext@20'.'CREDUI.DLL'..'SspiGetCredUIContext'
-++'_SspiIsPromptingNeeded@4'.'CREDUI.DLL'..'SspiIsPromptingNeeded'
-++'_SspiPromptForCredentialsA@32'.'CREDUI.DLL'..'SspiPromptForCredentialsA'
-++'_SspiPromptForCredentialsW@32'.'CREDUI.DLL'..'SspiPromptForCredentialsW'
-++'_SspiUnmarshalCredUIContext@12'.'CREDUI.DLL'..'SspiUnmarshalCredUIContext'
-++'_SspiUpdateCredentials@16'.'CREDUI.DLL'..'SspiUpdateCredentials'

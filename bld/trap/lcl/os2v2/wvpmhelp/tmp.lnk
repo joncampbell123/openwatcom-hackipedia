@@ -1,9 +1,0 @@
-name wdpmhelp.exe system os2v2 pm
-debug all op symf
-option map
-import WinLockInput PMMERGE.5225
-import WinThreadAssocQueue PMMERGE.5398
-file pmhelp.obj
-library os2386.lib
-option modname=wdpmhelp
-option description 'Open Watcom Debugger PM Helper'

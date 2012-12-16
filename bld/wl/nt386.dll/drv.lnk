@@ -1,5 +1,0 @@
-debug dwarf option symfile sys nt  op map, noredefs
-file stidedrv.obj
-file idemsgfm.obj
-file maindrv.obj
-lib wlinkd.lib
