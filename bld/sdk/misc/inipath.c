@@ -32,7 +32,8 @@
 #include <direct.h>
 #include <io.h>
 #include <string.h>
-#ifdef __NT__
+
+#if defined(__NT__) && WINVER >= 0x400
     #include <shlobj.h>
     typedef HRESULT (WINAPI *GetFolderPath)(HWND, int, HANDLE, DWORD, LPTSTR);
 #endif
@@ -47,7 +48,7 @@
  */
 void GetConfigFilePath( char *path, size_t size )
 {
-#ifdef __NT__
+#if defined(__NT__) && WINVER >= 0x400
     HINSTANCE library = LoadLibrary( "shfolder.dll" );
     if ( library ) {
         GetFolderPath getpath = (GetFolderPath)GetProcAddress(library, "SHGetFolderPathA");

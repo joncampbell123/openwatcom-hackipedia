@@ -5,6 +5,10 @@ proj_name = w32api
 w32api_autodepends  = .autodepend
 w32api_distrib_lib  = 1
 
+!ifeq system win32s
+win32ver_override = -DWINVER=0x310 -D_WIN32_IE=0x200
+!endif
+
 !include cproj.mif
 !include defrule.mif
 

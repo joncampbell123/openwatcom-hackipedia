@@ -137,11 +137,14 @@ int APIENTRY _LibMain( HANDLE hdll, DWORD reason, LPVOID reserved )
             GetModuleFileNameA( hdll, fn, sizeof( fn ) );
             _LpDllName = fn;
         }
+    /* JONATHAN C: Do NOT use the widechar GetModuleFileNameW if targeting the Windows 3.1 "Win32s" world */
+# if WINVER >= 0x400
         {
             static wchar_t wfn[_MAX_PATH];
             __lib_GetModuleFileNameW( hdll, wfn, sizeof( wfn ) );
             _LpwDllName = wfn;
         }
+# endif
 #endif
         __CommonInit();
         __sig_init_rtn();

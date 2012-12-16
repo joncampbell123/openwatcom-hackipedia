@@ -12,6 +12,10 @@ suppress_bd = 1
 
 memory_model_i86 = l
 
+!ifeq system win32s
+win32ver_override = -DWINVER=0x310 -D_WIN32_IE=0x200
+!endif
+
 !include cproj.mif
 !include deftarg.mif
 !include defrule.mif

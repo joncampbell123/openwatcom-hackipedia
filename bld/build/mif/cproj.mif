@@ -229,6 +229,9 @@ def_fpu_flags_qnx_386   = -fpi
   # WIN32 systems have emulator support in kernel
 def_fpu_flags_nt_386    = -fpi
   ######
+  # WIN32 systems have emulator support in kernel
+def_fpu_flags_win32s_386= -fpi
+  ######
   # LINUX has emulator support in kernel
 def_fpu_flags_linux_386 = -fpi
   ######
@@ -254,6 +257,7 @@ fpu_flags = $(def_fpu_flags_$(host_os)_$(host_cpu))
 !endif
 
 clflags_nt_386     = -l=nt $(win32ver)
+clflags_win32s_386 = -l=nt $(win32ver)
 clflags_nt_axp     = -l=ntaxp $(win32ver)
 clflags_win_i86    = -l=windows -DSTRICT
 clflags_win_386    = -l=windows -DSTRICT
@@ -337,6 +341,7 @@ lflags_dll_dos_386   = sys cwdllr
 lflags_dll_rdos_386  = sys rdos dll
 lflags_dll_nt_axp    = sys ntaxp dll
 lflags_dll_nt_386    = sys nt dll
+lflags_dll_win32s_386= sys nt dll
 lflags_dll_os2_386   = sys os2v2 dll
 lflags_dll_os2_i86   = sys os2 dll
 lflags_dll_win_i86   = sys windows dll

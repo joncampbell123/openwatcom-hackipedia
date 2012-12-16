@@ -146,11 +146,14 @@ int __NTInit( int is_dll, thread_data *tdata, HANDLE hdll )
         GetModuleFileNameA( NULL, fn, sizeof( fn ) );
         _LpPgmName = fn;
     }
+    /* JONATHAN C: Do NOT use the widechar GetModuleFileNameW if targeting the Windows 3.1 "Win32s" world */
+#if WINVER >= 0x400
     {
         static wchar_t  wfn[_MAX_PATH];
         __lib_GetModuleFileNameW( NULL, wfn, sizeof( wfn ) );
         _LpwPgmName = wfn;
     }
+#endif
 
     {
         char    *cmd;

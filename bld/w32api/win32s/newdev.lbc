@@ -1,0 +1,8 @@
+++'_DiInstallDevice@24'.'NEWDEV.DLL'..'DiInstallDevice'
+++'_DiInstallDriverA@16'.'NEWDEV.DLL'..'DiInstallDriverA'
+++'_DiInstallDriverW@16'.'NEWDEV.DLL'..'DiInstallDriverW'
+++'_DiRollbackDriver@20'.'NEWDEV.DLL'..'DiRollbackDriver'
+++'_DiShowUpdateDevice@20'.'NEWDEV.DLL'..'DiShowUpdateDevice'
+++'_DiUninstallDevice@20'.'NEWDEV.DLL'..'DiUninstallDevice'
+++'_UpdateDriverForPlugAndPlayDevicesA@20'.'NEWDEV.DLL'..'UpdateDriverForPlugAndPlayDevicesA'
+++'_UpdateDriverForPlugAndPlayDevicesW@20'.'NEWDEV.DLL'..'UpdateDriverForPlugAndPlayDevicesW'

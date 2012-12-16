@@ -1,0 +1,7 @@
+++'_USBCAMD_AdapterReceivePacket@16'.'USBCAMD.SYS'..'USBCAMD_AdapterReceivePacket'
+++'_USBCAMD_ControlVendorCommand@36'.'USBCAMD.SYS'..'USBCAMD_ControlVendorCommand'
+++'_USBCAMD_Debug_LogEntry@16'.'USBCAMD.SYS'..'USBCAMD_Debug_LogEntry'
+++'_USBCAMD_DriverEntry@20'.'USBCAMD.SYS'..'USBCAMD_DriverEntry'
+++'_USBCAMD_GetRegistryKeyValue@20'.'USBCAMD.SYS'..'USBCAMD_GetRegistryKeyValue'
+++'_USBCAMD_InitializeNewInterface@16'.'USBCAMD.SYS'..'USBCAMD_InitializeNewInterface'
+++'_USBCAMD_SelectAlternateInterface@8'.'USBCAMD.SYS'..'USBCAMD_SelectAlternateInterface'

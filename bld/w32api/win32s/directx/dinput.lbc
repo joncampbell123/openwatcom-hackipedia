@@ -1,0 +1,4 @@
+++'_DirectInputCreateA@16'.'DINPUT.DLL'..'DirectInputCreateA'
+++'_DirectInputCreateEx@20'.'DINPUT.DLL'..'DirectInputCreateEx'
+++'_DirectInputCreateW@16'.'DINPUT.DLL'..'DirectInputCreateW'
++directx/dinpstat.obj

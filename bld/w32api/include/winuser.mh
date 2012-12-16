@@ -4495,14 +4495,14 @@ typedef WINDOWPLACEMENT *PWINDOWPLACEMENT;
 typedef WINDOWPLACEMENT *LPWINDOWPLACEMENT;
 
 /* Notification header */
-#if (WINVER >= 0x0400)
+/*#if (WINVER >= 0x0400)*/
 typedef struct tagNMHDR {
     HWND        hwndFrom;
     UINT_PTR    idFrom;
     UINT        code;
 } NMHDR;
 typedef NMHDR   *LPNMHDR;
-#endif
+/*#endif*/
 
 /* WM_STYLECHANGED/WM_STYLECHANGING parameters */
 #if (WINVER >= 0x0400)

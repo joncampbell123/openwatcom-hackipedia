@@ -30,6 +30,11 @@ cdsay .
     <CPCMD> nt386/ddk/*.lib               <RELROOT>/lib386/nt/ddk/
     <CPCMD> nt386/directx/*.lib           <RELROOT>/lib386/nt/directx/
 
+  [ IFDEF (os_win32s "") <2*> ]
+    <CPCMD> win32s/*.lib                  <RELROOT>/lib386/win32s/
+    <CPCMD> win32s/ddk/*.lib              <RELROOT>/lib386/win32s/ddk/
+    <CPCMD> win32s/directx/*.lib          <RELROOT>/lib386/win32s/directx/
+
   [ IFDEF (cpu_axp) <2*> ]
     <CPCMD> ntaxp/*.lib                   <RELROOT>/libaxp/nt/
 

@@ -40,10 +40,13 @@
 BOOL __lib_SetEnvironmentVariableW( LPCWSTR lpName, LPCWSTR lpValue )
 /*******************************************************************/
 {
-    /* TODO: Use of SetEnvironmentVariableW() must be disabled for "win32s" targets */
+    /* Jonathan C: Use of SetEnvironmentVariableW() must be disabled for "win32s" targets */
+#if WINVER >= 0x400
     if( WIN32_IS_NT ) {                                 /* NT */
         return( SetEnvironmentVariableW( lpName, lpValue ) );
-    } else {                                            /* Win95 or Win32s */
+    } else
+#endif
+    {                                            /* Win95 or Win32s */
         char *          mbName;
         char *          mbValue;
         BOOL            osrc;

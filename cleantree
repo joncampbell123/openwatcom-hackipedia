@@ -13,6 +13,13 @@ rm -v bld/build/binl/wtouch
 rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
 (cd bld && find -name \*.obj -delete)
 (cd bld && find -name \*.lib -delete)
+(cd bld && find -name \*.exe -delete)
+(cd bld && find -name \*.map -delete)
+(cd bld && find -name \*.sym -delete)
+(cd bld && find -name \*.err -delete)
+(cd bld && find -name \*.log -delete)
+(cd bld && find -name \*.pch -delete)
+for i in aliasgen  bmp2eps cdsay hcdos langdat objchg objlist objxref sweep wgrep whpcvt wsplice bcwc comstrip ide2make mksetup objfind objxdef parsedlg ssl w32bind whc wipfc wpack; do rm -v bld/build/binl/$i; done
 (cd bld/browser && find -name \*.exe -delete)
 (cd bld/browser && find -name \*.map -delete)
 (cd bld/browser && find -name \*.sym -delete)

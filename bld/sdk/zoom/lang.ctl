@@ -24,6 +24,9 @@ cdsay .
   [ IFDEF (os_nt "") <2*> ]
     <CPCMD> <DEVDIR>/sdk/zoom/nt386/wzoom.exe  <RELROOT>/binnt/wzoom.exe
 
+  [ IFDEF (os_win32s "") <2*> ]
+    <CPCMD> <DEVDIR>/sdk/zoom/win32s/wzoom.exe  <RELROOT>/binw32s/wzoom.exe
+
   [ IFDEF (cpu_axp) <2*> ]
     <CPCMD> <DEVDIR>/sdk/zoom/ntaxp/wzoom.exe  <RELROOT>/axpnt/wzoom.exe
 

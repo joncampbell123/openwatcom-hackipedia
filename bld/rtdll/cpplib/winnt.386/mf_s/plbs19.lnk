@@ -1,12 +1,12 @@
 debug dwarf option symfile sys nt dll initinstance terminstance option impfile=plbs19.imp reference __DLLstart_ disable 121
 op map option offset=0x6FD00000
-file /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/library/winnt.386/mf_s/clibdwnt.obj
-export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/runtime/nt386.def }
-export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_smt.dll/exportx.def }
-lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_smt.dll/plbxmt3s.lib
+file /usr/src/openwatcom-1.9/bld/clib/startup/library/winnt.386/mf_s/clibdwnt.obj
+export { @/usr/src/openwatcom-1.9/bld/plusplus/cpplib/runtime/nt386.def }
+export { @/usr/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_smt.dll/exportx.def }
+lib /usr/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_smt.dll/plbxmt3s.lib
 lib ../../../clib/winnt.386/mf_s/clbsdll.lib
 lib ../../../mathlib/winnt.387/mf_s/mt7sdll.lib
-lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_smt/plbxmt3s.lib
+lib /usr/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_smt/plbxmt3s.lib
 lib kernel32.lib
 lib user32.lib
 lib advapi32.lib

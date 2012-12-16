@@ -7,6 +7,10 @@ wzoom_autodepends = .AUTODEPEND
 
 sys_windowed = 1
 
+!ifeq system win32s
+win32ver_override = -DWINVER=0x310 -D_WIN32_IE=0x200
+!endif
+
 !include cproj.mif
 !include deftarg.mif
 !include defrule.mif

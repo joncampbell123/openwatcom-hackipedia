@@ -13,6 +13,11 @@
 
 :include cpluspro.sp
 
+/* This signals to our existing DOSLIB projects the integration
+   of Win32s support and that we no longer need the w32imphk
+   hackjob library -- J.C. */
+#define __JC_OW_PROPER_WIN32s 1
+
 /* Macros to specify kernel and advanced functions */
 #define WINBASEAPI  DECLSPEC_IMPORT
 #define WINADVAPI   DECLSPEC_IMPORT
