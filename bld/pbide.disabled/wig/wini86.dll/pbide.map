@@ -1,0 +1,610 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/15 18:41:14
+Executable Image: pbide.dll
+creating a Windows 16-bit dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            0000530c
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           0001:0000       000052fd
+pbide_TEXT             CODE           AUTO           0001:5300       000006d8
+errdll_TEXT            CODE           AUTO           0001:59e0       00000207
+keywords_TEXT          CODE           AUTO           0001:5bf0       00000330
+scanner_TEXT           CODE           AUTO           0001:5f20       00000e23
+mem_TEXT               CODE           AUTO           0001:6d50       000000ea
+hashtab_TEXT           CODE           AUTO           0001:6e40       0000032f
+srusuprt_TEXT          CODE           AUTO           0001:7170       00001c34
+gen_cpp_TEXT           CODE           AUTO           0001:8db0       00002173
+options_TEXT           CODE           AUTO           0001:af30       00000812
+list_TEXT              CODE           AUTO           0001:b750       00000157
+filelist_TEXT          CODE           AUTO           0001:b8b0       0000017c
+wig_TEXT               CODE           AUTO           0001:ba30       00000090
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+_DATA                  DATA           DGROUP         0002:0010       000002ef
+XIB                    DATA           DGROUP         0002:0300       00000000
+XI                     DATA           DGROUP         0002:0300       00000012
+XIE                    DATA           DGROUP         0002:0312       00000000
+YIB                    DATA           DGROUP         0002:0312       00000000
+YI                     DATA           DGROUP         0002:0312       00000012
+YIE                    DATA           DGROUP         0002:0324       00000000
+DATA                   DATA           DGROUP         0002:0324       00000000
+CONST                  DATA           DGROUP         0002:0324       00001420
+STRINGS                DATA           DGROUP         0002:1744       00000000
+CONST2                 DATA           DGROUP         0002:1744       00000d68
+_BSS                   BSS            DGROUP         0002:24b0       00002e5c
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/libentry.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/a/libentry.asm)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:0012      __curbrk
+0002:0014*     __psp
+0002:0016      __osmajor
+0002:0017*     __osminor
+0002:0018      __osmode
+0002:000a      __STACKLOW
+0002:000c*     __STACKTOP
+0002:001a      __cbyte
+0002:001c*     __child
+0002:001e*     __no87
+0002:0019*     __HShift
+0002:0020*     __get_ovl_stack
+0002:0024*     __restore_ovl_stack
+0002:0028*     ___FPE_handler
+0002:002c*     __LpCmdLine
+0000:0000*     _large_code_
+0001:0000*     LibEntry
+0001:0000      __DLLstart_
+0001:005a      __exit_
+0001:0073      __GETDS
+Module: pbide.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/pbide.c)
+0001:5300      LIBMAIN
+0001:5314      WEP
+0001:5328+     WATIDE_GETVERSION
+0001:5354+     WATIDE_DIRISOK
+0001:53f0+     WATIDE_GETFUNCTIONNAME
+0001:5446+     WATIDE_RUNWIG
+0001:54fa+     WATIDE_FINIERRINFO
+0001:5516+     FINDWATIDEHWND
+0001:5726+     DDEPROC
+0001:593e+     WATIDE_RUNIDE
+0001:598c+     WATIDE_CLOSEIDE
+Module: errdll.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/errdll.c)
+0001:59e0      GetErrInfo_
+0001:59e8      FreeErrInfo_
+0001:5a00      InitError_
+0001:5a40      FiniError_
+0001:5a7e+     fmtErr_
+0001:5b6c      Error_
+0001:5bac      Warning_
+0002:270c      _ErrorEnv
+Module: keywords.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/keywords.c)
+0001:5c3c      GetStmntCnt_
+0001:5c6c      IsPtrType_
+0001:5d94      ConvertRetType_
+0001:5db2      ConvertVarType_
+0001:5e0c      ConvertParmType_
+0001:5eb4*     FindStmt_
+0002:06a8      _Statements
+0002:0858      _DataTypes
+Module: scanner.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/scanner.c)
+0002:4740+     _yylval
+0002:474c*     _yyvp
+0002:4750+     _yyval
+0001:5fe0+     yyparse_
+0001:667e      wig_parse_
+0001:67ce      InitLex_
+0001:688a      FiniLex_
+0001:68d8+     compKeywords_
+0001:68f2+     checkKeyWord_
+0001:6952+     yylex_
+0001:6cd0      GetParsedLine_
+0001:6cd8*     LineFinished_
+0001:6cdc      FinishLine_
+0001:6cfc      GetToEOS_
+Module: mem.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/mem.c)
+0001:6d50      FiniMem_
+0001:6d50      InitMem_
+0001:6d52      MemMalloc_
+0001:6d88      MemRealloc_
+0001:6dba      MemFree_
+0001:6dd2      MemStrDup_
+Module: hashtab.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/hashtab.c)
+0001:6e40      NewHashTable_
+0001:6e82      DestroyHashTable_
+0001:6f24      InsertHashValue_
+0001:703a+     HashByte_
+0001:7092      HashString_
+0001:70d0      FindHashEntry_
+Module: srusuprt.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/srusuprt.c)
+0001:7170      yyerror_
+0001:7242      GetConstructor_
+0001:7256      GetDestructor_
+0001:72fc      FreeSru_
+0001:73ac      InitSru_
+0001:7498      SetDefaultAccess_
+0001:74a8      SetHeader_
+0001:755e      UserCode_
+0001:7572      SetComment_
+0001:7586      SetReturn_
+0001:75d8      SetFunction_
+0001:767c      SetSubroutine_
+0001:76c6      StartSubProgram_
+0001:773c      EndSubProgram_
+0001:78d8      FiniParmList_
+0001:7a74      AddParm_
+0001:7b98      StartSection_
+0001:7bf6      EndSection_
+0001:7c26      AddDataMethod2_
+0001:7c48      AddDataMethod_
+0001:7d06      RegisterEvent_
+0001:86ec      DoPostProcessing_
+0001:86f6      FiniSru_
+0001:8704      GenCPPInterface_
+0001:8720      ProcessStatement_
+Module: gen_cpp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/gen_cpp.c)
+0001:8f9c      GenerateCPPFiles_
+0001:9080      GenerateCoverFnName_
+Module: options.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/options.c)
+0002:4be0      _Options
+0001:af30      GetInputFile_
+0001:af36*     GetErrorFile_
+0001:af3c      GetOutputFile_
+0001:af42      GetCoverFile_
+0001:af48      GetHeaderFile_
+0001:af4e      GetCodeFile_
+0001:af54      GetClass_
+0001:af5a      GetLibName_
+0001:af60      GetParentClass_
+0001:af72      GetParentHeader_
+0001:af78      GetLmainName_
+0001:af7e      GetHash_
+0001:b078+     getFname_
+0001:b174      SetBaseName_
+0001:b28e+     PostProcessOptions_
+0001:b310      ProcessOptions_
+Module: list.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/list.c)
+0001:b750      NewList_
+0001:b786      AddToList_
+0001:b80a      FreeList_
+0001:b86e      GetListItem_
+0001:b890      GetListCount_
+Module: filelist.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/filelist.c)
+0001:b900      InitFileList_
+0001:b90a      WigOpenFile_
+0001:b980      WigCloseFile_
+0001:ba22      FiniFileList_
+Module: wig.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/wig/c/wig.c)
+0001:ba30      Wigmain_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wallflgs.c)
+0002:00dc      ___win_alloc_flags
+0002:00e0      ___win_realloc_flags
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initrtns.c)
+0001:00b1      __FInitRtns
+0001:00bc+     __InitRtns
+0001:011a      __FFiniRtns
+0001:0125      __FiniRtns
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(dir.c)
+0001:01dc+     _opendir_
+0001:03a5      opendir_
+0001:03b7*     readdir_
+0001:03f8      closedir_
+0001:0455*     rewinddir_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(splitpat.c)
+0001:04f2      _splitpath_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(makepath.c)
+0001:061a      _makepath_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sprintf.c)
+0001:0885      sprintf_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(remove.c)
+0001:08b7      remove_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strncmp.c)
+0001:08c3      strncmp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(getenv.c)
+0001:0905      getenv_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(cmodel)
+0001:09cc      _big_code_
+0001:09cc*     CodeModelMismatch
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(vsprintf.c)
+0001:09f3      vsprintf_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(setjmp)
+0001:0a22      _setjmp_
+0001:0a58      longjmp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(printf.c)
+0001:0a9b      printf_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4d)
+0001:0acc      __I4D
+0001:0b1b      __U4D
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(itoa.c)
+0001:0b9f+     utoa_
+0001:0c02      itoa_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(errno.c)
+0001:0c2a      __get_errno_ptr_
+0001:0c30      __get_doserrno_ptr_
+0002:51e4+     _errno
+0002:51e6+     __doserrno
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fgetc.c)
+0001:0c36      __fill_buffer_
+0001:0d53      fgetc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fclose.c)
+0001:0e1c      __doclose_
+0001:0ed8      __shutdown_stream_
+0001:0ef5      fclose_
+0002:51e8+     ___RmTmpFileFn
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(stricmp.c)
+0001:0f45      stricmp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(bsearch.c)
+0001:0f83      bsearch_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(istable.c)
+0002:23aa      __IsTable
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ungetc.c)
+0001:1028      ungetc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(atoi.c)
+0001:1126      atoi_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fmalloc.c)
+0001:1182      malloc_
+0001:118d      _fmalloc_
+0002:00e4+     ___fheap
+0002:00e6      ___fheapRover
+0002:00e8      ___LargestSizeB4Rover
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(frealloc.c)
+0001:1285      realloc_
+0001:1290+     _frealloc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ffree.c)
+0001:1365      free_
+0001:1370      _ffree_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(tolower.c)
+0001:13ae      tolower_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strnicmp.c)
+0001:13bc      strnicmp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(stack086.c)
+0001:1410      stackavail_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fprintf.c)
+0001:141d      fprintf_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(accss.c)
+0001:144f      access_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fputs.c)
+0001:148c      fputs_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strncpy.c)
+0001:1538      strncpy_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fgets.c)
+0001:1576      fgets_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fseek.c)
+0001:1688      fseek_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fread.c)
+0001:17e9      fread_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(renam.c)
+0001:1a12      rename_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strstr.c)
+0001:1a34      strstr_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4m)
+0001:1af4*     __I4M
+0001:1af4      __U4M
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fopen.c)
+0001:1b0c+     __open_flags_
+0001:1d1c+     _fsopen_
+0001:1d87      fopen_
+0001:1e64*     freopen_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sgdef086)
+0002:0300      __Start_XI
+0002:0312      __End_XI
+0002:0312      __Start_YI
+0002:0324      __End_YI
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsnextc.c)
+0001:1f02      _mbsnextc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsinc.c)
+0001:1f2e      _mbsinc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(finddos.c)
+0001:1f63      _dos_findfirst_
+0001:1f98      _dos_findnext_
+0001:1fb1      _dos_findclose_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(dosret.c)
+0001:1fb4*     _dosretax_
+0001:1fc6*     _dosret0_
+0001:1fda      __set_errno_dos_
+0001:2034*     __set_errno_dos_reterr_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strdup.c)
+0001:2045      __clib_strdup_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsnccnt.c)
+0001:20a1      _mbsnccnt_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsncpy.c)
+0001:20db      _mbsncpy_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsnbcnt.c)
+0001:2114      _mbsnbcnt_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbconv.c)
+0001:2186      _mbvtop_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbclen.c)
+0001:219e      _mbclen_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsdec.c)
+0001:21c5      _mbsdec_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(unlnk.c)
+0001:224b      unlink_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(environ.c)
+0002:51ec      ___env_mask
+0002:51f0      _environ
+0002:51f4*     __wenviron
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbterm.c)
+0001:2267      _mbterm_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbcupper.c)
+0001:22a3      _mbctoupper_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(prtf.c)
+0001:22c7      __prtf_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ljmphdl.c)
+0002:00fe      ___longjmp_handler
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(iob.c)
+0002:0102      ___iob
+0002:026a      __fmode
+0002:51f8      ___OpenStreams
+0002:51fc      ___ClosedStreams
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fprtf.c)
+0001:31c8      __fprtf_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(alphabet.c)
+0002:16be      ___Alphabet
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(flushall.c)
+0001:32ad      __flushall_
+0001:3310*     flushall_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(gtche.c)
+0001:331e      getche_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ioalloc.c)
+0001:3353      __ioalloc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(qread.c)
+0001:3411      __qread_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(seterrno.c)
+0001:3465      __set_errno_
+0001:3480*     __set_EDOM_
+0001:3497*     __set_ERANGE_
+0001:34ad*     __set_EINVAL_
+0001:34c6      __set_doserrno_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(__lseek.c)
+0001:34d6      __lseek_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(_clse.c)
+0001:3513      __close_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(flush.c)
+0001:3579      __flush_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(freefp.c)
+0001:36cc      __freefp_
+0001:3748      __purgefp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mem.c)
+0001:3790      __MemAllocator
+0001:385e      __MemFree
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(growseg.c)
+0001:39bd      __GrowSeg_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(allocseg.c)
+0001:3af7      __AllocSeg_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fmemneed.c)
+0001:3bd1      __fmemneed_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(nmalloc.c)
+0001:3bd4      _nmalloc_
+0002:026c      ___nheapbeg
+0002:026e      ___MiniHeapRover
+0002:0270      ___LargestSizeB4MiniHeapRover
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fmsize.c)
+0001:3c98*     _msize_
+0001:3c98      _fmsize_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(nexpand.c)
+0001:3caa      __HeapManager_expand_
+0001:3e47      _nexpand_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fexpand.c)
+0001:3e73*     _expand_
+0001:3e7e      _fexpand_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(nfree.c)
+0001:3eba      _nfree_
+0002:5200      ___MiniHeapFreeRover
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(gfattdos.c)
+0001:3f85      _dos_getfileattr_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fputc.c)
+0001:3fa2      fputc_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(lseek.c)
+0001:4094      lseek_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(tell.c)
+0001:40cb      tell_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(doserror)
+0001:40e2      __doserror_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(comtflag.c)
+0001:40f0*     __set_commode_
+0002:0272      __commode
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(open.c)
+0001:4324*     open_
+0001:435f      sopen_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(chktty.c)
+0001:438d      __chktty_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(allocfp.c)
+0001:43c3      __allocfp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(winrtns.c)
+0002:0274      __WindowsIsWindowedHandle
+0002:0278      __WindowsRemoveWindowedHandle
+0002:027c      __WindowsNewWindow
+0002:0280      __WindowsCloseWindow
+0002:0284*     __WindowsSetAbout
+0002:0288*     __WindowsSetAppTitle
+0002:028c*     __WindowsSetConTitle
+0002:0290*     __WindowsDestroyOnClose
+0002:0294*     __WindowsYieldControl
+0002:0298*     __WindowsShutDown
+0002:029c      __WindowsStdin
+0002:02a0      __WindowsStdout
+0002:02a4*     __WindowsKbhit
+0002:02a8*     __WindowsGetch
+0002:02ac      __WindowsGetche
+0002:02b0*     __WindowsPutch
+0002:02b4      __WindowsExitRtn
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbisdbcs.c)
+0002:5202      ___IsDBCS
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbislead.c)
+0001:44db*     _ismbblead_
+0002:5204      ___MBCSIsTable
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbsnbcpy.c)
+0001:44f9      _mbsnbcpy_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(setenvp.c)
+0001:4577      __setenvp_
+0001:4677      __freeenvp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbinit.c)
+0001:46f5      __mbinit_
+0002:02b8      ___MBCodePage
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbdtoupp.c)
+0001:4793      _mbdtoupper_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(toupper.c)
+0001:47a1      toupper_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wctomb.c)
+0001:47af      wctomb_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strupr.c)
+0001:47db      strupr_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(noefgfmt.c)
+0002:02ba      ___EFG_printf
+0002:02be*     ___EFG_scanf
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(lltoa.c)
+0001:4817      ulltoa_
+0001:4900*     lltoa_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ltoa.c)
+0001:4964      ultoa_
+0001:49d7*     ltoa_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initfile.c)
+0001:4a08      __InitFiles_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ioexit.c)
+0001:4b50*     fcloseall_
+0001:4b5d      __full_io_exit_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(iomode.c)
+0001:4b6e      __GetIOMode_
+0001:4b8a      __SetIOMode_nogrow_
+0002:02c2      ___NFiles
+0002:02c4      ___init_mode
+0002:02ec      ___io_mode
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fsync.c)
+0001:4ba4      fsync_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(qwrit.c)
+0001:4bb0      __qwrite_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(heapen.c)
+0001:4c45*     _heapenable_
+0002:02f0      ___heap_enabled
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(amblksiz.c)
+0002:02f2      __amblksiz
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(nmemneed.c)
+0001:4c51      __nmemneed_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(grownear.c)
+0001:4d71      __ExpandDGROUP_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(bfree.c)
+0001:4d86      _bfree_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(bexpand.c)
+0001:4db0      _bexpand_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(stiomode.c)
+0001:4e0c+     __grow_iomode_
+0001:4ec7+     __shrink_iomode_
+0001:4efa      __SetIOMode_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(opendos.c)
+0001:4f53      _dos_open_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(isatt.c)
+0001:4f7b      isatty_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(umaskval.c)
+0002:02f4      ___umaskval
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(creatdos.c)
+0001:4fbc      _dos_creat_
+0001:4fe2*     _dos_creatnew_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(clearenv.c)
+0001:5005      clearenv_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(xmsgwin.c)
+0001:50d7+     __exit_with_msg_
+0001:5138      __fatal_runtime_error_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(filedos.c)
+0001:5155*     _dos_close_
+0001:5169      _dos_commit_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(nheapmin.c)
+0001:517d*     _nheapmin_
+0001:5205      _nheapshrink_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(iomodtty.c)
+0001:5236      __ChkTTYIOMode_
+0001:5276*     __IOMode_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(exit.c)
+0001:528c+     __null_int23_exit_
+0001:528d*     exit_
+0001:52c6      _exit_
+0002:02f6+     ___int23_exit
+0002:02fa+     ___FPE_handler_exit
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(enterdb.c)
+0001:52d9      __EnterWVIDEO_
+0002:02fe+     ___WD_Present
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+__AHSHIFT                           KERNEL
+LOCALINIT                           KERNEL
+GETCLASSNAME                        USER
+GETWINDOWTEXT                       USER
+WINEXEC                             KERNEL
+DDEINITIALIZE                       DDEML
+DDEDISCONNECT                       DDEML
+DDECREATESTRINGHANDLE               DDEML
+DDEFREESTRINGHANDLE                 DDEML
+DDECONNECT                          DDEML
+DDEGETLASTERROR                     DDEML
+DDECLIENTTRANSACTION                DDEML
+DDEUNINITIALIZE                     DDEML
+ENUMWINDOWS                         USER
+POSTMESSAGE                         USER
+GLOBALHANDLE                        KERNEL
+GLOBALREALLOC                       KERNEL
+GLOBALALLOC                         KERNEL
+GLOBALLOCK                          KERNEL
+GLOBALFREE                          KERNEL
+GETDOSENVIRONMENT                   KERNEL
+GETVERSION                          KERNEL
+ISDBCSLEADBYTE                      KERNEL
+GETKBCODEPAGE                       KEYBOARD
+LOCALALLOC                          KERNEL
+MESSAGEBOX                          USER
+LOCALFREE                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/usr/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/usr/src/openwatcom-1.9/rel2/lib286/win/ddeml.lib
+/usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  00010dcc (69068.)
+Link time: 00:00.00

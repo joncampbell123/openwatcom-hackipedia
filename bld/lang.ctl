@@ -168,7 +168,7 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/dig/lang.ctl ]
 [ INCLUDE <DEVDIR>/uiforms/lang.ctl ]
 [ INCLUDE <DEVDIR>/watcom/lang.ctl ]
-[ INCLUDE <DEVDIR>/pbide/lang.ctl ]
+#[ INCLUDE <DEVDIR>/pbide/lang.ctl ]
 [ INCLUDE <DEVDIR>/trmem/lang.ctl ]
 #[ INCLUDE <DEVDIR>/version/lang.ctl ]
 [ INCLUDE <DEVDIR>/dmpobj/lang.ctl ]

@@ -1,0 +1,173 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/15 18:41:10
+Executable Image: run.exe
+creating a Windows 16-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            00002420
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+run_TEXT               CODE           AUTO           0001:0000       000001c2
+_TEXT                  CODE           AUTO           0001:01c2       0000029a
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+AFX_NULL               BEGDATA        DGROUP         0002:0010       00000000
+CONST                  DATA           DGROUP         0002:0010       00000000
+CONST2                 DATA           DGROUP         0002:0010       00000102
+_DATA                  DATA           DGROUP         0002:0112       00000100
+XIB                    DATA           DGROUP         0002:0212       00000000
+XI                     DATA           DGROUP         0002:0212       00000000
+XIE                    DATA           DGROUP         0002:0212       00000000
+YIB                    DATA           DGROUP         0002:0212       00000000
+YI                     DATA           DGROUP         0002:0212       00000000
+YIE                    DATA           DGROUP         0002:0212       00000000
+STRINGS                DATA           DGROUP         0002:0212       00000000
+DATA                   DATA           DGROUP         0002:0212       00000000
+BCSD                   DATA           DGROUP         0002:0212       00000000
+_BSS                   BSS            DGROUP         0002:0212       00000204
+STACK                  STACK          DGROUP         0002:0420       00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: run.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/pbide/run/run.c)
+0001:0000+     ENUMPROC
+0001:009c      WINMAIN
+0002:0212+     _Caption
+0002:0312+     _ClassName
+0002:0412+     _TheWindow
+0002:0414+     _CaptionLen
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strncmp.c)
+0001:01c2      strncmp_
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(istable.c)
+0002:0010      __IsTable
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wstart)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:0114*     __curbrk
+0002:0116*     __psp
+0002:0118*     __osmajor
+0002:0119*     __osminor
+0002:011a*     __osmode
+0002:000a*     __STACKLOW
+0002:000c*     __STACKTOP
+0002:011c*     __cbyte
+0002:011e*     __child
+0002:0120*     __no87
+0002:011b*     __HShift
+0002:0122*     __get_ovl_stack
+0002:0126*     __restore_ovl_stack
+0002:012a*     ___FPE_handler
+0002:012e*     __LpCmdLine
+0002:0132*     __LpPgmName
+0001:0204      _wstart_
+0001:0204*     _cstart_
+0001:02e5      __exit_
+0001:02f6      __GETDS
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(cmodel)
+0001:02f8      _big_code_
+0001:02f8*     CodeModelMismatch
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(exit.c)
+0001:02f8+     __null_int23_exit_
+0001:02f9      exit_
+0001:0332*     _exit_
+0002:01c6+     ___int23_exit
+0002:01ca+     ___FPE_handler_exit
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initrtns.c)
+0001:0382      __FInitRtns
+0001:038d+     __InitRtns
+0001:03eb      __FFiniRtns
+0001:03f6      __FiniRtns
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(dosseg)
+0001:045a      __DOSseg__
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(winrtns.c)
+0002:01ce*     __WindowsIsWindowedHandle
+0002:01d2*     __WindowsRemoveWindowedHandle
+0002:01d6*     __WindowsNewWindow
+0002:01da*     __WindowsCloseWindow
+0002:01de*     __WindowsSetAbout
+0002:01e2*     __WindowsSetAppTitle
+0002:01e6*     __WindowsSetConTitle
+0002:01ea*     __WindowsDestroyOnClose
+0002:01ee*     __WindowsYieldControl
+0002:01f2*     __WindowsShutDown
+0002:01f6*     __WindowsStdin
+0002:01fa*     __WindowsStdout
+0002:01fe*     __WindowsKbhit
+0002:0202*     __WindowsGetch
+0002:0206*     __WindowsGetche
+0002:020a*     __WindowsPutch
+0002:020e      __WindowsExitRtn
+Module: /usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sgdef086)
+0002:0212      __Start_XI
+0002:0212      __End_XI
+0002:0212      __Start_YI
+0002:0212      __End_YI
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+GETCLASSNAME                        USER
+GETWINDOWTEXT                       USER
+MAKEPROCINSTANCE                    KERNEL
+ENUMWINDOWS                         USER
+FREEPROCINSTANCE                    KERNEL
+WINEXEC                             KERNEL
+SHOWWINDOW                          USER
+SETWINDOWPOS                        USER
+INITTASK                            KERNEL
+GETMODULEFILENAME                   KERNEL
+INITAPP                             USER
+WAITEVENT                           KERNEL
+__AHSHIFT                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/usr/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/usr/src/openwatcom-1.9/rel2/lib286/win/clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  287c (10364.)
+Entry point address: 0001:0204
+Link time: 00:00.00
