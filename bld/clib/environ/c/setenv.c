@@ -94,6 +94,7 @@ _WCRTLINK int __F_NAME(setenv,_wsetenv)( const CHAR_TYPE *name, const CHAR_TYPE 
     /*** Update the process environment if using Win32 ***/
 #ifdef __NT__
     if( overwrite  ||  __F_NAME(getenv,_wgetenv)( name ) == NULL ) {
+	/* TODO: Use of SetEnvironmentVariableW() must be disabled for "win32s" targets */
         #ifdef __WIDECHAR__
             osRc = __lib_SetEnvironmentVariableW( name, newvalue );
         #else

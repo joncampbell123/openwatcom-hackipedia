@@ -40,6 +40,7 @@
 BOOL __lib_SetEnvironmentVariableW( LPCWSTR lpName, LPCWSTR lpValue )
 /*******************************************************************/
 {
+    /* TODO: Use of SetEnvironmentVariableW() must be disabled for "win32s" targets */
     if( WIN32_IS_NT ) {                                 /* NT */
         return( SetEnvironmentVariableW( lpName, lpValue ) );
     } else {                                            /* Win95 or Win32s */

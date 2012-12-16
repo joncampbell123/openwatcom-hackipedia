@@ -123,6 +123,7 @@ _WCRTLINK int __F_NAME(putenv,_wputenv)( const CHAR_TYPE *env_string )
 
 #ifdef __NT__
     /*** Tell the OS about the change ***/
+    /* TODO: Use of SetEnvironmentVariableW() must be disabled for "win32s" targets */
     #ifdef __WIDECHAR__
         osRc = __lib_SetEnvironmentVariableW( name, value );
     #else

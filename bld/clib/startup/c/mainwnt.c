@@ -123,6 +123,14 @@ int __NTInit( int is_dll, thread_data *tdata, HANDLE hdll )
     __FirstThreadData = tdata;
     __initPOSIXHandles();
 
+    /* TODO: The "win32s" target must undo the Windows headers redefinition
+     *       of "GetEnvironmentStrings => GetEnvironmentStringsA" because
+     *       the win32s environment does not provide the -A version, it only
+     *       provides GetEnvironmentStrings().
+     *
+     *       This means not only modifying this code but also modifying the
+     *       Watcom w32api headers to NOT do that mapping when compiling for
+     *       "win32s" */
     _Envptr = GetEnvironmentStrings();
 
     /*
@@ -171,6 +179,21 @@ int __NTInit( int is_dll, thread_data *tdata, HANDLE hdll )
         }
         _LpCmdLine = cmd;
     }
+    /* JONATHAN C: -- TODO -- Build into WCC386 a "win32s" mode which uses a "win32s"
+     *             specific version of the NT code (omitting all Windows API functions
+     *             not present in Windows 3.1 Win32s), then, get clib to make a "win32s"
+     *             version for it to link to. If you succeed you can get rid of the
+     *             "w32imphk" hackjob in your DOS library. 
+     *
+     *             When you make the win32s build, this code here using GetCommandLineW
+     *             should be effectively disabled by a #ifdef block. When you do, don't
+     *             forget to #ifdef out the _LpwCmdLine variable too.
+     *
+     *               ||
+     *               ||
+     *             \ || /
+     *              \||/
+     *               \/ */
     {
         wchar_t *wcmd;
         wcmd = GetCommandLineW();       /* Win95 supports GetCommandLineW */
@@ -202,6 +225,14 @@ int __NTInit( int is_dll, thread_data *tdata, HANDLE hdll )
             GetModuleFileNameA( hdll, fn, sizeof( fn ) );
             _LpDllName = fn;
         }
+    /* JONATHAN C: GetModuleFileNameW() use--this block must be #ifdef'd out for
+     *             "win32s" targets, and the _LpwDllName variable disabled.
+     *
+     *               ||
+     *               ||
+     *             \ || /
+     *              \||/
+     *               \/ */
         {
             static wchar_t wfn[_MAX_PATH];
             __lib_GetModuleFileNameW( hdll, wfn, sizeof( wfn ) );

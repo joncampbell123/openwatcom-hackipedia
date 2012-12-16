@@ -75,6 +75,7 @@ extern DWORD    __lib_GetFullPathNameW( LPCWSTR lpFileName,
                                         LPWSTR lpBuffer,
                                         LPWSTR *lpFilePart );
 
+/* TODO: Use of GetModuleFileNameW() must be disabled for "win32s" targets */
 _WCRTLINK extern DWORD  __lib_GetModuleFileNameW( HINSTANCE hModule,
                                                   LPWSTR lpFilename,
                                                   DWORD nSize );
@@ -86,6 +87,7 @@ extern BOOL     __lib_RemoveDirectoryW( LPCWSTR lpPathName );
 
 extern BOOL     __lib_SetCurrentDirectoryW( LPCWSTR lpPathName );
 
+/* TODO: Use of SetEnvironmentVariableW() must be disabled for "win32s" targets */
 extern BOOL     __lib_SetEnvironmentVariableW( LPCWSTR lpName,
                                                LPCWSTR lpValue );
 
