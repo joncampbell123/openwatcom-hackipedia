@@ -3569,6 +3569,10 @@ WINADVAPI BOOL WINAPI               AddConditionalAce( PACL, DWORD, DWORD, UCHAR
     #endif
 #endif
 
+/* TODO: Jonathan C -- Consider setting this _OLD_WINNT_COMPATIBLE #define
+         when targeting "win32s" because the Windows 3.1 Win32s environment
+         carries the same limitation */
+
 /* If the original Windows NT 3.1, a single function GetEnvironmentStrings()
  * without an A/W suffix was defined.  It did not support Unicode.  To enable
  * support for Windows NT 3.1 in code that calls GetEnvironmentStrings(),
