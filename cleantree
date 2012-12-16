@@ -8,6 +8,7 @@ find -name \*~ -delete
 find -name \*.log -delete
 find -name \*.lo1 -delete
 . setvars.sh
+rm -v bld/build/binl/wtouch
 ./clean
 rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
 (cd bld && find -name \*.obj -delete)
@@ -26,5 +27,4 @@ rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
 (cd bld/wstuba && find -name \*.exe -delete)
 (cd bld/wstuba && find -name \*.sym -delete)
 (cd contrib && find -name \*.obj -delete)
-rm -v bld/build/binl/wtouch
 
