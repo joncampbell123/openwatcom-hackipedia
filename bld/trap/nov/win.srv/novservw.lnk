@@ -1,0 +1,16 @@
+debug dwarf option symfile
+op map name novservw.exe
+sys windows op st=20k, modname=novservw, desc 'Open Watcom Debug Server'
+file mxutil.obj
+file wserver.obj
+file options.obj
+file servacc.obj
+file servcmd.obj
+file servname.obj
+file trpsupp.obj
+file trpld.obj
+file winnoth.obj
+file packet.obj
+file novlink.obj
+file novdos.obj
+

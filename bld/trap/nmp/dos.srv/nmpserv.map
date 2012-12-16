@@ -1,0 +1,376 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:56
+Executable Image: nmpserv.exe
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0416:0000            00001f80
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0000:0000       00000007
+_TEXT                  CODE           AUTO           0000:0010       0000414b
+FAR_DATA               FAR_DATA       AUTO           0415:000b       00000000
+_NULL                  BEGDATA        DGROUP         0416:0000       00000020
+_AFTERNULL             BEGDATA        DGROUP         0418:0000       00000002
+CONST                  DATA           DGROUP         0418:0002       000002e7
+CONST2                 DATA           DGROUP         0446:000a       00000102
+_DATA                  DATA           DGROUP         0456:000c       000000be
+XIB                    DATA           DGROUP         0462:000a       00000000
+XI                     DATA           DGROUP         0462:000a       00000018
+XIE                    DATA           DGROUP         0464:0002       00000000
+YIB                    DATA           DGROUP         0464:0002       00000000
+YI                     DATA           DGROUP         0464:0002       0000000c
+YIE                    DATA           DGROUP         0464:000e       00000000
+STRINGS                DATA           DGROUP         0464:000e       00000000
+DATA                   DATA           DGROUP         0464:000e       00000000
+_BSS                   BSS            DGROUP         0465:0000       00000a8f
+STACK                  STACK          DGROUP         050e:0000       00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: mxutil.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/mxutil.c)
+0000:0010      GetInPtr_
+0000:003a      GetOutPtr_
+0000:0064*     GetTotalSize_
+0416:04f0      _In_Mx_Ptr
+0416:04f4      _Out_Mx_Ptr
+0416:04f8      _Out_Mx_Num
+0416:04f9      _In_Mx_Num
+Module: serv.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/serv.c)
+0000:00a0      ServError_
+0000:00a0*     ServMessage_
+0000:00ac+     Initialize_
+0000:0122+     OpeningStatement_
+0000:0156      main_
+Module: dostrio.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/dos/dostrio.c)
+0000:01f0      Output_
+0000:0218      SayGNiteGracey_
+0000:021e      StartupErr_
+0000:026e      KeyPress_
+0000:027e      KeyGet_
+0000:0284      PathOpen_
+0000:0394      GetSystemHandle_
+0000:0398      FileClose_
+0000:03a8      WantUsage_
+Module: servacc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/servacc.c)
+0416:04fc      _RWBuff
+0000:04d6      Session_
+0000:05be      TrapClientString_
+0416:0908      _TrapVersion
+Module: servcmd.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/servcmd.c)
+0000:06be      ParseCommandLine_
+Module: servname.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/servname.c)
+0416:040c      _ServUsage
+0416:0448      _ServName
+Module: trpsupp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dig/c/trpsupp.c)
+0000:0840*     TrapSetFailCallBack_
+0000:0846*     TrapSetAccessCallBack_
+0000:084c*     TrapFailAllRequests_
+0000:0858*     TrapSimpAccess_
+0000:08ac      TrapAccess_
+0000:08fe+     ReqFuncProxy_
+0416:0910      _ReqFunc
+0416:0914      _TrapVer
+Module: trpld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dig/c/dos/trpld.c)
+0000:0930      KillTrap_
+0000:0964      LoadTrap_
+Module: dosnoth.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/dos/dosnoth.c)
+0000:0c20      NothingToDo_
+Module: packet.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/packet.c)
+0000:0c40*     StartPacket_
+0000:0c48*     PutPacket_
+0000:0c62      PutBuffPacket_
+0000:0c78*     AddPacket_
+0000:0cc2      GetPacket_
+0000:0cd8*     RemovePacket_
+0000:0d16      GetPacketBuffPtr_
+0000:0d22      MaxPacketSize_
+Module: nmplink.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/nmplink.c)
+0416:0d34+     _BindHdl
+0416:0d36+     _ReadHdl
+0416:0d38+     _WriteHdl
+0416:0d3a+     _ConnHdl
+0416:0d3c+     _NameBuff
+0000:0e32+     DoOpen_
+0000:0e8c+     ValidName_
+0000:0ef2      RemoteLink_
+0000:101e      RemoteConnect_
+0000:105c      RemoteGet_
+0000:10a6      RemotePut_
+0000:1102      RemoteDisco_
+0000:1116      RemoteUnLink_
+0416:0466+     _DefLinkName
+Module: nmpdos.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/nmpdos.c)
+0000:1120      myopen_
+0000:1140      myclose_
+0000:114e      myread_
+0000:116c      mywrite_
+0000:1184      mysnooze_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(cmodel)
+0000:118a      _small_code_
+0000:118a*     CodeModelMismatch
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(gtcmddos.c)
+0000:118a+     _bgetcmd_
+0000:1209      getcmd_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(cstart)
+0000:0003*     ___begtext
+0416:0000*     __nullarea
+0000:121e      _cstart_
+0000:12f3*     _Not_Enough_Memory_
+0000:141e      __exit_
+0000:143d      __do_exit_with_msg__
+0000:1480      __GETDS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(argcv.c)
+0416:0e4e      __argv
+0416:0e52      ___argv
+0416:0e56      __argc
+0416:0e58      ___argc
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(searchen.c)
+0000:148a      _searchenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(isalpha.c)
+0000:15f4      isalpha_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(strnicmp.c)
+0000:160a      strnicmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(sprintf.c)
+0000:1659      sprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(intx086.c)
+0000:1686+     int86x_
+0000:171d      int86_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(istable.c)
+0416:030a      __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(crwdata)
+0416:046e      __curbrk
+0416:0476      __STACKLOW
+0416:0478      __STACKTOP
+0416:047a      __cbyte
+0416:047c      __child
+0416:047e      __no87
+0416:048c      ___FPE_handler
+0416:0470      __psp
+0416:0480      __get_ovl_stack
+0416:0484      __restore_ovl_stack
+0416:0488      __close_ovl_file
+0416:0490      __LpCmdLine
+0416:0494      __LpPgmName
+0416:0472      __osmajor
+0416:0473      __osminor
+0416:0474      __osmode
+0416:0475      __HShift
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(xmsg.c)
+0000:1748*     __exit_with_msg_
+0000:174b      __fatal_runtime_error_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(cmain086.c)
+0000:1765      __CMain
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(initrtns.c)
+0000:17c1*     __FInitRtns
+0000:17c5      __InitRtns
+0000:1820*     __FFiniRtns
+0000:1824      __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(uselfn.c)
+0416:0498      ___uselfn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(dosseg)
+0000:1888      __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(initargv.c)
+0000:1889      __Init_Argv_
+0000:18e5+     _getargv_
+0000:1ade      __Fini_Argv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(errno.c)
+0000:1b00      __get_errno_ptr_
+0000:1b07      __get_doserrno_ptr_
+0416:0e5e+     _errno
+0416:0e60+     __doserrno
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(accss.c)
+0000:1b0e      access_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(gtcwd.c)
+0000:1b44      getcwd_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(strlen.c)
+0000:1be5      strlen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(strncat.c)
+0000:1bfa      strncat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(getenv.c)
+0000:1c39      getenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(strcat.c)
+0000:1cf0      strcat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(seterrno.c)
+0000:1d1b      __set_errno_
+0000:1d2d*     __set_EDOM_
+0000:1d3d*     __set_ERANGE_
+0000:1d4d*     __set_EINVAL_
+0000:1d60      __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(vsprintf.c)
+0000:1d83      vsprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(intr.c)
+0000:1da8      intr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(segread.c)
+0000:1dba      segread_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(enterdb.c)
+0000:1dda      __EnterWVIDEO_
+0416:049a+     ___WD_Present
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(___argc.c)
+0416:0e62      ____Argv
+0416:0e66      ____Argc
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(amblksiz.c)
+0416:049c      __amblksiz
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(exit.c)
+0000:1dfe+     __null_int23_exit_
+0000:1dff      exit_
+0000:1e2c*     _exit_
+0416:049e+     ___int23_exit
+0416:04a0+     ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(sgdef086)
+0416:04ca      __Start_XI
+0416:04e2      __End_XI
+0416:04e2      __Start_YI
+0416:04ee      __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(histsplt.c)
+0416:0e68      ___historical_splitparms
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(nmalloc.c)
+0000:1e46      _nmalloc_
+0416:04a2      ___nheapbeg
+0416:04a4      ___MiniHeapRover
+0416:04a6      ___LargestSizeB4MiniHeapRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(fmalloc.c)
+0000:1f17*     _fmalloc_
+0000:1f17      malloc_
+0416:04a8+     ___fheap
+0416:04aa      ___fheapRover
+0416:04ac      ___LargestSizeB4Rover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(ffree.c)
+0000:201a*     _ffree_
+0000:201a      free_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(gfattdos.c)
+0000:205c      _dos_getfileattr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(dosret.c)
+0000:2071*     _dosretax_
+0000:2076*     _dosret0_
+0000:207d      __set_errno_dos_
+0000:20d7*     __set_errno_dos_reterr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(doserror)
+0000:20e2      __doserror_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(strncpy.c)
+0000:20ee      strncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(environ.c)
+0416:0e6a      ___env_mask
+0416:0e6e      _environ
+0416:0e72*     __wenviron
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbterm.c)
+0000:212a      _mbterm_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbsnextc.c)
+0000:216c      _mbsnextc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbcupper.c)
+0000:219d      _mbctoupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbsinc.c)
+0000:21bc      _mbsinc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(prtf.c)
+0000:21f8      __prtf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(dointr)
+0000:2fb2      _DoINTR_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(nmemneed.c)
+0000:332b      __nmemneed_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mem.c)
+0000:3330      __MemAllocator
+0000:33fa      __MemFree
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(grownear.c)
+0000:35dc      __LastFree_
+0000:3655      __ExpandDGROUP_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(hpgrw086.c)
+0000:3762      __CMain_nheapgrow_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(growseg.c)
+0000:3765      __GrowSeg_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(allocseg.c)
+0000:3857      __AllocSeg_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(fmemneed.c)
+0000:38ee      __fmemneed_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(nfree.c)
+0000:38f1      _nfree_
+0416:0e76+     ___MiniHeapFreeRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(setenvp.c)
+0000:3a03      __setenvp_
+0000:3b04      __freeenvp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbisdbcs.c)
+0416:0e7c      ___IsDBCS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbislead.c)
+0000:3b5c*     _ismbblead_
+0416:0e7e      ___MBCSIsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbinit.c)
+0000:3bb4      __mbinit_
+0416:04c2      ___MBCodePage
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(mbdtoupp.c)
+0000:3c8f      _mbdtoupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(toupper.c)
+0000:3c9d      toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(wctomb.c)
+0000:3cab      wctomb_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(itoa.c)
+0000:3cd4+     utoa_
+0000:3d31      itoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(i4m)
+0000:3d54*     __I4M
+0000:3d54      __U4M
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(strupr.c)
+0000:3d6c      strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(noefgfmt.c)
+0416:04c4      ___EFG_printf
+0416:04c6*     ___EFG_scanf
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(lltoa.c)
+0000:3d9f      ulltoa_
+0000:3e84*     lltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(ltoa.c)
+0000:3ee5      ultoa_
+0000:3f54*     ltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(heapen.c)
+0000:3f82*     _heapenable_
+0416:04c8      ___heap_enabled
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(sbrk.c)
+0000:3f93*     sbrk_
+0000:3fa2      __brk_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(heapgrow.c)
+0000:400a*     _heapgrow_
+0000:400a*     _fheapgrow_
+0000:400b      _nheapgrow_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(clearenv.c)
+0000:407f      clearenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(alphabet.c)
+0416:02e4      ___Alphabet
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  60e0 (24800.)
+Entry point address: 0000:121e
+Link time: 00:00.00

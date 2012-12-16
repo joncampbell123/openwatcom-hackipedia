@@ -1,0 +1,462 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:21:37
+Executable Image: mt7r19p.dll
+creating a Windows NT character-mode dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+.idata                          6ff08000             0000047e
+DGROUP                          6ff09000             00007730
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           6ff01000        00000007
+_TEXT                  CODE           AUTO           6ff01010        00006a48
+TRANSFER CODE          CODE           AUTO           6ff07a58        0000010e
+.idata                 .idata         .idata         6ff08000        0000047e
+_NULL                  BEGDATA        DGROUP         6ff09000        00000004
+_AFTERNULL             BEGDATA        DGROUP         6ff09004        00000000
+CONST                  DATA           DGROUP         6ff09004        000000e4
+CONST2                 DATA           DGROUP         6ff090e8        00000000
+_DATA                  DATA           DGROUP         6ff090e8        000001f8
+TIB                    DATA           DGROUP         6ff092e0        00000000
+TI                     DATA           DGROUP         6ff092e0        00006cf0
+TIE                    DATA           DGROUP         6ff0ffd0        00000000
+XIB                    DATA           DGROUP         6ff0ffd0        00000000
+XI                     DATA           DGROUP         6ff0ffd0        00000006
+XIE                    DATA           DGROUP         6ff0ffd6        00000000
+YIB                    DATA           DGROUP         6ff0ffd6        00000000
+YI                     DATA           DGROUP         6ff0ffd6        00000006
+YIE                    DATA           DGROUP         6ff0ffdc        00000000
+DATA                   DATA           DGROUP         6ff0ffdc        00000000
+_BSS                   BSS            DGROUP         6ff10000        00000721
+STACK                  STACK          DGROUP         6ff10730        00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/library/winnt.386/mf_rp/clibdwnt.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/clibdwnt.c)
+6ff01010       _LibMain@12
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(dstrt386)
+6ff0102c       __DLLstart_
+6ff0102c*      __DLLstartw_
+6ff0102c*      _DllMainCRTStartup@12
+6ff0102c*      _wDllMainCRTStartup@12
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(__87LDI2)
+6ff01088       __87LDI2
+6ff01088       __87LDI2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(__87LDI4)
+6ff010a8       __87LDI4
+6ff010a8       __87LDI4_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(acosl87)
+6ff010c8       acosl_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(asinl87)
+6ff010d4       asinl_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(atanl87)
+6ff010e0       atanl_
+6ff010ec       atan2l_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(atof.c)
+6ff010fc       atof_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(cabs.c)
+6ff01120       cabs_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ceil.c)
+6ff0114c       ceil_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fchop87)
+6ff01184       __CHP
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(clear87.c)
+6ff0119b       _status87_
+6ff011c7       _clear87_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(cnvd2f.c)
+6ff011fd       __cnvd2f_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(cnvd2ld.c)
+6ff01281       __cnvd2ld_
+6ff012a0       __get__cnvd2ld_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(cnvs2d.c)
+6ff012b6       __cnvs2d_
+6ff012de       __get__cnvs2d_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(exp87)
+6ff0135b       exp_
+6ff012f4       __@DEXP1
+6ff012fc       IF@EXP
+6ff012fc       IF@DEXP
+6ff012fe       __@DEXP
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(difftime.c)
+6ff01367       difftime_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(inf_nan.c)
+6ff0139e       ___f_infinity
+6ff013a2       ___f_posqnan
+6ff013a6       ___d_infinity
+6ff013ae       ___d_posqnan
+6ff013b6       ___ld_infinity
+6ff013be       ___ld_posqnan
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(sqrt87)
+6ff013c8       sqrt_
+6ff013f8       IF@SQRT
+6ff013f8       IF@DSQRT
+6ff013fa       __@DSQRT
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i__ecvt.asm)
+6ff0142c       __ecvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i_ecvt_.asm)
+6ff01434       _ecvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(efcvt.c)
+6ff01484       ecvt_
+6ff014e1       fcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(efgfmt.c)
+6ff0153d       _EFG_Format_
+6ff016d2       __get_EFG_Format_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(evalpoly.c)
+6ff016eb       _EvalPoly_
+6ff01741       _OddPoly_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i__fcvt.asm)
+6ff0177c       __fcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i_fcvt_.asm)
+6ff01784       _fcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fdclass.c)
+6ff01789       _FDClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fdsign.c)
+6ff0180e       _FDSign_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(finite.c)
+6ff0183d       _finite_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i_finit.asm)
+6ff01868       finite_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ldclass.c)
+6ff0186d       __LDClass_
+6ff018d1       _FLClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(floor.c)
+6ff018fa       floor_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(flsign.c)
+6ff0194e*      __LDSign_
+6ff0196a       _FLSign_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(frexp.c)
+6ff01989       frexp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fsclass.c)
+6ff01a05       _FSClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fssign.c)
+6ff01a74       _FSSign_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i__gcvt.asm)
+6ff01a94       __gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_i_gcvt_.asm)
+6ff01a9c       _gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(gcvt.c)
+6ff01aa1       gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(hypot.c)
+6ff01bd9       hypot_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fabs87)
+6ff01c08       fabs_
+6ff01c15       IF@DABS
+6ff01c15       IF@ABS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(acos87)
+6ff01c57       acos_
+6ff01c18       IF@DACOS
+6ff01c18       IF@ACOS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(acosh87)
+6ff01c9e       acosh_
+6ff01c64       IF@DACOSH
+6ff01c64       IF@ACOSH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(asin87)
+6ff01cc7       asin_
+6ff01cac       IF@DASIN
+6ff01cac       IF@ASIN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(asinh87)
+6ff01d05       asinh_
+6ff01cd4       IF@DASINH
+6ff01cd4       IF@ASINH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(atan87)
+6ff01d3e       atan_
+6ff01d4a       atan2_
+6ff01d14       IF@ATAN
+6ff01d14       IF@DATAN
+6ff01d29       IF@ATAN2
+6ff01d29       IF@DATAN2
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(atanh87)
+6ff01db3       atanh_
+6ff01d5c       IF@DATANH
+6ff01d5c       IF@ATANH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(divc16.c)
+6ff01dbf       IF@C16Div
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(mulc16.c)
+6ff01eec       IF@C16Mul
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powc16.c)
+6ff01f50       IF@C16Pow
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powic16.c)
+6ff020c3       IF@C16PowI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(divc20.c)
+6ff02293       IF@C32Div
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(mulc20.c)
+6ff023c0       IF@C32Mul
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powc20.c)
+6ff02424       IF@C32Pow
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powic32.c)
+6ff02492       IF@C32PowI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(divc8.c)
+6ff024f4       IF@C8Div
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(mulc8.c)
+6ff025f3       IF@C8Mul
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powc8.c)
+6ff02655       IF@C8Pow
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powic8.c)
+6ff0277c       IF@C8PowI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ifcdabs.c)
+6ff02900       IF@CDABS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ifcdcos.c)
+6ff029d1       IF@CDCOS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ifcdexp.c)
+6ff02a37       IF@CDEXP
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ifcdlog.c)
+6ff02aa7       IF@CDLOG
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ifcdsin.c)
+6ff02b05       IF@CDSIN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ifcdsqrt.c)
+6ff02b69       IF@CDSQRT
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(trig87)
+6ff02ded       sin_
+6ff02de1       cos_
+6ff02e0e       tan_
+6ff02da0       IF@COS
+6ff02da0       IF@DCOS
+6ff02daa       IF@SIN
+6ff02daa       IF@DSIN
+6ff02df9       IF@TAN
+6ff02df9       IF@DTAN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(trigh87)
+6ff02f1a       sinh_
+6ff02f0e       cosh_
+6ff02f26       tanh_
+6ff02e1c       IF@DSINH
+6ff02e1c       IF@SINH
+6ff02e50       IF@DCOSH
+6ff02e50       IF@COSH
+6ff02e8a       IF@DTANH
+6ff02e8a       IF@TANH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(cotan87)
+6ff02f34       IF@DCOTAN
+6ff02f34       IF@COTAN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(fmod87)
+6ff02f7b       fmod_
+6ff02f60       IF@DFMOD
+6ff02f60       IF@FMOD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(log87)
+6ff02fe0       log_
+6ff02ff8       log2_
+6ff02fec       log10_
+6ff02f8c       IF@LOG
+6ff02f8c       IF@DLOG
+6ff02fcc       IF@LOG2
+6ff02fcc       IF@DLOG2
+6ff02fd6       IF@LOG10
+6ff02fd6       IF@DLOG10
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(pow87)
+6ff0315d       pow_
+6ff03004       IF@DPOW
+6ff03004       IF@POW
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powri.c)
+6ff0316d       IF@POWI
+6ff0319c       IF@DPOWI
+6ff03293       IF@PowRI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powii.c)
+6ff032c1       IF@IPOW
+6ff03366       IF@PowII
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powrr.c)
+6ff03385       IF@PowRR
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(powxi.c)
+6ff03414       IF@PowXI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(j0.c)
+6ff03578       __P0P
+6ff035a0       __P0Q
+6ff035d0       __Q0P
+6ff035f8       __Q0Q
+6ff03628       j0_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(j1.c)
+6ff03850       __P1P
+6ff03878       __P1Q
+6ff038a8       __Q1P
+6ff038d0       __Q1Q
+6ff038f8       j1_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(jn.c)
+6ff03ab4       jn_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ldcvt.c)
+6ff03e20       _LDScale10x_
+6ff04446       __LDcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(ldexp.c)
+6ff04934       ldexp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(math2err.c)
+6ff04a79       __math1err_
+6ff04a9d       __math2err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(__mtherr)
+6ff04bb8       __matherr
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_matherr.c)
+6ff04c63       _set_matherr_
+6ff04c7d       __rterrmsg_
+6ff04cfb       _matherr_
+6ff09220+      ___matherr_handler
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(matherr.c)
+6ff04d59       matherr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(qmatherr.c)
+6ff04ddc       __qmath1err_
+6ff04e1e       __qmath2err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(strtod.c)
+6ff05462       __Strtold_
+6ff0560b       strtod_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_iwtof__.asm)
+6ff057b4       _watof_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_ustrtod.c)
+6ff05e16       __wStrtold_
+6ff05fe7       wcstod_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_uefcvt.c)
+6ff061d8       _wecvt_
+6ff06248       _wfcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_ugcvt.c)
+6ff062bb       _wgcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(_uatof.c)
+6ff06307       _wtof_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(y0.c)
+6ff063b3       y0_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(y1.c)
+6ff0662b       y1_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(yn.c)
+6ff06845       yn_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(bufld386)
+6ff06940       __ZBuf2LD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(zmatherr.c)
+6ff06a4f       __zmath1err_
+6ff06a8f       __zmath2err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(modf87)
+6ff06af0       modf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(trigl87)
+6ff06b0c       _cosl_
+6ff06b18       _sinl_
+6ff06b24       _tanl_
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(dp5prof2.c)
+6ff0ffd0*      ___new_p5_profile_init
+6ff0ffd6       __new_p5_profile
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(dmndwnt.c)
+6ff07310       __LibMain@12
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(segdefns)
+6ff01003       ___begtext
+6ff09000*      __nullarea
+6ff0ffd0       __Start_XI
+6ff0ffd6       __End_XI
+6ff0ffd6       __Start_YI
+6ff0ffdc       __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(math87e.c)
+6ff07526       __math87_err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(cvt.c)
+6ff075ab       __cvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(log87e.c)
+6ff0764b       __log87_err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib(pow87e.c)
+6ff0769a       __pow87_err_
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(dllnmwnt.c)
+6ff10320       ___Is_DLL
+6ff10324       __LpwDllName
+6ff10328       __LpDllName
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(p5psegs)
+6ff092e0       __Start_TI
+6ff0ffd0       __End_TI
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(initrtns.c)
+6ff07770       __InitRtns
+6ff077e0       __FiniRtns
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(rdllmwnt.c)
+6ff092dc       __pRawDllMain
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(ddgrpwnt.c)
+6ff07940       __disallow_single_dgroup_
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(dcinit.c)
+6ff07a40       __CommonInit_
+Module: ../../../clib/winnt.386/mf_rp/clbrdllp.lib(dosseg)
+00001234       __DOSseg__
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+__PON                               clbr19p.dll
+__POFF                              clbr19p.dll
+__8087                              clbr19p.dll
+__CVTBuffer_                        clbr19p.dll
+_LDisDouble_                        clbr19p.dll
+__chipbug                           clbr19p.dll
+__fpatan_wrap                       clbr19p.dll
+__fdiv_fpr                          clbr19p.dll
+__fdiv_m64r                         clbr19p.dll
+__fdiv_m32r                         clbr19p.dll
+__fptan_chk                         clbr19p.dll
+__fprem_chk                         clbr19p.dll
+__real87                            clbr19p.dll
+__fdiv_m64                          clbr19p.dll
+__Bin2String                        clbr19p.dll
+__IsTable_br                        clbr19p.dll
+memset_                             clbr19p.dll
+__set_ERANGE_                       clbr19p.dll
+__HugeValue_br                      clbr19p.dll
+__get_std_stream_                   clbr19p.dll
+fputs_                              clbr19p.dll
+fputc_                              clbr19p.dll
+__set_EDOM_                         clbr19p.dll
+tolower_                            clbr19p.dll
+wcstombs_                           clbr19p.dll
+_atouni_                            clbr19p.dll
+__LpPgmName                         clbr19p.dll
+_splitpath2_                        clbr19p.dll
+_makepath_                          clbr19p.dll
+access_                             clbr19p.dll
+stat_                               clbr19p.dll
+unlink_                             clbr19p.dll
+fopen_                              clbr19p.dll
+fprintf_                            clbr19p.dll
+sleep_                              clbr19p.dll
+fclose_                             clbr19p.dll
+__ProfEnable_                       clbr19p.dll
+__ProfEnterCriticalSection_         clbr19p.dll
+__ProfDisable_                      clbr19p.dll
+__P5_overhead_                      clbr19p.dll
+__ProfExitCriticalSection_          clbr19p.dll
+_GetModuleFileNameA@12              KERNEL32.DLL
+__lib_GetModuleFileNameW_           clbr19p.dll
+___sig_init_rtn                     clbr19p.dll
+_MessageBoxA@16                     USER32.DLL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/kernel32.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/user32.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_rp.dll/math387r.lib
+../../../clib/winnt.386/mf_rp/clbrdllp.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  e714 (59156.)
+Entry point address: 6ff0102c
+Link time: 00:00.00

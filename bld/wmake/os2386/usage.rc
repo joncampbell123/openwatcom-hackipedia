@@ -1,0 +1,23 @@
+(MSG_USE_E_BASE+1-1), "Usage  :  wmake [options]* [macro=text]* [target]*"
+(MSG_USE_E_BASE+2-1), "Options:  ('/' may be substituted for '-', and '#' for '=')"
+(MSG_USE_E_BASE+3-1), "-a make all targs (ignoring time stamp)  -b  block/ignore all implicit rules"
+(MSG_USE_E_BASE+4-1), "-c do not check existence of files made  -d  debug mode (echo progress of work)"
+(MSG_USE_E_BASE+5-1), "-e erase files after error (no prompt)"
+(MSG_USE_E_BASE+6-1), "-f <filename>  process filename instead of MAKEFILE ('-f -' means stdin)"
+(MSG_USE_E_BASE+7-1), "-h do not print program header           -i  ignore command return status"
+(MSG_USE_E_BASE+8-1), "-k continue after an error               -l <logfile>   output to logfile"
+(MSG_USE_E_BASE+9-1), "-m do not read MAKEINIT file             -ms Microsoft NMAKE mode"
+(MSG_USE_E_BASE+10-1), "-n print commands without executing      -o  take advantage of circular path"
+(MSG_USE_E_BASE+11-1), "-p print the dependency tree, macro definitions, and extension information"
+(MSG_USE_E_BASE+12-1), "-q query mode (commands not executed)    -r  ignore built-in definitions"
+(MSG_USE_E_BASE+13-1), "-s silent mode (do not print commands)   -sn noisy mode (print all commands)"
+(MSG_USE_E_BASE+14-1), "-t touch files (commands not executed)   -u  UNIX compatibility mode"
+(MSG_USE_E_BASE+15-1), "-v verbose listing of inline files       -y  show why a target will be updated"
+(MSG_USE_E_BASE+16-1), "-z do not erase files (no prompt)"
+(MSG_USE_E_BASE+17-1), "macro=text      overrides the definition of 'macro' with the value 'text'"
+(MSG_USE_E_BASE+18-1), "target          specifies a target to make (default is first target)"
+(MSG_USE_E_BASE+19-1), "."
+
+
+
+

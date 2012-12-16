@@ -1,0 +1,7 @@
+debug dwarf option symfile sys nt  name bdiff.exe op map
+lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib
+file bdiff.obj
+file bdiffmem.obj
+file dopatchd.obj
+file msg.obj
+file myio.obj

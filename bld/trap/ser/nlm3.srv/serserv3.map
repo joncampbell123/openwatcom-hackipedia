@@ -1,0 +1,378 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:14
+Executable Image: serserv3.nlm
+creating a Novell Netware executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          DATA:00000000        00005e1b
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           CODE:00000000   000049ec
+CONST                  DATA           DGROUP         DATA:00000000   00000530
+CONST2                 DATA           DGROUP         DATA:00000530   000000f0
+_DATA                  DATA           DGROUP         DATA:00000620   0000014c
+_BSS                   BSS            DGROUP         DATA:0000076c   000056af
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: nlmstrt.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/nlm/nlmstrt.c)
+DATA:00002770* skwoff
+DATA:00002774+ InterruptTag
+DATA:00002778+ SocketTag
+DATA:0000277c* skwtmp
+DATA:00002780  TimerTag
+DATA:00002784* skwHandle
+DATA:00002788  ProcessTag
+DATA:0000278c  BreakTag
+DATA:00002790  AllocTag
+DATA:00002794  screenID
+DATA:00002798+ debugScreen
+DATA:0000279c+ ScreenTag
+DATA:000027a0  SemaphoreTag
+DATA:00000620+ DebugMode
+CODE:00000000  getcmd
+CODE:00000024+ upper
+CODE:00000034+ lower
+CODE:00000044  isalpha
+CODE:00000070  strnicmp
+CODE:000000b4  stricmp
+CODE:000000ec* strupr
+CODE:00000114  strcpy
+CODE:00000138* strcat
+CODE:0000015c* strlen
+CODE:00000174* memcpy
+CODE:00000198* memcmp
+CODE:000001c0  memset
+CODE:000001dc* strchr
+CODE:000001f8* toupper
+CODE:0000020c* _Stop
+CODE:00000238* _Check
+CODE:00000264+ MainHelper
+CODE:00000314* _Prelude
+CODE:00000484* __Init_Argv
+CODE:00000484* __Null_Argv
+CODE:00000484  __WATCOM_Prelude
+CODE:00000488  WriteStdErr
+DATA:000027a4  DebugTag
+DATA:000027a8  MyNLMHandle
+Module: mxutil.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/mxutil.c)
+CODE:000004d0  GetInPtr
+CODE:000004f8  GetOutPtr
+CODE:00000520  GetTotalSize
+DATA:000027ac  In_Mx_Ptr
+DATA:000027b0  Out_Mx_Ptr
+DATA:000027b4  Out_Mx_Num
+DATA:000027b5  In_Mx_Num
+Module: serv.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/serv.c)
+CODE:00000550  ServError
+CODE:0000056c  ServMessage
+CODE:0000057c+ Initialize
+CODE:00000600* OpeningStatement
+CODE:00000650  main
+Module: nlmtrio.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/nlm/nlmtrio.c)
+CODE:00000730  Output
+CODE:00000764  SayGNiteGracey
+CODE:00000784  StartupErr
+CODE:000007b8  KeyPress
+CODE:000007c8  KeyGet
+CODE:00000804  WantUsage
+Module: servacc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/servacc.c)
+CODE:00000938  Session
+CODE:00000a4c  TrapClientString
+DATA:000027cc  RWBuff
+DATA:00002bcc  TrapVersion
+Module: servcmd.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/servcmd.c)
+CODE:00000b3c  ParseCommandLine
+Module: servname.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/ser/c/servname.c)
+DATA:0000062c  ServName
+DATA:00000640  ServUsage
+Module: trpsupp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dig/c/trpsupp.c)
+CODE:00000cd0* TrapSetFailCallBack
+CODE:00000cdc* TrapSetAccessCallBack
+CODE:00000ce8* TrapFailAllRequests
+CODE:00000cf0* TrapSimpAccess
+CODE:00000d48  TrapAccess
+CODE:00000da4* ReqFuncProxy
+DATA:00002bd0  ReqFunc
+DATA:00002bd4  TrapVer
+Module: trpld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dig/c/nlm/trpld.c)
+CODE:00000dd0  KillTrap
+CODE:00000dd8  LoadTrap
+Module: nlmnoth.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/nlm/nlmnoth.c)
+CODE:00000e70  NothingToDo
+Module: packet.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/packet.c)
+CODE:00000e80* StartPacket
+CODE:00000e88* PutPacket
+CODE:00000ea8  PutBuffPacket
+CODE:00000ec4* AddPacket
+CODE:00000f18  GetPacket
+CODE:00000f34* RemovePacket
+CODE:00000f88  GetPacketBuffPtr
+CODE:00000f94  MaxPacketSize
+Module: serlink.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/ser/c/serlink.c)
+CODE:00000fa0* SyncPoint
+CODE:00001230* MarchToTheSameDrummer
+CODE:00001264+ SetSyncTime
+CODE:000017ac+ SetMaxBaud
+CODE:00001aa8  RemoteLink
+CODE:00001af8  RemoteUnLink
+CODE:00001b04  RemoteConnect
+CODE:00001c2c  RemoteDisco
+CODE:00001c38  RemoteGet
+CODE:00001c7c  RemotePut
+DATA:000006ac+ BaudTable
+DATA:00002fe0+ MaxBaud
+Module: sernlm.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/ser/c/sernlm.c)
+DATA:00002fe4+ CurrentBaud
+DATA:00002fe8+ Ticks
+DATA:00002fec+ ComPortHandle
+DATA:00002ff0+ TimerData
+CODE:00001cfc  ZeroWaitCount
+CODE:00001d04  WaitCount
+CODE:00001d0c  ClearCom
+CODE:00001d20  InitSys
+CODE:00001d40  ResetSys
+CODE:00001d54  SendByte
+CODE:00001d90  StopBlockTrans
+CODE:00001d90  StartBlockTrans
+CODE:00001d94  GetByte
+CODE:00001de8  Baud
+CODE:00001e20  CheckPendingError
+CODE:00001e30  ParsePortSpec
+CODE:00001fbc  DonePort
+CODE:00001fe0  ClearLastChar
+DATA:00000718+ PortNumber
+DATA:0000071c+ Divisor
+Module: busywait.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/ser/c/busywait.c)
+CODE:00001ff0  WaitByte
+CODE:00002020  Wait
+Module: nlmfile.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/nlm/c/nlmfile.c)
+CODE:00002040  ReqFile_get_config
+CODE:00002060  ReqFile_open
+CODE:000020dc  ReqFile_close
+CODE:0000210c  ReqFile_write
+CODE:00002170  ReqFile_write_console
+CODE:000021cc  ReqFile_seek
+CODE:00002220  ReqFile_read
+CODE:00002274  ReqFile_string_to_fullpath
+CODE:00002308  ReqFile_erase
+CODE:00002320  ReqFile_run_cmd
+Module: nlmclib.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/nlm/c/nlmclib.c)
+CODE:00002340  ValidatePID
+CODE:00002394  BoobyTrapPID
+CODE:000023c4  UnBoobyTrapPID
+CODE:000023f4  GetPIDName
+CODE:00002404  GetNLMFromPID
+CODE:00002418  SetupPIDForACleanExit
+Module: nlmio.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/nlm/c/nlmio.c)
+CODE:00002614  IOCreat
+CODE:000026bc  StringToNLMPath
+CODE:00002780  IOOpen
+CODE:000028f4  IOClose
+CODE:00002978  IOWriteConsole
+CODE:0000298c  IOWrite
+CODE:000029e0  IOSeek
+CODE:00002a68  IORead
+DATA:00003014+ Files
+DATA:000038fc+ ccode
+Module: nlmacc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/nlm/c/nlmacc.c)
+DATA:00005900+ WatchPoints
+DATA:00005b80+ UtilBuff
+DATA:00005c80+ HelperThreadRegs
+DATA:00005cc0+ CmdLine
+DATA:00005dc0+ DR
+DATA:00005dec+ WatchCount
+DATA:00005df0  ReturnESP
+DATA:00005df4+ ThreadId
+DATA:00005df8+ MSB
+DATA:00005dfc+ MSBHead
+DATA:00005e00* DebugProcess
+DATA:00005e04+ NLMName
+DATA:00005e12+ ExpectingEvent
+DATA:00005e13* DebugPriority
+DATA:00005e14+ FakeBreak
+DATA:00005e15* RunningPriority
+DATA:00005e16+ DebuggerRunning
+DATA:00005e17+ SavedFirstByte
+DATA:00005e18+ TrapInt1
+DATA:0000074c+ DebugSem
+DATA:00000750+ HelperSem
+DATA:00000754+ DebuggerLoadedNLM
+DATA:00000758+ NLMList
+DATA:0000075c+ LastNLMListEntry
+CODE:00002ab0+ NewNLMListEntry
+CODE:00002aec+ DeadNLMListEntry
+CODE:00002b14* FreeAnNLMListEntry
+CODE:00002b2c+ LocateThread
+CODE:00002ba4+ FreeThread
+CODE:00002be0+ FreeInvalidThreads
+CODE:00002c38+ Suicide
+CODE:00002c48* TheBigSleep
+CODE:00002c50* WakeDebugger
+CODE:00002c78* SleepDebugger
+CODE:00002c98+ NPX
+CODE:00003130+ JumpTo
+CODE:000032f4  ReqGet_sys_config
+CODE:00003330  ReqMap_addr
+CODE:00003430  ReqAddr_info
+CODE:00003444  ReqMachine_data
+CODE:00003594  ReqChecksum_mem
+CODE:0000362c  ReqRead_mem
+CODE:00003674  ReqWrite_mem
+CODE:000036d8  ReqRead_io
+CODE:0000372c  ReqWrite_io
+CODE:000037a8  ReqRead_cpu
+CODE:000037ec  ReqRead_fpu
+CODE:00003830  ReqWrite_cpu
+CODE:00003868  ReqWrite_fpu
+CODE:000038a0  ReqRead_regs
+CODE:000038fc  ReqWrite_regs
+CODE:00003af4  ReqProg_load
+CODE:00003ba8  ReqProg_kill
+CODE:00003c5c+ Execute
+CODE:00003dc4  ReqSet_watch
+CODE:00003f04  ReqClear_watch
+CODE:00003f0c  ReqSet_break
+CODE:00003f74  ReqClear_break
+CODE:00004210  ReqProg_go
+CODE:0000421c  ReqProg_step
+CODE:00004228  ReqGet_next_alias
+CODE:0000425c  ReqSet_debug_screen
+CODE:0000425c  ReqSet_user_screen
+CODE:00004260  ReqThread_get_next
+CODE:000042c4  ReqThread_set
+CODE:00004350  ReqThread_freeze
+CODE:0000439c  ReqThread_thaw
+CODE:000043e8  ReqThread_get_extra
+CODE:00004484  ReqGet_err_text
+CODE:000044c8  ReqGet_message_text
+CODE:00004538  ReqGet_lib_name
+CODE:000045d8  ReqRedirect_stdout
+CODE:000045d8  ReqRedirect_stdin
+CODE:000045f0  ReqRead_user_keyboard
+CODE:00004604  ReqSplit_cmd
+CODE:00004668  TrapInit
+CODE:00004714  TrapFini
+DATA:00005e1a+ NLMState
+Module: nlmintr.obj(nlmintr)
+CODE:000047aa  Return
+CODE:000047b1  DoALongJumpTo
+CODE:000047d7  GetDS
+CODE:000047db  GetCS
+Module: x86cpu.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/x86cpu.c)
+CODE:000047e0  X86CPUType
+Module: misc7386.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/asm/misc7386.asm)
+CODE:00004869  NPXType
+CODE:000048ca  Read387
+CODE:000048d3  Write387
+Module: supp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/supp.c)
+CODE:000048e0  ReqGet_supplementary_service
+CODE:00004950  ReqPerform_supplementary_service
+Module: core.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/core.c)
+CODE:00004980+ ReqConnect
+CODE:000049b4+ ReqResume
+CODE:000049b4+ ReqSuspend
+CODE:000049b4+ ReqDisconnect
+CODE:000049b8  TrapRequest
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol
+======
+
+_exit
+FileServerMajorVersionNumber
+FileServerMinorVersionNumber
+CValidatePointer
+Abend
+AIOFlushBuffers
+AIOWriteData
+AIOWriteStatus
+AIOReadStatus
+AIOReadData
+AIOConfigurePort
+AIOReleasePort
+AIOAcquirePortWithRTag
+LoadedList
+ExternalPublicList
+systemConsoleScreen
+RunningProcess
+AllocateResourceTag
+Enable
+OpenScreen
+CloseScreen
+ActivateScreen
+OutputToScreen
+SetInputToOutputCursorPosition
+EnableInputCursor
+CGetMyProcessID
+CDestroyProcess
+CMakeProcess
+KillMe
+CheckKeyStatus
+GetKey
+CAllocSemaphore
+CDeAllocateSemaphore
+CSemaphoreReleaseAll
+CVSemaphore
+CPSemaphore
+CRescheduleLast
+CSleepUntilInterrupt
+Alloc
+Free
+LoadModule
+RegisterDebuggerRTag
+UnRegisterDebugger
+ReserveABreakpointRTag
+UnReserveABreakpoint
+CSetABreakpoint
+ConvertPathString
+OpenFile
+OpenFileUsingSearchPath
+CreateFile
+CloseFile
+GetFileSize
+WriteFile
+ReadFile
+INWDOSFindFirstFile
+INWDOSRead
+INWDOSClose
+CScheduleInterruptTimeCallBack
+CCancelInterruptTimeCallBack
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  a807 (43015.)
+Link time: 00:00.00

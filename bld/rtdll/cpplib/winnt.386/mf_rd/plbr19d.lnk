@@ -1,0 +1,13 @@
+debug dwarf all option symfile sys nt dll initinstance terminstance option impfile=plbr19d.imp reference __DLLstart_ disable 121 option map,mangle,artificial,verbose
+op map option offset=0x6FD00000
+file /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/library/winnt.386/mf_rd/clibdwnt.obj
+export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/runtime/nt386.def }
+export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_rmtd.dll/exportx.def }
+lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_rmtd.dll/plbxmt3r.lib
+lib ../../../clib/winnt.386/mf_rd/clbrdlld.lib
+lib ../../../mathlib/winnt.387/mf_rd/mt7rdlld.lib
+lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/plusplus/cpplib/winnt.386/mf_rmtd/plbxmt3r.lib
+lib kernel32.lib
+lib user32.lib
+lib advapi32.lib
+

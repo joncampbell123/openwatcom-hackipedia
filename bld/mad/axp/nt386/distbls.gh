@@ -1,0 +1,691 @@
+#include <stddef.h>
+/* file created by DISBUILD.C */
+
+const unsigned char AXPMaxInsName = 13;
+
+
+const unsigned char DisStringTable[] = {
+/*0000*/ 128,131,141,'j','s','r','_','c','o','r','o','u','t','i','n','e',
+/*0010*/ 136,'c','a','l','l','_','p','a','l',133,135,'f','e','t','c','h',
+/*0020*/ '_','m',135,'c','m','o','v','l','b','c',135,'c','m','o','v','l',
+/*0030*/ 'b','s',135,'f',134,'c','m','o','v','e','q',135,'f',134,'c','m',
+/*0040*/ 'o','v','g','e',135,'f',134,'c','m','o','v','g','t',135,'f',134,
+/*0050*/ 'c','m','o','v','l','e',135,'f',134,'c','m','o','v','l','t',135,
+/*0060*/ 'f',134,'c','m','o','v','n','e',135,'m','f','_',130,'f','p','c',
+/*0070*/ 'r',135,'m','t','_','f','p','c',130,'r',134,'c','m','p',131,'b',
+/*0080*/ 'g','e',134,'c','m','p','u','l','e',134,'c','m','p','u','l','t',
+/*0090*/ 130,134,'s','4',132,'a','d','d','l',134,'s','4',132,'a','d','d',
+/*00a0*/ 'q',134,'s','4',132,'s','u','b','l',134,'s','4',132,'s','u','b',
+/*00b0*/ 'q',134,'s','8','a','d','d','l',134,'s','8','a','d','d','q',134,
+/*00c0*/ 's','8','s','u','b','l',134,'s','8','s','u','b','q',131,134,'z',
+/*00d0*/ 'a','p','n','o','t',134,'c','m','p','t','e','q',134,'c','m','p',
+/*00e0*/ 't','l','t',134,'c','m','p','t','l','e',134,'c','m','p','t','u',
+/*00f0*/ 'n',134,'c','m','p','g','e','q',134,'c','m','p','g','l','t',134,
+/*0100*/ 'c','m','p','g','l','e',133,'p','a','l','1','9',133,'p','a','l',
+/*0110*/ '1','b',133,'p','a','l','1','d',133,'p','a','l','1','e',133,'p',
+/*0120*/ 'a','l','1','f',131,133,'l','d','l','_','l',131,133,'l','d','q',
+/*0130*/ '_','l',133,'l','d','q','_','u',131,133,'s','t','l','_','c',131,
+/*0140*/ 133,'s','t','q','_','c',133,'s','t','q','_','u',133,'t',130,'r',
+/*0150*/ 'a','p','b',133,'c','m','p','e','q',133,'c','m','p','l','e',133,
+/*0160*/ 'c','m','p','l','t',133,'o','r','n','o','t',133,'e','x','t',131,
+/*0170*/ 'b','l',133,'e','x','t','l','h',133,'e','x','t','l','l',133,'e',
+/*0180*/ 'x','t','q','h',133,'e','x','t','q','l',133,'e','x','t','w','h',
+/*0190*/ 133,'e','x','t','w','l',133,'i','n','s','b','l',133,'i','n','s',
+/*01a0*/ 'l','h',133,'i','n',131,'s','l','l',133,'i','n','s','q','h',133,
+/*01b0*/ 'i','n','s','q','l',133,'i','n','s','w','h',133,'i','n','s','w',
+/*01c0*/ 'l',133,'m','s','k','b','l',133,'m','s','k','l','h',133,'m','s',
+/*01d0*/ 'k','l','l',133,'m','s','k','q','h',133,'m','s','k','q','l',133,
+/*01e0*/ 'm','s','k','w','h',133,'m','s','k','w','l',133,'u','m','u','l',
+/*01f0*/ 'h',132,133,'c','p','y','s','e',133,'c','p','y','s','n',133,'c',
+/*0200*/ 'v','t','l','q',133,'c','v','t','q','l',133,'c','v','t','q','s',
+/*0210*/ 133,'c','v','t','q','t',133,'c','v','t','t','s',133,'c','v','t',
+/*0220*/ 't','q',133,'c','v','t','d','g',133,'c','v','t','g','f',133,'c',
+/*0230*/ 'v','t','g','d',133,'c','v','t','q','f',133,'c','v','t','q','g',
+/*0240*/ 133,'c','v','t','g','q',133,'$',132,'z','e','r','o',132,'?','?',
+/*0250*/ '?','?',131,132,'l','d','a','h',132,'r','p','c','c',132,'e','x',
+/*0260*/ 'c','b',132,'f',131,'b','e','q',132,'f',131,'b','l','t',132,'f',
+/*0270*/ 'b','l','e',132,'f',131,'b','n','e',132,'f','b','g','e',132,'f',
+/*0280*/ 131,'b','g','t',132,'b','l','b','c',132,'b','l','b','s',132,'m',
+/*0290*/ 'u','l','l',132,'m','u','l','q',132,'a','d','d','s',132,'a','d',
+/*02a0*/ 'd','t',132,'d','i','v','s',132,'d','i','v','t',132,'m','u','l',
+/*02b0*/ 's',132,'m','u','l','t',132,'s','u','b','s',132,'s','u','b','t',
+/*02c0*/ 132,'a','d','d','f',132,'a','d','d','g',132,'d','i','v','f',132,
+/*02d0*/ 'd','i','v','g',132,'m','u','l','f',132,'m','u','l','g',132,'s',
+/*02e0*/ 'u','b','f',132,'s','u','b','g',131,132,'$',130,131,'f','1','0',
+/*02f0*/ 132,'$',131,'f','1','1',132,'$',131,'f','1','2',132,'$',131,'f',
+/*0300*/ '1','3',132,'$',131,'f','1','4',132,'$',131,'f','1','5',132,'$',
+/*0310*/ 131,'f','1','6',132,'$',131,'f','1','7',132,'$',131,'f','1','8',
+/*0320*/ 132,'$',131,'f','1','9',131,132,'$',130,131,'f','2','0',132,'$',
+/*0330*/ 131,'f','2','1',132,'$',131,'f','2','2',132,'$',131,'f','2','3',
+/*0340*/ 132,'$',131,'f','2','4',132,'$',131,'f','2','5',132,'$',131,'f',
+/*0350*/ '2','6',132,'$',131,'f','2','7',132,'$',131,'f','2','8',132,'$',
+/*0360*/ 131,'f','2','9',131,132,'$',130,131,'f','3','0',132,'$',131,'f',
+/*0370*/ '3','1',131,132,'$',130,131,'t','1','0',132,'$',131,'t','1','1',
+/*0380*/ 132,'$',131,'t','1','2',131,'l','d','s',131,'l','d','t',131,'s',
+/*0390*/ 't','s',131,'s','t','t',131,'w',130,'m','b',131,'j','m','p',131,
+/*03a0*/ 'r','e','t',131,'b',131,'s','r',131,'a','n','d',131,'b','i','c',
+/*03b0*/ 131,'b','i','s',131,'e','q','v',131,'x','o',130,'r',131,'s','r',
+/*03c0*/ 'l',130,131,'r','1','0',131,'r','1','1',131,'r','1','2',131,'r',
+/*03d0*/ '1','3',131,'r','1','4',131,'r','1','5',131,'r','1','6',131,'r',
+/*03e0*/ '1','7',131,'r','1','8',131,'r','1','9',130,131,'r','2','0',131,
+/*03f0*/ 'r','2','1',131,'r','2','2',131,'r','2','3',131,'r','2','4',131,
+/*0400*/ 'r','2','5',131,'r','2','6',131,'r','2','7',131,'r','2','8',131,
+/*0410*/ 'r','2','9',130,131,'r','3','0',131,'r','3','1',131,'$',130,'f',
+/*0420*/ '0',131,'$',130,'f','4',131,'$',130,'f','5',131,'$',130,'f','6',
+/*0430*/ 131,'$',130,'f','7',131,'$',130,'f','8',131,'$',130,'f','9',130,
+/*0440*/ 131,'$','1','0',131,'$','1','1',131,'$','1','2',131,'$','1','3',
+/*0450*/ 131,'$','1','4',131,'$','1','5',131,'$','1','6',131,'$','1','7',
+/*0460*/ 131,'$','1','8',131,'$','1','9',130,131,'$','2','0',131,'$','2',
+/*0470*/ '1',131,'$','2','2',131,'$','2','3',131,'$','2','4',131,'$','2',
+/*0480*/ '5',131,'$','2','6',131,'$','2','7',131,'$','2','8',131,'$','2',
+/*0490*/ '9',130,131,'$','3','0',131,'$','3','1',131,'$',130,'v','0',131,
+/*04a0*/ '$',130,'t','0',131,'$',130,'t','2',131,'$',130,'t','3',131,'$',
+/*04b0*/ 130,'t','4',131,'$',130,'t','5',131,'$',130,'t','6',131,'$',130,
+/*04c0*/ 't','7',131,'$',130,'s','0',131,'$',130,'s','1',131,'$',130,'s',
+/*04d0*/ '2',131,'$',130,'s','3',131,'$','s','4',131,'$',130,'s','5',131,
+/*04e0*/ '$','f','p',131,'$',130,'a','0',131,'$',130,'a','1',131,'$',130,
+/*04f0*/ 'a','2',131,'$',130,'a','3',131,'$',130,'a','4',131,'$',130,'a',
+/*0500*/ '5',131,'$',130,'t','8',131,'$',130,'t','9',131,'$','r','a',131,
+/*0510*/ '$',130,'a','t',131,'$',130,'g','p',131,'$',130,'s','p',130,'b',
+/*0520*/ 'r',130,'r','0',130,'r','4',130,'r','5',130,'r','6',130,'r','7',
+/*0530*/ 130,'r','8',130,'r','9',130,'$','0',130,'$','4',130,'$','5',130,
+/*0540*/ '$','6',130,'$','7',130,'$','8',130,'$','9',};
+
+extern dis_handler_return AXPPal( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPPal( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPPal( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPPal( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPPal( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPPal( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryLA( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryLA( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPMemoryFC( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPJump( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPJump( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPJump( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPJump( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPBranch( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperateV( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperateV( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperateV( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperateV( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperateV( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperateV( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPConvert( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPConvert( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPFPOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEECompare( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEECompare( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEECompare( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEECompare( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEConvert( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEConvert( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEConvert( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPIEEEConvert( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXOperate( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return AXPVAXConvert( dis_handle *, void *, dis_dec_ins * );
+
+const dis_ins_descript DisInstructionTable[] = {
+    { 0x024d, 0x00000001, 0x00000000, NULL },
+
+    /* Machine:AXP */
+
+    /* Table_1 */
+
+    { 0x0010, 0x00000000, 0xfc000000, AXPPal }, /* CALL_PAL */
+    { 0x0106, 0x64000000, 0xfc000000, AXPPal }, /* PAL19 */
+    { 0x010c, 0x6c000000, 0xfc000000, AXPPal }, /* PAL1B */
+    { 0x0112, 0x74000000, 0xfc000000, AXPPal }, /* PAL1D */
+    { 0x0118, 0x78000000, 0xfc000000, AXPPal }, /* PAL1E */
+    { 0x011e, 0x7c000000, 0xfc000000, AXPPal }, /* PAL1F */
+    { 0x0252, 0x20000000, 0xfc000000, AXPMemoryLA }, /* LDA */
+    { 0x0253, 0x24000000, 0xfc000000, AXPMemoryLA }, /* LDAH */
+    { 0x0124, 0xa0000000, 0xfc000000, AXPMemory }, /* LDL */
+    { 0x0125, 0xa8000000, 0xfc000000, AXPMemory }, /* LDL_L */
+    { 0x012b, 0xa4000000, 0xfc000000, AXPMemory }, /* LDQ */
+    { 0x012c, 0xac000000, 0xfc000000, AXPMemory }, /* LDQ_L */
+    { 0x0132, 0x2c000000, 0xfc000000, AXPMemory }, /* LDQ_U */
+    { 0x0386, 0x88000000, 0xfc000000, AXPFPMemory }, /* LDS */
+    { 0x038a, 0x8c000000, 0xfc000000, AXPFPMemory }, /* LDT */
+    { 0x0138, 0xb0000000, 0xfc000000, AXPMemory }, /* STL */
+    { 0x0139, 0xb8000000, 0xfc000000, AXPMemory }, /* STL_C */
+    { 0x013f, 0xb4000000, 0xfc000000, AXPMemory }, /* STQ */
+    { 0x0140, 0xbc000000, 0xfc000000, AXPMemory }, /* STQ_C */
+    { 0x0146, 0x3c000000, 0xfc000000, AXPMemory }, /* STQ_U */
+    { 0x038e, 0x98000000, 0xfc000000, AXPFPMemory }, /* STS */
+    { 0x0392, 0x9c000000, 0xfc000000, AXPFPMemory }, /* STT */
+    { 0x0019, 0x60008000, 0xfc00ffff, AXPMemoryFC }, /* FETCH */
+    { 0x001a, 0x6000a000, 0xfc00ffff, AXPMemoryFC }, /* FETCH_M */
+    { 0x0398, 0x60004000, 0xfc00ffff, AXPMemoryFC }, /* MB */
+    { 0x0078, 0x6000e000, 0xfc00ffff, AXPMemoryFC }, /* RC */
+    { 0x0258, 0x6000c000, 0xfc00ffff, AXPMemoryFC }, /* RPCC */
+    { 0x03bb, 0x6000f000, 0xfc00ffff, AXPMemoryFC }, /* RS */
+    { 0x014c, 0x60000000, 0xfc00ffff, AXPMemoryFC }, /* TRAPB */
+    { 0x0396, 0x60004400, 0xfc00ffff, AXPMemoryFC }, /* WMB */
+    { 0x025d, 0x60000400, 0xfc00ffff, AXPMemoryFC }, /* EXCB */
+    { 0x039b, 0x68000000, 0xfc00c000, AXPJump }, /* JMP */
+    { 0x0001, 0x68004000, 0xfc00c000, AXPJump }, /* JSR */
+    { 0x039f, 0x68008000, 0xfc00c000, AXPJump }, /* RET */
+    { 0x0002, 0x6800c000, 0xfc00c000, AXPJump }, /* JSR_CORTN */
+    { 0x051e, 0xc0000000, 0xfc000000, AXPBranch }, /* BR */
+    { 0x0262, 0xc4000000, 0xfc000000, AXPFPBranch }, /* FBEQ */
+    { 0x0268, 0xc8000000, 0xfc000000, AXPFPBranch }, /* FBLT */
+    { 0x026e, 0xcc000000, 0xfc000000, AXPFPBranch }, /* FBLE */
+    { 0x03a3, 0xd0000000, 0xfc000000, AXPBranch }, /* BSR */
+    { 0x0273, 0xd4000000, 0xfc000000, AXPFPBranch }, /* FBNE */
+    { 0x0279, 0xd8000000, 0xfc000000, AXPFPBranch }, /* FBGE */
+    { 0x027e, 0xdc000000, 0xfc000000, AXPFPBranch }, /* FBGT */
+    { 0x0284, 0xe0000000, 0xfc000000, AXPBranch }, /* BLBC */
+    { 0x0264, 0xe4000000, 0xfc000000, AXPBranch }, /* BEQ */
+    { 0x026a, 0xe8000000, 0xfc000000, AXPBranch }, /* BLT */
+    { 0x016f, 0xec000000, 0xfc000000, AXPBranch }, /* BLE */
+    { 0x0289, 0xf0000000, 0xfc000000, AXPBranch }, /* BLBS */
+    { 0x0275, 0xf4000000, 0xfc000000, AXPBranch }, /* BNE */
+    { 0x007e, 0xf8000000, 0xfc000000, AXPBranch }, /* BGE */
+    { 0x0280, 0xfc000000, 0xfc000000, AXPBranch }, /* BGT */
+    { 0x0094, 0x40000000, 0xfc0007e0, AXPOperateV }, /* ADDL */
+    { 0x009c, 0x40000400, 0xfc0007e0, AXPOperateV }, /* ADDQ */
+    { 0x007a, 0x400001e0, 0xfc000fe0, AXPOperate }, /* CMPBGE */
+    { 0x0153, 0x400005a0, 0xfc000fe0, AXPOperate }, /* CMPEQ */
+    { 0x0159, 0x40000da0, 0xfc000fe0, AXPOperate }, /* CMPLE */
+    { 0x015f, 0x400009a0, 0xfc000fe0, AXPOperate }, /* CMPLT */
+    { 0x0082, 0x400007a0, 0xfc000fe0, AXPOperate }, /* CMPULE */
+    { 0x0089, 0x400003a0, 0xfc000fe0, AXPOperate }, /* CMPULT */
+    { 0x00a4, 0x40000120, 0xfc0007e0, AXPOperateV }, /* SUBL */
+    { 0x00ac, 0x40000520, 0xfc0007e0, AXPOperateV }, /* SUBQ */
+    { 0x0091, 0x40000040, 0xfc000fe0, AXPOperate }, /* S4ADDL */
+    { 0x0099, 0x40000440, 0xfc000fe0, AXPOperate }, /* S4ADDQ */
+    { 0x00a1, 0x40000160, 0xfc000fe0, AXPOperate }, /* S4SUBL */
+    { 0x00a9, 0x40000560, 0xfc000fe0, AXPOperate }, /* S4SUBQ */
+    { 0x00b1, 0x40000240, 0xfc000fe0, AXPOperate }, /* S8ADDL */
+    { 0x00b8, 0x40000640, 0xfc000fe0, AXPOperate }, /* S8ADDQ */
+    { 0x00bf, 0x40000360, 0xfc000fe0, AXPOperate }, /* S8SUBL */
+    { 0x00c6, 0x40000760, 0xfc000fe0, AXPOperate }, /* S8SUBQ */
+    { 0x03a8, 0x44000000, 0xfc000fe0, AXPOperate }, /* AND */
+    { 0x03ac, 0x44000100, 0xfc000fe0, AXPOperate }, /* BIC */
+    { 0x03b0, 0x44000400, 0xfc000fe0, AXPOperate }, /* BIS */
+    { 0x0034, 0x44000480, 0xfc000fe0, AXPOperate }, /* CMOVEQ */
+    { 0x0022, 0x440002c0, 0xfc000fe0, AXPOperate }, /* CMOVLBC */
+    { 0x002a, 0x44000280, 0xfc000fe0, AXPOperate }, /* CMOVLBS */
+    { 0x003d, 0x440008c0, 0xfc000fe0, AXPOperate }, /* CMOVGE */
+    { 0x0046, 0x44000cc0, 0xfc000fe0, AXPOperate }, /* CMOVGT */
+    { 0x004f, 0x44000c80, 0xfc000fe0, AXPOperate }, /* CMOVLE */
+    { 0x0058, 0x44000880, 0xfc000fe0, AXPOperate }, /* CMOVLT */
+    { 0x0061, 0x440004c0, 0xfc000fe0, AXPOperate }, /* CMOVNE */
+    { 0x03b4, 0x44000900, 0xfc000fe0, AXPOperate }, /* EQV */
+    { 0x0165, 0x44000500, 0xfc000fe0, AXPOperate }, /* ORNOT */
+    { 0x03b8, 0x44000800, 0xfc000fe0, AXPOperate }, /* XOR */
+    { 0x016b, 0x480000c0, 0xfc000fe0, AXPOperate }, /* EXTBL */
+    { 0x0172, 0x48000d40, 0xfc000fe0, AXPOperate }, /* EXTLH */
+    { 0x0178, 0x480004c0, 0xfc000fe0, AXPOperate }, /* EXTLL */
+    { 0x017e, 0x48000f40, 0xfc000fe0, AXPOperate }, /* EXTQH */
+    { 0x0184, 0x480006c0, 0xfc000fe0, AXPOperate }, /* EXTQL */
+    { 0x018a, 0x48000b40, 0xfc000fe0, AXPOperate }, /* EXTWH */
+    { 0x0190, 0x480002c0, 0xfc000fe0, AXPOperate }, /* EXTWL */
+    { 0x0196, 0x48000160, 0xfc000fe0, AXPOperate }, /* INSBL */
+    { 0x019c, 0x48000ce0, 0xfc000fe0, AXPOperate }, /* INSLH */
+    { 0x01a2, 0x48000560, 0xfc000fe0, AXPOperate }, /* INSLL */
+    { 0x01a9, 0x48000ee0, 0xfc000fe0, AXPOperate }, /* INSQH */
+    { 0x01af, 0x48000760, 0xfc000fe0, AXPOperate }, /* INSQL */
+    { 0x01b5, 0x48000ae0, 0xfc000fe0, AXPOperate }, /* INSWH */
+    { 0x01bb, 0x48000360, 0xfc000fe0, AXPOperate }, /* INSWL */
+    { 0x01c1, 0x48000040, 0xfc000fe0, AXPOperate }, /* MSKBL */
+    { 0x01c7, 0x48000c40, 0xfc000fe0, AXPOperate }, /* MSKLH */
+    { 0x01cd, 0x48000440, 0xfc000fe0, AXPOperate }, /* MSKLL */
+    { 0x01d3, 0x48000e40, 0xfc000fe0, AXPOperate }, /* MSKQH */
+    { 0x01d9, 0x48000640, 0xfc000fe0, AXPOperate }, /* MSKQL */
+    { 0x01df, 0x48000a40, 0xfc000fe0, AXPOperate }, /* MSKWH */
+    { 0x01e5, 0x48000240, 0xfc000fe0, AXPOperate }, /* MSKWL */
+    { 0x01a5, 0x48000720, 0xfc000fe0, AXPOperate }, /* SLL */
+    { 0x03a5, 0x48000780, 0xfc000fe0, AXPOperate }, /* SRA */
+    { 0x03bd, 0x48000680, 0xfc000fe0, AXPOperate }, /* SRL */
+    { 0x00cd, 0x48000600, 0xfc000fe0, AXPOperate }, /* ZAP */
+    { 0x00ce, 0x48000620, 0xfc000fe0, AXPOperate }, /* ZAPNOT */
+    { 0x028e, 0x4c000000, 0xfc0007e0, AXPOperateV }, /* MULL */
+    { 0x0293, 0x4c000400, 0xfc0007e0, AXPOperateV }, /* MULQ */
+    { 0x01eb, 0x4c000600, 0xfc000fe0, AXPOperate }, /* UMULH */
+    { 0x01f1, 0x5c000400, 0xfc00ffe0, AXPFPOperate }, /* CPYS */
+    { 0x01f2, 0x5c000440, 0xfc00ffe0, AXPFPOperate }, /* CPYSE */
+    { 0x01f8, 0x5c000420, 0xfc00ffe0, AXPFPOperate }, /* CPYSN */
+    { 0x01fe, 0x5c000200, 0xfc001fe0, AXPFPConvert }, /* CVTLQ */
+    { 0x0204, 0x5c000600, 0xfc001fe0, AXPFPConvert }, /* CVTQL */
+    { 0x0032, 0x5c000540, 0xfc00ffe0, AXPFPOperate }, /* FCMOVEQ */
+    { 0x003b, 0x5c0005a0, 0xfc00ffe0, AXPFPOperate }, /* FCMOVGE */
+    { 0x0044, 0x5c0005e0, 0xfc00ffe0, AXPFPOperate }, /* FCMOVGT */
+    { 0x004d, 0x5c0005c0, 0xfc00ffe0, AXPFPOperate }, /* FCMOVLE */
+    { 0x0056, 0x5c000580, 0xfc00ffe0, AXPFPOperate }, /* FCMOVLT */
+    { 0x005f, 0x5c000560, 0xfc00ffe0, AXPFPOperate }, /* FCMOVNE */
+    { 0x0068, 0x5c0004a0, 0xfc00ffe0, AXPFPOperate }, /* MF_FPCR */
+    { 0x0071, 0x5c000480, 0xfc00ffe0, AXPFPOperate }, /* MT_FPCR */
+    { 0x0298, 0x58000000, 0xfc0007e0, AXPIEEEOperate }, /* ADDS */
+    { 0x029d, 0x58000400, 0xfc0007e0, AXPIEEEOperate }, /* ADDT */
+    { 0x00d5, 0x580014a0, 0xfc00ffe0, AXPIEEECompare }, /* CMPTEQ */
+    { 0x00dc, 0x580014c0, 0xfc00ffe0, AXPIEEECompare }, /* CMPTLT */
+    { 0x00e3, 0x580014e0, 0xfc00ffe0, AXPIEEECompare }, /* CMPTLE */
+    { 0x00ea, 0x58001480, 0xfc00ffe0, AXPIEEECompare }, /* CMPTUN */
+    { 0x020a, 0x58000780, 0xfc0007e0, AXPIEEEConvert }, /* CVTQS */
+    { 0x0210, 0x580007c0, 0xfc0007e0, AXPIEEEConvert }, /* CVTQT */
+    { 0x0216, 0x58000580, 0xfc0007e0, AXPIEEEConvert }, /* CVTTS */
+    { 0x02a2, 0x58000060, 0xfc0007e0, AXPIEEEOperate }, /* DIVS */
+    { 0x02a7, 0x58000460, 0xfc0007e0, AXPIEEEOperate }, /* DIVT */
+    { 0x02ac, 0x58000040, 0xfc0007e0, AXPIEEEOperate }, /* MULS */
+    { 0x02b1, 0x58000440, 0xfc0007e0, AXPIEEEOperate }, /* MULT */
+    { 0x02b6, 0x58000020, 0xfc0007e0, AXPIEEEOperate }, /* SUBS */
+    { 0x02bb, 0x58000420, 0xfc0007e0, AXPIEEEOperate }, /* SUBT */
+    { 0x021c, 0x580005e0, 0xfc0007e0, AXPIEEEConvert }, /* CVTTQ */
+    { 0x02c0, 0x54000000, 0xfc004fe0, AXPVAXOperate }, /* ADDF */
+    { 0x0222, 0x540003c0, 0xfc004fe0, AXPVAXOperate }, /* CVTDG */
+    { 0x02c5, 0x54000400, 0xfc004fe0, AXPVAXOperate }, /* ADDG */
+    { 0x00f1, 0x540014a0, 0xfc004fe0, AXPVAXOperate }, /* CMPGEQ */
+    { 0x00f8, 0x540014c0, 0xfc004fe0, AXPVAXOperate }, /* CMPGLT */
+    { 0x00ff, 0x540014e0, 0xfc004fe0, AXPVAXOperate }, /* CMPGLE */
+    { 0x0228, 0x54000580, 0xfc004fe0, AXPVAXOperate }, /* CVTGF */
+    { 0x022e, 0x540005a0, 0xfc004fe0, AXPVAXOperate }, /* CVTGD */
+    { 0x0234, 0x54000780, 0xfc004fe0, AXPVAXOperate }, /* CVTQF */
+    { 0x023a, 0x540007c0, 0xfc004fe0, AXPVAXOperate }, /* CVTQG */
+    { 0x02ca, 0x54000060, 0xfc004fe0, AXPVAXOperate }, /* DIVF */
+    { 0x02cf, 0x54000460, 0xfc004fe0, AXPVAXOperate }, /* DIVG */
+    { 0x02d4, 0x54000040, 0xfc004fe0, AXPVAXOperate }, /* MULF */
+    { 0x02d9, 0x54000440, 0xfc004fe0, AXPVAXOperate }, /* MULG */
+    { 0x02de, 0x54000020, 0xfc004fe0, AXPVAXOperate }, /* SUBF */
+    { 0x02e3, 0x54000420, 0xfc004fe0, AXPVAXOperate }, /* SUBG */
+    { 0x0240, 0x540005e0, 0xfc004fe0, AXPVAXConvert }, /* CVTGQ */
+
+};
+
+const unsigned short DisRegisterTable[] = {
+    0x0000,
+    0x041e,
+    0x02eb,
+    0x0329,
+    0x0367,
+    0x0423,
+    0x0428,
+    0x042d,
+    0x0432,
+    0x0437,
+    0x043c,
+    0x02ec,
+    0x02f2,
+    0x02f8,
+    0x02fe,
+    0x0304,
+    0x030a,
+    0x0310,
+    0x0316,
+    0x031c,
+    0x0322,
+    0x032a,
+    0x0330,
+    0x0336,
+    0x033c,
+    0x0342,
+    0x0348,
+    0x034e,
+    0x0354,
+    0x035a,
+    0x0360,
+    0x0368,
+    0x036e,
+    0x0521,
+    0x03c1,
+    0x03ea,
+    0x0413,
+    0x0524,
+    0x0527,
+    0x052a,
+    0x052d,
+    0x0530,
+    0x0533,
+    0x03c2,
+    0x03c6,
+    0x03ca,
+    0x03ce,
+    0x03d2,
+    0x03d6,
+    0x03da,
+    0x03de,
+    0x03e2,
+    0x03e6,
+    0x03eb,
+    0x03ef,
+    0x03f3,
+    0x03f7,
+    0x03fb,
+    0x03ff,
+    0x0403,
+    0x0407,
+    0x040b,
+    0x040f,
+    0x0414,
+    0x0418,
+    0x049c,
+    0x04a1,
+    0x0375,
+    0x04a6,
+    0x04ab,
+    0x04b0,
+    0x04b5,
+    0x04ba,
+    0x04bf,
+    0x04c4,
+    0x04c9,
+    0x04ce,
+    0x04d3,
+    0x0090,
+    0x04dc,
+    0x006c,
+    0x04e5,
+    0x04ea,
+    0x04ef,
+    0x04f4,
+    0x04f9,
+    0x04fe,
+    0x0503,
+    0x0508,
+    0x0376,
+    0x037c,
+    0x014e,
+    0x0382,
+    0x0511,
+    0x0516,
+    0x051b,
+    0x0248,
+    0x041c,
+    0x02e8,
+    0x0326,
+    0x0364,
+    0x0421,
+    0x0426,
+    0x042b,
+    0x0430,
+    0x0435,
+    0x043a,
+    0x02e9,
+    0x02f0,
+    0x02f6,
+    0x02fc,
+    0x0302,
+    0x0308,
+    0x030e,
+    0x0314,
+    0x031a,
+    0x0320,
+    0x0327,
+    0x032e,
+    0x0334,
+    0x033a,
+    0x0340,
+    0x0346,
+    0x034c,
+    0x0352,
+    0x0358,
+    0x035e,
+    0x0365,
+    0x036c,
+    0x0536,
+    0x043f,
+    0x0468,
+    0x0491,
+    0x0539,
+    0x053c,
+    0x053f,
+    0x0542,
+    0x0545,
+    0x0548,
+    0x0440,
+    0x0444,
+    0x0448,
+    0x044c,
+    0x0450,
+    0x0454,
+    0x0458,
+    0x045c,
+    0x0460,
+    0x0464,
+    0x0469,
+    0x046d,
+    0x0471,
+    0x0475,
+    0x0479,
+    0x047d,
+    0x0481,
+    0x0485,
+    0x0489,
+    0x048d,
+    0x0492,
+    0x0496,
+    0x049a,
+    0x049f,
+    0x0372,
+    0x04a4,
+    0x04a9,
+    0x04ae,
+    0x04b3,
+    0x04b8,
+    0x04bd,
+    0x04c2,
+    0x04c7,
+    0x04cc,
+    0x04d1,
+    0x04d6,
+    0x04da,
+    0x04df,
+    0x04e3,
+    0x04e8,
+    0x04ed,
+    0x04f2,
+    0x04f7,
+    0x04fc,
+    0x0501,
+    0x0506,
+    0x0373,
+    0x037a,
+    0x050b,
+    0x0380,
+    0x050f,
+    0x0514,
+    0x0519,
+    0x0246,
+};
+
+const unsigned short DisRefTypeTable[] = {
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+};
+
+const dis_range AXPRangeTable[] = {
+
+    /* Table_1 */
+
+    { 0x3f, 0x1a, 0x0000 },
+    { 0x7f, 0x05, 0x0040 },
+    { 0x3f, 0x06, 0x00c0 },
+    { 0x7f, 0x05, 0x0100 },
+    { 0x03, 0x09, 0x0180 },
+    { 0x3f, 0x05, 0x0184 },
+    { 0x3f, 0x05, 0x01c4 },
+    { 0x3f, 0x05, 0x0204 },
+    { 0x01, 0x0a, 0x0244 },
+    { 0x03, 0x0e, 0x0246 },
+    { 0x0f, 0x0c, 0x024a },
+    { 0x01, 0x0e, 0x025a },
+};
+
+const int AXPRangeTablePos[] = {
+    0,
+    -1
+};
+
+const dis_selector DisSelectorTable[] = {
+/*0000*/   1,   0,   0,   0,   0,   0,   0,   0,   7,   8,   0,  13,   0,   0,   0,  20,
+/*0010*/  -1,  -2,  -3,  -4,   0,  -5,  -6,  -7,  -8,   2,  -9,   3,   0,   4,   5,   6,
+/*0020*/   0,   0,  14,  15,   0,   0,  21,  22,   9,  11,  10,  12,  16,  18,  17,  19,
+/*0030*/  36,  37,  38,  39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+/*0040*/  52,   0,  62,   0,   0,   0,   0,   0,   0,  60,   0,  64,   0,   0,   0,  54,
+/*0050*/   0,   0,  66,   0,   0,   0,   0,   0,   0,   0,   0,  68,   0,  59,   0,   0,
+/*0060*/  53,   0,  63,   0,   0,   0,   0,   0,   0,  61,   0,  65,   0,  55,   0,   0,
+/*0070*/   0,   0,  67,   0,   0,   0,   0,   0,   0,   0,   0,  69,   0,  58,   0,   0,
+/*0080*/  52,   0,   0,   0,   0,   0,   0,   0,   0,  60,   0,   0,   0,  57,   0,   0,
+/*0090*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00a0*/  53,   0,   0,   0,   0,   0,   0,   0,   0,  61,   0,   0,   0,  56,   0,   0,
+/*00b0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00c0*/  70,   0,   0,   0,  71,   0,   0,   0,   0,   0,  75,  74,   0,   0,   0,   0,
+/*00d0*/  72,   0,  73,  80,  82,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00e0*/  83,   0,  79,  76,  81,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00f0*/   0,   0,  78,  77,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0100*/   0,   0,  98,   0,   0,   0,  84,   0,   0,   0,   0,  91,   0,   0,   0,   0,
+/*0110*/   0,   0, 104,   0,   0,   0,  90,   0,   0,   0,   0,  97,   0,   0,   0,   0,
+/*0120*/   0,   0, 100,   0,   0,   0,  86,   0,   0,   0,   0,  93,   0,   0,   0,   0,
+/*0130*/ 108, 109, 102,   0, 107,   0,  88,   0,   0, 105,   0,  95, 106,   0,   0,   0,
+/*0140*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0150*/   0,   0, 103,   0,   0,   0,   0,  96,   0,   0,  89,   0,   0,   0,   0,   0,
+/*0160*/   0,   0,  99,   0,   0,   0,   0,  92,   0,   0,  85,   0,   0,   0,   0,   0,
+/*0170*/   0,   0, 101,   0,   0,   0,   0,  94,   0,   0,  87,   0,   0,   0,   0,   0,
+/*0180*/ 110,   0, 111, 112, 142, 156, 154, 152,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0190*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01a0*/   0,   0, 143,   0, 144, 157, 155, 153,   0, 145, 146, 147,   0,   0,   0,   0,
+/*01b0*/ 148, 149,   0, 158,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01c0*/ 150,   0, 151,   0, 126, 139, 137, 135,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01d0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01e0*/   0,   0,   0,   0, 127, 140, 138, 136, 131, 128, 129, 130,   0,   0,   0,   0,
+/*01f0*/ 134,   0,   0, 141,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0200*/ 132,   0, 133,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0210*/   0,   0,   0,   0, 116,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0220*/   0,   0,   0,   0, 113, 115, 114,   0, 125, 124,   0,   0,   0,   0, 118, 123,
+/*0230*/ 122, 119, 121, 120, 117,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0240*/   0,   0,   0,   0, -10, -11,  32,  33,  34,  35,  29,   0,   0,   0,  25,   0,
+/*0250*/   0,   0,  23,   0,  24,   0,  27,   0,  26,  28,  31,  30,};

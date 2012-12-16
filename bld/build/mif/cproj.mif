@@ -20,6 +20,10 @@ win32ver = $($(proj_name)_win32ver)
 win32ver = -DWINVER=0x400 -D_WIN32_IE=0x300
 !endif
 
+!ifdef win32ver_override
+win32ver = $(win32ver_override)
+!endif
+
 cc_386          = *wcc386
 cc_i86          = *wcc
 cc_axp          = *wccaxp
@@ -128,6 +132,7 @@ default_memory_model_386_osi   = s
 default_memory_model_386_win   = f
 default_memory_model_386_os2   = f
 default_memory_model_386_nt    = f
+default_memory_model_386_win32s= f
 default_memory_model_386_linux = f
 default_memory_model_386_nto   = f
 default_memory_model_386_rdos  = f
@@ -160,6 +165,7 @@ cflags_386      += -zc
 !endif
 
 cflags_nt       = -bt=nt $(win32ver)
+cflags_win32s   = -bt=nt $(win32ver)
 cflags_win      = -bt=windows -DSTRICT
 cflags_os2      = -bt=os2
 cflags_qnx      = -bt=qnx
@@ -184,6 +190,7 @@ sys_rtdll       = 0
 
 !ifeq sys_rtdll 1
 cflags_nt      += -br
+cflags_win32s  += -br
 cflags_win     += -br
 cflags_os2     += -br
 !endif
@@ -309,6 +316,7 @@ aflags           = $(aflags_all) $(aflags_$(host_cpu)) $(aflags_$(host_os)) $(mo
 
 lflags_dos_i86   = sys dos
 lflags_nt_axp    = sys ntaxp
+lflags_win32s_386= sys win32s
 lflags_nt_386    = sys nt
 lflags_os2_386   = sys os2v2
 lflags_os2_i86   = sys os2 pmc
@@ -339,11 +347,13 @@ lflags_nt_386   = sys nt_win
 lflags_nt_axp   = sys ntaxp_win
 lflags_os2_386  = sys os2v2_pm
 lflags_os2_i86  = sys os2_pm
+lflags_win32s_386=sys win32s
 !endif
 !ifdef sys_dll
 #this is equally bad
 lflags_dos_386  = sys cwdllr
 lflags_nt_386   = sys nt_dll
+lflags_win32s_386=sys win32s_dll
 lflags_nt_axp   = sys ntaxp_dll
 lflags_win_i86  = sys windows_dll
 lflags_os2_386  = sys os2v2 dll
@@ -359,6 +369,7 @@ libflags        =  $(libflags_all) $(libflags_$(host_os)_$(host_cpu)) $(extra_li
 rc_flags_all    = -r
 
 rc_flags_nt     = -bt=nt $(win32ver)
+rc_flags_win32s = -bt=nt $(win32ver)
 rc_flags_win    = -bt=windows
 rc_flags_os2    = -bt=os2
 rc_flags_axp    = -D__AXP__
@@ -372,6 +383,7 @@ rc_flags        = $(rc_flags_all) $(rc_flags_$(host_os)) $(rc_flags_$(host_cpu))
 inc_dirs_sys_os2_386 = -I$(dev_dir)/os2api/os2386
 inc_dirs_sys_os2_i86 = -I$(dev_dir)/os2api/os2286
 inc_dirs_sys_nt    = -I$(dev_dir)/w32api/nt
+inc_dirs_sys_win32s= -I$(dev_dir)/w32api/nt
 inc_dirs_sys_win   = -I$(dev_dir)/w16api/wini86
 inc_dirs_sys_os2   = $(inc_dirs_sys_os2_$(host_cpu))
 inc_dirs_sys_dos   =
@@ -400,6 +412,7 @@ inc_dirs_lang   = -I$(hdr_dir)/dos
 inc_dirs_sys_os2_386 = -I$(lang_root)/h/os2
 inc_dirs_sys_os2_i86 = -I$(lang_root)/h/os21x
 inc_dirs_sys_nt    = -I$(lang_root)/h/nt
+inc_dirs_sys_win32s= -I$(lang_root)/h/nt
 inc_dirs_sys_win   = -I$(lang_root)/h/win
 inc_dirs_sys_os2   = $(inc_dirs_sys_os2_$(host_cpu))
 inc_dirs_sys_dos   =
@@ -431,6 +444,7 @@ inc_path        = $(inc_dirs) $(inc_dirs_$(host_os)) $(inc_dirs_sys) -I$(watcom_
 inc_dirs_sys_os2_386 = -I$(lang_root)\h\os2
 inc_dirs_sys_os2_i86 = -I$(lang_root)\h\os21x
 inc_dirs_sys_nt    = -I$(lang_root)\h\nt
+inc_dirs_sys_win32s= -I$(lang_root)\h\nt
 inc_dirs_sys_win   = -I$(lang_root)\h\win
 inc_dirs_sys_os2   = $(inc_dirs_sys_os2_$(host_cpu))
 inc_dirs_sys_dos   =
@@ -459,15 +473,19 @@ inc_path        = $(inc_dirs) $(inc_dirs_$(host_os)) $(inc_dirs_sys) -I$(watcom_
 
 rtdll_clib_os2_386     = $(rtdll_dir)/clib/os2.386/mf_r
 rtdll_clib_nt_386      = $(rtdll_dir)/clib/winnt.386/mf_r
+rtdll_clib_win32s_386  = $(rtdll_dir)/clib/win32s.386/mf_r
 
 rtdll_mathlib_os2_386  = $(rtdll_dir)/mathlib/os2.386/mf_r
 rtdll_mathlib_nt_386   = $(rtdll_dir)/mathlib/winnt.386/mf_r
+rtdll_mathlib_win32s_386=$(rtdll_dir)/mathlib/win32s.386/mf_r
 
 rtdll_mathlib7_os2_386 = $(rtdll_dir)/mathlib/os2.387/mf_r
 rtdll_mathlib7_nt_386  = $(rtdll_dir)/mathlib/winnt.387/mf_r
+rtdll_mathlib7_win32s_386=$(rtdll_dir)/mathlib/win32s.387/mf_r
 
 rtdll_cpplib_os2_386   = $(rtdll_dir)/cpplib/os2.386/mf_r
 rtdll_cpplib_nt_386    = $(rtdll_dir)/cpplib/winnt.386/mf_r
+rtdll_cpplib_win32s_386= $(rtdll_dir)/cpplib/win32s.386/mf_r
 
 rtdll_libpath = &
     $(rtdll_clib_$(host_os)_$(host_cpu)) &

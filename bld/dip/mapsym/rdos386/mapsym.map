@@ -1,0 +1,177 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:45
+Executable Image: mapsym.dll
+creating a RDOS dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00403000             00001114
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           00401000        000013e3
+CONST                  DATA           DGROUP         00403000        00000000
+CONST2                 DATA           DGROUP         00403000        00000000
+_DATA                  DATA           DGROUP         00403000        000000f8
+_BSS                   BSS            DGROUP         004030f8        0000101c
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: dipimp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/c/dipimp.c)
+00401000       DIPLOAD
+00401030       DCAlloc_
+00401040*      DCAllocZ_
+00401070*      DCRealloc_
+00401080       DCFree_
+00401090       DCMapAddr_
+004010a0       DCSymCreate_
+004010b0*      DCItemLocation_
+004010c0*      DCAssignLocation_
+004010d0*      DCSameAddrSpace_
+00401100       DCAddrSection_
+00401110*      DCOpen_
+00401120       DCSeek_
+00401130       DCRead_
+00401140*      DCReadAt_
+004011a0*      DCWrite_
+004011b0       DCClose_
+004011c0*      DCRemove_
+004011d0       DCStatus_
+004011e0*      DCCurrMAD_
+00401200*      DCMachineData_
+00401250+      DIPImpOldTypeBase_
+00403000+      _ImpInterface
+004030f8       _NilAddr
+00403100+      _Client
+Module: msymmisc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/mapsym/c/msymmisc.c)
+00401260       _DIPImpName
+00401270       DIPImpQueryHandleSize_
+00401280       DIPImpMoreMem_
+00401290       DIPImpStartup_
+004012a0       DIPImpCancel_
+004012a0       DIPImpShutdown_
+Module: msymld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/mapsym/c/msymld.c)
+004012c0+      BSeek_
+00401340+      BRead_
+004014e0       DIPImpUnloadInfo_
+00401510       FindAddrBlock_
+00401b40       DIPImpLoadInfo_
+00401bc0       DIPImpMapInfo_
+00404110*      __nullarea
+Module: msymmod.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/mapsym/c/msymmod.c)
+00401c10       DIPImpWalkModList_
+00401c20       DIPImpModName_
+00401c60       DIPImpModSrcLang_
+00401c70       DIPImpModDefault_
+00401c70       DIPImpModInfo_
+00401c80       DIPImpAddrMod_
+00401cb0       DIPImpModAddr_
+Module: msymtype.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/mapsym/c/msymtype.c)
+00401d10       DIPImpWalkTypeList_
+00401d20       DIPImpTypePtrAddrSpace_
+00401d20       DIPImpTypeMod_
+00401d30       DIPImpTypeInfo_
+00401d50       DIPImpTypeBase_
+00401d60       DIPImpTypeArrayInfo_
+00401d90       DIPImpTypeThunkAdjust_
+00401db0       DIPImpTypeProcInfo_
+00401dc0       DIPImpTypeCmp_
+00401dd0       DIPImpTypeName_
+00401de0       DIPImpTypeFreeAll_
+00401de0       DIPImpTypeRelease_
+00401de0       DIPImpTypeAddRef_
+Module: msymsym.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/mapsym/c/msymsym.c)
+00401df0+      DoWalkSymList_
+00401e40       DIPImpWalkSymList_
+00401e60       DIPImpWalkSymListEx_
+00401e80       DIPImpSymObjLocation_
+00401e80       DIPImpSymObjType_
+00401e80       DIPImpSymValue_
+00401e80       DIPImpSymMod_
+00401e90       DIPImpSymName_
+00401ef0       DIPImpSymType_
+00401f20       DIPImpSymLocation_
+00401f50       DIPImpSymInfo_
+00401fa0       DIPImpSymParmLocation_
+00401fb0       DIPImpAddrSym_
+00402020+      DoLookupSym_
+00402090       DIPImpLookupSym_
+004020b0       DIPImpLookupSymEx_
+004020d0       DIPImpAddrScope_
+004020e0       DIPImpScopeOuter_
+004020f0       DIPImpSymCmp_
+00402100       DIPImpSymFreeAll_
+00402100       DIPImpSymRelease_
+00402100       DIPImpSymAddRef_
+Module: msymcue.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/mapsym/c/msymcue.c)
+00402110       DIPImpWalkFileList_
+00402120       DIPImpCueCmp_
+00402120       DIPImpCueColumn_
+00402120       DIPImpCueLine_
+00402120       DIPImpCueFileId_
+00402120       DIPImpCueFile_
+00402120       DIPImpCueMod_
+00402130       DIPImpCueAdjust_
+00402140       DIPImpCueAddr_
+00402160       DIPImpLineCue_
+00402170       DIPImpAddrCue_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/rdos/clib3r.lib(memset.c)
+00402180       memset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/rdos/clib3r.lib(_strcmp)
+004021a0       strcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/rdos/clib3r.lib(memcmp.c)
+004022e0       memcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/rdos/clib3r.lib(memicmp.c)
+00402300       memicmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/rdos/clib3r.lib(__stos)
+00402340       __STOSB
+00402377*      __STOSD
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/rdos/clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  24f7 (9463.)
+Entry point address: 00000000
+Link time: 00:00.00

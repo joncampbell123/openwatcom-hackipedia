@@ -1,0 +1,16 @@
+option dosseg,nocaseex name os2edit lib /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/os2/os2.lib, clibs
+system os2 dll initinstance option manyautodata
+option newfiles op map
+export OS2EDIT_
+file cmdstart.obj
+file cmdalias.ubj
+file cmddata.ubj
+file cmddir.ubj
+file cmdedit.ubj
+file cmdfile.ubj
+file cmdio.ubj
+file cmdmain.ubj
+file cmdsave.ubj
+file cmdscrn.ubj
+file cmdstub.ubj
+file cmdutil.ubj

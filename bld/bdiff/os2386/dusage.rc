@@ -1,0 +1,6 @@
+MSG_USAGE_LN_1, "usage: %s <old_exe> <new_exe> <patch_file> [options]\n"
+MSG_USAGE_LN_2, "options:  -p<file>         file to patch"
+MSG_USAGE_LN_3, "          -c<file>         comment file"
+MSG_USAGE_LN_4, "          -do<file>        old file's debug info"
+MSG_USAGE_LN_5, "          -dn<file>        new file's debug info"
+MSG_USAGE_LN_6, "          -l               don't write patch level into patch file"

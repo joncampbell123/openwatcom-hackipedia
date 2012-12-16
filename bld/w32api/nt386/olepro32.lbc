@@ -1,7 +1,0 @@
-++'_OleCreateFontIndirect@12'.'OLEPRO32.DLL'..'OleCreateFontIndirect'
-++'_OleCreatePictureIndirect@16'.'OLEPRO32.DLL'..'OleCreatePictureIndirect'
-++'_OleCreatePropertyFrame@44'.'OLEPRO32.DLL'..'OleCreatePropertyFrame'
-++'_OleCreatePropertyFrameIndirect@4'.'OLEPRO32.DLL'..'OleCreatePropertyFrameIndirect'
-++'_OleIconToCursor@8'.'OLEPRO32.DLL'..'OleIconToCursor'
-++'_OleLoadPicture@20'.'OLEPRO32.DLL'..'OleLoadPicture'
-++'_OleTranslateColor@12'.'OLEPRO32.DLL'..'OleTranslateColor'

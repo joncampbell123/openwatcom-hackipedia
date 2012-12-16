@@ -1,0 +1,10 @@
+debug dwarf option symfile sys dos4g  name bdump.exe op map
+lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/small386/ms_r/wres.lib
+file bdump.obj
+file dopatchx.obj
+file msg.obj
+file myio.obj
+file oldfile.obj
+file patchio.obj
+file patmain.obj
+file bdiffmem.obj

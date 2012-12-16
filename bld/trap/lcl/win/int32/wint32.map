@@ -1,0 +1,171 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:50
+Executable Image: wint32.dll
+creating a Windows 16-bit dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            000010b0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           0001:0000       0000041e
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+_DATA                  DATA           DGROUP         0002:0010       00000080
+XIB                    DATA           DGROUP         0002:0090       00000000
+XI                     DATA           DGROUP         0002:0090       00000000
+XIE                    DATA           DGROUP         0002:0090       00000000
+YIB                    DATA           DGROUP         0002:0090       00000000
+YI                     DATA           DGROUP         0002:0090       00000000
+YIE                    DATA           DGROUP         0002:0090       00000000
+DATA                   DATA           DGROUP         0002:0090       00000000
+CONST                  DATA           DGROUP         0002:0090       00000000
+STRINGS                DATA           DGROUP         0002:0090       00000000
+CONST2                 DATA           DGROUP         0002:0090       00000000
+_BSS                   BSS            DGROUP         0002:0090       00001020
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/libentry.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/a/libentry.asm)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:0012*     __curbrk
+0002:0014*     __psp
+0002:0016*     __osmajor
+0002:0017*     __osminor
+0002:0018*     __osmode
+0002:000a*     __STACKLOW
+0002:000c*     __STACKTOP
+0002:001a*     __cbyte
+0002:001c*     __child
+0002:001e*     __no87
+0002:0019*     __HShift
+0002:0020*     __get_ovl_stack
+0002:0024*     __restore_ovl_stack
+0002:0028*     ___FPE_handler
+0002:002c*     __LpCmdLine
+0000:0000*     _large_code_
+0001:0000*     LibEntry
+0001:0000      __DLLstart_
+0001:005a*     __exit_
+0001:0073      __GETDS
+Module: intmain.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/win/c/intmain.c)
+0001:0080      LIBMAIN
+0001:0094      WEP
+Module: ints.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/win/c/ints.c)
+0001:00b0+     CopyMemory_
+0001:00e0+     SETDEBUGINTERRUPTS32
+0001:0168+     RESETDEBUGINTERRUPTS32
+0001:01c4+     GETDEBUGINTERRUPTDATA
+0001:0210+     DONEWITHINTERRUPT
+0001:0278+     ISDEBUGGEREXECUTING
+0001:0288+     DEBUGGERISEXECUTING
+0002:0032+     _SetCount
+0002:0034+     _IntAccessed
+0002:0036+     _DebuggerCount
+0002:0090+     _IdtInt1
+0002:0098+     _IdtInt3
+0002:00a0+     _IStack
+0002:10a0*     _NewIdtInt1
+0002:10a8*     _NewIdtInt3
+Module: int32.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/win/asm/int32.asm)
+0002:0044      _CopySize
+0002:0040      _DPL
+0002:003e      _IDTSel
+0002:0042      _OurOwnInt
+0002:003c      _InterruptStackSel
+0002:0038      _InterruptStackOff
+0002:0046      _SaveEAX
+0002:004a*     _SaveEBX
+0002:004e*     _SaveECX
+0002:0052*     _SaveEDX
+0002:0056*     _SaveEDI
+0002:005a*     _SaveESI
+0002:005e*     _SaveEFLAGS
+0002:0062*     _SaveEBP
+0002:0066*     _SaveEIP
+0002:006a*     _SaveESP
+0002:006e*     _SaveSS
+0002:0070*     _SaveCS
+0002:0072*     _SaveDS
+0002:0074*     _SaveES
+0002:0076*     _SaveFS
+0002:0078*     _SaveGS
+0002:007a*     _FaultNumber
+0001:029e      ReflectInt1Int3_
+0001:02a0      InterruptCallback_
+0001:02ac      GetIDTSel_
+0001:02e7      ReleaseIDTSel_
+0001:02f3      _CopyMemory_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(wallflgs.c)
+0002:0088      ___win_alloc_flags
+0002:008c      ___win_realloc_flags
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(initrtns.c)
+0001:034a      __FInitRtns
+0001:0354+     __InitRtns
+0001:03b0      __FFiniRtns
+0001:03ba+     __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(cmodel)
+0001:041e      _small_code_
+0001:041e*     CodeModelMismatch
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(sgdef086)
+0002:0090      __Start_XI
+0002:0090      __End_XI
+0002:0090      __Start_YI
+0002:0090      __End_YI
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+__AHSHIFT                           KERNEL
+LOCALINIT                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  14ce (5326.)
+Link time: 00:00.00

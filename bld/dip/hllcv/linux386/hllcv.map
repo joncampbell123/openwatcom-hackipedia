@@ -1,0 +1,244 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:43
+Executable Image: hllcv.dip
+creating a Phar Lap relocatable executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0000a9a0             00000294
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           00000000        0000a9a0
+CONST                  DATA           DGROUP         0000a9a0        00000025
+CONST2                 DATA           DGROUP         0000a9c8        00000104
+_DATA                  DATA           DGROUP         0000aacc        000000f8
+_BSS                   BSS            DGROUP         0000abc4        00000070
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: dipimp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/c/dipimp.c)
+00000000*      _Signature
+00000010*      DIPLOAD
+00000040       DCAlloc_
+00000050       DCAllocZ_
+00000080*      DCRealloc_
+00000090       DCFree_
+000000a0       DCMapAddr_
+000000b0       DCSymCreate_
+000000c0       DCItemLocation_
+000000d0       DCAssignLocation_
+000000e0*      DCSameAddrSpace_
+00000110*      DCAddrSection_
+00000120*      DCOpen_
+00000130       DCSeek_
+00000140       DCRead_
+00000150       DCReadAt_
+000001b0       DCWrite_
+000001c0       DCClose_
+000001d0*      DCRemove_
+000001e0       DCStatus_
+000001f0*      DCCurrMAD_
+00000210*      DCMachineData_
+00000260+      DIPImpOldTypeBase_
+0000aacc+      _ImpInterface
+0000abc4       _NilAddr
+0000abcc+      _Client
+Module: hllmisc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllmisc.c)
+00000278       _DIPImpName
+000002b0       DIPImpQueryHandleSize_
+000002c0       DIPImpMoreMem_
+000002d0       DIPImpStartup_
+000002e0       DIPImpCancel_
+000002e0       DIPImpShutdown_
+000002f0       hllNameCopy_
+00000330       hllFindDirEntry_
+00000400       hllWalkDirList_
+00000510       hllGetNumLeaf_
+000005d0       hllDoIndirection_
+00000690       hllConfused_
+Module: hllld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllld.c)
+000012c0       DIPImpLoadInfo_
+000013b0       DIPImpMapInfo_
+000013e0       hllIsSegExecutable_
+00001400       hllMapLogical_
+00001450       DIPImpUnloadInfo_
+0000abd0*      __nullarea
+0000abd4       _ImageList
+Module: hllmod.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllmod.c)
+000014b0       DIPImpWalkModList_
+00001580       DIPImpModName_
+00001620+      GetCompInfo_
+000016a0       DIPImpModSrcLang_
+00001700       DIPImpModInfo_
+00001830+      hllAddrMod_
+000018e0       DIPImpAddrMod_
+00001910       DIPImpModAddr_
+00001a20       DIPImpModDefault_
+00001a80       hllGetModStyle_
+Module: hlltype.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hlltype.c)
+00001d50       hllTypeIndexFillIn_
+00001d70       DIPImpTypeFreeAll_
+00001d70       DIPImpTypeRelease_
+00001d70       DIPImpTypeAddRef_
+00001d70       DIPImpTypeMod_
+00001e10*      hllTypeCallInfo_
+00001ea0*      hllTypeMemberFuncInfo_
+00001f50       hllTypeSymGetName_
+00002ba0*      hllTypeSymGetAddr_
+00002dc0       hllTypeSymGetType_
+00002e90*      hllTypeSymGetValue_
+00002f50       hllTypeSymGetInfo_
+00003220*      hllTypeSymWalkList_
+000032f0*      hllTypeSearchTagName_
+00003660*      hllTypeSearchNestedSym_
+00003720       DIPImpWalkTypeList_
+00003800+      hllTypeInfo_
+00003800       DIPImpTypeInfo_
+00003b20+      hllTypeBase_
+00003d00       DIPImpTypeBase_
+00004190       DIPImpTypeArrayInfo_
+000041a0       DIPImpTypeProcInfo_
+00004280       DIPImpTypePtrAddrSpace_
+00004360       DIPImpTypeThunkAdjust_
+00004500       DIPImpTypeCmp_
+00004520       DIPImpTypeName_
+Module: hllsym.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllsym.c)
+000045e0*      hllSymFillIn_
+00004620*      cv3SymFillIn_
+000048f0       DIPImpSymFreeAll_
+000048f0       DIPImpSymRelease_
+000048f0       DIPImpSymAddRef_
+000048f0       DIPImpSymObjLocation_
+00004900       hllSymLocation_
+00004900       DIPImpSymLocation_
+00004fd0       hllSymFindMatchingSym_
+000051a0+      hllWalkSymList_
+00005210       DIPImpWalkSymList_
+00005230       DIPImpWalkSymListEx_
+00005250       DIPImpSymMod_
+00005360       DIPImpSymName_
+00005380*      hllSymType_
+00005380       DIPImpSymType_
+00005410*      hllSymValue_
+00005410       DIPImpSymValue_
+00005420       DIPImpSymObjType_
+00005540       DIPImpSymInfo_
+00005680       DIPImpSymParmLocation_
+00005690       DIPImpAddrScope_
+00005690       DIPImpAddrSym_
+000056a0       DIPImpLookupSymEx_
+000056a0*      DoImpLookupSym_
+000056b0       DIPImpLookupSym_
+000056c0       DIPImpScopeOuter_
+000056d0       DIPImpSymCmp_
+Module: hllcue.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllcue.c)
+000059d0       DIPImpWalkFileList_
+00006120       DIPImpCueMod_
+00006130       DIPImpCueFile_
+00006190       DIPImpCueFileId_
+000061b0       DIPImpCueLine_
+00006210       DIPImpCueColumn_
+00006230       DIPImpCueAddr_
+000062f0       DIPImpCueAdjust_
+00006590       DIPImpLineCue_
+000067c0       DIPImpAddrCue_
+00006840       DIPImpCueCmp_
+Module: hllvirt.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllvirt.c)
+00006890       VMInit_
+000068d0       VMFini_
+00006950       VMAddDtor_
+00006aa0       VMBlock_
+00006e20       VMGetU8_
+00006e40*      VMGetU16_
+00006e60*      VMGetU32_
+00006e80       VMRecord_
+00006f00       VMSsBlock_
+00006f20       VMSsGetU8_
+00006f50       VMSsGetU16_
+00006f80*      VMSsGetU32_
+00006fb0       VMSsRecord_
+00007050       VMShrink_
+Module: hllloc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/hllcv/c/hllloc.c)
+000072f0       hllLocationCreate_
+00007320       hllLocationAdd_
+00007410       hllLocationTrunc_
+00007460+      hllLocationManyReg_
+00007680       hllLocationOneReg_
+Module: demangle.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/lib_misc/c/demangle.c)
+00009a80*      __demangle_t_
+00009ae0       __demangle_l_
+00009b50*      __demangle_r_
+00009be0*      __scope_name_
+00009c80       __is_mangled_
+00009d60*      __is_mangled_internal_
+00009da0*      __unmangled_name_
+00009e10*      __demangled_basename_
+00009e80*      __parse_mangled_name_
+00009ee0*      __mangle_operator_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(memset.c)
+0000a020       memset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(memcmp.c)
+0000a040       memcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(memicmp.c)
+0000a060       memicmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(qsort.c)
+0000a100       qsort_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(memmove.c)
+0000a7c0       memmove_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(itoa.c)
+0000a820+      utoa_
+0000a870       itoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(toupper.c)
+0000a8a0       toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(istable.c)
+0000a9c8       __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(tolower.c)
+0000a8b0       tolower_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(strncmp.c)
+0000a8c0       strncmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(__stos)
+0000a8f0       __STOSB
+0000a927*      __STOSD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(alphabet.c)
+0000a9a0       ___Alphabet
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  ac34 (44084.)
+Entry point address: 00000000
+Link time: 00:00.00

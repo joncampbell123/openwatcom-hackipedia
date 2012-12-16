@@ -1,0 +1,12 @@
+debug dwarf option symfile
+op map name par.d32
+sys os2v2 dll initinstance terminstance export TrapInit_.1 export TrapFini_.2 export TrapRequest_.3 op modname=par option description 'Open Watcom Debugger Trap File'
+op dosseg
+file os2strt2.obj
+file mxutil.obj
+file remote.obj
+file packet.obj
+file parlink.obj
+file paros22.obj
+file os2noth2.obj
+lib os2386.lib imp OUTPUT_PORT wdio.OUTPORT, INPUT_PORT wdio.INPORT imp DOSPORTACCESS DOSCALLS.69

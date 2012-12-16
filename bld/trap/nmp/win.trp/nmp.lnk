@@ -1,0 +1,12 @@
+debug dwarf option symfile
+op map name nmp.dll
+sys windows_dll export WEP.1 RESIDENT export TRAPINIT.2 export TRAPFINI.3 export TRAPREQUEST.4 export INPUTHOOK.5 export INFOFUNCTION.6 export HARDMODECHECK.7 export GETHWNDFUNC.8 export SETHARDMODE.12 export UNLOCKINPUT.13 op modname=nmp option description 'Open Watcom Debugger Trap File'
+op dosseg
+file winstrt.obj
+file mxutil.obj
+file remote.obj
+file winstub.obj
+file packet.obj
+file nmplink.obj
+file nmpdos.obj
+

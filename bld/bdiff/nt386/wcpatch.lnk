@@ -1,0 +1,9 @@
+debug dwarf option symfile sys nt  name wcpatch.exe op map
+lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib
+file dopatchw.obj
+file msg.obj
+file myio.obj
+file wcptchio.obj
+file wcpatch.obj
+file bdiffmem.obj
+file wbdiff.obj

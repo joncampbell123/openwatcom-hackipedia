@@ -16,7 +16,7 @@
 !inject cmainlnx.obj                                                                            l32 lpc lmp
 !inject cmainqnx.obj                                                        q16 q32
 !inject cmdname.obj  d16 d32             nt nta ntp nvc     nvl     o16 o32         w16 w32 osi l32 lpc lmp rdu win32s
-!inject cmnw386.obj                      nt nta ntp                     o32                                     win32s
+!inject cmnw386.obj                      nt nta ntp                     o32                               
 !inject cmodel.obj   d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32         rdu win32s
 !inject crtinit.obj                      nt nta ntp
 !inject crwd086.obj  d16                                                    q16
@@ -79,7 +79,7 @@
 !inject initrtns.obj d16 d32             nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu win32s
 !inject initargv.obj d16 d32             nt nta ntp nvc     nvl     o16 o32         w16 w32 osi             rdu win32s
 !inject initerrn.obj                                                            q32
-!inject initwarg.obj                     nt nta ntp                     o32                                     win32s
+!inject initwarg.obj                     nt nta ntp                     o32                               
 !inject ioexit.obj   d16 d32 dpm         nt nta ntp nvc     nvl     o16 o32 q16 q32 w16 w32 osi l32 lpc lmp rdu win32s
 !inject itsto32.obj                                                     o32
 !inject kererr.obj                                                              q32
@@ -95,7 +95,7 @@
 !inject main2o32.obj                                                    o32
 !inject main4o32.obj                                                    o32
 !inject main2wnt.obj                     nt nta ntp                                                             win32s
-!inject main4wnt.obj                     nt nta ntp                                                             win32s
+!inject main4wnt.obj                     nt nta ntp
 !inject maino16.obj                                                 o16
 !inject mainlnx.obj                                                                             l32 lpc lmp
 !inject maino32.obj                                                     o32
@@ -153,10 +153,10 @@
 !inject tnkcdo32.obj                                                    o32
 !inject tnksto32.obj                                                    o32
 !inject uselfn.obj   d16 d32 dpm         nt nta ntp nvc ncl nvl nll o16 o32 q16 q32 w16 w32 osi l32 lpc lmp     win32s
-!inject wargcv.obj                       nt nta ntp                     o32                                     win32s
+!inject wargcv.obj                       nt nta ntp                     o32                         
 !inject wep.obj                                                                     w16 w32
 !inject wmainwnt.obj                     nt nta ntp                                                             win32s
-!inject wmnwwnt.obj                      nt nta ntp                                                             win32s
+!inject wmnwwnt.obj                      nt nta ntp                                                        
 !inject wnmjptr.obj                      nt                                                                     win32s
 !inject wnmnptr.obj                      nt                                                                     win32s
 !inject wnvrptr.obj                      nt                                                                     win32s
@@ -180,7 +180,7 @@
 !inject xmsgwnt.obj                      nt nta ntp                                                             win32s
 !inject xmsgrdu.obj                                                                                         rdu
 !inject ___argc.obj  d16 d32             nt nta ntp                 o16 o32         w16 w32 osi             rdu win32s
-!inject ___wargc.obj                     nt nta ntp                     o32                                     win32s
+!inject ___wargc.obj                     nt nta ntp                     o32
 
 !include ../../../../objlist.mif
 
@@ -197,7 +197,7 @@
 !inject cstrtx32.obj     d32
 !inject dcinit.obj                       nt nta ntp                     o32                                     win32s
 !inject dinitarg.obj                     nt nta ntp                     o32                                     win32s
-!inject diniwarg.obj                     nt nta ntp                     o32                                     win32s
+!inject diniwarg.obj                     nt nta ntp                     o32                            
 !inject dllstart.obj     d32
 !inject dllnmwnt.obj                     nt nta ntp                                                             win32s
 !inject dmndo32.obj                                                     o32
@@ -208,11 +208,11 @@
 !inject main3o32.obj                                                    o32
 !inject main5o32.obj                                                    o32
 !inject main3wnt.obj                     nt nta ntp                                                             win32s
-!inject main5wnt.obj                     nt nta ntp                                                             win32s
+!inject main5wnt.obj                     nt nta ntp
 !inject wildargv.obj d16 d32             nt nta ntp                 o16 o32                                     win32s
-!inject wildwarg.obj                     nt nta ntp                     o32                                     win32s
+!inject wildwarg.obj                     nt nta ntp                     o32                       
 !inject wmndwnt.obj                      nt nta ntp                                                             win32s
-!inject wmndwwnt.obj                     nt nta ntp                                                             win32s
+!inject wmndwwnt.obj                     nt nta ntp                                            
 
 objsuffix=files
 !include ../../../../objlist.mif

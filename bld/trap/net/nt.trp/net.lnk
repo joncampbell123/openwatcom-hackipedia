@@ -1,0 +1,11 @@
+debug dwarf option symfile
+op map name net.dll
+sys nt_dll initinstance opt dosseg export TrapInit_.1 export TrapFini_.2 export TrapRequest_.3 op modname=net option description 'Open Watcom Debugger Trap File' op offset=0x6e900000
+op dosseg
+file ntstrt.obj
+file mxutil.obj
+file remote.obj
+file ntstub.obj
+file packet.obj
+file netlink.obj
+

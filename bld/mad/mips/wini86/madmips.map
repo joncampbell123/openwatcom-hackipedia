@@ -1,0 +1,478 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:54
+Executable Image: madmips.dll
+creating a Windows 16-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            00002760
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+madimp_TEXT            CODE           AUTO           0001:0000       000003a8
+disentry_TEXT          CODE           AUTO           0001:03b0       00001f4f
+dismips_TEXT           CODE           AUTO           0001:2300       00000d2f
+mpsaddr_TEXT           CODE           AUTO           0001:3030       000000e9
+mpsctrl_TEXT           CODE           AUTO           0001:3120       000000e0
+mpstypes_TEXT          CODE           AUTO           0001:3200       00000347
+mpsreg_TEXT            CODE           AUTO           0001:3550       00001612
+mpscall_TEXT           CODE           AUTO           0001:4b70       00000343
+mpsdisas_TEXT          CODE           AUTO           0001:4ec0       00000bce
+mpstrace_TEXT          CODE           AUTO           0001:5a90       000004a6
+_TEXT                  CODE           AUTO           0001:5f36       00000592
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+AFX_NULL               BEGDATA        DGROUP         0002:0010       00000000
+CONST                  DATA           DGROUP         0002:0010       00000000
+CONST2                 DATA           DGROUP         0002:0010       00000102
+_DATA                  DATA           DGROUP         0002:0120       000002f0
+XIB                    DATA           DGROUP         0002:0410       00000000
+XI                     DATA           DGROUP         0002:0410       00000000
+XIE                    DATA           DGROUP         0002:0410       00000000
+YIB                    DATA           DGROUP         0002:0410       00000000
+YI                     DATA           DGROUP         0002:0410       00000000
+YIE                    DATA           DGROUP         0002:0410       00000000
+STRINGS                DATA           DGROUP         0002:0410       00000000
+DATA                   DATA           DGROUP         0002:0410       00000000
+BCSD                   DATA           DGROUP         0002:0410       00000000
+_BSS                   BSS            DGROUP         0002:0410       00000346
+STACK                  STACK          DGROUP         0002:0760       00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: madimp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/c/madimp.c)
+0002:0410+     _MadClient
+0001:0000+     MADUNLOAD
+0001:0020      WINMAIN
+0001:010e+     MADLOAD
+0001:013a      MCAlloc_
+0001:014c*     MCRealloc_
+0001:015e      MCFree_
+0001:0170*     MCOpen_
+0001:0184*     MCSeek_
+0001:0198*     MCRead_
+0001:01aa*     MCClose_
+0001:01bc      MCReadMem_
+0001:01e8*     MCWriteMem_
+0001:0214*     MCString_
+0001:0226*     MCAddString_
+0001:0238*     MCRadixPrefix_
+0001:024a      MCNotify_
+0001:025e*     MCMachineData_
+0001:0296      MCAddrToString_
+0001:02cc      MCMemExpr_
+0001:02ea*     MCAddrSection_
+0001:02fc*     MCAddrOvlReturn_
+0001:030e      MCSystemConfig_
+0001:0320      MCTypeInfoForHost_
+0001:0334*     MCTypeConvert_
+0001:035a      MCTypeToString_
+0001:0384*     MCStatus_
+0002:0120+     _MadImpInterface
+Module: disentry.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/ndisasm/core/c/disentry.c)
+0001:03b0      _MIPSMaxInsName
+0001:03b1+     _DisStringTable
+0001:0802+     _DisInstructionTable
+0001:1194+     _DisRegisterTable
+0001:1316*     _DisRefTypeTable
+0001:132c      _MIPSRangeTable
+0001:135c      _MIPSRangeTablePos
+0001:1360+     _DisSelectorTable
+0001:1a78      SEX_
+0001:1aae+     DisGetString_
+0001:1b0c*     DisDummyHandler_
+0001:1b16      DisInit_
+0001:1b48      DisFini_
+0001:1b54      DisDecodeInit_
+0001:1bec      DisDecode_
+0001:1e0a+     DisAddReg_
+0001:1e52+     DisOpFormat_
+0001:20ca      DisFormat_
+0001:22d6      DisInsNameMax_
+0001:22ec*     DisInsSizeInc_
+Module: dismips.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/ndisasm/core/c/dismips.c)
+0001:230e      _MIPSData
+0001:2372      MIPSNull_
+0001:2384      MIPSJType_
+0001:23ce      MIPSCode_
+0001:2426      MIPSImmed1_
+0001:245c      MIPSImmed2_
+0001:24be      MIPSImmed2U_
+0001:250c      MIPSShift_
+0001:257e      MIPSTrap1_
+0001:25ce      MIPSTrap2_
+0001:2608      MIPSRegD_
+0001:263e      MIPSRegS_
+0001:2666      MIPSReg2_
+0001:26b8      MIPSReg3_
+0001:2718      MIPSMulDiv_
+0001:2752      MIPSCache_
+0001:27cc      MIPSMemory_
+0001:286a      MIPSJump1_
+0001:2892      MIPSJump2_
+0001:28e6      MIPSBranch1_
+0001:296e      MIPSBranch2_
+0001:29f6      MIPSBranch3_
+0001:2a6c      MIPSFGMove_
+0001:2abe      MIPSFPUOp2_
+0001:2b36      MIPSFPUOp3_
+0001:2bc0      MIPSFPUCmp_
+0001:2c28      MIPSFPUMemory_
+0001:2ca6      MIPSBranchCop_
+Module: mpsaddr.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpsaddr.c)
+0001:3030      MIADDRADD
+0001:3050      MIADDRCOMP
+0001:30b0      MIADDRDIFF
+0001:30de      MIADDRMAP
+0001:30f2      MIADDRFLAT
+0001:3106      MIADDRINTERRUPT
+Module: mpsctrl.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpsctrl.c)
+0001:3120      MIINIT
+0001:314e      MIFINI
+0001:3166      MISTATESIZE
+0001:3178      MISTATEINIT
+0001:31b0      MISTATESET
+0001:31cc      MISTATECOPY
+0002:0420      _MADState
+Module: mpstypes.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpstypes.c)
+0001:3272      _TypeArray
+0001:32f2      MITYPEWALK
+0001:3348      MITYPENAME
+0001:3364      MITYPEPREFERREDRADIX
+0001:3390      MITYPEINFO
+0001:33da      MITYPEDEFAULT
+0001:3428      MITYPETOSTRING
+0001:346a      MITYPEFORDIPTYPE
+0001:3534      MITYPECONVERT
+Module: mpsreg.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpsreg.c)
+0001:35d8+     _NAME_rm
+0001:35db+     _NAME_fi
+0001:35de+     _NAME_fu
+0001:35e1+     _NAME_fo
+0001:35e4+     _NAME_fz
+0001:35e7+     _NAME_fv
+0001:35ea+     _NAME_ei
+0001:35ed+     _NAME_eu
+0001:35f0+     _NAME_eo
+0001:35f3+     _NAME_ez
+0001:35f6+     _NAME_ev
+0001:35f9+     _NAME_ci
+0001:35fc+     _NAME_cu
+0001:35ff+     _NAME_co
+0001:3602+     _NAME_cz
+0001:3605+     _NAME_cv
+0001:3608+     _NAME_cn
+0001:360b+     _NAME_c
+0001:36f2+     _NAME_f0
+0001:36f5+     _NAME_f1
+0001:36f8+     _NAME_f2
+0001:36fb+     _NAME_f3
+0001:36fe+     _NAME_f4
+0001:3701+     _NAME_f5
+0001:3704+     _NAME_f6
+0001:3707+     _NAME_f7
+0001:370a+     _NAME_f8
+0001:370d+     _NAME_f9
+0001:3710+     _NAME_f10
+0001:3714+     _NAME_f11
+0001:3718+     _NAME_f12
+0001:371c+     _NAME_f13
+0001:3720+     _NAME_f14
+0001:3724+     _NAME_f15
+0001:3728+     _NAME_f16
+0001:372c+     _NAME_f17
+0001:3730+     _NAME_f18
+0001:3734+     _NAME_f19
+0001:3738+     _NAME_f20
+0001:373c+     _NAME_f21
+0001:3740+     _NAME_f22
+0001:3744+     _NAME_f23
+0001:3748+     _NAME_f24
+0001:374c+     _NAME_f25
+0001:3750+     _NAME_f26
+0001:3754+     _NAME_f27
+0001:3758+     _NAME_f28
+0001:375c+     _NAME_f29
+0001:3760+     _NAME_f30
+0001:3764+     _NAME_f31
+0001:3768+     _NAME_r0
+0001:376b+     _NAME_r1
+0001:376e+     _NAME_r2
+0001:3771+     _NAME_r3
+0001:3774+     _NAME_r4
+0001:3777+     _NAME_r5
+0001:377a+     _NAME_r6
+0001:377d+     _NAME_r7
+0001:3780+     _NAME_r8
+0001:3783+     _NAME_r9
+0001:3786+     _NAME_r10
+0001:378a+     _NAME_r11
+0001:378e+     _NAME_r12
+0001:3792+     _NAME_r13
+0001:3796+     _NAME_r14
+0001:379a+     _NAME_r15
+0001:379e+     _NAME_r16
+0001:37a2+     _NAME_r17
+0001:37a6+     _NAME_r18
+0001:37aa+     _NAME_r19
+0001:37ae+     _NAME_r20
+0001:37b2+     _NAME_r21
+0001:37b6+     _NAME_r22
+0001:37ba+     _NAME_r23
+0001:37be+     _NAME_r24
+0001:37c2+     _NAME_r25
+0001:37c6+     _NAME_r26
+0001:37ca+     _NAME_r27
+0001:37ce+     _NAME_r28
+0001:37d2+     _NAME_r29
+0001:37d6+     _NAME_r30
+0001:37da+     _NAME_r31
+0001:37de+     _NAME_zero
+0001:37e3+     _NAME_at
+0001:37e6+     _NAME_v0
+0001:37e9+     _NAME_v1
+0001:37ec+     _NAME_a0
+0001:37ef+     _NAME_a1
+0001:37f2+     _NAME_a2
+0001:37f5+     _NAME_a3
+0001:37f8+     _NAME_t0
+0001:37fb+     _NAME_t1
+0001:37fe+     _NAME_t2
+0001:3801+     _NAME_t3
+0001:3804+     _NAME_t4
+0001:3807+     _NAME_t5
+0001:380a+     _NAME_t6
+0001:380d+     _NAME_t7
+0001:3810+     _NAME_s0
+0001:3813+     _NAME_s1
+0001:3816+     _NAME_s2
+0001:3819+     _NAME_s3
+0001:381c+     _NAME_s4
+0001:381f+     _NAME_s5
+0001:3822+     _NAME_s6
+0001:3825+     _NAME_s7
+0001:3828+     _NAME_t8
+0001:382b+     _NAME_t9
+0001:382e+     _NAME_k0
+0001:3831+     _NAME_k1
+0001:3834+     _NAME_gp
+0001:3837+     _NAME_sp
+0001:383a+     _NAME_fp
+0001:383d+     _NAME_ra
+0001:3840+     _NAME_pc
+0001:3843+     _NAME_lo
+0001:3846+     _NAME_hi
+0001:3849+     _NAME_fpcsr
+0001:384f+     _NAME_fpivr
+0001:3856      _RegList
+0001:3d8e      MIREGISTERSSIZE
+0001:3da0      MIREGISTERSHOST
+0001:3db2      MIREGISTERSTARGET
+0001:3dc4      MIREGSETWALK
+0001:3e16      MIREGSETNAME
+0001:3e36      MIREGSETLEVEL
+0001:3f82      MIREGSETDISPLAYGROUPING
+0001:41fc      MIREGSETDISPLAYGETPIECE
+0001:4238      MIREGSETDISPLAYMODIFY
+0001:4288      MIREGMODIFIED
+0001:439a      MIREGINSPECTADDR
+0001:442c      MIREGSETDISPLAYTOGGLELIST
+0001:4448      MIREGSETDISPLAYTOGGLE
+0001:44bc      MIREGWALK
+0001:45aa      MIREGSPECIALGET
+0001:462a      MIREGSPECIALSET
+0001:46a2      MIREGSPECIALNAME
+0001:4732      MIREGFROMCONTEXTITEM
+0001:47a4      MIREGUPDATESTART
+0001:47b4      MIREGUPDATEEND
+0001:4a14      RegInit_
+0001:4af2      RegFini_
+Module: mpscall.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpscall.c)
+0001:4b72      MICALLSTACKGROWSUP
+0001:4b84      MICALLTYPELIST
+0001:4b98      MICALLBUILDFRAME
+0001:4be8      MICALLRETURNREG
+0001:4bfe      MICALLPARMREGLIST
+0001:4c14      MICALLUPSTACKSIZE
+0001:4c26      MICALLUPSTACKINIT
+0001:4d4e      MICALLUPSTACKLEVEL
+Module: mpsdisas.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpsdisas.c)
+0001:4ec0      _RegTrans
+0001:4fa6      DisasmInit_
+0001:4fd2      DisasmFini_
+0001:4fe6      DisCliGetData_
+0001:5044      DisCliValueString_
+0001:519c      MIDISASMDATASIZE
+0001:51ae      MIDISASMNAMEMAX
+0001:51c6+     DisasmOne_
+0001:52a2      MIDISASM
+0001:52c6      MIDISASMFORMAT
+0001:542a      MIDISASMINSSIZE
+0001:543e      MIDISASMINSUNDOABLE
+0001:5574      DisasmControl_
+0001:56de      MIDISASMCONTROL
+0001:56fe      MIDISASMINSNEXT
+0001:580e      MIDISASMMEMREFWALK
+0001:59ce      MIDISASMTOGGLELIST
+0001:59e2      MIDISASMTOGGLE
+0001:5a20      MIDISASMINSPECTADDR
+Module: mpstrace.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/mips/c/mpstrace.c)
+0001:5a9a      MITRACESIZE
+0001:5aac      MITRACEINIT
+0001:5abc      MITRACEHAVERECURSED
+0001:5af0      MITRACEONE
+0001:5c10      MITRACESIMULATE
+0001:5dca      MITRACEFINI
+0001:5dda      MIUNEXPECTEDBREAK
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strtol.c)
+0001:617c      strtoul_
+0001:6190*     strtol_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wstart)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:0312*     __curbrk
+0002:0314*     __psp
+0002:0316*     __osmajor
+0002:0317*     __osminor
+0002:0318*     __osmode
+0002:000a*     __STACKLOW
+0002:000c*     __STACKTOP
+0002:031a*     __cbyte
+0002:031c*     __child
+0002:031e*     __no87
+0002:0319*     __HShift
+0002:0320*     __get_ovl_stack
+0002:0324*     __restore_ovl_stack
+0002:0328*     ___FPE_handler
+0002:032c*     __LpCmdLine
+0002:0330*     __LpPgmName
+0001:619a      _wstart_
+0001:619a*     _cstart_
+0001:627b      __exit_
+0001:628c      __GETDS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(cmodel)
+0001:628e      _big_code_
+0001:628e*     CodeModelMismatch
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(toupper.c)
+0001:628e      toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strupr.c)
+0001:629c      strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(tolower.c)
+0001:62c0      tolower_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(istable.c)
+0002:0010      __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(seterrno.c)
+0001:62ce      __set_errno_
+0001:62e9*     __set_EDOM_
+0001:6300*     __set_ERANGE_
+0001:6316*     __set_EINVAL_
+0001:632f*     __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4m)
+0001:6340*     __I4M
+0001:6340      __U4M
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(exit.c)
+0001:6358+     __null_int23_exit_
+0001:6359      exit_
+0001:6392*     _exit_
+0002:03c4+     ___int23_exit
+0002:03c8+     ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initrtns.c)
+0001:63e2      __FInitRtns
+0001:63ed+     __InitRtns
+0001:644b      __FFiniRtns
+0001:6456      __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(dosseg)
+0001:64ba      __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(errno.c)
+0001:64bb      __get_errno_ptr_
+0001:64c1      __get_doserrno_ptr_
+0002:0752+     _errno
+0002:0754+     __doserrno
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(winrtns.c)
+0002:03cc*     __WindowsIsWindowedHandle
+0002:03d0*     __WindowsRemoveWindowedHandle
+0002:03d4*     __WindowsNewWindow
+0002:03d8*     __WindowsCloseWindow
+0002:03dc*     __WindowsSetAbout
+0002:03e0*     __WindowsSetAppTitle
+0002:03e4*     __WindowsSetConTitle
+0002:03e8*     __WindowsDestroyOnClose
+0002:03ec*     __WindowsYieldControl
+0002:03f0*     __WindowsShutDown
+0002:03f4*     __WindowsStdin
+0002:03f8*     __WindowsStdout
+0002:03fc*     __WindowsKbhit
+0002:0400*     __WindowsGetch
+0002:0404*     __WindowsGetche
+0002:0408*     __WindowsPutch
+0002:040c      __WindowsExitRtn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sgdef086)
+0002:0410      __Start_XI
+0002:0410      __End_XI
+0002:0410      __Start_YI
+0002:0410      __End_YI
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+POSTAPPMESSAGE                      USER
+GETCURRENTTASK                      KERNEL
+MAKEPROCINSTANCE                    KERNEL
+GETMESSAGE                          USER
+TRANSLATEMESSAGE                    USER
+DISPATCHMESSAGE                     USER
+INITTASK                            KERNEL
+GETMODULEFILENAME                   KERNEL
+INITAPP                             USER
+WAITEVENT                           KERNEL
+__AHSHIFT                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  8c28 (35880.)
+Entry point address: 0001:619a
+Link time: 00:00.00

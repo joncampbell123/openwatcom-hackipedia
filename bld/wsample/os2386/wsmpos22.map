@@ -1,0 +1,640 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:42:14
+Executable Image: wsmpos22.exe
+creating an OS/2 32-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        000115d0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0001:00000000   00000007
+_TEXT                  CODE           AUTO           0001:00000010   0000881b
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   00000034
+CONST2                 DATA           DGROUP         0002:00000038   00000000
+_DATA                  DATA           DGROUP         0002:00000038   000005f8
+XIB                    DATA           DGROUP         0002:00000630   00000000
+XI                     DATA           DGROUP         0002:00000630   0000002a
+XIE                    DATA           DGROUP         0002:0000065a   00000000
+YIB                    DATA           DGROUP         0002:0000065a   00000000
+YI                     DATA           DGROUP         0002:0000065a   00000018
+YIE                    DATA           DGROUP         0002:00000672   00000000
+TIB                    DATA           DGROUP         0002:00000672   00000000
+TI                     DATA           DGROUP         0002:00000672   00000000
+TIE                    DATA           DGROUP         0002:00000672   00000000
+DATA                   DATA           DGROUP         0002:00000672   00000000
+_BSS                   BSS            DGROUP         0002:00000674   00000f58
+STACK                  STACK          DGROUP         0002:000015d0   00010000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: sampos22.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/sampos22.c)
+0001:00000020  NextThread_
+0001:00000080  InitTimerRate_
+0001:00000090* SetTimerRate_
+0001:000000c0  TimerRate_
+0001:000000d0  SafeMargin_
+0001:000000e0  VersionCheck_
+0001:000001d0+ RecordSample_
+0001:00000340  GetCommArea_
+0001:000003e0  ResetCommArea_
+0001:00000460  GetNextAddr_
+0001:00000490  StopProg_
+0001:000005d0+ DebugExecute_
+0001:00000760+ Sleeper
+0001:00000890  StartProg_
+0001:00000b40  SysDefaultOptions_
+0001:00000c50  SysParseOptions_
+Module: sysinit.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/sysinit.c)
+0001:00000cc0  SysInit_
+Module: sampexe.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/sampexe.c)
+0001:00000cf0  GetProg_
+0001:00000e50  fatal_
+Module: sample.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/sample.c)
+0002:00000044+ _Header
+0002:0000004c+ _Last
+0002:00000054+ _FirstSample
+0001:00000f70  WriteMark_
+0001:00001000  WriteCodeLoad_
+0001:000010c0  WriteAddrMap_
+0001:00001110  StopAndSave_
+0001:00001130+ SaveSamples_
+0001:00001360  RecordCGraph_
+0001:000014b0  report_
+0001:00001580+ Usage_
+0001:000015b0+ skip_
+0001:000015d0  GetNumber_
+0001:000016d0+ Parse_
+0001:000018c0  AllocSamples_
+0001:00001970  main_
+Module: sampdata.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/sampdata.c)
+0002:00000fc8  _ExeName
+0002:00001048  _SampName
+0002:00001148  _CGraphOff
+0002:0000114c  _SampleIndex
+0002:00001150  _Margin
+0002:00001154  _LastSampleIndex
+0002:00001158  _Comm
+0002:0000116c  _SamplerOff
+0002:00001170  _Samples
+0002:00001174  _SampleCount
+0002:00001178  _CallGraph
+0002:0000117c  _Info
+0002:000011e0  _CurrTick
+0002:000011e4  _Ceiling
+0002:000011e8  _InsiderTime
+0002:000011ec  _CGraphSeg
+0002:000011ee  _FarWriteProblem
+0002:000011ef  _CallGraphMode
+0002:000011f0  _LostData
+Module: io.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/io.c)
+0001:00001b40  SampCreate_
+0001:00001b60  SampWrite_
+0001:00001bc0  SampSeek_
+0001:00001bf0  SampClose_
+0001:00001c10  Output_
+Module: sysio.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/sysio.c)
+0001:00001c40  SysCreate_
+0001:00001c60  SysWrite_
+0001:00001c70  SysSeek_
+0001:00001c80  SysClose_
+0001:00001c90  alloc_
+0001:00001ca0  mfree_
+Module: wmsg.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/c/wmsg.c)
+0001:00001d10  MsgInit_
+0001:00001e90  MsgFini_
+0001:00001ec0  MsgPrintfUsage_
+0002:00000064  _WResRtns
+0002:000011fc  _MsgArray
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nrealloc.c)
+0001:00001ef0* _nrealloc_
+0001:00001ef0  realloc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(exit.c)
+0001:00001f6a+ __null_int23_exit_
+0001:00001f6b  exit_
+0001:00001fbb  _exit_
+0002:00000084+ ___int23_exit
+0002:00000088+ ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(split2.c)
+0001:00002030  _splitpath2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(makepath.c)
+0001:000021a0  _makepath_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(searchen.c)
+0001:00002350  _searchenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(accssos2.c)
+0001:00002480  access_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(stack386.c)
+0001:000024e0  stackavail_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(statos2.c)
+0001:00002551  stat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(stk)
+0001:000027e5* __STK
+0001:000027d5  __CHK
+0001:00002814  __GRO
+0001:00002804  __STKOVERFLOW_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(tolower.c)
+0001:00002840  tolower_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(istable.c)
+0001:00002850  __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(gtcmd.c)
+0001:000029a0  _bgetcmd_
+0001:00002a10  getcmd_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nmalloc.c)
+0001:00002a30  _nmalloc_
+0001:00002a30  malloc_
+0002:0000009c  ___nheapbeg
+0002:000000a0  ___MiniHeapRover
+0002:000000a4  ___LargestSizeB4MiniHeapRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nfree.c)
+0001:00002b30  _nfree_
+0001:00002b30  free_
+0002:00001370  ___MiniHeapFreeRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(cstart)
+0001:00002c38  _cstart_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(argcv.c)
+0002:00001374  __argc
+0002:00001378  __argv
+0002:0000137c  ___argc
+0002:00001380  ___argv
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(openos2.c)
+0001:00002e60  open_
+0001:00002e80+ sopen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(write.c)
+0001:00002fb0  write_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(lseek.c)
+0001:000031e0  lseek_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(close.c)
+0001:00003210  close_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(read.c)
+0001:00003220  read_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(tell.c)
+0001:00003390  tell_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(loadfind.c)
+0001:000033c8  FindResources_
+0002:000000a8  _FileShift
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(cmdname.c)
+0001:000034d0  _cmdname_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(loadstr.c)
+0001:00003638+ WResLoadString2_
+0001:000036e8  WResLoadString_
+0001:00003700  OpenResFile_
+0001:00003710+ InitResources2_
+0001:00003738  InitResources_
+0001:00003748* CloseResFile2_
+0001:00003754  CloseResFile_
+0001:0000376c* LoadstrInitStatics_
+0002:00001384+ _MainDir
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(wrlang.c)
+0001:000037a0  _WResLanguage_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nmsize.c)
+0001:00003830  _nmsize_
+0001:00003830* _msize_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nexpand.c)
+0001:00003840  _nexpand_
+0001:00003840* _expand_
+0001:00003880+ __HeapManager_expand_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(maino32.c)
+0002:000000ac+ ___FirstThreadData
+0002:000000b0  ___GetThreadPtr
+0002:000000b4  __AccessFileH
+0002:000000b8  __ReleaseFileH
+0002:000000bc  __AccessIOB
+0002:000000c0  __ReleaseIOB
+0002:000000c4  __AccessNHeap
+0002:000000c8* __AccessFHeap
+0002:000000cc  __ReleaseNHeap
+0002:000000d0* __ReleaseFHeap
+0001:00003a3d  __threadstack_
+0001:00003a44* __threadid_
+0001:00003a4b  __OS2MainInit_
+0001:00003aba+ __OS2Init_
+0001:00003af8* __OS2Fini_
+0001:00003b00* __shutdown_stack_checking_
+0001:00003b15  __exit_
+0002:000000d4* __AccessTDList
+0002:000000d8* __ReleaseTDList
+0002:000000dc+ ___sig_init_rtn
+0002:000000e0* ___sig_fini_rtn
+0002:000000e4* __threadstksize
+0002:000000e8  ___process_fini
+0002:00001388  ___Is_DLL
+0002:0000138c+ ___saved_CS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(initrtns.c)
+0001:00003b70  __InitRtns
+0001:00003bc0  __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsnccnt.c)
+0001:00003c20  _mbsnccnt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsncpy.c)
+0001:00003c50  _mbsncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsnbcnt.c)
+0001:00003c70  _mbsnbcnt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsnextc.c)
+0001:00003ce0  _mbsnextc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsinc.c)
+0001:00003d20  _mbsinc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbconv.c)
+0001:00003d50  _mbvtop_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbclen.c)
+0001:00003d70  _mbclen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsdec.c)
+0001:00003da0  _mbsdec_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(gtcwdos2.c)
+0001:00003e20  getcwd_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(strlen.c)
+0001:00003ee0  strlen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(strncat.c)
+0001:00003f00  strncat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(getenv.c)
+0001:00003f40  getenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(strcat.c)
+0001:00003fd0  strcat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(seterrno.c)
+0001:00003fff  __set_errno_
+0001:0000400d* __set_EDOM_
+0001:0000401b* __set_ERANGE_
+0001:00004029* __set_EINVAL_
+0001:0000403c  __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(dosret.c)
+0001:00004050* _dosretax_
+0001:00004060* _dosret0_
+0001:00004070  __set_errno_dos_
+0001:000040a0* __set_errno_dos_reterr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbschr.c)
+0001:000040b0  _mbschr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbscmp.c)
+0001:00004110  _mbscmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbspbrk.c)
+0001:00004180  _mbspbrk_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(fullpath.c)
+0001:000041d0+ _sys_fullpath_
+0001:00004310  _fullpath_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(fstatos2.c)
+0001:000043c0  fstat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(errno.c)
+0001:00004540  __get_errno_ptr_
+0001:00004550* __get_doserrno_ptr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(d2ttime.c)
+0001:00004560  _d2ttime_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(xmsgo32.c)
+0001:000045e0+ __exit_with_msg_
+0001:00004630  __fatal_runtime_error_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nmemneed.c)
+0001:00004650  __nmemneed_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mem.c)
+0001:00004660  __MemAllocator
+0001:00004710  __MemFree
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(grownear.c)
+0001:000049b0  __ExpandDGROUP_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(main2o32.c)
+0001:000049d0  __OS2Main
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(segdefns)
+0001:00000003  ___begtext
+0002:00000000* __nullarea
+0002:00000630  __Start_XI
+0002:0000065a  __End_XI
+0002:0000065a  __Start_YI
+0002:00000672  __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(initargv.c)
+0001:00004a40  __Init_Argv_
+0001:00004a90+ _getargv_
+0001:00004c30  __Fini_Argv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(umaskval.c)
+0002:000001f0  ___umaskval
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(os2fil64.c)
+0002:000001f4  ___os2_DosOpenL
+0002:000001f8+ ___os2_DosSetFilePtrL
+0002:000001fc+ ___os2_DosSetFileSizeL
+0002:00000200+ ___os2_DosSetFileLocksL
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(iomode.c)
+0001:00004d30  __GetIOMode_
+0001:00004d50  __SetIOMode_nogrow_
+0002:00000204  ___NFiles
+0002:00000208  ___init_mode
+0002:00000258  ___io_mode
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(isattos2.c)
+0001:00004d70  isatty_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(stiomode.c)
+0001:00004da0  __grow_iomode_
+0001:00004e70+ __shrink_iomode_
+0001:00004ef0  __SetIOMode_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(iob.c)
+0002:0000025c  ___iob
+0002:00000464  __fmode
+0002:00001498  ___OpenStreams
+0002:0000149c  ___ClosedStreams
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(__lseek.c)
+0001:00004f60  __lseek_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(memset.c)
+0001:00004f90  memset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(_clseos2.c)
+0001:00004fb0  __close_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(iomodtty.c)
+0001:00004ff0  __ChkTTYIOMode_
+0001:00005030* __IOMode_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wriidfn.c)
+0001:00005050  WResInitIDFromNum_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrfindrs.c)
+0001:00005060  __FindType_
+0001:00005084  __FindRes_
+0001:000050a8  __FindLang_
+0001:000050e4  WResFindResource_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrgetli.c)
+0001:00005170  WResGetLangInfo_
+0001:00005184* WResGetFileInfo_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(ropenfro.c)
+0001:000051a0  ResOpenFileRO_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrinitdi.c)
+0001:000051f0  WResInitDir_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrreaddi.c)
+0001:00005968  WResReadDir_
+0001:00005974+ WResReadDir2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrfreedi.c)
+0001:00005a30+ __FreeLangList_
+0001:00005a5c+ __FreeResList_
+0001:00005a94  __FreeTypeList_
+0001:00005acc  WResFreeDir_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(rclosef.c)
+0001:00005af0  ResCloseFile_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(stricmp.c)
+0001:00005b10  stricmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(crwdata)
+0002:000004ac  __osmajor
+0002:000004ad  __osminor
+0002:00000478* __LpDllName
+0002:0000047c* __LpwCmdLine
+0002:00000480* __LpwPgmName
+0002:00000484* __LpwDllName
+0002:00000470  __LpCmdLine
+0002:00000474  __LpPgmName
+0002:00000468* __dynend
+0002:0000046c  __curbrk
+0002:00000488* __STACKLOW
+0002:0000048c* __STACKTOP
+0002:00000490  __ASTACKSIZ
+0002:00000494  __ASTACKPTR
+0002:00000498* __cbyte
+0002:0000049c* __cbyte2
+0002:000004a0* __child
+0002:000004a6  __Envptr
+0002:000004aa* __Envseg
+0002:000004a4* __no87
+0002:000004ae* ___FPE_handler
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(cinit.c)
+0001:00005b50  __CommonInit_
+0002:000014a0  ___hmodule
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbterm.c)
+0001:00005b60  _mbterm_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbsnbcpy.c)
+0001:00005ba0  _mbsnbcpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbisdbcs.c)
+0002:000014a4  ___IsDBCS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbislead.c)
+0001:00005c00* _ismbblead_
+0002:000014a8  ___MBCSIsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(strncpy.c)
+0001:00005c20  strncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(environ.c)
+0002:000015ac  ___env_mask
+0002:000015b0  _environ
+0002:000015b4* __wenviron
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbcupper.c)
+0001:00005c60  _mbctoupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbccmp.c)
+0001:00005c80  _mbccmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mktime.c)
+0001:00005cc0  mktime_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(enterdb.c)
+0001:00005d50  __EnterWVIDEO_
+0002:000004b4+ ___WD_Present
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(amblksiz.c)
+0002:000004b8  __amblksiz
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(heapen.c)
+0001:00005d80* _heapenable_
+0002:000004bc  ___heap_enabled
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(nheapmin.c)
+0001:00005db0  _nheapshrink_
+0001:00005db0* _nheapmin_
+0001:00005db0* _heapmin_
+0001:00005db0* _heapshrink_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mthrdini.c)
+0001:00005ea0  __InitThreadData_
+0002:000004c0  ___ThreadDataSize
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(cmain386.c)
+0001:00005ec0  __CMain
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(dosseg)
+0000:00001234  __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(histsplt.c)
+0002:000015b8  ___historical_splitparms
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(___argc.c)
+0002:000015bc  ____Argc
+0002:000015c0  ____Argv
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(hdlman.c)
+0001:00005f00* __set_handles_
+0001:00005f10* _grow_handles_
+0002:000004c4  ___NHandles
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(initfile.c)
+0001:00005fa0  __InitFiles_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(ioexit.c)
+0001:000060a0* fcloseall_
+0001:000060b0  __full_io_exit_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(__stos)
+0001:000060c0  __STOSB
+0001:000060f7* __STOSD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wridcmp.c)
+0001:00006170  WResIDCmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(setmd.c)
+0001:000061b0  setmode_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrerror.c)
+0001:00006290  WresRecordError_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(ralliae.c)
+0001:000062a0  ResAddLLItemAtEnd_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrrfrr.c)
+0001:000062d0  WResReadFixedResRecord_
+0001:00006310  WResReadFixedResRecord1_
+0001:00006350  WResReadFixedResRecord2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wridexby.c)
+0001:000063d0  WResIDExtraBytes_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrrewrid.c)
+0001:000063e0  WResReadExtraWResID_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrrftr.c)
+0001:00006440  WResReadFixedTypeRecord_
+0001:00006488  WResReadFixedTypeRecord2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrrhr.c)
+0001:00006500  WResReadHeaderRecord_
+0001:00006578  WResReadExtHeader_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(mrrdrh.c)
+0001:000065c0  M32ResReadResourceHeader_
+0001:0000672c  MResReadResourceHeader_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrfree.c)
+0001:000067d0  MResFreeResourceHeader_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wridfnoo.c)
+0001:00006810  WResIDFromNameOrOrd_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wraddres.c)
+0001:00006980* WResAddResource_
+0001:000069dc  WResAddResource2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wriswrf.c)
+0001:00006b00  WResFindResType_
+0001:00006b98* WResIsWResFile_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbinit.c)
+0001:00006be0  __mbinit_
+0002:000004c8  ___MBCodePage
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(setenvp.c)
+0001:00006ce0  __setenvp_
+0001:00006da0  __freeenvp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(toupper.c)
+0001:00006df0  toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(mbdtoupp.c)
+0001:00006e00  _mbdtoupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(locmktim.c)
+0001:00006e20  __local_mktime_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(gmtime.c)
+0001:00006fa0  __brktime_
+0001:000070a0+ _gmtime_
+0001:000070c0* gmtime_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(tzset.c)
+0002:000004cc  ___start_dst
+0002:000004f0  ___end_dst
+0002:00000618* _tzname
+0002:00000620  _timezone
+0002:00000624  _daylight
+0002:00000628  ___dst_adjust
+0001:00007130* __DontCacheOSTZ_
+0001:00007140* __CacheOSTZ_
+0001:00007620+ __parse_tz_
+0001:00007850  tzset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(timeutil.c)
+0001:000079c0  __isindst_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(fclose.c)
+0001:00007cf0+ __doclose_
+0001:00007d90  __shutdown_stream_
+0001:00007db0* fclose_
+0002:000015c8+ ___RmTmpFileFn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(freefp.c)
+0001:00007e00  __freefp_
+0001:00007e50  __purgefp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wridnacm.c)
+0001:00007ec0  WResIDNameCmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(resseek.c)
+0001:00007f10* ResSeek_
+0001:00007f30  ResPadDWord_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(rduint32.c)
+0001:00007f90  ResReadUint32_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(rrnamoor.c)
+0001:00007fe0  ResReadNameOrOrdinal_
+0001:000080c8  ResRead32NameOrOrdinal_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(rduint16.c)
+0001:000081b0  ResReadUint16_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wridfrst.c)
+0001:00008200  WResIDFromStr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wridfrnu.c)
+0001:00008270  WResIDFromNum_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(wrfirres.c)
+0001:000082d0* WResFirstResource_
+0001:000082fc  WResSetEmptyWindow_
+0001:00008318  WResMakeWindow_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(clearenv.c)
+0001:00008330  clearenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(leapyear.c)
+0001:000083c0  __leapyear_
+0002:00000004  ___diyr
+0002:0000001e  ___dilyr
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(flush.c)
+0001:00008400  __flush_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(rduint8.c)
+0001:00008500  ResReadUint8_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(rrdstr.c)
+0001:00008550  ResReadString_
+0001:000085c0  ResRead32String_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(fsync.c)
+0001:00008640  fsync_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib(qwrit.c)
+0001:00008670  __qwrite_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib(varstr.c)
+0001:00008710  VarStringStart_
+0001:00008744  VarStringAddChar_
+0001:0000879c  VarStringEnd_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+DosDebug                            DOSCALLS
+DosQueryModuleName                  DOSCALLS
+DosSleep                            DOSCALLS
+DosQueryAppType                     DOSCALLS
+DosStartSession                     SESMGR
+DosExecPgm                          DOSCALLS
+DosQueryCurrentDisk                 DOSCALLS
+DosQueryCurrentDir                  DOSCALLS
+DosCreateThread                     DOSCALLS
+DosSetPriority                      DOSCALLS
+DosQueryPathInfo                    DOSCALLS
+DosFindFirst                        DOSCALLS
+DosFindClose                        DOSCALLS
+DosGetInfoBlocks                    DOSCALLS
+DosOpen                             DOSCALLS
+DosClose                            DOSCALLS
+DosWrite                            DOSCALLS
+DosSetFilePtr                       DOSCALLS
+DosRead                             DOSCALLS
+DosQueryCp                          DOSCALLS
+DosQuerySysInfo                     DOSCALLS
+DosExit                             DOSCALLS
+DosQueryHType                       DOSCALLS
+DosQueryFileInfo                    DOSCALLS
+DosAllocMem                         DOSCALLS
+DosQueryModuleHandle                DOSCALLS
+DosQueryProcAddr                    DOSCALLS
+DosSetRelMaxFH                      DOSCALLS
+DosFreeMem                          DOSCALLS
+DosQueryDBCSEnv                     NLS
+DosResetBuffer                      DOSCALLS
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/clib3r.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/os2386.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00010000 (65536.)
+Memory size:  00019dfb (105979.)
+Entry point address: 0001:00002c38
+Link time: 00:00.00

@@ -1,0 +1,471 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:50
+Executable Image: std.dll
+creating a RDOS dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          db008000             000013a0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           db001000        00000007
+_TEXT                  CODE           AUTO           db001010        00006b87
+_NULL                  BEGDATA        DGROUP         db008000        00000004
+_AFTERNULL             BEGDATA        DGROUP         db008004        00000000
+CONST                  DATA           DGROUP         db008004        00000224
+CONST2                 DATA           DGROUP         db008228        00000134
+_DATA                  DATA           DGROUP         db00835c        0000014c
+TIB                    DATA           DGROUP         db0084a8        00000000
+TI                     DATA           DGROUP         db0084a8        00000000
+TIE                    DATA           DGROUP         db0084a8        00000000
+XIB                    DATA           DGROUP         db0084a8        00000000
+XI                     DATA           DGROUP         db0084a8        0000000c
+XIE                    DATA           DGROUP         db0084b4        00000000
+YIB                    DATA           DGROUP         db0084b4        00000000
+YI                     DATA           DGROUP         db0084b4        00000006
+YIE                    DATA           DGROUP         db0084ba        00000000
+DATA                   DATA           DGROUP         db0084ba        00000000
+_BSS                   BSS            DGROUP         db009000        00000394
+STACK                  STACK          DGROUP         db0093a0        00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: rdosstrt.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/rdos/rdosstrt.c)
+db001010       _LibMain@12
+Module: mxutil.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/mxutil.c)
+db001020       GetInPtr_
+db001050       GetOutPtr_
+db001080       GetTotalSize_
+db009000       _In_Mx_Ptr
+db009004       _Out_Mx_Ptr
+db009008       _Out_Mx_Num
+db009009       _In_Mx_Num
+Module: x86cpu.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/x86cpu.c)
+db0010c0*      X86CPUType_
+Module: task.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/task.c)
+db001160       TrapInit_
+db001190       TrapFini_
+Module: debug.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/debug.c)
+db0011b0       GetCurrentDebug_
+db0011f0       SetCurrentDebug_
+db0014c0*      IsDebug_
+db0014d0       HasBreakOccurred_
+db0014e0       HasTraceOccurred_
+db0014f0       HasFaultOccurred_
+db001500       ReadMem_
+db001520       WriteMem_
+db001b50       WriteRegs_
+db002030       LockThread_
+db002060       UnlockThread_
+db002070       LockModule_
+db0020a0       UnlockModule_
+db002360       InitDebug_
+db0024a0       FreeDebug_
+db0024e0       WaitForLoad_
+db002500       HasThreadChange_
+db002510       ClearThreadChange_
+db002520       HasModuleChange_
+db002530       ClearModuleChange_
+db002540       IsTerminated_
+db002550*      GetMainThread_
+db002560*      GetMainModule_
+db002570*      GetCurrentThread_
+db002580       SetCurrentThread_
+db0025c0       GetNextThread_
+db002620       GetNextModule_
+db002690       AddBreak_
+db002720       ClearBreak_
+db002790       Go_
+db0027e0       Trace_
+Module: accmisc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accmisc.c)
+db002890       ReqAddr_info_
+db0028b0       ReqMachine_data_
+db0028f0       ReqGet_sys_config_
+db002950       ReqGet_message_text_
+db0029b0       ReqGet_next_alias_
+db0029e0       ReqGet_err_text_
+db002a60       ReqSplit_cmd_
+db002b20       ReqSet_debug_screen_
+db002b20       ReqSet_user_screen_
+db002b20       ReqRead_io_
+db002b30       ReqWrite_io_
+Module: accload.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accload.c)
+db002b40       ReqProg_load_
+db002d20       ReqProg_kill_
+Module: accio.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accio.c)
+db002d40       ReqFile_get_config_
+db002d60       ReqRead_user_keyboard_
+db002d90       ReqFile_open_
+db002df0       ReqFile_seek_
+db002e90       ReqFile_write_
+db002ef0       ReqFile_write_console_
+db002f40       ReqFile_read_
+db002f90       ReqFile_close_
+db002fc0       ReqFile_erase_
+db003010       ReqFile_run_cmd_
+db003030       ReqFile_string_to_fullpath_
+Module: accfinfo.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accfinfo.c)
+db0030f0       ReqFileInfo_getdate_
+db003120       ReqFileInfo_setdate_
+Module: accenv.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accenv.c)
+db003150       ReqEnv_setvar_
+db0031e0       ReqEnv_getvar_
+Module: accbrwat.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accbrwat.c)
+db003290       ReqSet_break_
+db0032d0       ReqClear_break_
+db003300       ReqSet_watch_
+db003330       ReqClear_watch_
+Module: accrun.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accrun.c)
+db003340       ReqProg_go_
+db003440       ReqProg_step_
+Module: accregs.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accregs.c)
+db003540       ReqRead_cpu_
+db0035f0       ReqRead_fpu_
+db003690       ReqWrite_cpu_
+db003730       ReqWrite_fpu_
+db0037d0       ReqRead_regs_
+db0038f0       ReqWrite_regs_
+Module: accmap.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accmap.c)
+db0039f0       ReqMap_addr_
+db003ab0       ReqGet_lib_name_
+Module: accredir.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accredir.c)
+db003b70       ReqRedirect_stdout_
+db003b70       ReqRedirect_stdin_
+Module: accmem.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accmem.c)
+db003b90       ReqRead_mem_
+db003be0       ReqWrite_mem_
+db003c60       ReqChecksum_mem_
+Module: accrdos.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/accrdos.c)
+db003d00       ReqRdos_poll_
+Module: thread.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/thread.c)
+db003d10       ReqThread_thaw_
+db003d10       ReqThread_freeze_
+db003d30       ReqThread_set_
+db003d90       ReqThread_get_next_
+db003de0       ReqThread_get_extra_
+Module: supphdlr.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/rdos/c/supphdlr.c)
+db003ea0       ReqCapabilities_set_exact_bp_
+db003ea0       ReqCapabilities_get_exact_bp_
+db003ea0       ReqCapabilities_set_8b_bp_
+db003ea0       ReqCapabilities_get_8b_bp_
+Module: supp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/supp.c)
+db003ed0       ReqGet_supplementary_service_
+db003f40       ReqPerform_supplementary_service_
+Module: core.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/core.c)
+db003f70+      ReqConnect_
+db003fa0+      ReqResume_
+db003fa0+      ReqSuspend_
+db003fa0+      ReqDisconnect_
+db003fb0       TrapRequest_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(dstrt386)
+db003fd4       __DLLstart_
+db003fd4*      __DLLstartw_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(strncpy.c)
+db004030       strncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nfree.c)
+db004070       _nfree_
+db004070       free_
+db00908c       ___MiniHeapFreeRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nmalloc.c)
+db004180       _nmalloc_
+db004180       malloc_
+db00835c       ___nheapbeg
+db008360       ___MiniHeapRover
+db008364       ___LargestSizeB4MiniHeapRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(rdos.c)
+db004280       RdosCreateThread_
+db004290*      RdosCreatePrioThread_
+db0042a0*      RdosBlit_
+db004300*      RdosDrawMask_
+db004370*      RdosGetBitmapInfo_
+db0043d0       RdosReadDir_
+db004440*      RdosReadResource_
+db0044f0*      RdosReadBinaryResource_
+db004590*      RdosSpawn_
+db0046a0       RdosSpawnDebug_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(splitpat.c)
+db0047f0       _splitpath_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(makepath.c)
+db0048e0       _makepath_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(accssrdu.c)
+db004a90       access_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(dirrdu.c)
+db004af0*      chdir_
+db004b20       getcwd_
+db004ba0*      _chdrive_
+db004bd0*      _getdrive_
+db004be0*      _getdiskfree_
+db004ec0*      opendir_
+db005060*      readdir_
+db005090*      rewinddir_
+db0050a0*      closedir_
+db0050d0*      mkdir_
+db005100*      rmdir_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(memset.c)
+db005130       memset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(stricmp.c)
+db005150       stricmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(dmainrdu.c)
+db0051a0       __LibMain
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(segdefns)
+db001003       ___begtext
+db008000*      __nullarea
+db0084a8       __Start_XI
+db0084b4       __End_XI
+db0084b4       __Start_YI
+db0084ba       __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mainrdu.c)
+db008368       ___TlsIndex
+db00836c+      __LpDllName
+db008370       ___FirstThreadData
+db008374       ___GetThreadPtr
+db008378       __AccessFileH
+db00837c       __ReleaseFileH
+db008380       __AccessIOB
+db008384       __ReleaseIOB
+db008388       __AccessNHeap
+db00838c       __AccessFHeap
+db005290*      __threadid_
+db0052b0+      __sig_null_rtn_
+db0052c0       __RdosInit_
+db0053a0       __exit_
+db008390       __ReleaseNHeap
+db008394       __ReleaseFHeap
+db008398       __AccessTDList
+db00839c       __ReleaseTDList
+db0083a0*      __AccessFList
+db0083a4*      __ReleaseFList
+db0083a8       ___sig_init_rtn
+db0083ac       ___sig_fini_rtn
+db00912c+      ___Is_DLL
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mem.c)
+db0053e0       __MemAllocator
+db005490       __MemFree
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nmemneed.c)
+db0055d0       __nmemneed_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(grownear.c)
+db005660+      __LastFree_
+db005790       __ExpandDGROUP_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(register.c)
+db0057c0       __initthread_
+db0057d0       _beginthread_
+db0057e0       _endthread_
+db0057f0*      __RegisterThreadData_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsnccnt.c)
+db005840       _mbsnccnt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsncpy.c)
+db005870       _mbsncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsnbcnt.c)
+db005890       _mbsnbcnt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsnextc.c)
+db005900       _mbsnextc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsinc.c)
+db005940       _mbsinc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbconv.c)
+db005970       _mbvtop_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbclen.c)
+db005990       _mbclen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsdec.c)
+db0059c0       _mbsdec_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(strupr.c)
+db005a40       strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(_strcmp)
+db005a60       strcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(__stos)
+db005ba0       __STOSB
+db005bd7*      __STOSD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(initrtns.c)
+db005c60       __InitRtns
+db005cb0       __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mthread.c)
+db005d50+      __CloseSemaphore_
+db005dc0+      __AccessIOB_
+db005dd0+      __ReleaseIOB_
+db005de0+      __AccessFileH_
+db005df0+      __ReleaseFileH_
+db005e00+      __AccessNHeap_
+db005e10+      __ReleaseNHeap_
+db005e20+      __AccessFHeap_
+db005e30+      __ReleaseFHeap_
+db005e40+      __AccessTDList_
+db005e50+      __AccessSemaphore_
+db005eb0+      __ReleaseTDList_
+db005ec0+      __ReleaseSemaphore_
+db005f00+      __MultipleThread_
+db005f30+      __AllocInitThreadData_
+db005f80*      __FreeInitThreadData_
+db005f90       __RdosThreadInit_
+db005fe0       __RdosAddThread_
+db006030       __RdosRemoveThread_
+db006070       __InitMultipleThread_
+db0083bc+      ___AccessSema4
+db0083c0+      ___ReleaseSema4
+db0083c4+      ___CloseSema4
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mthrdini.c)
+db006210       __InitThreadData_
+db0083c8       ___ThreadDataSize
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(cinit.c)
+db006240       __CommonInit_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(dosseg)
+00001234       __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(crwdata)
+db008400       __osmajor
+db008401       __osminor
+db0083d4       __LpCmdLine
+db0083d8*      __LpPgmName
+db0083cc*      __dynend
+db0083d0       __curbrk
+db0083dc*      __STACKLOW
+db0083e0*      __STACKTOP
+db0083e4*      __ASTACKSIZ
+db0083e8*      __ASTACKPTR
+db0083ec*      __cbyte
+db0083f0*      __cbyte2
+db0083f4*      __child
+db0083fa*      __Envptr
+db0083fe*      __Envseg
+db0083f8*      __no87
+db008402       ___FPE_handler
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(excptrdu.c)
+db006830+      __ReportException_
+db006b90+      ___ExceptionFilter
+db006d70       __NewExceptionFilter_
+db006da0       __DoneExceptionFilter_
+db008408       ___oscode_check_func
+db00840c       ___raise_func
+db009280*      _sw
+db009284+      ___ExceptionHandled
+db009285+      ___ReportInvoked
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(amblksiz.c)
+db008424       __amblksiz
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(heapen.c)
+db006de0*      _heapenable_
+db008428       ___heap_enabled
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nheapmin.c)
+db006e10       _nheapshrink_
+db006e10*      _nheapmin_
+db006e10*      _heapmin_
+db006e10       _heapshrink_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(thredrdu.c)
+db006f90       __CBeginThread_
+db007070       __CEndThread_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbterm.c)
+db007080       _mbterm_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbsnbcpy.c)
+db0070c0       _mbsnbcpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbisdbcs.c)
+db009288       ___IsDBCS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbislead.c)
+db007120*      _ismbblead_
+db00928c       ___MBCSIsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(xmsgrdu.c)
+db007150*      __exit_with_msg_
+db007150       __fatal_runtime_error_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(declrdu.asm)
+00000000*      __tls_index
+00000000*      __tls_start
+db00716d       __tls_alloc
+db00718c*      __tls_free
+db0071af       __tls_set_value
+db00719d       __tls_get_value
+db0071da       __create_thread
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(trdlist.c)
+db007260       __GetThreadData_
+db0072b0*      __ReallocThreadData_
+db0073a0       __AddThreadData_
+db007420       __RemoveThreadData_
+db007480*      __ResizeThreadDataList_
+db0074b0       __FreeThreadDataList_
+db0074e0*      __ActiveThreads_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(calloc.c)
+db007500       calloc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(trdalloc.c)
+db007520       __FiniThreadProcessing_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(fclex387.c)
+db007530       _ClearFPE_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(signlrdu.c)
+db007540+      __SetSignalFunc_
+db007590+      __GetSignalFunc_
+db0075c0+      __GetSignalOSCode_
+db0075f0+      __CheckSignalExCode_
+db007610+      __sigabort_
+db007620       __sigfpe_handler_
+db007670*      signal_
+db0076e0+      raise_
+db007750+      __SigInit_
+db0077a0+      __SigFini_
+db0077d0+      __sig_init_
+db008438+      __SignalTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(seterrno.c)
+db0077ef       __set_errno_
+db0077fd*      __set_EDOM_
+db00780b*      __set_ERANGE_
+db007819*      __set_EINVAL_
+db00782c*      __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(mbinit.c)
+db007874       __mbinit_
+db0084a0+      ___MBCodePage
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nrealloc.c)
+db0078d0*      _nrealloc_
+db0078d0       realloc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(abort.c)
+db00795f*      abort_
+db007971       __terminate_
+db0084a4       ___abort
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nmsize.c)
+db007990       _nmsize_
+db007990*      _msize_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib(nexpand.c)
+db0079a0       _nexpand_
+db0079a0*      _expand_
+db0079e0+      __HeapManager_expand_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r/clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  7f37 (32567.)
+Entry point address: db003fd4
+Link time: 00:00.00

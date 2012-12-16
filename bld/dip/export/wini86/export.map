@@ -1,0 +1,294 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:42
+Executable Image: export.dll
+creating a Windows 16-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            000024f0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+dipimp_TEXT            CODE           AUTO           0001:0000       0000041e
+expmisc_TEXT           CODE           AUTO           0001:0420       00000064
+expld_TEXT             CODE           AUTO           0001:0490       000027af
+expmod_TEXT            CODE           AUTO           0001:2c40       0000019b
+exptype_TEXT           CODE           AUTO           0001:2de0       000001a6
+expsym_TEXT            CODE           AUTO           0001:2f90       000005f2
+expcue_TEXT            CODE           AUTO           0001:3590       000000f4
+_TEXT                  CODE           AUTO           0001:3684       000006ac
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+AFX_NULL               BEGDATA        DGROUP         0002:0010       00000000
+CONST                  DATA           DGROUP         0002:0010       00000000
+CONST2                 DATA           DGROUP         0002:0010       00000102
+_DATA                  DATA           DGROUP         0002:0120       000002a8
+XIB                    DATA           DGROUP         0002:03c8       00000000
+XI                     DATA           DGROUP         0002:03c8       00000000
+XIE                    DATA           DGROUP         0002:03c8       00000000
+YIB                    DATA           DGROUP         0002:03c8       00000000
+YI                     DATA           DGROUP         0002:03c8       00000000
+YIE                    DATA           DGROUP         0002:03c8       00000000
+STRINGS                DATA           DGROUP         0002:03c8       00000000
+DATA                   DATA           DGROUP         0002:03c8       00000000
+BCSD                   DATA           DGROUP         0002:03c8       00000000
+_BSS                   BSS            DGROUP         0002:03d0       0000011c
+STACK                  STACK          DGROUP         0002:04f0       00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: dipimp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/c/dipimp.c)
+0002:03d0      _NilAddr
+0002:03d8+     _Client
+0001:0000+     DIPUNLOAD
+0001:0020      WINMAIN
+0001:010e+     DIPLOAD
+0001:0180      DCAlloc_
+0001:0192*     DCAllocZ_
+0001:01d8      DCRealloc_
+0001:01ea      DCFree_
+0001:01fc      DCMapAddr_
+0001:020e      DCSymCreate_
+0001:0220*     DCItemLocation_
+0001:023e*     DCAssignLocation_
+0001:025c*     DCSameAddrSpace_
+0001:028c      DCAddrSection_
+0001:029e*     DCOpen_
+0001:02b2      DCSeek_
+0001:02c6      DCRead_
+0001:02d8*     DCReadAt_
+0001:0344*     DCWrite_
+0001:0356      DCClose_
+0001:0368*     DCRemove_
+0001:037c      DCStatus_
+0001:038e*     DCCurrMAD_
+0001:03ae*     DCMachineData_
+0001:03f2+     DIPIMPOLDTYPEBASE
+0002:0120+     _ImpInterface
+Module: expmisc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/export/c/expmisc.c)
+0001:0420      _DIPImpName
+0001:0428      DIPIMPQUERYHANDLESIZE
+0001:0444      DIPIMPMOREMEM
+0001:0458      DIPIMPSTARTUP
+0001:0468      DIPIMPSHUTDOWN
+0001:0476      DIPIMPCANCEL
+Module: expld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/export/c/expld.c)
+0001:04ae+     BSeek_
+0001:056c+     BRead_
+0001:07a4      FindAddrBlock_
+0001:2a9a      DIPIMPLOADINFO
+0001:2b86      DIPIMPMAPINFO
+0001:2c26      DIPIMPUNLOADINFO
+Module: expmod.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/export/c/expmod.c)
+0001:2c42      DIPIMPWALKMODLIST
+0001:2c64      DIPIMPMODNAME
+0001:2cc2      DIPIMPMODSRCLANG
+0001:2cd8      DIPIMPMODINFO
+0001:2cec      DIPIMPADDRMOD
+0001:2d2a      DIPIMPMODADDR
+0001:2dc8      DIPIMPMODDEFAULT
+Module: exptype.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/export/c/exptype.c)
+0001:2de0      DIPIMPWALKTYPELIST
+0001:2df2      DIPIMPTYPEMOD
+0001:2e06      DIPIMPTYPEINFO
+0001:2e56      DIPIMPTYPEBASE
+0001:2e76      DIPIMPTYPEARRAYINFO
+0001:2ee0      DIPIMPTYPEPROCINFO
+0001:2f00      DIPIMPTYPEPTRADDRSPACE
+0001:2f14      DIPIMPTYPETHUNKADJUST
+0001:2f28      DIPIMPTYPECMP
+0001:2f3e      DIPIMPTYPENAME
+0001:2f50      DIPIMPTYPEADDREF
+0001:2f62      DIPIMPTYPERELEASE
+0001:2f74      DIPIMPTYPEFREEALL
+Module: expsym.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/export/c/expsym.c)
+0001:2f90+     DoWalkSymList_
+0001:301e      DIPIMPWALKSYMLIST
+0001:3056      DIPIMPWALKSYMLISTEX
+0001:308e      DIPIMPSYMMOD
+0001:30a2      DIPIMPSYMNAME
+0001:311e      DIPIMPSYMTYPE
+0001:317e      DIPIMPSYMLOCATION
+0001:31d6      DIPIMPSYMVALUE
+0001:31ea      DIPIMPSYMINFO
+0001:326a      DIPIMPSYMPARMLOCATION
+0001:327e      DIPIMPSYMOBJTYPE
+0001:3292      DIPIMPSYMOBJLOCATION
+0001:32a6      DIPIMPADDRSYM
+0001:338e+     DoLookupSym_
+0001:347a      DIPIMPLOOKUPSYM
+0001:34b0      DIPIMPLOOKUPSYMEX
+0001:34e8      DIPIMPADDRSCOPE
+0001:34fa      DIPIMPSCOPEOUTER
+0001:350c      DIPIMPSYMCMP
+0001:354c      DIPIMPSYMADDREF
+0001:355e      DIPIMPSYMRELEASE
+0001:3570      DIPIMPSYMFREEALL
+Module: expcue.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/export/c/expcue.c)
+0001:3590      DIPIMPWALKFILELIST
+0001:35a2      DIPIMPCUEMOD
+0001:35b4      DIPIMPCUEFILE
+0001:35c6      DIPIMPCUEFILEID
+0001:35da      DIPIMPCUEADJUST
+0001:35ee      DIPIMPCUELINE
+0001:3602      DIPIMPCUECOLUMN
+0001:3614      DIPIMPCUEADDR
+0001:364e      DIPIMPLINECUE
+0001:3660      DIPIMPADDRCUE
+0001:3672      DIPIMPCUECMP
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strtol.c)
+0001:38ca      strtoul_
+0001:38de*     strtol_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wstart)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:02ca*     __curbrk
+0002:02cc*     __psp
+0002:02ce*     __osmajor
+0002:02cf*     __osminor
+0002:02d0*     __osmode
+0002:000a*     __STACKLOW
+0002:000c*     __STACKTOP
+0002:02d2*     __cbyte
+0002:02d4*     __child
+0002:02d6*     __no87
+0002:02d1*     __HShift
+0002:02d8*     __get_ovl_stack
+0002:02dc*     __restore_ovl_stack
+0002:02e0*     ___FPE_handler
+0002:02e4*     __LpCmdLine
+0002:02e8*     __LpPgmName
+0001:38e8      _wstart_
+0001:38e8*     _cstart_
+0001:39c9      __exit_
+0001:39da      __GETDS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(cmodel)
+0001:39dc      _big_code_
+0001:39dc*     CodeModelMismatch
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4d)
+0001:39dc*     __I4D
+0001:3a2b      __U4D
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(memcmp.c)
+0001:3aaf      memcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(memicmp.c)
+0001:3ad9      memicmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(tolower.c)
+0001:3b29      tolower_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(istable.c)
+0002:0010      __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(seterrno.c)
+0001:3b37      __set_errno_
+0001:3b52*     __set_EDOM_
+0001:3b69*     __set_ERANGE_
+0001:3b7f*     __set_EINVAL_
+0001:3b98*     __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4m)
+0001:3ba8*     __I4M
+0001:3ba8      __U4M
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(exit.c)
+0001:3bc0+     __null_int23_exit_
+0001:3bc1      exit_
+0001:3bfa*     _exit_
+0002:037c+     ___int23_exit
+0002:0380+     ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initrtns.c)
+0001:3c4a      __FInitRtns
+0001:3c55+     __InitRtns
+0001:3cb3      __FFiniRtns
+0001:3cbe      __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(dosseg)
+0001:3d22      __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(errno.c)
+0001:3d23      __get_errno_ptr_
+0001:3d29      __get_doserrno_ptr_
+0002:04e8+     _errno
+0002:04ea+     __doserrno
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(winrtns.c)
+0002:0384*     __WindowsIsWindowedHandle
+0002:0388*     __WindowsRemoveWindowedHandle
+0002:038c*     __WindowsNewWindow
+0002:0390*     __WindowsCloseWindow
+0002:0394*     __WindowsSetAbout
+0002:0398*     __WindowsSetAppTitle
+0002:039c*     __WindowsSetConTitle
+0002:03a0*     __WindowsDestroyOnClose
+0002:03a4*     __WindowsYieldControl
+0002:03a8*     __WindowsShutDown
+0002:03ac*     __WindowsStdin
+0002:03b0*     __WindowsStdout
+0002:03b4*     __WindowsKbhit
+0002:03b8*     __WindowsGetch
+0002:03bc*     __WindowsGetche
+0002:03c0*     __WindowsPutch
+0002:03c4      __WindowsExitRtn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sgdef086)
+0002:03c8      __Start_XI
+0002:03c8      __End_XI
+0002:03c8      __Start_YI
+0002:03c8      __End_YI
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+POSTAPPMESSAGE                      USER
+GETCURRENTTASK                      KERNEL
+MAKEPROCINSTANCE                    KERNEL
+GETMESSAGE                          USER
+TRANSLATEMESSAGE                    USER
+DISPATCHMESSAGE                     USER
+FREEPROCINSTANCE                    KERNEL
+INITTASK                            KERNEL
+GETMODULEFILENAME                   KERNEL
+INITAPP                             USER
+WAITEVENT                           KERNEL
+__AHSHIFT                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  6220 (25120.)
+Entry point address: 0001:38e8
+Link time: 00:00.00

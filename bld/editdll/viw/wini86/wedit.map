@@ -1,0 +1,368 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:29:02
+Executable Image: wedit.dll
+creating a Windows 16-bit dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            000001fd
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           0001:0000       000015ca
+weditviw_TEXT          CODE           AUTO           0001:15d0       000005e1
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+_DATA                  DATA           DGROUP         0002:0010       00000084
+XIB                    DATA           DGROUP         0002:0094       00000000
+XI                     DATA           DGROUP         0002:0094       00000006
+XIE                    DATA           DGROUP         0002:009a       00000000
+YIB                    DATA           DGROUP         0002:009a       00000000
+YI                     DATA           DGROUP         0002:009a       00000000
+YIE                    DATA           DGROUP         0002:009a       00000000
+DATA                   DATA           DGROUP         0002:009a       00000000
+CONST                  DATA           DGROUP         0002:009a       00000054
+STRINGS                DATA           DGROUP         0002:00ee       00000000
+CONST2                 DATA           DGROUP         0002:00ee       00000000
+_BSS                   BSS            DGROUP         0002:00f0       0000010d
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+s = symbol is static
+
+Address        Symbol
+=======        ======
+
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/libentry.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/a/libentry.asm)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0002:0000*     __nullarea
+0002:0012*     __curbrk
+0002:0014*     __psp
+0002:0016*     __osmajor
+0002:0017*     __osminor
+0002:0018*     __osmode
+0002:000a*     __STACKLOW
+0002:000c*     __STACKTOP
+0002:001a*     __cbyte
+0002:001c*     __child
+0002:001e*     __no87
+0002:0019*     __HShift
+0002:0020*     __get_ovl_stack
+0002:0024*     __restore_ovl_stack
+0002:0028*     ___FPE_handler
+0002:002c*     __LpCmdLine
+0000:0000*     _large_code_
+0001:0000*     LibEntry
+0001:0000      __DLLstart_
+0001:005a      __exit_
+0001:0073      __GETDS
+0001:0072s     __null_FPE_rtn
+Module: weditviw.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/editdll/viw/weditviw.c)
+0001:1676*     doReset_
+0001:1686+     doRequest_
+0001:172c+     DDECALLBACK
+0001:175a+     EDITCONNECT
+0001:18da+     EDITFILE
+0001:195c+     EDITLOCATEERROR
+0001:19f6+     EDITLOCATE
+0001:1a1c+     EDITSHOWWINDOW
+0001:1a78+     EDITDISCONNECT
+0001:1ab4+     EDITSAVEFILES
+0001:1ae4+     EDITSAVETHISFILE
+0001:1b38+     EDITQUERYTHISFILE
+0001:1b84      LIBMAIN
+0001:1b9e      WEP
+0002:0032s     _bConnected
+0002:00f0s     _idInstance
+0002:00f4s     _hConv
+0002:00f8s     _hInstance
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wallflgs.c)
+0002:0034      ___win_alloc_flags
+0002:0038      ___win_realloc_flags
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initrtns.c)
+0001:0074s     callit_near_
+0001:008ds     callit_far_
+0001:00b1      __FInitRtns
+0001:00bc+     __InitRtns
+0001:011a      __FFiniRtns
+0001:0125      __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sprintf.c)
+0001:0189      sprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(cmodel)
+0001:01bc      _big_code_
+0001:01bc*     CodeModelMismatch
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sgdef086)
+0002:0094      __Start_XI
+0002:009a      __End_XI
+0002:009a      __Start_YI
+0002:009a      __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(vsprintf.c)
+0001:01bcs     mem_putc_
+0001:01e3      vsprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(prtf.c)
+0001:0211      __prtf_
+0001:04bds     getprintspecs_
+0001:069bs     evalflags_
+0001:06fcs     far_strlen_
+0001:071bs     far_other_strlen_
+0001:078cs     fmt4hex_
+0001:080ds     FixedPoint_Format_
+0001:093cs     SetZeroPad_
+0001:0975s     write_wide_string_
+0001:09e7s     formstring_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wctomb.c)
+0001:10ee      wctomb_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(itoa.c)
+0001:111a+     utoa_
+0001:117d      itoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4m)
+0001:11a6*     __I4M
+0001:11a6      __U4M
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strupr.c)
+0001:11be      strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(noefgfmt.c)
+0001:11e2s     _no_support_loaded_
+0002:003c      ___EFG_printf
+0002:0040*     ___EFG_scanf
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbisdbcs.c)
+0002:00fa      ___IsDBCS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbislead.c)
+0001:11fa*     _ismbblead_
+0001:120as     __mbInitOnStartup_
+0002:00fc      ___MBCSIsTable
+0002:0094s     ___anon58
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(lltoa.c)
+0001:1218      ulltoa_
+0001:1301*     lltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ltoa.c)
+0001:1365      ultoa_
+0001:13d8*     ltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(alphabet.c)
+0002:00bc      ___Alphabet
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(xmsgwin.c)
+0001:1409+     __exit_with_msg_
+0001:146a      __fatal_runtime_error_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(mbinit.c)
+0001:1487s     set_dbcs_table_
+0001:14a0s     clear_dbcs_table_
+0001:14bb      __mbinit_
+0002:0044+     ___MBCodePage
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(exit.c)
+0001:1559s     _null_exit_rtn_
+0001:1559+     __null_int23_exit_
+0001:155a*     exit_
+0001:1593      _exit_
+0002:0046+     ___int23_exit
+0002:004a+     ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(enterdb.c)
+0001:15a6      __EnterWVIDEO_
+0002:004e+     ___WD_Present
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(winrtns.c)
+0002:0050*     __WindowsIsWindowedHandle
+0002:0054*     __WindowsRemoveWindowedHandle
+0002:0058*     __WindowsNewWindow
+0002:005c*     __WindowsCloseWindow
+0002:0060*     __WindowsSetAbout
+0002:0064*     __WindowsSetAppTitle
+0002:0068*     __WindowsSetConTitle
+0002:006c*     __WindowsDestroyOnClose
+0002:0070*     __WindowsYieldControl
+0002:0074*     __WindowsShutDown
+0002:0078*     __WindowsStdin
+0002:007c*     __WindowsStdout
+0002:0080*     __WindowsKbhit
+0002:0084*     __WindowsGetch
+0002:0088*     __WindowsGetche
+0002:008c*     __WindowsPutch
+0002:0090      __WindowsExitRtn
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/a/libentry.asm
+                _TEXT                 CODE           0001:0000        00000074
+                _DATA                 DATA           0002:0010        00000021
+                XIB                   DATA           0002:0094        00000000
+                XI                    DATA           0002:0094        00000000
+                XIE                   DATA           0002:009a        00000000
+                YIB                   DATA           0002:009a        00000000
+                YI                    DATA           0002:009a        00000000
+                YIE                   DATA           0002:009a        00000000
+                FAR_DATA              FAR_DATA       0002:0000        00000000
+                _BSS                  BSS            0002:00f0        00000000
+                DATA                  DATA           0002:009a        00000000
+                CONST                 DATA           0002:009a        00000000
+                STRINGS               DATA           0002:00ee        00000000
+                _NULL                 BEGDATA        0002:0000        00000010
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/editdll/viw/weditviw.c
+                weditviw_TEXT         CODE           0001:15d0        000005e1
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0032        00000002
+                _BSS                  BSS            0002:00f0        0000000a
+wallflgs.c      _TEXT                 CODE           0001:0074        00000000
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0034        00000008
+initrtns.c      _TEXT                 CODE           0001:0074        00000115
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+sprintf.c       _TEXT                 CODE           0001:0189        00000032
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+cmodel          _TEXT                 CODE           0001:01bc        00000000
+                _DATA                 DATA           0002:003c        00000000
+sgdef086        _TEXT                 CODE           0001:01bc        00000000
+                _DATA                 DATA           0002:003c        00000000
+                XIB                   DATA           0002:0094        00000000
+                XI                    DATA           0002:0094        00000000
+                XIE                   DATA           0002:009a        00000000
+                YIB                   DATA           0002:009a        00000000
+                YI                    DATA           0002:009a        00000000
+                YIE                   DATA           0002:009a        00000000
+vsprintf.c      _TEXT                 CODE           0001:01bc        00000055
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+prtf.c          _TEXT                 CODE           0001:0211        00000edd
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+wctomb.c        _TEXT                 CODE           0001:10ee        0000002c
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+itoa.c          _TEXT                 CODE           0001:111a        0000008b
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+i4m             _TEXT                 CODE           0001:11a6        00000018
+                _DATA                 DATA           0002:003c        00000000
+strupr.c        _TEXT                 CODE           0001:11be        00000024
+                CONST                 DATA           0002:009a        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000000
+noefgfmt.c      _TEXT                 CODE           0001:11e2        00000018
+                CONST                 DATA           0002:009a        00000022
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:003c        00000008
+mbisdbcs.c      _TEXT                 CODE           0001:11fa        00000000
+                CONST                 DATA           0002:00bc        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000000
+                _BSS                  BSS            0002:00fa        00000002
+mbislead.c      _TEXT                 CODE           0001:11fa        0000001e
+                CONST                 DATA           0002:00bc        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000000
+                _BSS                  BSS            0002:00fc        00000101
+                XIB                   DATA           0002:0094        00000000
+                XI                    DATA           0002:0094        00000006
+                XIE                   DATA           0002:009a        00000000
+lltoa.c         _TEXT                 CODE           0001:1218        0000014d
+                CONST                 DATA           0002:00bc        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000000
+ltoa.c          _TEXT                 CODE           0001:1365        000000a4
+                CONST                 DATA           0002:00bc        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000000
+alphabet.c      _TEXT                 CODE           0001:1409        00000000
+                CONST                 DATA           0002:00bc        00000025
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000000
+xmsgwin.c       _TEXT                 CODE           0001:1409        0000007e
+                CONST                 DATA           0002:00e2        0000000c
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000000
+mbinit.c        _TEXT                 CODE           0001:1487        000000d2
+                CONST                 DATA           0002:00ee        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0044        00000002
+exit.c          _TEXT                 CODE           0001:1559        0000004d
+                CONST                 DATA           0002:00ee        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0046        00000008
+enterdb.c       _TEXT                 CODE           0001:15a6        00000024
+                CONST                 DATA           0002:00ee        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:004e        00000001
+winrtns.c       _TEXT                 CODE           0001:15ca        00000000
+                CONST                 DATA           0002:00ee        00000000
+                CONST2                DATA           0002:00ee        00000000
+                _DATA                 DATA           0002:0050        00000044
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+__AHSHIFT                           KERNEL
+LOCALINIT                           KERNEL
+DDECREATESTRINGHANDLE               DDEML
+DDECLIENTTRANSACTION                DDEML
+DDEFREESTRINGHANDLE                 DDEML
+DDEGETDATA                          DDEML
+DDEFREEDATAHANDLE                   DDEML
+DDECONNECT                          DDEML
+WINEXEC                             KERNEL
+DDEINITIALIZE                       DDEML
+DDEUNINITIALIZE                     DDEML
+MESSAGEBOX                          USER
+GETVERSION                          KERNEL
+ISDBCSLEADBYTE                      KERNEL
+GETKBCODEPAGE                       KEYBOARD
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/ddeml.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  1dae (7598.)
+Link time: 00:00.00

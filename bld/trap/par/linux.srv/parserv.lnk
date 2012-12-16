@@ -1,0 +1,16 @@
+debug dwarf option symfile
+op map name parserv.elf
+sys linux
+file mxutil.obj
+file serv.obj
+file lnxtrio.obj
+file servacc.obj
+file servcmd.obj
+file servname.obj
+file trpsupp.obj
+file trpld.obj
+file lnxnoth.obj
+file packet.obj
+file parlink.obj
+file parlinux.obj
+

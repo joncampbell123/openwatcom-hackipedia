@@ -1,0 +1,14 @@
+/**** DO NOT MODIFY THIS FILE BY HAND. CREATED BY PARSEDYN ****/
+
+
+struct {
+    int                num_tpls;
+    dyn_dim_def        dyn_tpl1;
+    int                tpl_1[4];
+} Dyn_setfs = {
+1,
+DYN_TPL_DIM, TRUE, 0, dynGetLanguage, dynIsLanguage, 
+    0, SETFS_PPKEYWORDONLY, 0,
+    -1,
+};
+

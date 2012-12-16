@@ -1,0 +1,654 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:40
+Executable Image: dwarf.dll
+creating a Windows 16-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0003:0000            00002690
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+dipimp_TEXT            CODE           AUTO           0001:0000       0000041e
+dfmisc_TEXT            CODE           AUTO           0001:0420       0000019f
+dfld_TEXT              CODE           AUTO           0001:05c0       00001050
+dfmod_TEXT             CODE           AUTO           0001:1610       00000e22
+dfmodbld_TEXT          CODE           AUTO           0001:2440       0000020c
+dftype_TEXT            CODE           AUTO           0001:2650       00001e5c
+dfsym_TEXT             CODE           AUTO           0001:44b0       00002a7e
+dfaddr_TEXT            CODE           AUTO           0001:6f30       000006fd
+dfsegs_TEXT            CODE           AUTO           0001:7630       000004a0
+dfloc_TEXT             CODE           AUTO           0001:7ad0       0000150d
+dfcue_TEXT             CODE           AUTO           0001:8fe0       00000f2d
+dfline_TEXT            CODE           AUTO           0001:9f10       000009aa
+dfaddsym_TEXT          CODE           AUTO           0001:a8c0       00000551
+dfscope_TEXT           CODE           AUTO           0001:ae20       0000024a
+dfhash_TEXT            CODE           AUTO           0001:b070       000004aa
+demangle_TEXT          CODE           AUTO           0001:b520       000030b8
+stub_TEXT              CODE           AUTO           0001:e5e0       00000000
+_TEXT                  CODE           AUTO           0002:0000       00002660
+drinit_TEXT            CODE           AUTO           0002:2660       00000708
+drinfo_TEXT            CODE           AUTO           0002:2d70       00000e39
+drpubnam_TEXT          CODE           AUTO           0002:3bb0       000002d9
+drarange_TEXT          CODE           AUTO           0002:3e90       000003a1
+drutils_TEXT           CODE           AUTO           0002:4240       000016d4
+drline_TEXT            CODE           AUTO           0002:5920       00000826
+drtype_TEXT            CODE           AUTO           0002:6150       00000b6f
+drloc_TEXT             CODE           AUTO           0002:6cc0       00001232
+drdecnam_TEXT          CODE           AUTO           0002:7f00       00004422
+virtmem_TEXT           CODE           AUTO           0002:c330       00000eb3
+drgettab_TEXT          CODE           AUTO           0002:d1f0       00000618
+drscope_TEXT           CODE           AUTO           0002:d810       0000020b
+drfdkids_TEXT          CODE           AUTO           0002:da20       00000697
+FAR_DATA               FAR_DATA       AUTO           0003:0000       00000000
+_NULL                  BEGDATA        DGROUP         0003:0000       00000010
+AFX_NULL               BEGDATA        DGROUP         0003:0010       00000000
+CONST                  DATA           DGROUP         0003:0010       00000026
+CONST2                 DATA           DGROUP         0003:0036       00000102
+_DATA                  DATA           DGROUP         0003:0140       000004c6
+XIB                    DATA           DGROUP         0003:0606       00000000
+XI                     DATA           DGROUP         0003:0606       00000000
+XIE                    DATA           DGROUP         0003:0606       00000000
+YIB                    DATA           DGROUP         0003:0606       00000000
+YI                     DATA           DGROUP         0003:0606       00000000
+YIE                    DATA           DGROUP         0003:0606       00000000
+STRINGS                DATA           DGROUP         0003:0606       00000000
+DATA                   DATA           DGROUP         0003:0606       00000000
+BCSD                   DATA           DGROUP         0003:0606       00000000
+_BSS                   BSS            DGROUP         0003:0610       0000007a
+STACK                  STACK          DGROUP         0003:0690       00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: dipimp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/c/dipimp.c)
+0003:0610      _NilAddr
+0003:0618+     _Client
+0001:0000+     DIPUNLOAD
+0001:0020      WINMAIN
+0001:010e+     DIPLOAD
+0001:0180      DCAlloc_
+0001:0192*     DCAllocZ_
+0001:01d8      DCRealloc_
+0001:01ea      DCFree_
+0001:01fc      DCMapAddr_
+0001:020e      DCSymCreate_
+0001:0220      DCItemLocation_
+0001:023e      DCAssignLocation_
+0001:025c      DCSameAddrSpace_
+0001:028c*     DCAddrSection_
+0001:029e*     DCOpen_
+0001:02b2      DCSeek_
+0001:02c6      DCRead_
+0001:02d8*     DCReadAt_
+0001:0344*     DCWrite_
+0001:0356      DCClose_
+0001:0368*     DCRemove_
+0001:037c      DCStatus_
+0001:038e      DCCurrMAD_
+0001:03ae*     DCMachineData_
+0001:03f2+     DIPIMPOLDTYPEBASE
+0003:0140+     _ImpInterface
+Module: dfmisc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfmisc.c)
+0001:0420      _DIPImpName
+0001:0468      DIPIMPQUERYHANDLESIZE
+0001:0484      DFAddImage_
+0001:04a2      DFFreeImage_
+0001:04fa      DIPIMPMOREMEM
+0001:056e      DIPIMPSTARTUP
+0001:0592      DIPIMPSHUTDOWN
+0001:05ae      DIPIMPCANCEL
+0003:0624      _Cleaners
+Module: dfld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfld.c)
+0001:0668+     Lookup_section_name_
+0001:12d2      DIPIMPLOADINFO
+0001:14ee      DIPIMPMAPINFO
+0001:15a6      DIPIMPUNLOADINFO
+0003:0238      _DWRRtns
+Module: dfmod.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfmod.c)
+0001:1918      InitModMap_
+0001:19f8      ClearMods_
+0001:1a76      FiniModMap_
+0001:1b16      Dwarf2ModIdx_
+0001:1b62      DwarfModIdx_
+0001:1bba      CuTag2ModIdx_
+0001:1c06      DFWalkModList_
+0001:1c6a      DFWalkModListSrc_
+0001:1cee      DIPIMPWALKMODLIST
+0001:1d48      DIPIMPMODNAME
+0001:1db6      DIPIMPMODSRCLANG
+0001:1e24      DFAddrMod_
+0001:1f2e      DIPIMPADDRMOD
+0001:20cc      DIPIMPMODADDR
+0001:21be      DIPIMPMODINFO
+0001:22b6      DIPIMPMODDEFAULT
+0001:239c      NameCopy_
+0001:23fa      SetModPubNames_
+Module: dfmodbld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfmodbld.c)
+0001:2440      InitModList_
+0001:2472      NextModInfo_
+0001:2520      FiniModInfo_
+Module: dftype.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dftype.c)
+0001:2ce2      DIPIMPWALKTYPELIST
+0001:2d78      DIPIMPTYPEMOD
+0001:2dc2      MapImpTypeInfo_
+0001:2efc      DIPIMPTYPEINFO
+0001:2fdc      DIPIMPTYPEBASE
+0001:3462      DIPIMPTYPEARRAYINFO
+0001:35d6      GetParmN_
+0001:363c      GetParmCount_
+0001:3688      DIPIMPTYPEPROCINFO
+0001:3732      DIPIMPTYPEPTRADDRSPACE
+0001:3766      DIPIMPTYPECMP
+0001:3e70      WalkTypeSymList_
+0001:3ff6      SearchMbr_
+0001:42a6      DFBaseAdjust_
+0001:431e      DIPIMPTYPETHUNKADJUST
+0001:437a      DIPIMPTYPENAME
+0001:4476      DIPIMPTYPEADDREF
+0001:4488      DIPIMPTYPERELEASE
+0001:449a      DIPIMPTYPEFREEALL
+Module: dfsym.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfsym.c)
+0001:44c0      DIPIMPSYMMOD
+0001:44e2      DIPIMPSYMNAME
+0001:46c8      DIPIMPSYMTYPE
+0001:48d8      DFLoadAddrSym_
+0001:4b34      DIPIMPSYMLOCATION
+0001:4ed0      DIPIMPSYMVALUE
+0001:4f96      DIPIMPSYMINFO
+0001:5348+     GetRet_
+0001:539a      DIPIMPSYMPARMLOCATION
+0001:5518      DIPIMPSYMOBJTYPE
+0001:55f8      DIPIMPSYMOBJLOCATION
+0001:57a4      DIPIMPADDRSYM
+0001:5b2e      DIPIMPADDRSCOPE
+0001:5e04      DIPIMPSCOPEOUTER
+0001:68d2      DIPIMPWALKSYMLIST
+0001:6908      DIPIMPWALKSYMLISTEX
+0001:6c60+     DoLookupSym_
+0001:6e6c      DIPIMPLOOKUPSYM
+0001:6ea2      DIPIMPLOOKUPSYMEX
+0001:6eda      DIPIMPSYMCMP
+0001:6ef8      DIPIMPSYMADDREF
+0001:6f0a      DIPIMPSYMRELEASE
+0001:6f1c      DIPIMPSYMFREEALL
+Module: dfaddr.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfaddr.c)
+0001:732e      AddMapAddr_
+0001:74ee      FindMapAddr_
+0001:7536      SortMapAddr_
+0001:7542      Real2Map_
+0001:75ae      InitAddrInfo_
+0001:7600      FiniAddrInfo_
+Module: dfsegs.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfsegs.c)
+0001:7630      InitSegList_
+0001:764c      FiniSegList_
+0001:76ae      AddMapSeg_
+0001:77d8*     FindMapSeg_
+0001:7900      FindRealSeg_
+0001:7986      SegWalk_
+0001:7a2c      SortSegReal_
+Module: dfloc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfloc.c)
+0001:7e42      SafeDCItemLocation_
+0001:7ea6      LocationCreate_
+0001:7f6a      LocationAdd_
+0001:80c4      LocationTrunc_
+0001:882c      EvalLocation_
+0001:8a46      EvalParmLocation_
+0001:8ae6      EvalRetLocation_
+0001:8bba      EvalLocAdj_
+0001:8cd4      EvalBasedPtr_
+0001:8eb4      EvalOffset_
+0001:8f16      EvalSeg_
+0001:8f78      EvalSymOffset_
+Module: dfcue.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfcue.c)
+0001:8fe2      InitImpCueInfo_
+0001:9050      FiniImpCueInfo_
+0001:907a      DIPIMPCUEMOD
+0001:941e      DIPIMPCUEFILE
+0001:978c      DIPIMPWALKFILELIST
+0001:9854      DIPIMPCUEFILEID
+0001:9922      DIPIMPCUEADJUST
+0001:9a9e      DIPIMPCUELINE
+0001:9ab8      DIPIMPCUECOLUMN
+0001:9ad0      DIPIMPCUEADDR
+0001:9b34      DIPIMPADDRCUE
+0001:9d50      DIPIMPLINECUE
+0001:9eb4      DIPIMPCUECMP
+Module: dfline.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfline.c)
+0001:9f10      InitCueList_
+0001:9f22      InitSegCue_
+0001:9fd4      AddCue_
+0001:a1e0      FindCueOffset_
+0001:a3f6      FindCue_
+0001:a856      FiniCueInfo_
+Module: dfaddsym.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfaddsym.c)
+0001:a982      AddAddrSym_
+0001:aa4c      FindAddrSym_
+0001:ac6c      SortAddrSym_
+0001:ad62      WlkAddrSyms_
+0001:ad92      InitAddrSym_
+0001:ade4      FiniAddrSym_
+Module: dfscope.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfscope.c)
+0001:ae20      FindScope_
+0001:af3c      AddScope_
+0001:b000      InitScope_
+0001:b02a      FiniScope_
+Module: dfhash.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/dfhash.c)
+0001:b206      InitHashName_
+0001:b256      FiniHashName_
+0001:b2e0      AddHashName_
+0001:b42c      FindHashWalk_
+0003:0628*     _name_defs
+Module: demangle.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/lib_misc/c/demangle.c)
+0001:df42*     __demangle_t_
+0001:dfa8      __demangle_l_
+0001:e016*     __demangle_r_
+0001:e0ca*     __scope_name_
+0001:e16e      __is_mangled_
+0001:e262*     __is_mangled_internal_
+0001:e296*     __unmangled_name_
+0001:e360      __demangled_basename_
+0001:e3d8*     __parse_mangled_name_
+0001:e44a*     __mangle_operator_
+Module: stub.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/dwarf/c/stub.c)
+0003:0672      _fltused_
+0003:0674*     __8087
+0003:0676*     __real87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strtol.c)
+0002:0246      strtoul_
+0002:025a*     strtol_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(wstart)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0003:0000*     __nullarea
+0003:0346*     __curbrk
+0003:0348*     __psp
+0003:034a*     __osmajor
+0003:034b*     __osminor
+0003:034c*     __osmode
+0003:000a*     __STACKLOW
+0003:000c*     __STACKTOP
+0003:034e*     __cbyte
+0003:0350*     __child
+0003:0352*     __no87
+0003:034d*     __HShift
+0003:0354*     __get_ovl_stack
+0003:0358*     __restore_ovl_stack
+0003:035c      ___FPE_handler
+0003:0360*     __LpCmdLine
+0003:0364*     __LpPgmName
+0002:0264      _wstart_
+0002:0264*     _cstart_
+0002:0345      __exit_
+0002:0356      __GETDS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(cmodel)
+0002:0358      _big_code_
+0002:0358*     CodeModelMismatch
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drinit.c)
+0002:29a2      DRDbgClear_
+0002:29ec      DRDbgDone_
+0002:2a44      DRDbgOldVersion_
+0002:2bc6      DRDbgInitNFT_
+0002:2bf6*     DRDbgInit_
+0002:2c28      DRDbgFini_
+0002:2cfc      DRSetDebug_
+0002:2d14      DRGetDebug_
+0002:2d1c      DRInit_
+0002:2d3e      DRFini_
+0003:0400      _DWRCurrNode
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(stricmp.c)
+0002:0358      stricmp_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drinfo.c)
+0002:2eca      DRGetLanguageAT_
+0002:2ef4      DRGetMemModelAT_
+0002:2f4e      DRGetProducer_
+0002:2fa8*     DRGetLanguage_
+0002:3098      DRGetCompDirBuff_
+0002:30ae      DRGetName_
+0002:30da      DRGetNameBuff_
+0002:30f0      DRGetScopedNameBuff_
+0002:3270*     DRGetColumn_
+0002:32d2*     DRGetLine_
+0002:3334*     DRGetFileName_
+0002:33a0*     DRGetFileNameList_
+0002:3424*     DRIndexFileName_
+0002:344e      DRGetAccess_
+0002:34a8      DRIsStatic_
+0002:3510      DRIsArtificial_
+0002:3568      DRIsSymDefined_
+0002:35b4*     DRIsMemberStatic_
+0002:360c      DRIsFunc_
+0002:3664      DRIsParm_
+0002:36bc      DRGetVirtuality_
+0002:3716*     DRGetByteSize_
+0002:376e      DRGetLowPc_
+0002:37d6      DRGetHighPc_
+0002:3842      DRGetContaining_
+0002:389c*     DRWalkParent_
+0002:3936      DRWalkModFunc_
+0002:398c      DRWalkModTypes_
+0002:39c8      DRWalkScope_
+0002:39e4      DRWalkBlock_
+0002:3a62      DRStartScopeAT_
+0002:3aca      DRGetAddrSize_
+0002:3ade      DRDebugPCHDef_
+0002:3b38      DRGetTagType_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drpubnam.c)
+0002:3bb0      DRWalkPubName_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drarange.c)
+0002:3f48      DRWalkARange_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drutils.c)
+0002:4240      _FunctionTags
+0002:4244      _ClassTags
+0002:424c      _TypedefTags
+0002:4250      _EnumTags
+0002:4254      _LabelTags
+0002:4258      _VariableTags
+0002:4262+     _MacroTags
+0002:4264      _SearchTags
+0002:4280+     _SearchSymbolTags
+0002:4296+     _SearchFunctionTags
+0002:429a+     _SearchClassTags
+0002:42a2+     _SearchTypeTags
+0002:42a8+     _SearchVariableTags
+0002:42b0+     _SearchFriendTags
+0002:42b4+     _SearchBaseTags
+0002:42b8*     _ScanKidsTags
+0002:42be*     _DeclarationTags
+0002:42d4      _SearchTypes
+0002:42f0*     DWRInfoLength_
+0002:4312      DWRScanCompileUnit_
+0002:459c      DWRSkipChildren_
+0002:4646      DWRSkipAttribs_
+0002:4684      DWRSkipRest_
+0002:46c6      DWRAllChildren_
+0002:4750      DWRSearchArray_
+0002:4772      DWRGetAddrSize_
+0002:47b2      DWRSkipForm_
+0002:491a      DWRFormClass_
+0002:4986      ReadConst_
+0002:4a24      DWRReadConstant_
+0002:4a44      DWRReadReference_
+0002:4abc      DWRReadAddr_
+0002:4b5e      DWRReadString_
+0002:4bc0      DWRReadFlag_
+0002:4c00      DWRGetAbbrev_
+0002:4c70      DWRLookupAbbrev_
+0002:4cb8*     DWRReadAbbrev_
+0002:4ce8      DWRCopyString_
+0002:4d1c+     DWRCopyDbgSecString_
+0002:4d66      DWRScanForAttrib_
+0002:4db2      DWRGetCompileUnitHdr_
+0002:4e3e      DRGetCompileUnitTag_
+0002:4e46      DWRGetName_
+0002:4ef6      DRIterateCompileUnits_
+0002:4f4e*     DWRScanAllCompileUnits_
+0002:50b4      DWRWalkCompileUnit_
+0002:514c      DWRWalkChildren_
+0002:52f0      DWRWalkContaining_
+0002:5480      DWRWalkSiblings_
+0002:558e      DWRWalkScope_
+0002:5770      DWRFindCompileInfo_
+0002:57c0      DWRFindCompileUnit_
+0002:57da+     DWRContextPush_
+0002:5876+     DWRContextPop_
+0002:58b8      DWRContext_
+0002:58ea      DWRFreeContextStack_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drline.c)
+0002:5ec2      DRGetStmtList_
+0002:5f3c      DRWalkLines_
+0002:5fcc      DRWalkLFiles_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drtype.c)
+0002:6320      DRGetSubrangeInfo_
+0002:63c0      DRGetBitFieldInfo_
+0002:64ea      DRGetTypeInfo_
+0002:6894      DRGetAddrClass_
+0002:694e      DRGetTypeAT_
+0002:69b0      DRGetArrayInfo_
+0002:6b0e      DRSkipTypeChain_
+0002:6bcc      DRWalkStruct_
+0002:6be8      DRWalkArraySibs_
+0002:6c06      DRWalkEnum_
+0002:6c3a      DRConstValAT_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4d)
+0002:0396      __I4D
+0002:03e5      __U4D
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(i4m)
+0002:046a      __I4M
+0002:046a      __U4M
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drloc.c)
+0002:7b80      DRLocBasedAT_
+0002:7c6e      DRLocationAT_
+0002:7d26      DRParmEntryAT_
+0002:7dc0      DRStringLengthAT_
+0002:7e0e      DRRetAddrLocation_
+0002:7e80      DRSegLocation_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(memcmp.c)
+0002:0482      memcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(memicmp.c)
+0002:04ac      memicmp_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drdecnam.c)
+0002:8184*     DRDecorateLabel_
+0002:8386      DRDecoratedName_
+0002:83ac*     DRDecoratedNameList_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strncpy.c)
+0002:04fc      strncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strcmp.c)
+0002:053a      strcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(memmove.c)
+0002:056b      memmove_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(qsort.c)
+0002:065d      qsort_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(istable.c)
+0003:0036      __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(tolower.c)
+0002:0be7      tolower_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(itoa.c)
+0002:0bf5+     utoa_
+0002:0c58      itoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(toupper.c)
+0002:0c80      toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strncmp.c)
+0002:0c8e      strncmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(seterrno.c)
+0002:0cd0      __set_errno_
+0002:0ceb*     __set_EDOM_
+0002:0d02      __set_ERANGE_
+0002:0d18*     __set_EINVAL_
+0002:0d31*     __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(exit.c)
+0002:0d41+     __null_int23_exit_
+0002:0d42      exit_
+0002:0d7b*     _exit_
+0003:0510+     ___int23_exit
+0003:0514+     ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(initrtns.c)
+0002:0dcb      __FInitRtns
+0002:0dd6+     __InitRtns
+0002:0e34      __FFiniRtns
+0002:0e3f      __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(dosseg)
+0002:0ea4      __DOSseg__
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/virtmem.c)
+0002:c330      DWRVMInit_
+0002:c39e*     DWRVMReset_
+0002:c4f2      DWRVMAlloc_
+0002:c51c*     DWRVMFree_
+0002:c54c*     DRSwap_
+0002:c61e      DWRVMDestroy_
+0002:c77c      DWRVMSwap_
+0002:c830      DWRVMSectDone_
+0002:c84c      DWRVMRead_
+0002:c91e      DWRVMReadByte_
+0002:cb00      DWRVMReadSLEB128_
+0002:cb10      DWRVMReadULEB128_
+0002:cbec      DWRVMSkipLEB128_
+0002:cd26      DWRVMReadWord_
+0002:ce44      DWRVMReadDWord_
+0002:cfd0      DWRStrLen_
+0002:d078      DWRGetString_
+0002:d134      DWRGetStrBuff_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drgettab.c)
+0002:d248      DWRInitFileTable_
+0002:d270      DWRFiniFileTable_
+0002:d312+     DWRAddFileName_
+0002:d406*     DWRAddIndex_
+0002:d424*     DWRIndexPath_
+0002:d43e      DWRIndexFile_
+0002:d456      DWRIndexFileName_
+0002:d518      DWRScanFileTable_
+0002:d7b4      DWRFindFileName_
+0003:067a      _FileNameTable
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drscope.c)
+0002:d996      DRGetScopeList_
+0002:da0e      DREndScopeList_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strrev.c)
+0002:0ea5      strrev_
+Module: dwarfr.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dr/c/drfdkids.c)
+0002:da20+     DRKidsSearch_
+0002:dd14      DRBaseSearch_
+0002:de9c*     DRDerivedSearch_
+0002:e000*     DRFriendsSearch_
+0002:e038+     DRGetSymType_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(strncat.c)
+0002:0ef9      strncat_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(ltoa.c)
+0002:0f3a      ultoa_
+0002:0fad      ltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fsfd086)
+0002:0fde      __FSFD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(gcvt.c)
+0002:1044      gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(alphabet.c)
+0003:0010      ___Alphabet
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(errno.c)
+0002:1128      __get_errno_ptr_
+0002:112e      __get_doserrno_ptr_
+0003:0686+     _errno
+0003:0688+     __doserrno
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(winrtns.c)
+0003:0534*     __WindowsIsWindowedHandle
+0003:0538*     __WindowsRemoveWindowedHandle
+0003:053c*     __WindowsNewWindow
+0003:0540*     __WindowsCloseWindow
+0003:0544*     __WindowsSetAbout
+0003:0548*     __WindowsSetAppTitle
+0003:054c*     __WindowsSetConTitle
+0003:0550*     __WindowsDestroyOnClose
+0003:0554*     __WindowsYieldControl
+0003:0558*     __WindowsShutDown
+0003:055c*     __WindowsStdin
+0003:0560*     __WindowsStdout
+0003:0564*     __WindowsKbhit
+0003:0568*     __WindowsGetch
+0003:056c*     __WindowsGetche
+0003:0570*     __WindowsPutch
+0003:0574      __WindowsExitRtn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(sgdef086)
+0003:0606      __Start_XI
+0003:0606      __End_XI
+0003:0606      __Start_YI
+0003:0606      __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(fdld086)
+0002:1134      __iFDLD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(ldcvt.c)
+0002:12c1+     _LDScale10x_
+0002:18ae      __LDcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib(fstat086)
+0003:0604*     _FPStatus_
+0002:1d20*     F8UnderFlow
+0002:1d24*     F4UnderFlow
+0002:1d30      F8InvalidOp
+0002:1d39      F8DivZero
+0002:1d6d*     F4DivZero
+0002:1d4b*     F8OverFlow
+0002:1d7f*     F4OverFlow
+0002:1d50*     F8RetInf_
+0002:1d50*     _F8RetInf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(fldm086)
+0002:1da0      __FLDM
+0002:1e67*     ___LDM
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(fldd086)
+0002:2002      __FLDD
+0002:202b*     ___LDD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(ldclass.c)
+0002:22e7      __LDClass_
+0002:233f*     _FLClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(ldi4086)
+0002:2360      __LDI4
+0002:2360*     __LDU4
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(i4ld086)
+0002:23ce      __I4LD
+0002:23df*     __U4LD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib(flda086)
+0002:2464*     __FLDA
+0002:2422      __FLDS
+0002:248d*     __FLDAC
+0002:244f*     __FLDSC
+0002:24bd*     ___LDA
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+POSTAPPMESSAGE                      USER
+GETCURRENTTASK                      KERNEL
+MAKEPROCINSTANCE                    KERNEL
+GETMESSAGE                          USER
+TRANSLATEMESSAGE                    USER
+DISPATCHMESSAGE                     USER
+FREEPROCINSTANCE                    KERNEL
+INITTASK                            KERNEL
+GETMODULEFILENAME                   KERNEL
+INITAPP                             USER
+WAITEVENT                           KERNEL
+__AHSHIFT                           KERNEL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+dwarfr.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibl.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/mathl.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  0001ed27 (126247.)
+Entry point address: 0002:0264
+Link time: 00:00.00

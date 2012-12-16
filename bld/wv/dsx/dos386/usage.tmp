@@ -1,0 +1,1 @@
+-kENGLISH -kIS_RC -kdos -t8 -f "%+(MSG_USE_E_BASE+%#-1), \"%s\"" /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wv/h/usage.sp usage.rc

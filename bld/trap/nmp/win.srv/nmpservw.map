@@ -1,0 +1,319 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:58
+Executable Image: nmpservw.exe
+creating a Windows 16-bit executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:0000            00006770
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0001:0000       00000007
+_TEXT                  CODE           AUTO           0001:0010       00002b81
+FAR_DATA               FAR_DATA       AUTO           0002:0000       00000000
+_NULL                  BEGDATA        DGROUP         0002:0000       00000010
+AFX_NULL               BEGDATA        DGROUP         0002:0010       00000000
+CONST                  DATA           DGROUP         0002:0010       00000250
+CONST2                 DATA           DGROUP         0002:0260       00000102
+_DATA                  DATA           DGROUP         0002:0362       00000165
+XIB                    DATA           DGROUP         0002:04c8       00000000
+XI                     DATA           DGROUP         0002:04c8       00000006
+XIE                    DATA           DGROUP         0002:04ce       00000000
+YIB                    DATA           DGROUP         0002:04ce       00000000
+YI                     DATA           DGROUP         0002:04ce       00000000
+YIE                    DATA           DGROUP         0002:04ce       00000000
+STRINGS                DATA           DGROUP         0002:04ce       00000000
+DATA                   DATA           DGROUP         0002:04ce       00000000
+BCSD                   DATA           DGROUP         0002:04ce       00000000
+_BSS                   BSS            DGROUP         0002:04d0       00001291
+STACK                  STACK          DGROUP         0002:1770       00005000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: mxutil.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/mxutil.c)
+0001:0010      GetInPtr_
+0001:003c      GetOutPtr_
+0001:0068*     GetTotalSize_
+0002:04d0      _In_Mx_Ptr
+0002:04d4      _Out_Mx_Ptr
+0002:04d8      _Out_Mx_Num
+0002:04d9      _In_Mx_Num
+Module: wserver.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/wserver.c)
+0002:04da      _TrapParm
+0002:08da+     _TrapFile
+0002:0cdc+     _Instance
+0001:00a0      WINMAIN
+0001:02f4+     ABOUTDLGPROC
+0001:033e+     WINDOWPROC
+0001:05ae      ServError_
+0001:05de      StartupErr_
+0001:05fe*     ServMessage_
+0001:0600      WantUsage_
+0001:0614+     Output_
+Module: options.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/options.c)
+0001:0630      OPTIONSDLGPROC
+Module: servacc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/servacc.c)
+0002:0ce2      _RWBuff
+0001:07d0      Session_
+0001:08b2      TrapClientString_
+0002:10ee      _TrapVersion
+Module: servcmd.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/servcmd.c)
+0001:09be      ParseCommandLine_
+Module: servname.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/servname.c)
+0002:0384      _ServUsage
+0002:03c0      _ServName
+Module: trpsupp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dig/c/trpsupp.c)
+0001:0b50*     TrapSetFailCallBack_
+0001:0b54*     TrapSetAccessCallBack_
+0001:0b58*     TrapFailAllRequests_
+0001:0b62*     TrapSimpAccess_
+0001:0bb8      TrapAccess_
+0001:0c04+     ReqFuncProxy_
+0002:1100      _ReqFunc
+0002:1104      _TrapVer
+Module: trpld.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/dig/c/win/trpld.c)
+0002:1114+     _SetHardMode
+0002:111c+     _HookFunc
+0002:1124+     _UnLockInput
+0002:112c+     _InfoFunction
+0002:1130+     _HardModeRequired
+0002:1132+     _toolhelp
+0001:0c40      KillTrap_
+0001:0ca0      LoadTrap_
+0001:0fba*     DoHardModeCheck_
+Module: winnoth.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/win/winnoth.c)
+0001:0fd0      NothingToDo_
+Module: packet.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/packet.c)
+0001:0fe0*     StartPacket_
+0001:0fe6*     PutPacket_
+0001:0ffe      PutBuffPacket_
+0001:1012*     AddPacket_
+0001:105c      GetPacket_
+0001:1072*     RemovePacket_
+0001:10b2      GetPacketBuffPtr_
+0001:10bc      MaxPacketSize_
+Module: nmplink.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/nmplink.c)
+0002:1544+     _BindHdl
+0002:1546+     _ReadHdl
+0002:1548+     _WriteHdl
+0002:154a+     _ConnHdl
+0002:154c+     _NameBuff
+0001:11c8+     DoOpen_
+0001:1226+     ValidName_
+0001:129e      RemoteLink_
+0001:13dc      RemoteConnect_
+0001:1418      RemoteGet_
+0001:1462      RemotePut_
+0001:14be      RemoteDisco_
+0001:14d0      RemoteUnLink_
+0002:03de+     _DefLinkName
+Module: nmpdos.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/nmp/c/nmpdos.c)
+0001:14e0      myopen_
+0001:1504      myclose_
+0001:1512      myread_
+0001:1536      mywrite_
+0001:1554      mysnooze_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(cmodel)
+0001:155a      _small_code_
+0001:155a*     CodeModelMismatch
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(wstart)
+0000:0006*     pLocalHeap
+0000:0008*     pAtomTable
+0000:000a*     pStackTop
+0000:000c*     pStackMin
+0000:000e*     pStackBot
+0001:0003*     ___begtext
+0002:0000*     __nullarea
+0002:03e8*     __curbrk
+0002:03ea*     __psp
+0002:03ec*     __osmajor
+0002:03ed*     __osminor
+0002:03ee*     __osmode
+0002:000a*     __STACKLOW
+0002:000c*     __STACKTOP
+0002:03f0*     __cbyte
+0002:03f2*     __child
+0002:03f4*     __no87
+0002:03ef*     __HShift
+0002:03f6*     __get_ovl_stack
+0002:03fa*     __restore_ovl_stack
+0002:03fe*     ___FPE_handler
+0002:0402*     __LpCmdLine
+0002:0406*     __LpPgmName
+0001:155a      _wstart_
+0001:155a*     _cstart_
+0001:163a      __exit_
+0001:164b      __GETDS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(isalpha.c)
+0001:164d      isalpha_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(strnicmp.c)
+0001:165c      strnicmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(sprintf.c)
+0001:16b0      sprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(istable.c)
+0002:0260      __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(exit.c)
+0001:16de+     __null_int23_exit_
+0001:16df      exit_
+0001:1708      _exit_
+0002:049a+     ___int23_exit
+0002:049c+     ___FPE_handler_exit
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(initrtns.c)
+0001:1755      __FInitRtns
+0001:175f+     __InitRtns
+0001:17bb      __FFiniRtns
+0001:17c5      __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(dosseg)
+0001:1828      __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(vsprintf.c)
+0001:1850      vsprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(winrtns.c)
+0002:049e*     __WindowsIsWindowedHandle
+0002:04a0*     __WindowsRemoveWindowedHandle
+0002:04a2*     __WindowsNewWindow
+0002:04a4*     __WindowsCloseWindow
+0002:04a6*     __WindowsSetAbout
+0002:04a8*     __WindowsSetAppTitle
+0002:04aa*     __WindowsSetConTitle
+0002:04ac*     __WindowsDestroyOnClose
+0002:04ae*     __WindowsYieldControl
+0002:04b0*     __WindowsShutDown
+0002:04b2*     __WindowsStdin
+0002:04b4*     __WindowsStdout
+0002:04b6*     __WindowsKbhit
+0002:04b8*     __WindowsGetch
+0002:04ba*     __WindowsGetche
+0002:04bc*     __WindowsPutch
+0002:04be      __WindowsExitRtn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(sgdef086)
+0002:04c8      __Start_XI
+0002:04ce      __End_XI
+0002:04ce      __Start_YI
+0002:04ce      __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(prtf.c)
+0001:1876      __prtf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(wctomb.c)
+0001:2732      wctomb_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(itoa.c)
+0001:275e+     utoa_
+0001:27bf      itoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(i4m)
+0001:27e4*     __I4M
+0001:27e4      __U4M
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(strupr.c)
+0001:27fc      strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(noefgfmt.c)
+0002:04c0      ___EFG_printf
+0002:04c2*     ___EFG_scanf
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(mbisdbcs.c)
+0002:165e      ___IsDBCS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(mbislead.c)
+0001:2830*     _ismbblead_
+0002:1660      ___MBCSIsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(lltoa.c)
+0001:2845      ulltoa_
+0001:292c*     lltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(ltoa.c)
+0001:298e      ultoa_
+0001:29ff*     ltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(alphabet.c)
+0002:022e      ___Alphabet
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(xmsgwin.c)
+0001:2a2e+     __exit_with_msg_
+0001:2a8b      __fatal_runtime_error_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(mbinit.c)
+0001:2ad9      __mbinit_
+0002:04c4+     ___MBCodePage
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib(enterdb.c)
+0001:2b75      __EnterWVIDEO_
+0002:04c6+     ___WD_Present
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+GETMESSAGE                          USER
+TRANSLATEMESSAGE                    USER
+DISPATCHMESSAGE                     USER
+LOADICON                            USER
+LOADCURSOR                          USER
+GETSTOCKOBJECT                      GDI
+REGISTERCLASS                       USER
+GETMENU                             USER
+ENABLEMENUITEM                      USER
+DRAWMENUBAR                         USER
+CREATEWINDOW                        USER
+SHOWWINDOW                          USER
+UPDATEWINDOW                        USER
+SENDMESSAGE                         USER
+ENDDIALOG                           USER
+MAKEPROCINSTANCE                    KERNEL
+DIALOGBOX                           USER
+FREEPROCINSTANCE                    KERNEL
+POSTQUITMESSAGE                     USER
+DEFWINDOWPROC                       USER
+SETCURSOR                           USER
+PEEKMESSAGE                         USER
+MESSAGEBOX                          USER
+GETDLGITEMTEXT                      USER
+SETDLGITEMTEXT                      USER
+SENDDLGITEMMESSAGE                  USER
+FREELIBRARY                         KERNEL
+LOADLIBRARY                         KERNEL
+SETERRORMODE                        KERNEL
+GETPROCADDRESS                      KERNEL
+YIELD                               KERNEL
+INITTASK                            KERNEL
+GETMODULEFILENAME                   KERNEL
+INITAPP                             USER
+WAITEVENT                           KERNEL
+__AHSHIFT                           KERNEL
+GETVERSION                          KERNEL
+ISDBCSLEADBYTE                      KERNEL
+GETKBCODEPAGE                       KEYBOARD
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/windows.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/win/clibc.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  5000 (20480.)
+Memory size:  9301 (37633.)
+Entry point address: 0001:155a
+Link time: 00:00.00

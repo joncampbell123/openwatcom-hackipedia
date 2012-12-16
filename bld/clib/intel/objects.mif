@@ -2,17 +2,17 @@
 #==========================================================================================================
 !inject chint086.obj d16                                                            w16
 !inject chint386.obj     d32
-!inject chipbug.obj  d16 d32             nt         nvc ncl nvl nll o16 o32 q16 q32 w16 w32     l32         rdu
-!inject chipvar.obj  d16 d32             nt         nvc ncl nvl nll o16 o32 q16 q32 w16 w32     l32         rdu
-!inject disable.obj  d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
+!inject chipbug.obj  d16 d32             nt         nvc ncl nvl nll o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject chipvar.obj  d16 d32             nt         nvc ncl nvl nll o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject disable.obj  d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
 !inject dointr.obj   d16     dpm                                            q16     w16
-!inject enable.obj   d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
-!inject grabfp87.obj d16 d32             nt                         o16 o32         w16 w32
+!inject enable.obj   d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject grabfp87.obj d16 d32             nt                         o16 o32         w16 w32 win32s
 #inject i64ts286.obj d16                                            o16     q16
-!inject i64ts386.obj     d32             nt         nvc     nvl         o32     q32         osi l32         rdu
-!inject inp.obj      d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
-!inject inpw.obj     d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
-!inject inpd.obj         d32             nt         nvc     nvl         o32     q32     w32     l32         rdu
+!inject i64ts386.obj     d32             nt         nvc     nvl         o32     q32         osi l32         rdu win32s
+!inject inp.obj      d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject inpw.obj     d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject inpd.obj         d32             nt         nvc     nvl         o32     q32     w32     l32         rdu win32s
 !inject int386.obj       d32                        nvc     nvl                 q32             l32         rdu
 !inject intq16.obj                                                          q16
 !inject intr.obj     d16 d32 dpm                    nvc     nvl             q16 q32 w16         l32         rdu
@@ -21,18 +21,18 @@
 !inject intxa386.obj     d32                        nvc     nvl                 q32             l32         rdu
 !inject intxq16.obj                                                         q16
 !inject intxw32.obj                                                                     w32
-!inject outp.obj     d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
-!inject outpw.obj    d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
-!inject outpd.obj        d32             nt         nvc     nvl         o32     q32     w32     l32         rdu
-!inject p5prof.obj       d32             nt         nvc     nvl         o32     q32         osi l32         rdu
-!inject p5prof2.obj      d32             nt                             o32     q32         osi l32         rdu
-!inject prfalloc.obj     d32             nt                             o32     q32         osi l32         rdu
-!inject profilog.obj     d32             nt                             o32     q32         osi l32         rdu
-!inject p5psegs.obj      d32             nt         nvc     nvl         o32     q32         osi l32         rdu
-!inject save8087.obj d16 d32             nt         nvc ncl nvl nll o16 o32         w16 w32                 rdu
-!inject segread.obj  d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu
+!inject outp.obj     d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject outpw.obj    d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
+!inject outpd.obj        d32             nt         nvc     nvl         o32     q32     w32     l32         rdu win32s
+!inject p5prof.obj       d32             nt         nvc     nvl         o32     q32         osi l32         rdu win32s
+!inject p5prof2.obj      d32             nt                             o32     q32         osi l32         rdu win32s
+!inject prfalloc.obj     d32             nt                             o32     q32         osi l32         rdu win32s
+!inject profilog.obj     d32             nt                             o32     q32         osi l32         rdu win32s
+!inject p5psegs.obj      d32             nt         nvc     nvl         o32     q32         osi l32         rdu win32s
+!inject save8087.obj d16 d32             nt         nvc ncl nvl nll o16 o32         w16 w32                 rdu win32s
+!inject segread.obj  d16 d32             nt         nvc     nvl     o16 o32 q16 q32 w16 w32     l32         rdu win32s
 !inject sound.obj    d16 d32                                                q16 q32 w16 w32
-!inject tlsawnt.obj                      nt
+!inject tlsawnt.obj                      nt win32s
 
 !include ../../../../objlist.mif
 

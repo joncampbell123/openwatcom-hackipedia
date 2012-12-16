@@ -1,0 +1,1025 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:29:02
+Executable Image: wedit.dll
+creating a Windows NT dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+.idata                          00408000             00000663
+DGROUP                          00409000             000022c0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           00401000        00000007
+_TEXT                  CODE           AUTO           00401010        0000651f
+TRANSFER CODE          CODE           AUTO           00407530        00000162
+.idata                 .idata         .idata         00408000        00000663
+_NULL                  BEGDATA        DGROUP         00409000        00000004
+_AFTERNULL             BEGDATA        DGROUP         00409004        00000000
+CONST                  DATA           DGROUP         00409004        00000028
+CONST2                 DATA           DGROUP         0040902c        00000000
+_DATA                  DATA           DGROUP         0040902c        00000290
+TIB                    DATA           DGROUP         004092bc        00000000
+TI                     DATA           DGROUP         004092bc        00000000
+TIE                    DATA           DGROUP         004092bc        00000000
+XIB                    DATA           DGROUP         004092bc        00000000
+XI                     DATA           DGROUP         004092bc        00000012
+XIE                    DATA           DGROUP         004092ce        00000000
+YIB                    DATA           DGROUP         004092ce        00000000
+YI                     DATA           DGROUP         004092ce        00000018
+YIE                    DATA           DGROUP         004092e6        00000000
+DATA                   DATA           DGROUP         004092e6        00000000
+_BSS                   BSS            DGROUP         0040a000        000012bc
+STACK                  STACK          DGROUP         0040b2c0        00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+s = symbol is static
+
+Address        Symbol
+=======        ======
+
+Module: weditcw.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/editdll/cw/weditcw.c)
+004010d0*      doReset_
+004010f0+      _DdeCallback@32
+00401120+      _EDITConnect@0
+00401250+      doExecute_
+00401290+      _EDITFile@8
+00401350+      _EDITLocateError@20
+004013f0+      _EDITLocate@12
+00401410+      _EDITShowWindow@4
+004014f0+      _EnumWnd@8
+00401540+      _EDITDisconnect@0
+004015b0       _LibMain@12
+0040902cs      _hConv
+00409030s      _idInstance
+00409034s      _hInstance
+00409038s      _bDdemlInitialized
+0040903cs      _bConnected
+00409040s      _bAppSpawned
+0040a000s      _lpDdeProc
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(sprintf.c)
+004015d0       sprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(atol.c)
+00401600       atol_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(_strcmp)
+00401650       strcmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(dstrt386)
+0040178e       __DLLstart_
+0040178e*      __DLLstartw_
+0040178e*      _DllMainCRTStartup@12
+0040178e*      _wDllMainCRTStartup@12
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(vsprintf.c)
+004017f0s      mem_putc_
+00401810       vsprintf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(istable.c)
+00401830       __IsTable
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(dmainwnt.c)
+00401950       __LibMain@12
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(segdefns)
+00401003       ___begtext
+00409000*      __nullarea
+004092bc       __Start_XI
+004092ce       __End_XI
+004092ce       __Start_YI
+004092e6       __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(prtf.c)
+00401b00       __prtf_
+00401d40s      getprintspecs_
+00401eb0s      evalflags_
+00401f10s      far_strlen_
+00401f30s      far_other_strlen_
+00401fa0s      fmt4hex_
+00402000s      FixedPoint_Format_
+004020f0s      SetZeroPad_
+00402130s      write_wide_string_
+004021a0s      formstring_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(initrtns.c)
+004027d0s      callit_
+004027e0       __InitRtns
+00402830       __FiniRtns
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(rdllmwnt.c)
+00409044       __pRawDllMain
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mainwnt.c)
+0040a008s      __wcmd_ptr
+0040a00cs      __cmd_ptr
+00409048       ___TlsIndex
+0040904c       ___FirstThreadData
+00409050       ___GetThreadPtr
+00409054       __AccessFileH
+00409058       __ReleaseFileH
+0040905c       __AccessIOB
+00409060       __ReleaseIOB
+00409064       __AccessNHeap
+00409068       __AccessFHeap
+0040906c       __ReleaseNHeap
+004028a0*      __threadid_
+004028b0s      __SingleThread_
+004028c0+      __sig_null_rtn_
+004028c0s      __NullAccTDListRtn_
+004028c0s      __NullAccHeapRtn_
+004028c0s      __NullAccIOBRtn_
+004028c0s      __NullExitRtn_
+004028c0s      __NullAccessRtn_
+004028d0       __NTInit_
+00402ab0       __NTFini_
+00402b10*      __NTMainInit_
+00402b70       __exit_
+00409070       __ReleaseFHeap
+00409074       __AccessTDList
+00409078       __ReleaseTDList
+0040907c       __AccessFList
+00409080       __ReleaseFList
+00409084       __ThreadExitRtn
+00409088       ___sig_init_rtn
+0040908c       ___sig_fini_rtn
+00409090+      ___process_fini
+0040a010       ___Is_DLL
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mthread.c)
+0040a62cs      _IOBSemaphore
+0040a63cs      _critsect_cache
+0040ac3cs      _InitSemaphore
+0040ac4cs      _TDListSemaphore
+0040ac5cs      _FHeapSemaphore
+0040ac6cs      _FileSemaphores
+0040ad6cs      _NHeapSemaphore
+0040ad7cs      _FListSemaphore
+0040ad8cs      _critsect_next
+0040ad90s      _critsect_vectornext
+00402c10s      __NullAccHeapRtn_
+00402c10s      nullSema4Rtn_
+00402c20s      __NTGetCriticalSection_
+00402cd0s      __NTDeleteCriticalSection_
+00402d00s      __NTFreeCriticalSection_
+00402d50+      __CloseSemaphore_
+00402d90+      __AccessIOB_
+00402da0+      __ReleaseIOB_
+00402db0+      __AccessFileH_
+00402dc0+      __ReleaseFileH_
+00402dd0+      __AccessNHeap_
+00402de0+      __ReleaseNHeap_
+00402df0+      __AccessFHeap_
+00402e00+      __ReleaseFHeap_
+00402e10+      __AccessTDList_
+00402e20+      __ReleaseTDList_
+00402e30+      __AccessFList_
+00402e40+      __AccessSemaphore_
+00402ea0+      __ReleaseFList_
+00402eb0+      __ReleaseSemaphore_
+00402ee0+      __MultipleThread_
+00402f30       __AllocInitThreadData_
+00402f80       __FreeInitThreadData_
+00402f90       __NTThreadInit_
+00403000       __NTAddThread_
+00403050       __NTRemoveThread_
+004030b0s      __ThreadExit_
+004030c0s      __NTThreadFini_
+004030e0       __InitMultipleThread_
+004031e0s      __FiniSema4s_
+00409094+      ___AccessSema4
+00409098+      ___ReleaseSema4
+0040909c+      ___CloseSema4
+0040ad94s      _critsect_vector
+004092ces      ___anon889
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(ddgrpwnt.c)
+00403390       __disallow_single_dgroup_
+0040ad98s      _pgmname
+0040ae9cs      _dllname
+0040afa0s      _buf
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(cinit.c)
+00403460       __CommonInit_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(dosseg)
+00001234       __DOSseg__
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(wctomb.c)
+00403470       wctomb_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(itoa.c)
+004034b0+      utoa_
+00403500       itoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(strupr.c)
+00403530       strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(noefgfmt.c)
+00403580s      _no_support_loaded_
+004090a0       ___EFG_printf
+004090a4*      ___EFG_scanf
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(lltoa.c)
+004035a0       ulltoa_
+00403610*      lltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(ltoa.c)
+00403640       ultoa_
+00403690*      ltoa_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbisdbcs.c)
+0040b190       ___IsDBCS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbislead.c)
+004036c0*      _ismbblead_
+004036d0s      __mbInitOnStartup_
+0040b194       ___MBCSIsTable
+004092bcs      ___anon58
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(hdlman.c)
+004090a8+      ___NHandles
+004090ac+      ___OSHandles
+004090b0+      ___FakeHandles
+004036e0+      __growPOSIXHandles_
+00403780+      __allocPOSIXHandle_
+00403840*      __freePOSIXHandle_
+00403860       __getOSHandle_
+00403870       __setOSHandle_
+004038c0+      __NTGetFakeHandle_
+00403930       __initPOSIXHandles_
+004039a0s      __finiPOSIXHandles_
+00403a10*      __set_handles_
+00403a20*      _grow_handles_
+004090b4s      ___topFakeHandle
+004092d4s      ___anon240
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(crwdata)
+00409100       __osmajor
+00409101       __osminor
+00409102       __osbuild
+00409104       __osver
+00409108       __winmajor
+0040910c       __winminor
+00409110       __winver
+004090cc       __LpDllName
+004090d0       __LpwCmdLine
+004090d4       __LpwPgmName
+004090d8       __LpwDllName
+004090c4       __LpCmdLine
+004090c8       __LpPgmName
+004090bc*      __dynend
+004090c0       __curbrk
+004090dc*      __STACKLOW
+004090e0       __STACKTOP
+004090e4*      __ASTACKSIZ
+004090e8*      __ASTACKPTR
+004090ec*      __cbyte
+004090f0*      __cbyte2
+004090f4*      __child
+004090fa       __Envptr
+004090fe*      __Envseg
+004090f8*      __no87
+00409114       ___FPE_handler
+00403a53s      __null_FPE_rtn
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(environ.c)
+0040b298       ___env_mask
+0040b29c       _environ
+0040b2a0       __wenviron
+004092c2s      ___anon43
+004092das      ___anon50
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(getmodfn.c)
+00403a60       __lib_GetModuleFileNameW_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(strdup.c)
+00403b00       __clib_strdup_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(ustrdup.c)
+00403b40       __clib_wcsdup_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nfree.c)
+00403b70       _nfree_
+00403b70       free_
+0040b2a4       ___MiniHeapFreeRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(excptwnt.c)
+00404230s      _my_GetActiveWindow_
+00404280s      fmt_hex_
+004042e0+      ___ReportException@4
+00404730       __DefaultExceptionHandler_
+00404770+      ___ExceptionFilter
+00404980       __NewExceptionFilter_
+004049b0       __DoneExceptionFilter_
+00409118       ___oscode_check_func
+0040911c       ___raise_func
+0040b2a8*      _sw
+0040b2ac+      ___ExceptionHandled
+0040b2ad+      ___ReportInvoked
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(stklmwnt.c)
+004049f0       __init_stack_limits_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(calloc.c)
+00404a60       calloc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(xmsgwnt.c)
+00404a80+      __exit_with_msg_
+00404ae0       __fatal_runtime_error_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nrealloc.c)
+00404b00*      _nrealloc_
+00404b00       realloc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(trdlist.c)
+00404bd0       __GetThreadData_
+00404c20       __ReallocThreadData_
+00404d10       __AddThreadData_
+00404d90       __RemoveThreadData_
+00404df0*      __ResizeThreadDataList_
+00404e20       __FreeThreadDataList_
+00404e50*      __ActiveThreads_
+0040b2b0s      ___thread_data_list
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mthrdini.c)
+00404e70       __InitThreadData_
+00409134       ___ThreadDataSize
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(trdalloc.c)
+00404ea0       __FiniThreadProcessing_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nheapmin.c)
+00404eb0       _nheapshrink_
+00404eb0*      _nheapmin_
+00404eb0*      _heapmin_
+00404eb0       _heapshrink_
+00404ef0s      __ReturnMemToSystem_
+00404f60s      __ReleaseMiniHeap_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbinit.c)
+00404f92s      set_dbcs_table_
+00404faas      clear_dbcs_table_
+00404fcc       __mbinit_
+00409138       ___MBCodePage
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(alphabet.c)
+00409004       ___Alphabet
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nmalloc.c)
+004050c0       _nmalloc_
+004050c0       malloc_
+0040913c       ___nheapbeg
+00409140       ___MiniHeapRover
+00409144       ___LargestSizeB4MiniHeapRover
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(seterrno.c)
+004051ba       __set_errno_
+004051c8*      __set_EDOM_
+004051d6*      __set_ERANGE_
+004051e4*      __set_EINVAL_
+004051f7*      __set_doserrno_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(iomode.c)
+00405210       __GetIOMode_
+00405230*      __SetIOMode_nogrow_
+00409148       ___NFiles
+0040914c       ___init_mode
+0040919c       ___io_mode
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(stiomode.c)
+00405250       __grow_iomode_
+00405320+      __shrink_iomode_
+00405360       __SetIOMode_
+0040b2b4s      __init_NFiles
+004092e0s      ___anon99
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(setenvp.c)
+004053d0       __setenvp_
+00405490       __freeenvp_
+0040b2b8s      __free_ep
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(ustrlen.c)
+004054dd       wcslen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(memcpy.c)
+004054f0       memcpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mem.c)
+00405510       __MemAllocator
+004055c0       __MemFree
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(conutwnt.c)
+00405710*      __NTRealKey_
+00405740s      initConsoleHandles_
+004057c0*      __NTConsoleInput_
+004057d0       __NTConsoleOutput_
+004091a0s      _console_in
+004091a4s      _console_out
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(fclex387.c)
+004057e0       _ClearFPE_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(signlwnt.c)
+004091a8+      __SignalTable
+004057f0+      __SetSignalFunc_
+00405840+      __GetSignalFunc_
+00405870+      __GetSignalOSCode_
+004058a0+      __CheckSignalExCode_
+004058c0s      _CtrlSignalHandler@4
+00405920s      CtrlHandlerIsNeeded_
+00405960s      StartCtrlHandler_
+004059a0s      KillCtrlHandler_
+004059e0+      __sigabort_
+004059f0       __sigfpe_handler_
+00405a40*      signal_
+00405ad0+      raise_
+00405b40+      __SigInit_
+00405b90+      __SigFini_
+00405bd0+      __sig_init_
+00409210s      _CtrlHandlerRunning
+004092c8s      ___anon290
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(memset.c)
+00405bf0       memset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(enterdb.c)
+00405c10       __EnterWVIDEO_
+00409214+      ___WD_Present
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nmsize.c)
+00405c40       _nmsize_
+00405c40*      _msize_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nexpand.c)
+00405c50       _nexpand_
+00405c50*      _expand_
+00405c90+      __HeapManager_expand_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(register.c)
+00405e50s      __CInitThread_
+00405e60       __initthread_
+00405e70*      _beginthread_
+00405e80       _endthread_
+00405e90*      __RegisterThreadData_
+00409218s      ___BeginThread
+0040921cs      ___EndThread
+00409220s      ___InitThread
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(nmemneed.c)
+00405ee0       __nmemneed_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(grownear.c)
+00405ef0s      __LinkUpNewMHeap_
+00405f70s      __AdjustAmount_
+00405fc0s      __CreateNewNHeap_
+00406050       __ExpandDGROUP_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(iomodtty.c)
+00406070       __ChkTTYIOMode_
+004060b0*      __IOMode_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(dofilstr.c)
+004060f0       __ParsePosixHandleStr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(clearenv.c)
+00406210       clearenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(abort.c)
+004062b5*      abort_
+004062c7       __terminate_
+00409224       ___abort
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(__stos)
+004062e0       __STOSB
+00406317*      __STOSD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(thredwnt.c)
+00406390s      _begin_thread_helper@4
+00406440       __CBeginThread_
+004064e0       __CEndThread_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(amblksiz.c)
+00409228       __amblksiz
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(heapen.c)
+0040922c       ___heap_enabled
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(isattwnt.c)
+00406520       isatty_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(getenv.c)
+00406540       getenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(strncpy.c)
+004065d0       strncpy_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(strtol.c)
+00406610s      radix_value_
+00406670s      _stol_
+00406830*      strtoul_
+00406840       strtol_
+00409230s      _nearly_overflowing
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(putenv.c)
+00406850       putenv_
+004069f0s      findenv_
+00406ae0       __putenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbterm.c)
+00406c50       _mbterm_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbsnextc.c)
+00406c90       _mbsnextc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbcupper.c)
+00406cd0       _mbctoupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbsinc.c)
+00406d00       _mbsinc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(tolower.c)
+00406d30       tolower_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbschr.c)
+00406d40       _mbschr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbslen.c)
+00406da0       _mbslen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbstowcs.c)
+00406dd0       mbstowcs_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(uputenv.c)
+00406e50*      _wputenv_
+00406fd0s      findenv_
+00407070       __wputenv_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(toupper.c)
+00407170       toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(memmove.c)
+00407180       memmove_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbconv.c)
+004071e0       _mbvtop_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbclen.c)
+00407200       _mbclen_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbccmp.c)
+00407230       _mbccmp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(mbtowc.c)
+00407270       mbtowc_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(ustrchr.c)
+00407300       wcschr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(setenvar.c)
+00407320       __lib_SetEnvironmentVariableW_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(crtwenv.c)
+00407410       __create_wide_environment_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(wcstombs.c)
+00407480       wcstombs_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib(utoupper.c)
+0040751f       towupper_
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/editdll/cw/weditcw.c
+                _TEXT                 CODE           00401010  !      000005b1
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           0040902c  !      00000018
+                _BSS                  BSS            0040a000  !      00000004
+LINKER MODULE   TRANSFER CODE         CODE           00407530  !      00000162
+                .idata                .idata         00408000  !      00000663
+sprintf.c       _TEXT                 CODE           004015d0  !      00000021
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+atol.c          _TEXT                 CODE           00401600  !      00000049
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+_strcmp         _TEXT                 CODE           00401650  !      0000013e
+                _DATA                 DATA           00409044  !      00000000
+dstrt386        _TEXT                 CODE           0040178e  !      0000005c
+                _DATA                 DATA           00409044  !      00000000
+vsprintf.c      _TEXT                 CODE           004017f0  !      00000035
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+istable.c       _TEXT                 CODE           00401830  !      00000101
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+dmainwnt.c      _TEXT                 CODE           00401940  !      000001b9
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+                _BSS                  BSS            0040a004  !      00000004
+segdefns        _DATA                 DATA           00409044  !      00000000
+                BEGTEXT               CODE           00401000  !      00000007
+                _NULL                 BEGDATA        00409000  !      00000004
+                _AFTERNULL            BEGDATA        00409004  !      00000000
+                CONST                 DATA           00409004  !      00000000
+                TIB                   DATA           004092bc  !      00000000
+                TI                    DATA           004092bc  !      00000000
+                TIE                   DATA           004092bc  !      00000000
+                XIB                   DATA           004092bc  !      00000000
+                XI                    DATA           004092bc  !      00000000
+                XIE                   DATA           004092ce  !      00000000
+                YIB                   DATA           004092ce  !      00000000
+                YI                    DATA           004092ce  !      00000000
+                YIE                   DATA           004092e6  !      00000000
+                DATA                  DATA           004092e6  !      00000000
+                _BSS                  BSS            0040a008  !      00000000
+                STACK                 STACK          0040b2c0  !      00010000
+prtf.c          _TEXT                 CODE           00401b00  !      00000cc4
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+initrtns.c      _TEXT                 CODE           004027d0  !      000000b3
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000000
+rdllmwnt.c      CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409044  !      00000004
+mainwnt.c       _TEXT                 CODE           00402890  !      00000330
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409048  !      0000004c
+                _BSS                  BSS            0040a008  !      00000624
+mthread.c       _TEXT                 CODE           00402bc0  !      000006de
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409094  !      0000000c
+                _BSS                  BSS            0040a62c  !      0000076c
+                YIB                   DATA           004092ce  !      00000000
+                YI                    DATA           004092ce  !      00000006
+                YIE                   DATA           004092e6  !      00000000
+ddgrpwnt.c      _TEXT                 CODE           004032a0  !      000001b6
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a0  !      00000000
+                _BSS                  BSS            0040ad98  !      000003f5
+cinit.c         _TEXT                 CODE           00403460  !      00000001
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a0  !      00000000
+dosseg          _DATA                 DATA           004090a0  !      00000000
+wctomb.c        _TEXT                 CODE           00403470  !      0000003d
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a0  !      00000000
+itoa.c          _TEXT                 CODE           004034b0  !      00000074
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a0  !      00000000
+strupr.c        _TEXT                 CODE           00403530  !      00000020
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a0  !      00000000
+noefgfmt.c      _TEXT                 CODE           00403550  !      00000042
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a0  !      00000008
+lltoa.c         _TEXT                 CODE           004035a0  !      00000099
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a8  !      00000000
+ltoa.c          _TEXT                 CODE           00403640  !      00000074
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a8  !      00000000
+mbisdbcs.c      CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a8  !      00000000
+                _BSS                  BSS            0040b190  !      00000004
+mbislead.c      _TEXT                 CODE           004036c0  !      00000017
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a8  !      00000000
+                _BSS                  BSS            0040b194  !      00000101
+                XIB                   DATA           004092bc  !      00000000
+                XI                    DATA           004092bc  !      00000006
+                XIE                   DATA           004092ce  !      00000000
+hdlman.c        _TEXT                 CODE           004036e0  !      00000373
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004090a8  !      00000014
+                YIB                   DATA           004092ce  !      00000000
+                YI                    DATA           004092d4  !      00000006
+                YIE                   DATA           004092e6  !      00000000
+crwdata         _TEXT                 CODE           00403a53  !      00000001
+                _DATA                 DATA           004090bc  !      0000005c
+environ.c       CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409118  !      00000000
+                _BSS                  BSS            0040b298  !      0000000c
+                XIB                   DATA           004092bc  !      00000000
+                XI                    DATA           004092c2  !      00000006
+                XIE                   DATA           004092ce  !      00000000
+                YIB                   DATA           004092ce  !      00000000
+                YI                    DATA           004092da  !      00000006
+                YIE                   DATA           004092e6  !      00000000
+getmodfn.c      _TEXT                 CODE           00403a60  !      00000091
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409118  !      00000000
+strdup.c        _TEXT                 CODE           00403b00  !      00000040
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409118  !      00000000
+ustrdup.c       _TEXT                 CODE           00403b40  !      00000027
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409118  !      00000000
+nfree.c         _TEXT                 CODE           00403b70  !      00000108
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409118  !      00000000
+                _BSS                  BSS            0040b2a4  !      00000004
+excptwnt.c      _TEXT                 CODE           00403c80  !      00000d63
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409118  !      00000019
+                _BSS                  BSS            0040b2a8  !      00000006
+stklmwnt.c      _TEXT                 CODE           004049f0  !      0000006d
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409134  !      00000000
+calloc.c        _TEXT                 CODE           00404a60  !      0000001a
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409134  !      00000000
+xmsgwnt.c       _TEXT                 CODE           00404a80  !      00000080
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409134  !      00000000
+nrealloc.c      _TEXT                 CODE           00404b00  !      0000007a
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409134  !      00000000
+trdlist.c       _TEXT                 CODE           00404b80  !      000002e7
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409134  !      00000000
+                _BSS                  BSS            0040b2b0  !      00000004
+mthrdini.c      _TEXT                 CODE           00404e70  !      0000002b
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409134  !      00000004
+trdalloc.c      _TEXT                 CODE           00404ea0  !      00000005
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409138  !      00000000
+nheapmin.c      _TEXT                 CODE           00404eb0  !      000000e2
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409138  !      00000000
+mbinit.c        _TEXT                 CODE           00404f92  !      00000128
+                CONST                 DATA           00409004  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409138  !      00000004
+alphabet.c      CONST                 DATA           00409004  !      00000025
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           0040913c  !      00000000
+nmalloc.c       _TEXT                 CODE           004050c0  !      000000fa
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           0040913c  !      0000000c
+seterrno.c      _TEXT                 CODE           004051ba  !      0000004b
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409148  !      00000000
+iomode.c        _TEXT                 CODE           00405210  !      0000003a
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409148  !      00000058
+stiomode.c      _TEXT                 CODE           00405250  !      00000172
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a0  !      00000000
+                _BSS                  BSS            0040b2b4  !      00000004
+                YIB                   DATA           004092ce  !      00000000
+                YI                    DATA           004092e0  !      00000006
+                YIE                   DATA           004092e6  !      00000000
+setenvp.c       _TEXT                 CODE           004053d0  !      0000010d
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a0  !      00000000
+                _BSS                  BSS            0040b2b8  !      00000004
+ustrlen.c       _TEXT                 CODE           004054dd  !      00000013
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a0  !      00000000
+memcpy.c        _TEXT                 CODE           004054f0  !      0000001f
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a0  !      00000000
+mem.c           _TEXT                 CODE           00405510  !      000001e6
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a0  !      00000000
+conutwnt.c      _TEXT                 CODE           00405700  !      000000db
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a0  !      00000008
+fclex387.c      _TEXT                 CODE           004057e0  !      00000003
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a8  !      00000000
+signlwnt.c      _TEXT                 CODE           004057f0  !      000003ff
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004091a8  !      00000069
+                XIB                   DATA           004092bc  !      00000000
+                XI                    DATA           004092c8  !      00000006
+                XIE                   DATA           004092ce  !      00000000
+memset.c        _TEXT                 CODE           00405bf0  !      00000018
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409214  !      00000000
+enterdb.c       _TEXT                 CODE           00405c10  !      00000026
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409214  !      00000001
+nmsize.c        _TEXT                 CODE           00405c40  !      0000000b
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409218  !      00000000
+nexpand.c       _TEXT                 CODE           00405c50  !      000001f7
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409218  !      00000000
+register.c      _TEXT                 CODE           00405e50  !      00000084
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409218  !      0000000c
+nmemneed.c      _TEXT                 CODE           00405ee0  !      00000003
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409224  !      00000000
+grownear.c      _TEXT                 CODE           00405ef0  !      00000171
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409224  !      00000000
+iomodtty.c      _TEXT                 CODE           00406070  !      00000051
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409224  !      00000000
+dofilstr.c      _TEXT                 CODE           004060d0  !      0000013d
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409224  !      00000000
+clearenv.c      _TEXT                 CODE           00406210  !      00000090
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409224  !      00000000
+abort.c         _TEXT                 CODE           004062a0  !      00000039
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409224  !      00000004
+__stos          _TEXT                 CODE           004062e0  !      000000a3
+                _DATA                 DATA           00409228  !      00000000
+thredwnt.c      _TEXT                 CODE           00406390  !      00000186
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409228  !      00000000
+amblksiz.c      CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409228  !      00000004
+heapen.c        CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           0040922c  !      00000004
+isattwnt.c      _TEXT                 CODE           00406520  !      0000001c
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409230  !      00000000
+getenv.c        _TEXT                 CODE           00406540  !      00000089
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409230  !      00000000
+strncpy.c       _TEXT                 CODE           004065d0  !      00000036
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409230  !      00000000
+strtol.c        _TEXT                 CODE           00406610  !      0000023d
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           00409230  !      0000008c
+putenv.c        _TEXT                 CODE           00406850  !      000003f9
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbterm.c        _TEXT                 CODE           00406c50  !      0000003c
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbsnextc.c      _TEXT                 CODE           00406c90  !      00000037
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbcupper.c      _TEXT                 CODE           00406cd0  !      0000002c
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbsinc.c        _TEXT                 CODE           00406d00  !      0000002d
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+tolower.c       _TEXT                 CODE           00406d30  !      0000000e
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbschr.c        _TEXT                 CODE           00406d40  !      0000005f
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbslen.c        _TEXT                 CODE           00406da0  !      00000030
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbstowcs.c      _TEXT                 CODE           00406dd0  !      00000073
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+uputenv.c       _TEXT                 CODE           00406e50  !      00000319
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+toupper.c       _TEXT                 CODE           00407170  !      0000000e
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+memmove.c       _TEXT                 CODE           00407180  !      00000053
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbconv.c        _TEXT                 CODE           004071e0  !      0000001a
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbclen.c        _TEXT                 CODE           00407200  !      0000002b
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbccmp.c        _TEXT                 CODE           00407230  !      0000003b
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+mbtowc.c        _TEXT                 CODE           00407270  !      00000090
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+ustrchr.c       _TEXT                 CODE           00407300  !      00000016
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+setenvar.c      _TEXT                 CODE           00407320  !      000000e8
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+crtwenv.c       _TEXT                 CODE           00407410  !      00000068
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+wcstombs.c      _TEXT                 CODE           00407480  !      0000009f
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+utoupper.c      _TEXT                 CODE           0040751f  !      00000010
+                CONST                 DATA           0040902c  !      00000000
+                CONST2                DATA           0040902c  !      00000000
+                _DATA                 DATA           004092bc  !      00000000
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+_DdeCreateStringHandleA@12          USER32.DLL
+_DdeConnect@16                      USER32.DLL
+_WinExec@8                          KERNEL32.DLL
+_DdeFreeStringHandle@8              USER32.DLL
+_DdeInitializeA@16                  USER32.DLL
+_DdeClientTransaction@32            USER32.DLL
+_DdeAccessData@8                    USER32.DLL
+_DdeUnaccessData@4                  USER32.DLL
+_GetClassNameA@12                   USER32.DLL
+_DdeUninitialize@4                  USER32.DLL
+_EnumWindows@8                      USER32.DLL
+_SendMessageA@16                    USER32.DLL
+_GetEnvironmentStringsA@0           KERNEL32.DLL
+_GetVersion@0                       KERNEL32.DLL
+_GetModuleFileNameA@12              KERNEL32.DLL
+_GetCommandLineA@0                  KERNEL32.DLL
+_GetCommandLineW@0                  KERNEL32.DLL
+_FreeEnvironmentStringsA@4          KERNEL32.DLL
+_GetModuleHandleA@4                 KERNEL32.DLL
+_ExitProcess@4                      KERNEL32.DLL
+_InitializeCriticalSection@4        KERNEL32.DLL
+_DeleteCriticalSection@4            KERNEL32.DLL
+_LeaveCriticalSection@4             KERNEL32.DLL
+_GetCurrentThreadId@0               KERNEL32.DLL
+_EnterCriticalSection@4             KERNEL32.DLL
+_GetLastError@0                     KERNEL32.DLL
+_TlsGetValue@4                      KERNEL32.DLL
+_SetLastError@4                     KERNEL32.DLL
+_TlsAlloc@0                         KERNEL32.DLL
+_TlsFree@4                          KERNEL32.DLL
+_TlsSetValue@8                      KERNEL32.DLL
+_CloseHandle@4                      KERNEL32.DLL
+_MessageBoxA@16                     USER32.DLL
+_WideCharToMultiByte@32             KERNEL32.DLL
+_SetStdHandle@8                     KERNEL32.DLL
+_CreateEventA@16                    KERNEL32.DLL
+_GetStdHandle@4                     KERNEL32.DLL
+_GetModuleFileNameW@12              KERNEL32.DLL
+_MultiByteToWideChar@24             KERNEL32.DLL
+_LoadLibraryA@4                     KERNEL32.DLL
+_GetProcAddress@8                   KERNEL32.DLL
+_WriteFile@20                       KERNEL32.DLL
+_SetUnhandledExceptionFilter@4      KERNEL32.DLL
+_UnhandledExceptionFilter@4         KERNEL32.DLL
+_VirtualQuery@12                    KERNEL32.DLL
+_VirtualFree@12                     KERNEL32.DLL
+_GetACP@0                           KERNEL32.DLL
+_GetOEMCP@0                         KERNEL32.DLL
+_GetCPInfo@8                        KERNEL32.DLL
+_CreateFileA@28                     KERNEL32.DLL
+_SetConsoleCtrlHandler@8            KERNEL32.DLL
+_VirtualAlloc@16                    KERNEL32.DLL
+_CreateThread@24                    KERNEL32.DLL
+_ResumeThread@4                     KERNEL32.DLL
+_ExitThread@4                       KERNEL32.DLL
+_GetFileType@4                      KERNEL32.DLL
+_SetEnvironmentVariableA@8          KERNEL32.DLL
+_CharUpperA@4                       USER32.DLL
+_SetEnvironmentVariableW@8          KERNEL32.DLL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/kernel32.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/user32.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  8fb5 (36789.)
+Entry point address: 0040178e
+Link time: 00:00.00

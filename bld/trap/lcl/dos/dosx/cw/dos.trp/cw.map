@@ -1,0 +1,194 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:42
+Executable Image: cw.trp
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+dgroup                          0000:0000            00004ec6
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           dgroup         0000:0000       0000264f
+_DATA                  DATA           dgroup         0265:0000       000000a6
+CONST                  DATA           dgroup         026f:0006       00000334
+CONST2                 DATA           dgroup         02a2:000a       000000a4
+_BSS                   BSS            dgroup         02ad:0000       000013f6
+STACK                  STACK          dgroup         03ec:0006       00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: dosstrt.obj(TRAPSTRT)
+0000:0000      _small_code_
+Module: mxutil.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/mxutil.c)
+0000:0040      GetInPtr_
+0000:006c      GetOutPtr_
+0000:0098      GetTotalSize_
+0000:2ad0      _In_Mx_Ptr
+0000:2ad4      _Out_Mx_Ptr
+0000:2ad8      _Out_Mx_Num
+0000:2ad9      _In_Mx_Num
+Module: dossplit.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/c/dossplit.c)
+0000:00d0      ReqSplit_cmd_
+Module: dosenv.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/c/dosenv.c)
+0000:0160      DOSEnvFind_
+Module: dosrfx.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/c/dosrfx.c)
+0000:01c0      ReqRfx_rename_
+0000:0222      ReqRfx_mkdir_
+0000:0254      ReqRfx_rmdir_
+0000:0286      ReqRfx_setdrive_
+0000:02b8      ReqRfx_getdrive_
+0000:02d0      ReqRfx_setcwd_
+0000:0302      ReqRfx_getcwd_
+0000:037c      ReqRfx_setfileattr_
+0000:03d4      ReqRfx_getfileattr_
+0000:0404      ReqRfx_getfreespace_
+0000:05e6      ReqRfx_setdatetime_
+0000:0728      ReqRfx_getdatetime_
+0000:0762      ReqRfx_findfirst_
+0000:07be      ReqRfx_findnext_
+0000:0836      ReqRfx_findclose_
+0000:083a      ReqRfx_nametocannonical_
+Module: dosfile.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/c/dosfile.c)
+0000:09c0      ReqFile_get_config_
+0000:09e2      ReqFile_open_
+0000:0a80      ReqFile_seek_
+0000:0afc      ReqFile_read_
+0000:0b6a      ReqFile_write_
+0000:0bd6      ReqFile_write_console_
+0000:0c2e      ReqFile_close_
+0000:0c66      ReqFile_erase_
+0000:0d18      FindFilePath_
+0000:0e42      ReqFile_string_to_fullpath_
+0000:0eda      ReqFile_run_cmd_
+Module: doschk.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/c/doschk.c)
+0000:0f50      CheckPointMem_
+0000:11ca      CheckPointRestore_
+Module: dosflip.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/c/dosflip.c)
+0000:1270      ReqRead_user_keyboard_
+0000:12fc      ReqSet_debug_screen_
+0000:12fc      ReqSet_user_screen_
+Module: fork.obj(FORK)
+0000:1308      Fork_
+Module: supp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/supp.c)
+0000:1420      ReqGet_supplementary_service_
+0000:14ce      ReqPerform_supplementary_service_
+Module: core.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/c/core.c)
+0000:1500+     ReqConnect_
+0000:1536+     ReqDisconnect_
+0000:153a+     ReqResume_
+0000:153a+     ReqSuspend_
+0000:153e      TrapRequest_
+Module: dosxlink.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/dosx/c/dosxlink.c)
+0000:1590      RemoteGet_
+0000:15c6      RemotePut_
+0000:161e      BackFromProtMode_
+0000:184e      RemoteLink_
+0000:1a56      RemoteUnLink_
+0000:1a8e      RemoteConnect_
+0000:1a90      RemoteDisco_
+0000:2b2f      _BackFromFork
+Module: dosxremo.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/dos/dosx/c/dosxremo.c)
+0000:1aa0      ReqWrite_cpu_
+0000:1aa0      ReqWrite_fpu_
+0000:1aa0      ReqWrite_regs_
+0000:1aa0      ReqSet_watch_
+0000:1aa0      ReqClear_watch_
+0000:1aa0      ReqSet_break_
+0000:1aa0      ReqClear_break_
+0000:1aa0      ReqGet_message_text_
+0000:1aa0      ReqRedirect_stdin_
+0000:1aa0      ReqRedirect_stdout_
+0000:1b7a      ReqGet_sys_config_
+0000:1bb6      ReqGet_err_text_
+0000:1cc0      ReqMap_addr_
+0000:1d16      ReqRead_mem_
+0000:1d16      ReqRead_io_
+0000:1d28      ReqWrite_io_
+0000:1d4e      ReqRead_cpu_
+0000:1d86      ReqRead_fpu_
+0000:1dbe      ReqRead_regs_
+0000:1df6      ReqChecksum_mem_
+0000:1e22      ReqGet_next_alias_
+0000:1e4e      ReqProg_go_
+0000:1e4e      ReqProg_step_
+0000:1e94      ReqAddr_info_
+0000:1eba      ReqMachine_data_
+0000:1f0a      ReqGet_lib_name_
+0000:1f44      ReqWrite_mem_
+0000:1f6c      GetExeExtensions_
+0000:1f74      ReqProg_load_
+0000:219e      ReqProg_kill_
+0000:21e4      TrapInit_
+0000:22de      TrapFini_
+0000:2ac4+     _DOSEMUString
+Module: dosxfork.obj(fork)
+0000:22e6      GetPSP_
+0000:22f1      SetPSP_
+0000:22fc      SaveVectors_
+0000:2316      RestoreVectors_
+0000:2332      DbgPSP_
+0000:2337      InitPSP_
+0000:233f      _fork_
+Module: dosxjump.obj(SETJMP)
+0000:23b2      _setjmp_
+0000:23e1      longjmp_
+Module: packet.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/packet.c)
+0000:2410      StartPacket_
+0000:241c      PutPacket_
+0000:243e*     PutBuffPacket_
+0000:245a      AddPacket_
+0000:24a4      GetPacket_
+0000:24be      RemovePacket_
+0000:250a*     GetPacketBuffPtr_
+0000:251a      MaxPacketSize_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(i4d)
+0000:251e*     __I4D
+0000:2567      __U4D
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(i4m)
+0000:25ec      __I4M
+0000:25ec*     __U4M
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(toupper.c)
+0000:2604      toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib(stricmp.c)
+0000:2612      stricmp_
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib286/dos/clibc.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  4ec6 (20166.)
+Entry point address: 0000:002d
+Link time: 00:00.00

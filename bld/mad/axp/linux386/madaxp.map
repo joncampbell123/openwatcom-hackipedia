@@ -1,0 +1,336 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:40:51
+Executable Image: madaxp.mad
+creating a Phar Lap relocatable executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00005554             00000170
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           00000000        00005553
+CONST                  DATA           DGROUP         00005554        00000000
+CONST2                 DATA           DGROUP         00005554        00000000
+_DATA                  DATA           DGROUP         00005554        00000148
+_BSS                   BSS            DGROUP         0000569c        00000028
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: madimp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/c/madimp.c)
+00000000*      _Signature
+00000010*      MADLOAD
+00000030       MCAlloc_
+00000040*      MCRealloc_
+00000050       MCFree_
+00000060*      MCOpen_
+00000070*      MCSeek_
+00000080*      MCRead_
+00000090*      MCClose_
+000000a0       MCReadMem_
+000000d0*      MCWriteMem_
+00000100*      MCString_
+00000110*      MCAddString_
+00000120*      MCRadixPrefix_
+00000130       MCNotify_
+00000140       MCMachineData_
+00000180       MCAddrToString_
+000001c0       MCMemExpr_
+000001d0*      MCAddrSection_
+000001e0*      MCAddrOvlReturn_
+000001f0       MCSystemConfig_
+00000200       MCTypeInfoForHost_
+00000210       MCTypeConvert_
+00000230       MCTypeToString_
+00000250*      MCStatus_
+00005554+      _MadImpInterface
+0000569c*      __nullarea
+000056a0+      _MadClient
+Module: disentry.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/ndisasm/core/c/disentry.c)
+00000270       _AXPMaxInsName
+00000271+      _DisStringTable
+000007bc+      _DisInstructionTable
+000011ac+      _DisRegisterTable
+0000132e*      _DisRefTypeTable
+00001342       _AXPRangeTable
+00001374       _AXPRangeTablePos
+0000137c+      _DisSelectorTable
+00001840       SEX_
+00001860+      DisGetString_
+000018b0*      DisDummyHandler_
+000018c0       DisInit_
+000018e0       DisFini_
+000018f0       DisDecodeInit_
+00001950       DisDecode_
+00001ab0+      DisAddReg_
+00001af0+      DisOpFormat_
+00001cc0       DisFormat_
+00001e20       DisInsNameMax_
+00001e30*      DisInsSizeInc_
+Module: disaxp.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/ndisasm/core/c/disaxp.c)
+00001e84       _AXPData
+00001eb0       AXPPal_
+00001f00       AXPMemory_
+00001f90       AXPFPMemory_
+00001fa0       AXPMemoryLA_
+00001fc0       AXPMemoryFC_
+00002000       AXPJump_
+00002040       AXPBranch_
+00002080       AXPFPBranch_
+00002090       AXPOperate_
+000020f0       AXPOperateV_
+00002110       AXPFPOperate_
+00002150       AXPFPConvert_
+00002250       AXPIEEEOperate_
+00002270       AXPIEEECompare_
+00002290       AXPIEEEConvert_
+000022c0       AXPVAXOperate_
+000022f0       AXPVAXConvert_
+Module: axpaddr.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axpaddr.c)
+00002810       MIAddrAdd_
+00002820       MIAddrComp_
+00002840       MIAddrDiff_
+00002850       MIAddrInterrupt_
+00002850       MIAddrFlat_
+00002850       MIAddrMap_
+Module: axpctrl.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axpctrl.c)
+00002860       MIInit_
+00002890       MIFini_
+000028a0       MIStateSize_
+000028b0       MIStateInit_
+000028e0       MIStateSet_
+000028f0       MIStateCopy_
+000056a4       _MADState
+Module: axptypes.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axptypes.c)
+00002a2c       _TypeArray
+00002b40       MITypeWalk_
+00002b90       MITypeName_
+00002ba0       MITypePreferredRadix_
+00002bc0       MITypeInfo_
+00002c00       MITypeDefault_
+00002dc0       MITypeToString_
+00002e50       MITypeForDIPType_
+00002f40       MITypeConvert_
+Module: axpreg.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axpreg.c)
+00002fde+      _NAME_invd
+00002fe3+      _NAME_dzed
+00002fe8+      _NAME_ovfd
+00002fed+      _NAME_inv
+00002ff1+      _NAME_dze
+00002ff5+      _NAME_ovf
+00002ff9+      _NAME_unf
+00002ffd+      _NAME_ine
+00003001+      _NAME_iov
+00003005+      _NAME_dyn
+00003009+      _NAME_sum
+000030d0+      _NAME_mode
+000030d5+      _NAME_ie
+000030d8+      _NAME_irql
+00003120+      _NAME_f0
+00003123+      _NAME_f1
+00003126+      _NAME_f2
+00003129+      _NAME_f3
+0000312c+      _NAME_f4
+0000312f+      _NAME_f5
+00003132+      _NAME_f6
+00003135+      _NAME_f7
+00003138+      _NAME_f8
+0000313b+      _NAME_f9
+0000313e+      _NAME_f10
+00003142+      _NAME_f11
+00003146+      _NAME_f12
+0000314a+      _NAME_f13
+0000314e+      _NAME_f14
+00003152+      _NAME_f15
+00003156+      _NAME_f16
+0000315a+      _NAME_f17
+0000315e+      _NAME_f18
+00003162+      _NAME_f19
+00003166+      _NAME_f20
+0000316a+      _NAME_f21
+0000316e+      _NAME_f22
+00003172+      _NAME_f23
+00003176+      _NAME_f24
+0000317a+      _NAME_f25
+0000317e+      _NAME_f26
+00003182+      _NAME_f27
+00003186+      _NAME_f28
+0000318a+      _NAME_f29
+0000318e+      _NAME_f30
+00003192+      _NAME_f31
+00003196+      _NAME_r0
+00003199+      _NAME_r1
+0000319c+      _NAME_r2
+0000319f+      _NAME_r3
+000031a2+      _NAME_r4
+000031a5+      _NAME_r5
+000031a8+      _NAME_r6
+000031ab+      _NAME_r7
+000031ae+      _NAME_r8
+000031b1+      _NAME_r9
+000031b4+      _NAME_r10
+000031b8+      _NAME_r11
+000031bc+      _NAME_r12
+000031c0+      _NAME_r13
+000031c4+      _NAME_r14
+000031c8+      _NAME_r15
+000031cc+      _NAME_r16
+000031d0+      _NAME_r17
+000031d4+      _NAME_r18
+000031d8+      _NAME_r19
+000031dc+      _NAME_r20
+000031e0+      _NAME_r21
+000031e4+      _NAME_r22
+000031e8+      _NAME_r23
+000031ec+      _NAME_r24
+000031f0+      _NAME_r25
+000031f4+      _NAME_r26
+000031f8+      _NAME_r27
+000031fc+      _NAME_r28
+00003200+      _NAME_r29
+00003204+      _NAME_r30
+00003208+      _NAME_r31
+0000320c+      _NAME_fpcr
+00003211+      _NAME_v0
+00003214+      _NAME_t0
+00003217+      _NAME_t1
+0000321a+      _NAME_t2
+0000321d+      _NAME_t3
+00003220+      _NAME_t4
+00003223+      _NAME_t5
+00003226+      _NAME_t6
+00003229+      _NAME_t7
+0000322c+      _NAME_s0
+0000322f+      _NAME_s1
+00003232+      _NAME_s2
+00003235+      _NAME_s3
+00003238+      _NAME_s4
+0000323b+      _NAME_s5
+0000323e+      _NAME_fp
+00003241+      _NAME_a0
+00003244+      _NAME_a1
+00003247+      _NAME_a2
+0000324a+      _NAME_a3
+0000324d+      _NAME_a4
+00003250+      _NAME_a5
+00003253+      _NAME_t8
+00003256+      _NAME_t9
+00003259+      _NAME_t10
+0000325d+      _NAME_t11
+00003261+      _NAME_ra
+00003264+      _NAME_t12
+00003268+      _NAME_at
+0000326b+      _NAME_gp
+0000326e+      _NAME_sp
+00003284       _RegList
+00003940       GetPData_
+000039b0       VariableFrame_
+00003a20       MIRegistersSize_
+00003a30       MIRegistersHost_
+00003a40       MIRegSetDisplayGrouping_
+00003a40       MIRegistersTarget_
+00003a50       MIRegSetWalk_
+00003a90       MIRegSetName_
+00003aa0       MIRegSetLevel_
+00003d20       MIRegSetDisplayGetPiece_
+00003d50       MIRegSetDisplayModify_
+00003da0       MIRegModified_
+00003e50       MIRegInspectAddr_
+00003eb0       MIRegSetDisplayToggleList_
+00003ec0       MIRegSetDisplayToggle_
+00003f30       MIRegWalk_
+00004010       MIRegSpecialGet_
+00004050       MIRegSpecialSet_
+00004090       MIRegSpecialName_
+00004130       MIRegFromContextItem_
+00004160       MIRegUpdateStart_
+00004180       MIRegUpdateEnd_
+000043a0       RegInit_
+00004470       RegFini_
+000056b6+      _CurrPAL
+Module: axpcall.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axpcall.c)
+00004500       MICallStackGrowsUp_
+00004510       MICallTypeList_
+00004520       MICallBuildFrame_
+00004560       MICallReturnReg_
+00004570       MICallParmRegList_
+000045c0       MICallUpStackSize_
+000045d0       MICallUpStackInit_
+000045f0       MICallUpStackLevel_
+Module: axpdisas.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axpdisas.c)
+00004890       _RegTrans
+00004920       DisasmInit_
+00004950       DisasmFini_
+00004960       DisCliGetData_
+00004990       DisCliValueString_
+00004a40       MIDisasmDataSize_
+00004a50       MIDisasmNameMax_
+00004a60       DisasmOne_
+00004a60       MIDisasm_
+00004ad0       MIDisasmFormat_
+00004c40       MIDisasmInsSize_
+00004c50       MIDisasmInsUndoable_
+00004d70       DisasmControl_
+00004d70       MIDisasmControl_
+00004fc0       MIDisasmInsNext_
+00005030       MIDisasmMemRefWalk_
+00005110       MIDisasmToggleList_
+00005120       MIDisasmToggle_
+00005160       MIDisasmInspectAddr_
+Module: axptrace.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/axp/c/axptrace.c)
+000051c0       MITraceSize_
+000051d0       MITraceInit_
+000051e0       MITraceHaveRecursed_
+00005200       MITraceOne_
+00005290       MITraceSimulate_
+00005320       MITraceFini_
+00005340       MIUnexpectedBreak_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(toupper.c)
+00005460       toupper_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(memset.c)
+00005470       memset_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(strupr.c)
+00005490       strupr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib(__stos)
+000054b0       __STOSB
+000054e7*      __STOSD
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/dos/clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  56c4 (22212.)
+Entry point address: 00000000
+Link time: 00:00.00

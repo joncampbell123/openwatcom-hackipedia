@@ -1,0 +1,71 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:49
+Executable Image: wdpmhook.dll
+creating an OS/2 32-bit dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        00000320
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           0001:00000000   000000b9
+CONST                  DATA           DGROUP         0002:00000000   00000000
+CONST2                 DATA           DGROUP         0002:00000000   00000000
+_DATA                  DATA           DGROUP         0002:00000000   00000000
+_BSS                   BSS            DGROUP         0002:00000000   00000320
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: pmhook.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/os2v2/c/pmhook.c)
+0001:00000050  SendMsgHookProc
+0001:00000080  SetHmqDebugee
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+WinQueryWindowULong                 PMWIN
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/os2386.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  03d9 (985.)
+Link time: 00:00.00

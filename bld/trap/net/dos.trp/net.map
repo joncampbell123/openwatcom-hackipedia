@@ -1,0 +1,94 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:39:53
+Executable Image: net.trp
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+dgroup                          0000:0000            00001c0d
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           dgroup         0000:0000       00000722
+_DATA                  DATA           dgroup         0072:0002       00000021
+CONST                  DATA           dgroup         0074:0004       0000006d
+CONST2                 DATA           dgroup         007b:0002       00000000
+_BSS                   BSS            dgroup         007c:0000       0000044d
+STACK                  STACK          dgroup         00c0:000d       00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: dosstrt.obj(TRAPSTRT)
+0000:0000      _small_code_
+Module: mxutil.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/mxutil.c)
+0000:0040*     GetInPtr_
+0000:006c      GetOutPtr_
+0000:0098*     GetTotalSize_
+0000:07c0      _In_Mx_Ptr
+0000:07c4      _Out_Mx_Ptr
+0000:07c8      _Out_Mx_Num
+0000:07c9      _In_Mx_Num
+Module: remote.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/remote.c)
+0000:021e      TrapInit_
+0000:02b4      TrapRequest_
+0000:032c      TrapFini_
+Module: packet.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/common/packet.c)
+0000:0340      StartPacket_
+0000:034c      PutPacket_
+0000:036e*     PutBuffPacket_
+0000:038a      AddPacket_
+0000:03d4      GetPacket_
+0000:03ee      RemovePacket_
+0000:043a*     GetPacketBuffPtr_
+0000:044a      MaxPacketSize_
+Module: netlink.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/net/c/netlink.c)
+0000:0724+     _DefLinkName
+0000:0450+     GetLanaNum_
+0000:04c0      RemoteGet_
+0000:04e4      RemotePut_
+0000:0526      RemoteConnect_
+0000:054c      RemoteDisco_
+0000:0560      RemoteLink_
+0000:06d4      RemoteUnLink_
+0000:0bca+     _NetCtlBlk
+0000:0c0a+     _SkipEnum
+0000:0c0c+     _LanaNum
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  1c0d (7181.)
+Entry point address: 0000:002d
+Link time: 00:00.00

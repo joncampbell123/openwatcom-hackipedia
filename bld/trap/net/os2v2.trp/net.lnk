@@ -1,0 +1,11 @@
+debug dwarf option symfile
+op map name net.d32
+sys os2v2 dll initinstance terminstance export TrapInit_.1 export TrapFini_.2 export TrapRequest_.3 op modname=net option description 'Open Watcom Debugger Trap File'
+op dosseg
+file os2strt2.obj
+file mxutil.obj
+file remote.obj
+file packet.obj
+file netlink.obj
+library /mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/os2/os2386.lib
+

@@ -1,0 +1,1082 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 02:21:36
+Executable Image: mthr19d.dll
+creating a Windows NT character-mode dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+.idata                          6ff0c000             00000424
+DGROUP                          6ff0d000             00001720
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           6ff01000        00000007
+_TEXT                  CODE           AUTO           6ff01010        00009f98
+TRANSFER CODE          CODE           AUTO           6ff0afa8        00000114
+.idata                 .idata         .idata         6ff0c000        00000424
+_NULL                  BEGDATA        DGROUP         6ff0d000        00000004
+_AFTERNULL             BEGDATA        DGROUP         6ff0d004        00000000
+CONST                  DATA           DGROUP         6ff0d004        00000000
+CONST2                 DATA           DGROUP         6ff0d004        00000000
+_DATA                  DATA           DGROUP         6ff0d004        000001e4
+TIB                    DATA           DGROUP         6ff0d1e8        00000000
+TI                     DATA           DGROUP         6ff0d1e8        00000000
+TIE                    DATA           DGROUP         6ff0d1e8        00000000
+XIB                    DATA           DGROUP         6ff0d1e8        00000000
+XI                     DATA           DGROUP         6ff0d1e8        00000000
+XIE                    DATA           DGROUP         6ff0d1e8        00000000
+YIB                    DATA           DGROUP         6ff0d1e8        00000000
+YI                     DATA           DGROUP         6ff0d1e8        00000000
+YIE                    DATA           DGROUP         6ff0d1e8        00000000
+DATA                   DATA           DGROUP         6ff0d1e8        00000000
+_BSS                   BSS            DGROUP         6ff0e000        00000714
+STACK                  STACK          DGROUP         6ff0e720        00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/library/winnt.386/mf_rd/clibdwnt.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/clibdwnt.c)
+6ff01010       _LibMain@12
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(dstrt386)
+6ff01030       __DLLstart_
+6ff01030*      __DLLstartw_
+6ff01030*      _DllMainCRTStartup@12
+6ff01030*      _wDllMainCRTStartup@12
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/acos.c)
+6ff0108c       IF@ACOS
+6ff010cf       acos_
+6ff01106       IF@DACOS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/acosh.c)
+6ff011f1       IF@DACOSH
+6ff01228       acosh_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/asin.c)
+6ff012dd       IF@ASIN
+6ff01320       asin_
+6ff01357       IF@DASIN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/asinh.c)
+6ff0142e       IF@DASINH
+6ff01465       asinh_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atan.c)
+6ff0154b       IF@ATAN
+6ff0158e       atan_
+6ff015c5       IF@DATAN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atan2.c)
+6ff01808       IF@ATAN2
+6ff0185c       atan2_
+6ff0189f       IF@DATAN2
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/atan387_.asm)
+6ff01a80       __atan87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atanh.c)
+6ff01ae9       IF@DATANH
+6ff01b20       atanh_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atof.c)
+6ff01be9       atof_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cabs.c)
+6ff01c1c       cabs_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ceil.c)
+6ff01c88       ceil_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/clear87.c)
+6ff01cd5       _status87_
+6ff01d09       _clear87_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cnvd2f.c)
+6ff01d43       __cnvd2f_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cnvd2ld.c)
+6ff01e30       __cnvd2ld_
+6ff01e57       __get__cnvd2ld_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cnvs2d.c)
+6ff01e79       __cnvs2d_
+6ff01eae       __get__cnvs2d_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sincos.c)
+6ff02229       IF@SIN
+6ff0226c       sin_
+6ff022a3       IF@DSIN
+6ff022ff       IF@COS
+6ff02342       cos_
+6ff02379       IF@DCOS
+6ff023d5       IF@TAN
+6ff02418       tan_
+6ff0244f       IF@DTAN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/sin387_.asm)
+6ff024b5       __sin87
+6ff024ac       __cos87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cosh.c)
+6ff02565       IF@COSH
+6ff025a8       cosh_
+6ff025df       IF@DCOSH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/difftime.c)
+6ff026cf       difftime_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/inf_nan.c)
+6ff0271a       ___f_infinity
+6ff0271e       ___f_posqnan
+6ff02722       ___d_infinity
+6ff0272a       ___d_posqnan
+6ff02732       ___ld_infinity
+6ff0273a       ___ld_posqnan
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i__ecvt.asm)
+6ff02744       __ecvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_ecvt_.asm)
+6ff0274c       _ecvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/efcvt.c)
+6ff027cc       ecvt_
+6ff02825       fcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/efgfmt.c)
+6ff02885       _EFG_Format_
+6ff02a39       __get_EFG_Format_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/evalpoly.c)
+6ff02a5b       _EvalPoly_
+6ff02ad7       _OddPoly_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/exp.c)
+6ff02b64       IF@EXP
+6ff02ba7       exp_
+6ff02bde       IF@DEXP
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/exp387_.asm)
+6ff02eb8       __exp87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fabs.c)
+6ff02f63       IF@FABS
+6ff02f98       fabs_
+6ff02fcf       IF@DFABS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i__fcvt.asm)
+6ff03014       __fcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_fcvt_.asm)
+6ff0301c       _fcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fdclass.c)
+6ff03021       _FDClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fdsign.c)
+6ff030b7       _FDSign_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/finite.c)
+6ff030eb       _finite_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_finit.asm)
+6ff03130       finite_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ldclass.c)
+6ff03135       __LDClass_
+6ff031c2       _FLClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/flda386.asm)
+6ff03216       __FLDA
+6ff03240       __FLDAC
+6ff031ec       __FLDS
+6ff032f2       ___LDA
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fldc386.asm)
+6ff0347c       __FLDC
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fldd386.asm)
+6ff03518       __FLDD
+6ff035b8       ___LDD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fldm386.asm)
+6ff03774       __FLDM
+6ff0383a       ___LDM
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/floor.c)
+6ff0394f       floor_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/flsign.c)
+6ff039b3*      __LDSign_
+6ff039de       _FLSign_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fmod.c)
+6ff03a16       IF@FMOD
+6ff03a6a       fmod_
+6ff03aad       IF@DFMOD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/fprem386.asm)
+6ff03afc       __fprem_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/frexp.c)
+6ff03bf5       frexp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fsclass.c)
+6ff03c69       _FSClass_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fssign.c)
+6ff03ce8       _FSSign_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i__gcvt.asm)
+6ff03d18       __gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_gcvt_.asm)
+6ff03d20       _gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/gcvt.c)
+6ff03d25       gcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/hypot.c)
+6ff03e17       hypot_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/i4ld386.asm)
+6ff03e8c       __I4LD
+6ff03e9d       __U4LD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/i8ld386.asm)
+6ff03ed9       __I8LD
+6ff03ed4       __U8LD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/divc16.c)
+6ff03f29       IF@C16Div
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/mulc16.c)
+6ff040af       IF@C16Mul
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powc16.c)
+6ff04161       IF@C16Pow
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powic16.c)
+6ff0438f       IF@C16PowI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/divc20.c)
+6ff0462c       IF@C32Div
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/mulc20.c)
+6ff047b2       IF@C32Mul
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powc20.c)
+6ff04864       IF@C32Pow
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powic32.c)
+6ff048e6       IF@C32PowI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/divc8.c)
+6ff0495c       IF@C8Div
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/mulc8.c)
+6ff04a6d       IF@C8Mul
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powc8.c)
+6ff04ae7       IF@C8Pow
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powic8.c)
+6ff04d03       IF@C8PowI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdabs.c)
+6ff04eb8       IF@CDABS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdcos.c)
+6ff04fef       IF@CDCOS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdexp.c)
+6ff05098       IF@CDEXP
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdlog.c)
+6ff05139       IF@CDLOG
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdsin.c)
+6ff051ec       IF@CDSIN
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdsqrt.c)
+6ff0528c       IF@CDSQRT
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fdld386.asm)
+6ff055e4       __iFDLD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log.c)
+6ff056a3       IF@LOG
+6ff056e6       log_
+6ff0571d       IF@DLOG
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log10.c)
+6ff05941       IF@LOG10
+6ff05984       log10_
+6ff059bb       IF@DLOG10
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log2.c)
+6ff05a35       IF@DLOG2
+6ff05a6c       log2_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/pow.c)
+6ff05ae6       IF@POW
+6ff05b3a       pow_
+6ff05b7d       IF@DPOW
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powri.c)
+6ff05ddb       IF@POWI
+6ff05e22       IF@DPOWI
+6ff05f50       IF@PowRI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sinh.c)
+6ff05f8b       IF@SINH
+6ff05fce       sinh_
+6ff06005       IF@DSINH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sqrt.c)
+6ff06107       IF@SQRT
+6ff0614a       sqrt_
+6ff06181       IF@DSQRT
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/tanh.c)
+6ff06209       IF@TANH
+6ff0624c       tanh_
+6ff06283       IF@DTANH
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powii.c)
+6ff0638f       IF@IPOW
+6ff06475       IF@PowII
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powrr.c)
+6ff064a2       IF@PowRR
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powxi.c)
+6ff0652f       IF@PowXI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fsld386.asm)
+6ff06630       __iFSLD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldfd386.asm)
+6ff06678       __iLDFD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldfs386.asm)
+6ff0674c       __iLDFS
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/j0.c)
+6ff0684d       __P0P
+6ff06875       __P0Q
+6ff068a5       __Q0P
+6ff068cd       __Q0Q
+6ff068fd       j0_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/j1.c)
+6ff06bbd       __P1P
+6ff06be5       __P1Q
+6ff06c15       __Q1P
+6ff06c3d       __Q1Q
+6ff06c65       j1_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/jn.c)
+6ff06ed1       jn_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ldcvt.c)
+6ff07342       _LDScale10x_
+6ff07919       __LDcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ldexp.c)
+6ff07ec6       ldexp_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldi4386.asm)
+6ff07ffd       __LDI4
+6ff08002       __LDU4
+6ff07fa8       __RLDU4
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldi8386.asm)
+6ff0806c       __LDI8
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/log387_.asm)
+6ff080e0       __log87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/math2err.c)
+6ff08160       __math1err_
+6ff0819a       __math2err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/__mtherr.asm)
+6ff082f4       __matherr
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_matherr.c)
+6ff0839f       _set_matherr_
+6ff083c2       __rterrmsg_
+6ff08429       _matherr_
+6ff0d114+      ___matherr_handler
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/matherr.c)
+6ff08493       matherr_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/modf.c)
+6ff084b8       modf_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/modf386.asm)
+6ff08510       __ModF
+6ff085a0       __ZBuf2F
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/qmatherr.c)
+6ff086a8       __qmath1err_
+6ff086ed       __qmath2err_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/sqrt386.asm)
+6ff08770       __sqrtd
+6ff08797       __sqrt
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/sqrt387_.asm)
+6ff08864       __sqrt87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/strtod.c)
+6ff08f61       __Strtold_
+6ff0912c       strtod_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/tan387_.asm)
+6ff092d4       __tan87
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_iwtof__.asm)
+6ff09378       _watof_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_ustrtod.c)
+6ff09ace       __wStrtold_
+6ff09cc0       wcstod_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_uefcvt.c)
+6ff09ee1       _wecvt_
+6ff09f45       _wfcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_ugcvt.c)
+6ff09fae       _wgcvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_uatof.c)
+6ff09ff1       _wtof_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/y0.c)
+6ff0a0ac       y0_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/y1.c)
+6ff0a3e3       y1_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/yn.c)
+6ff0a6ce       yn_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/bufld386.asm)
+6ff0a7ec       __ZBuf2LD
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/zmatherr.c)
+6ff0a8fb       __zmath1err_
+6ff0a93c       __zmath2err_
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/dmndwnt.c)
+6ff0a9c0       __LibMain@12
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(segdefns)
+6ff01003       ___begtext
+6ff0d000*      __nullarea
+6ff0d1e8       __Start_XI
+6ff0d1e8       __End_XI
+6ff0d1e8       __Start_YI
+6ff0d1e8       __End_YI
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sgn.c)
+6ff0ab60       __sgn_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cvt.c)
+6ff0aba4       __cvt_
+Module: /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log87e.c)
+6ff0ac39       __log87_err_
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/ddgrpwnt.c)
+6ff0ad90       __disallow_single_dgroup_
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/dllnmwnt.c)
+6ff0e708       ___Is_DLL
+6ff0e70c       __LpwDllName
+6ff0e710       __LpDllName
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/initrtns.c)
+6ff0ae60       __InitRtns
+6ff0aef0       __FiniRtns
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/rdllmwnt.c)
+6ff0d1e4       __pRawDllMain
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/dcinit.c)
+6ff0af90       __CommonInit_
+Module: ../../../clib/winnt.386/mf_rd/clbrdlld.lib(dosseg)
+00001234       __DOSseg__
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/clibdwnt.c
+                _TEXT                 CODE           6ff01010  !      0000001f
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+LINKER MODULE   TRANSFER CODE         CODE           6ff0afa8  !      00000114
+                .idata                .idata         6ff0c000  !      00000424
+dstrt386        _TEXT                 CODE           6ff01030  !      0000005c
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/acos.c
+                _TEXT                 CODE           6ff0108c  !      00000165
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/acosh.c
+                _TEXT                 CODE           6ff011f1  !      000000ec
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/asin.c
+                _TEXT                 CODE           6ff012dd  !      00000151
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/asinh.c
+                _TEXT                 CODE           6ff0142e  !      000000d5
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atan.c
+                _TEXT                 CODE           6ff01503  !      00000305
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atan2.c
+                _TEXT                 CODE           6ff01808  !      00000278
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/atan387_.asm
+                _TEXT                 CODE           6ff01a80  !      00000069
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atanh.c
+                _TEXT                 CODE           6ff01ae9  !      00000100
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/atof.c
+                _TEXT                 CODE           6ff01be9  !      00000033
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cabs.c
+                _TEXT                 CODE           6ff01c1c  !      0000006c
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ceil.c
+                _TEXT                 CODE           6ff01c88  !      0000004d
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/clear87.c
+                _TEXT                 CODE           6ff01cd5  !      0000006e
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cnvd2f.c
+                _TEXT                 CODE           6ff01d43  !      000000ed
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cnvd2ld.c
+                _TEXT                 CODE           6ff01e30  !      00000049
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cnvs2d.c
+                _TEXT                 CODE           6ff01e79  !      00000057
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sincos.c
+                _TEXT                 CODE           6ff01ed0  !      000005db
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d004  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/sin387_.asm
+                _TEXT                 CODE           6ff024ac  !      000000b9
+                _DATA                 DATA           6ff0d004  !      0000000a
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cosh.c
+                _TEXT                 CODE           6ff02565  !      0000016a
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/difftime.c
+                _TEXT                 CODE           6ff026cf  !      0000004b
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/inf_nan.c
+                _TEXT                 CODE           6ff0271a  !      00000028
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i__ecvt.asm
+                _TEXT                 CODE           6ff02744  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_ecvt_.asm
+                _TEXT                 CODE           6ff0274c  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/efcvt.c
+                _TEXT                 CODE           6ff02751  !      00000134
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/efgfmt.c
+                _TEXT                 CODE           6ff02885  !      000001d6
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/evalpoly.c
+                _TEXT                 CODE           6ff02a5b  !      000000e9
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/exp.c
+                _TEXT                 CODE           6ff02b44  !      00000374
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/exp387_.asm
+                _TEXT                 CODE           6ff02eb8  !      000000ab
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fabs.c
+                _TEXT                 CODE           6ff02f63  !      000000b1
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i__fcvt.asm
+                _TEXT                 CODE           6ff03014  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_fcvt_.asm
+                _TEXT                 CODE           6ff0301c  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fdclass.c
+                _TEXT                 CODE           6ff03021  !      00000096
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fdsign.c
+                _TEXT                 CODE           6ff030b7  !      00000034
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/finite.c
+                _TEXT                 CODE           6ff030eb  !      00000043
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_finit.asm
+                _TEXT                 CODE           6ff03130  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ldclass.c
+                _TEXT                 CODE           6ff03135  !      000000b7
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/flda386.asm
+                _TEXT                 CODE           6ff031ec  !      00000290
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fldc386.asm
+                _TEXT                 CODE           6ff0347c  !      00000099
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fldd386.asm
+                _TEXT                 CODE           6ff03518  !      0000025b
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fldm386.asm
+                _TEXT                 CODE           6ff03774  !      000001db
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/floor.c
+                _TEXT                 CODE           6ff0394f  !      00000064
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/flsign.c
+                _TEXT                 CODE           6ff039b3  !      00000063
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fmod.c
+                _TEXT                 CODE           6ff03a16  !      000000e4
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/fprem386.asm
+                _TEXT                 CODE           6ff03afc  !      000000f9
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/frexp.c
+                _TEXT                 CODE           6ff03bf5  !      00000074
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fsclass.c
+                _TEXT                 CODE           6ff03c69  !      0000007f
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/fssign.c
+                _TEXT                 CODE           6ff03ce8  !      0000002d
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i__gcvt.asm
+                _TEXT                 CODE           6ff03d18  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_i_gcvt_.asm
+                _TEXT                 CODE           6ff03d20  !      00000005
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/gcvt.c
+                _TEXT                 CODE           6ff03d25  !      000000f2
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/hypot.c
+                _TEXT                 CODE           6ff03e17  !      00000072
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/i4ld386.asm
+                _TEXT                 CODE           6ff03e8c  !      00000046
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/i8ld386.asm
+                _TEXT                 CODE           6ff03ed4  !      00000055
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/divc16.c
+                _TEXT                 CODE           6ff03f29  !      00000186
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/mulc16.c
+                _TEXT                 CODE           6ff040af  !      000000b2
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powc16.c
+                _TEXT                 CODE           6ff04161  !      0000022e
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powic16.c
+                _TEXT                 CODE           6ff0438f  !      0000029d
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/divc20.c
+                _TEXT                 CODE           6ff0462c  !      00000186
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/mulc20.c
+                _TEXT                 CODE           6ff047b2  !      000000b2
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powc20.c
+                _TEXT                 CODE           6ff04864  !      00000082
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powic32.c
+                _TEXT                 CODE           6ff048e6  !      00000076
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/divc8.c
+                _TEXT                 CODE           6ff0495c  !      00000111
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/mulc8.c
+                _TEXT                 CODE           6ff04a6d  !      0000007a
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powc8.c
+                _TEXT                 CODE           6ff04ae7  !      0000021c
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powic8.c
+                _TEXT                 CODE           6ff04d03  !      000001b5
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdabs.c
+                _TEXT                 CODE           6ff04eb8  !      00000137
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdcos.c
+                _TEXT                 CODE           6ff04fef  !      000000a9
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdexp.c
+                _TEXT                 CODE           6ff05098  !      000000a1
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdlog.c
+                _TEXT                 CODE           6ff05139  !      000000b3
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdsin.c
+                _TEXT                 CODE           6ff051ec  !      000000a0
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ifcdsqrt.c
+                _TEXT                 CODE           6ff0528c  !      00000355
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fdld386.asm
+                _TEXT                 CODE           6ff055e4  !      00000087
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log.c
+                _TEXT                 CODE           6ff0566b  !      000002d6
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log10.c
+                _TEXT                 CODE           6ff05941  !      000000f4
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log2.c
+                _TEXT                 CODE           6ff05a35  !      000000b1
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/pow.c
+                _TEXT                 CODE           6ff05ae6  !      000002f5
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powri.c
+                _TEXT                 CODE           6ff05ddb  !      000001b0
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sinh.c
+                _TEXT                 CODE           6ff05f8b  !      0000017c
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sqrt.c
+                _TEXT                 CODE           6ff06107  !      00000102
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/tanh.c
+                _TEXT                 CODE           6ff06209  !      00000186
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powii.c
+                _TEXT                 CODE           6ff0638f  !      00000113
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powrr.c
+                _TEXT                 CODE           6ff064a2  !      0000008d
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/powxi.c
+                _TEXT                 CODE           6ff0652f  !      00000100
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/fsld386.asm
+                _TEXT                 CODE           6ff06630  !      00000047
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldfd386.asm
+                _TEXT                 CODE           6ff06678  !      000000d1
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldfs386.asm
+                _TEXT                 CODE           6ff0674c  !      00000081
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/j0.c
+                _TEXT                 CODE           6ff067cd  !      00000370
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/j1.c
+                _TEXT                 CODE           6ff06b3d  !      00000394
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/jn.c
+                _TEXT                 CODE           6ff06ed1  !      0000038a
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ldcvt.c
+                _TEXT                 CODE           6ff0725b  !      00000c6b
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d010  !      000000a8
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/ldexp.c
+                _TEXT                 CODE           6ff07ec6  !      000000e2
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d0b8  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldi4386.asm
+                _TEXT                 CODE           6ff07fa8  !      000000c4
+                _DATA                 DATA           6ff0d0b8  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/ldi8386.asm
+                _TEXT                 CODE           6ff0806c  !      00000072
+                _DATA                 DATA           6ff0d0b8  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/log387_.asm
+                _TEXT                 CODE           6ff080e0  !      00000014
+                _DATA                 DATA           6ff0d0b8  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/math2err.c
+                _TEXT                 CODE           6ff080f4  !      000001ff
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d0b8  !      0000005c
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/__mtherr.asm
+                _TEXT                 CODE           6ff082f4  !      00000005
+                _DATA                 DATA           6ff0d114  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_matherr.c
+                _TEXT                 CODE           6ff082f9  !      0000019a
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d114  !      00000004
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/matherr.c
+                _TEXT                 CODE           6ff08493  !      00000025
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d118  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/modf.c
+                _TEXT                 CODE           6ff084b8  !      00000057
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d118  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/modf386.asm
+                _TEXT                 CODE           6ff08510  !      0000012c
+                _DATA                 DATA           6ff0d118  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/qmatherr.c
+                _TEXT                 CODE           6ff0863c  !      00000132
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d118  !      0000005c
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/emu/asm/sqrt386.asm
+                _TEXT                 CODE           6ff08770  !      000000f3
+                _DATA                 DATA           6ff0d174  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/sqrt387_.asm
+                _TEXT                 CODE           6ff08864  !      00000012
+                _DATA                 DATA           6ff0d174  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/strtod.c
+                _TEXT                 CODE           6ff08876  !      00000a5c
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d174  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/tan387_.asm
+                _TEXT                 CODE           6ff092d4  !      000000a2
+                _DATA                 DATA           6ff0d174  !      00000014
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/alias/a/_iwtof__.asm
+                _TEXT                 CODE           6ff09378  !      00000005
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_ustrtod.c
+                _TEXT                 CODE           6ff0937d  !      00000ae9
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_uefcvt.c
+                _TEXT                 CODE           6ff09e66  !      00000148
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_ugcvt.c
+                _TEXT                 CODE           6ff09fae  !      00000043
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/_uatof.c
+                _TEXT                 CODE           6ff09ff1  !      00000033
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/y0.c
+                _TEXT                 CODE           6ff0a024  !      0000033f
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/y1.c
+                _TEXT                 CODE           6ff0a363  !      0000036b
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/yn.c
+                _TEXT                 CODE           6ff0a6ce  !      0000011e
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/a/bufld386.asm
+                _TEXT                 CODE           6ff0a7ec  !      000000a3
+                _DATA                 DATA           6ff0d188  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/zmatherr.c
+                _TEXT                 CODE           6ff0a88f  !      0000011c
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d188  !      0000005c
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/dmndwnt.c
+                _TEXT                 CODE           6ff0a9b0  !      000001af
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+                _BSS                  BSS            6ff0e000  !      00000310
+segdefns        _TEXT                 CODE           6ff0ab60  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+                BEGTEXT               CODE           6ff01000  !      00000007
+                _NULL                 BEGDATA        6ff0d000  !      00000004
+                _AFTERNULL            BEGDATA        6ff0d004  !      00000000
+                CONST                 DATA           6ff0d004  !      00000000
+                TIB                   DATA           6ff0d1e8  !      00000000
+                TI                    DATA           6ff0d1e8  !      00000000
+                TIE                   DATA           6ff0d1e8  !      00000000
+                XIB                   DATA           6ff0d1e8  !      00000000
+                XI                    DATA           6ff0d1e8  !      00000000
+                XIE                   DATA           6ff0d1e8  !      00000000
+                YIB                   DATA           6ff0d1e8  !      00000000
+                YI                    DATA           6ff0d1e8  !      00000000
+                YIE                   DATA           6ff0d1e8  !      00000000
+                DATA                  DATA           6ff0d1e8  !      00000000
+                _BSS                  BSS            6ff0e310  !      00000000
+                STACK                 STACK          6ff0e720  !      00010000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/sgn.c
+                _TEXT                 CODE           6ff0ab60  !      00000044
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/cvt.c
+                _TEXT                 CODE           6ff0aba4  !      00000095
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/c/log87e.c
+                _TEXT                 CODE           6ff0ac39  !      00000064
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/ddgrpwnt.c
+                _TEXT                 CODE           6ff0aca0  !      00000186
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+                _BSS                  BSS            6ff0e310  !      000003f5
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/dllnmwnt.c
+                _TEXT                 CODE           6ff0ae30  !      00000000
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+                _BSS                  BSS            6ff0e708  !      0000000c
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/initrtns.c
+                _TEXT                 CODE           6ff0ae30  !      0000015a
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000000
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/rdllmwnt.c
+                _TEXT                 CODE           6ff0af90  !      00000000
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e4  !      00000004
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/c/dcinit.c
+                _TEXT                 CODE           6ff0af90  !      00000017
+                CONST                 DATA           6ff0d004  !      00000000
+                CONST2                DATA           6ff0d004  !      00000000
+                _DATA                 DATA           6ff0d1e8  !      00000000
+dosseg          _TEXT                 CODE           6ff0afa8  !      00000000
+                _DATA                 DATA           6ff0d1e8  !      00000000
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+__FSFD                              clbr19d.dll
+__FDFS                              clbr19d.dll
+__FDM                               clbr19d.dll
+__FDS                               clbr19d.dll
+__FDD                               clbr19d.dll
+__FDC                               clbr19d.dll
+__FDA                               clbr19d.dll
+__FDN                               clbr19d.dll
+__real87                            clbr19d.dll
+__chipbug                           clbr19d.dll
+__fpatan_wrap                       clbr19d.dll
+__8087                              clbr19d.dll
+__fdiv_fpr                          clbr19d.dll
+__U4FD                              clbr19d.dll
+__CVTBuffer_                        clbr19d.dll
+_LDisDouble_                        clbr19d.dll
+__FDI4                              clbr19d.dll
+__FSN                               clbr19d.dll
+F8DivZero                           clbr19d.dll
+F8InvalidOp                         clbr19d.dll
+__I4FD                              clbr19d.dll
+__FSD                               clbr19d.dll
+__FSM                               clbr19d.dll
+__FSA                               clbr19d.dll
+__FSS                               clbr19d.dll
+__I4FS                              clbr19d.dll
+F8OverFlow                          clbr19d.dll
+__fptan_chk                         clbr19d.dll
+__HugeValue_br                      clbr19d.dll
+__set_ERANGE_                       clbr19d.dll
+__IsTable_br                        clbr19d.dll
+memcpy_                             clbr19d.dll
+memset_                             clbr19d.dll
+__get_std_stream_                   clbr19d.dll
+fputs_                              clbr19d.dll
+fputc_                              clbr19d.dll
+__set_EDOM_                         clbr19d.dll
+strlen_                             clbr19d.dll
+tolower_                            clbr19d.dll
+wcstombs_                           clbr19d.dll
+_atouni_                            clbr19d.dll
+strcat_                             clbr19d.dll
+_GetModuleFileNameA@12              KERNEL32.DLL
+__lib_GetModuleFileNameW_           clbr19d.dll
+___sig_init_rtn                     clbr19d.dll
+_MessageBoxA@16                     USER32.DLL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/kernel32.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/rel2/lib386/nt/user32.lib
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.386/mf_rd.dll/math3r.lib
+../../../clib/winnt.386/mf_rd/clbrdlld.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  bc00 (48128.)
+Entry point address: 6ff01030
+Link time: 00:00.00

@@ -1,0 +1,12 @@
+debug dwarf option symfile sys nt dll initinstance terminstance option impfile=mt7s19.imp reference __DLLstart_ disable 121
+op map option offset=0x6FF00000
+file /mnt/sda5/.user/root/src/openwatcom-1.9/bld/clib/startup/library/winnt.386/mf_s/clibdwnt.obj
+export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_s.dll/export.def }
+export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/export.387 }
+export { @/mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/stack.387 }
+lib /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mathlib/library/winnt.387/mf_s.dll/math387s.lib
+lib ../../../clib/winnt.386/mf_s/clbsdll.lib
+lib kernel32.lib
+lib user32.lib
+lib advapi32.lib
+
