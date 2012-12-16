@@ -26,4 +26,5 @@ rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
 (cd bld/wstuba && find -name \*.exe -delete)
 (cd bld/wstuba && find -name \*.sym -delete)
 (cd contrib && find -name \*.obj -delete)
+rm -v bld/build/binl/wtouch
 
