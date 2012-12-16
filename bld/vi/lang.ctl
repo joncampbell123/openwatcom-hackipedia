@@ -46,16 +46,16 @@ cdsay .
   [ IFDEF (os_nt "") <2*> ]
     <CPCMD> <PROJDIR>/nt386/vi.exe              <RELROOT>/binnt/vi.exe
     <CPCMD> <PROJDIR>/nt386/vi.sym              <RELROOT>/binnt/vi.sym
-    <CPCMD> <PROJDIR>/nt386.win/vi.exe          <RELROOT>/binnt/viw.exe
-    <CPCMD> <PROJDIR>/nt386.win/vi.sym          <RELROOT>/binnt/viw.sym
+#    <CPCMD> <PROJDIR>/nt386.win/vi.exe          <RELROOT>/binnt/viw.exe
+#    <CPCMD> <PROJDIR>/nt386.win/vi.sym          <RELROOT>/binnt/viw.sym
     <CPCMD> <PROJDIR>/ctags/nt386/ctags.exe     <RELROOT>/binnt/ctags.exe
     <CPCMD> <PROJDIR>/bind/nt386/edbind.exe     <RELROOT>/binnt/edbind.exe
 
   [ IFDEF (cpu_axp) <2*> ]
     <CPCMD> <PROJDIR>/ntaxp/vi.exe              <RELROOT>/axpnt/vi.exe
     <CPCMD> <PROJDIR>/ntaxp/vi.sym              <RELROOT>/axpnt/vi.sym
-    <CPCMD> <PROJDIR>/ntaxp.win/vi.exe          <RELROOT>/axpnt/viw.exe
-    <CPCMD> <PROJDIR>/ntaxp.win/vi.sym          <RELROOT>/axpnt/viw.sym
+#    <CPCMD> <PROJDIR>/ntaxp.win/vi.exe          <RELROOT>/axpnt/viw.exe
+#    <CPCMD> <PROJDIR>/ntaxp.win/vi.sym          <RELROOT>/axpnt/viw.sym
     <CPCMD> <PROJDIR>/ctags/ntaxp/ctags.exe     <RELROOT>/axpnt/ctags.exe
     <CPCMD> <PROJDIR>/bind/ntaxp/edbind.exe     <RELROOT>/axpnt/edbind.exe
 

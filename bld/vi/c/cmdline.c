@@ -226,10 +226,6 @@ vi_rc TryCompileableToken( int token, char *data, bool iscmdline,
 #endif
         break;
     case PCL_T_ACTIVATE_IDE:
-#ifdef __WIN__
-        StartIDE( InstanceHandle, TRUE );
-        rc = ERR_NO_ERR;
-#endif
         break;
     case PCL_T_ALIAS:
         rc = SetAlias( data );

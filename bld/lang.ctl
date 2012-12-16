@@ -180,7 +180,7 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/parsedlg/lang.ctl ]
 [ INCLUDE <DEVDIR>/helpcomp/lang.ctl ]
 [ INCLUDE <DEVDIR>/wipfc/lang.ctl ]
-[ INCLUDE <DOC_ROOT>/lang.ctl ]
+#[ INCLUDE <DOC_ROOT>/lang.ctl ]
 #
 #        Do CDSAY to see end time
 #

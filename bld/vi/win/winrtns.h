@@ -147,9 +147,6 @@ bool    GetSetGenDialog( void );
 void    CenterWindowInRoot( HWND );
 void    StatusWndSetSeparatorsWithArray( short *, int );
 
-// ideactiv.c
-void    StartIDE( HANDLE instance, BOOL dospawn );
-
 // filetype.c
 void    UpdateFileTypeIcon( HWND hwnd, const char *filename );
 

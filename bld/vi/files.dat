@@ -2,11 +2,11 @@
 [ DEFAULT type="e" ]
     
 usr="vi.exe" 	dir="binnt" 	cond="wnthost" 				where="c f77 ac"
-usr="viw.exe" 	dir="binnt" 	cond="wnthost" 				where="c f77 ac"
+#usr="viw.exe" 	dir="binnt" 	cond="wnthost" 				where="c f77 ac"
 usr="vi.exe" 	dir="binw" 	cond="doshost winhost |" 		where="c f77"
-usr="viw.exe" 	dir="binw" 	cond="winhost" 				where="c f77"
+#usr="viw.exe" 	dir="binw" 	cond="winhost" 				where="c f77"
 usr="vi.exe" 	dir="axpnt" 	cond="alphahost" 			where="ac"
-usr="viw.exe" 	dir="axpnt" 	cond="alphahost" 			where="ac"
+#usr="viw.exe" 	dir="axpnt" 	cond="alphahost" 			where="ac"
 usr="vi.exe" 	dir="binp" 	cond="os2host" 				where="c f77"
 usr="vi" 	dir="binl" 	cond="lnxhost"				where="c f77"
 
