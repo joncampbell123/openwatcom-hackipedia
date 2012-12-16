@@ -13,6 +13,11 @@
 
 :include cpluspro.sp
 
+/* TODO: When compiling for win32s, put a #define here that tells
+         other projects (such as the "dos" and "doslib2" code) that
+         the fixes are built into the clib and the w32imphk library
+         is unnecessary */
+
 /* Macros to specify kernel and advanced functions */
 #define WINBASEAPI  DECLSPEC_IMPORT
 #define WINADVAPI   DECLSPEC_IMPORT
