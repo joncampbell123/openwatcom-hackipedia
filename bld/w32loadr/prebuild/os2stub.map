@@ -1,0 +1,81 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 01:07:15
+Executable Image: os2stub.exe
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00b9:0004            00002210
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           0000:0000       00000b94
+_DATA                  DATA           DGROUP         00b9:0004       0000020e
+STACK                  STACK          DGROUP         00da:0004       00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: loader16.obj(loader16)
+00b9:0004      BaseAddr
+00b9:0008*     MemHandle
+00b9:000c*     CodeLoadAddr
+00b9:0010*     CodeEntryPoint
+00b9:0014*     _CodeSelector
+00b9:0016      _DataSelector
+00b9:0018      _StackSelector
+00b9:001a      _16BitSelector
+00b9:001e      _EntryStackSave
+00b9:0022      RM_BufSeg
+00b9:0024      PM_BufSeg
+00b9:0026      RM_BufSize
+00b9:0028      IsDBCS
+00b9:002a      _PSP
+0000:0000*     Signature
+0000:0004*     W32start
+0000:0008*     W32size
+0000:0024      _DGroupSelector
+0000:00b4      Loader16
+0000:0220*     __Loader
+0000:035a*     SetupSelectors
+0000:03c6*     FreeSels
+0000:0402*     copyname
+Module: dpmildr.obj(dpmildr)
+0000:0550*     exit_with_msg
+0000:055e*     __OS2stub
+0000:06ab*     __DPMI_start
+Module: int21win.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/w32loadr/int21win.asm)
+0000:07e0      __fInt21
+0000:080d      __Int21
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  2da4 (11684.)
+Entry point address: 0000:06ab
+Link time: 00:00.00

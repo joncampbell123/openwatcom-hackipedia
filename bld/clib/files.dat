@@ -75,6 +75,11 @@ type="l"	dir="lib386/win"	usr="clib3s.lib"	cond="wintarg 3s"		where="c f77"
 type="s"	dir="lib386/win"	usr="binmode.obj"	cond="wintarg 3r 3s |"		where="c f77"
 type="s"	dir="lib386/win"	usr="commode.obj"	cond="wintarg 3r 3s |"		where="c f77"
 
+type="l"	dir="lib386/win32s"	usr="clib3r.lib"	cond="wnttarg 3r"		where="c f77 ac"
+type="l"	dir="lib386/win32s"	usr="clib3s.lib"	cond="wnttarg 3s"		where="c f77 ac"
+type="s"	dir="lib386/win32s"	usr="binmode.obj"	cond="wnttarg"			where="c f77"
+type="s"	dir="lib386/win32s"	usr="commode.obj"	cond="wnttarg"			where="c f77"
+
 type="l"	dir="lib386/nt"		usr="clib3r.lib"	cond="wnttarg 3r"		where="c f77 ac"
 type="l"	dir="lib386/nt"		usr="clib3s.lib"	cond="wnttarg 3s"		where="c f77 ac"
 type="s"	dir="lib386/nt"		usr="binmode.obj"	cond="wnttarg"			where="c f77"
