@@ -12,6 +12,7 @@ rm -v bld/build/binl/wtouch
 ./clean
 rm -Rfv rel2 bld/build/binl/wtouch bld/w32api.old/nt386/{base,ddk,directx}
 (cd bld && find -name \*.obj -delete)
+(cd bld && find -name \*.lib -delete)
 (cd bld/browser && find -name \*.exe -delete)
 (cd bld/browser && find -name \*.map -delete)
 (cd bld/browser && find -name \*.sym -delete)
