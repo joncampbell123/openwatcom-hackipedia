@@ -1,0 +1,5 @@
+++'_PshedAllocateMemory@4'.'PSHED.DLL'..'PshedAllocateMemory'
+++'_PshedFreeMemory@4'.'PSHED.DLL'..'PshedFreeMemory'
+++'_PshedIsSystemWheaEnabled@4'.'PSHED.DLL'..'PshedIsSystemWheaEnabled'
+++'_PshedRegisterPlugin@4'.'PSHED.DLL'..'PshedRegisterPlugin'
+++'_PshedSynchronizeExecution@12'.'PSHED.DLL'..'PshedSynchronizeExecution'

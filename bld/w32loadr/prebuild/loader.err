@@ -1,0 +1,21 @@
+../loader.c(45): Error! E1055: Unable to open 'os2.h'
+../loader.c(434): Error! E1022: Missing or misspelled data type near 'PEXCEPTIONREGISTRATIONRECORD'
+../loader.c(435): Error! E1022: Missing or misspelled data type near 'ULONG'
+../loader.c(438): Error! E1116: An id list not allowed except for function definition
+../loader.c(441): Error! E1127: Type required in parameter list
+../loader.c(441): Error! E1022: Missing or misspelled data type near 'PCONTEXTRECORD'
+../loader.c(449): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(449): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(449): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(449): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(451): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(451): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(451): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(451): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(453): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(453): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(453): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(453): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(455): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(455): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+../loader.c(455): Error! E1147: Too many errors: compilation aborted

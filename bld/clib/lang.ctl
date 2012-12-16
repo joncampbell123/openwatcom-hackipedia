@@ -100,12 +100,13 @@ cdsay .
     <CPCMD> startup/library/winnt.386/mf_r/binmode.obj      <RELROOT>/lib386/nt/binmode.obj
     <CPCMD> startup/library/winnt.386/mf_r/commode.obj      <RELROOT>/lib386/nt/commode.obj
 
-    <CPCMD> library/winnt.386/mf_r/clib3r.lib               <RELROOT>/lib386/win32s/clib3r.lib
-    <CPCMD> library/winnt.386/mf_s/clib3s.lib               <RELROOT>/lib386/win32s/clib3s.lib
-    <CPCMD> library/winnt.386/mf_rd/clib3r.lib              <RELROOT>/lib386/win32s/clib3rd.lib
+  [ IFDEF (os_win32s "") <2*> ]
+    <CPCMD> library/win32s.386/mf_r/clib3r.lib              <RELROOT>/lib386/win32s/clib3r.lib
+    <CPCMD> library/win32s.386/mf_s/clib3s.lib              <RELROOT>/lib386/win32s/clib3s.lib
+    <CPCMD> library/win32s.386/mf_rd/clib3r.lib             <RELROOT>/lib386/win32s/clib3rd.lib
 
-    <CPCMD> startup/library/winnt.386/mf_r/binmode.obj      <RELROOT>/lib386/win32s/binmode.obj
-    <CPCMD> startup/library/winnt.386/mf_r/commode.obj      <RELROOT>/lib386/win32s/commode.obj
+    <CPCMD> startup/library/win32s.386/mf_r/binmode.obj     <RELROOT>/lib386/win32s/binmode.obj
+    <CPCMD> startup/library/win32s.386/mf_r/commode.obj     <RELROOT>/lib386/win32s/commode.obj
 
   [ IFDEF (os_linux "") <2*> ]
     <CPCMD> library/linux.386/mf_r/clib3r.lib               <RELROOT>/lib386/linux/clib3r.lib

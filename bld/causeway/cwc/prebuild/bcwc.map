@@ -1,0 +1,319 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 00:04:33
+Executable Image: bcwc.exe
+creating a Linux x86 executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0804c000             00001138
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           08048100        00000007
+_TEXT                  CODE           AUTO           08048110        00003c10
+_NULL                  BEGDATA        DGROUP         0804c000        00000004
+_AFTERNULL             BEGDATA        DGROUP         0804c004        00000000
+CONST                  DATA           DGROUP         0804c004        00000025
+CONST2                 DATA           DGROUP         0804c02c        00000000
+_DATA                  DATA           DGROUP         0804c02c        000008d4
+XIB                    DATA           DGROUP         0804c900        00000000
+XI                     DATA           DGROUP         0804c900        0000000c
+XIE                    DATA           DGROUP         0804c90c        00000000
+YIB                    DATA           DGROUP         0804c90c        00000000
+YI                     DATA           DGROUP         0804c90c        00000006
+YIE                    DATA           DGROUP         0804c912        00000000
+TIB                    DATA           DGROUP         0804c912        00000000
+TI                     DATA           DGROUP         0804c912        00000000
+TIE                    DATA           DGROUP         0804c912        00000000
+DATA                   DATA           DGROUP         0804c912        00000000
+_BSS                   BSS            DGROUP         0804d000        00000138
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: cwc.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/causeway/c/cwc.c)
+080481b0+      InitOutFileBuffer_
+08048200+      FiniOutFileBuffer_
+08048280+      WriteBit_
+08048310*      WriteByte_
+08048340+      WriteTerminateCmd_
+08048390+      WriteFlushInpBufCmd_
+080483e0+      WriteFlushOutBufCmd_
+08048430+      WriteStringCmd_
+08048480+      EncodeFile_
+08048c20+      ProcessEXE_
+08049020*      usage_
+08049040       main_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(nmalloc.c)
+08049070       _nmalloc_
+08049070       malloc_
+0804c6b0       ___nheapbeg
+0804c6b4       ___MiniHeapRover
+0804c6b8       ___LargestSizeB4MiniHeapRover
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fwrite.c)
+08049160       fwrite_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(nfree.c)
+080492a0       _nfree_
+080492a0       free_
+0804d014+      ___MiniHeapFreeRover
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(memset.c)
+080493a0       memset_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(ftell.c)
+080493c0       ftell_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fseek.c)
+08049460       fseek_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fopen.c)
+08049560+      __open_flags_
+08049700+      _fsopen_
+08049750       fopen_
+080497d0*      freopen_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fread.c)
+08049830       fread_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fclose.c)
+08049970       __doclose_
+080499e0       __shutdown_stream_
+08049a00       fclose_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(tmpnm.c)
+08049ab0       tmpnam_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(remove.c)
+08049b70       remove_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(rename.c)
+08049b80       rename_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(printf.c)
+08049bb0       printf_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(cstart)
+08049bd2       _cstart_
+08049bd2*      _start
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(cmainlnx.c)
+08049c40       __LinuxMain
+0804d118       __argc
+0804d11c+      __argv
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(nmemneed.c)
+08049cd0       __nmemneed_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(mem.c)
+08049ce0       __MemAllocator
+08049d90       __MemFree
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(grownear.c)
+08049f50+      __LastFree_
+08049fd0       __ExpandDGROUP_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(qwritunx.c)
+0804a0d0       __qwrite_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(seterrno.c)
+0804a11c       __set_errno_
+0804a128*      __set_EDOM_
+0804a134*      __set_ERANGE_
+0804a140*      __set_EINVAL_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(ioalloc.c)
+0804a160       __ioalloc_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(flush.c)
+0804a200       __flush_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(__stos)
+0804a2d0       __STOSB
+0804a307*      __STOSD
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fflush.c)
+0804a380       fflush_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(tell.c)
+0804a390       tell_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(lseek.c)
+0804a3b0       lseek_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(comtflag.c)
+0804a3c0*      __set_commode_
+0804c6bc       __commode
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(tolower.c)
+0804a3d0       tolower_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(openlnx.c)
+0804a3e0*      open_
+0804a400       sopen_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(chktty.c)
+0804a420       __chktty_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(freefp.c)
+0804a450       __freefp_
+0804a490       __purgefp_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(allocfp.c)
+0804a4c0       __allocfp_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(iob.c)
+0804c6c0       ___iob
+0804d120       ___OpenStreams
+0804d124       ___ClosedStreams
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(qreadunx.c)
+0804a580       __qread_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fgetc.c)
+0804a5d0       __fill_buffer_
+0804a680*      fgetc_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(__lseek.c)
+0804a6f0       __lseek_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(close.c)
+0804a720       close_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(tmpdir.c)
+0804a760       __tmpdir_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(getpid.c)
+0804a780       getpid_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(errno.c)
+0804a7b0       __get_errno_ptr_
+0804d128+      _errno
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(access.c)
+0804a7c0       access_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(unlink.c)
+0804a7f0       unlink_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fprtf.c)
+0804a840       __fprtf_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(segdefns)
+08048103       ___begtext
+0804c000*      __nullarea
+0804c900       __Start_XI
+0804c90c       __End_XI
+0804c90c       __Start_YI
+0804c912       __End_YI
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(crwdata)
+0804c888*      __LpCmdLine
+0804c88c       __LpPgmName
+0804c880*      __dynend
+0804c884       __curbrk
+0804c890       __STACKLOW
+0804c894       __STACKTOP
+0804c898       __ASTACKSIZ
+0804c89c       __ASTACKPTR
+0804c8a0*      __cbyte
+0804c8a4*      __cbyte2
+0804c8a8*      __child
+0804c8ae*      __Envptr
+0804c8b2*      __Envseg
+0804c8ac*      __no87
+0804c8b4*      ___FPE_handler
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(sbrklnx.c)
+0804a8d0       sbrk_
+0804a8e0       __brk_
+0804a910*      brk_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(environ.c)
+0804d12c       ___env_mask
+0804d130       _environ
+0804d134*      __wenviron
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(initrtns.c)
+0804a950       __InitRtns
+0804a9a0       __FiniRtns
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(amblksiz.c)
+0804c8b8       __amblksiz
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(exit.c)
+0804aa00       exit_
+0804aa12*      _exit_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(heapen.c)
+0804aa20*      _heapenable_
+0804c8bc       ___heap_enabled
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(write.c)
+0804aa30       write_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fsync.c)
+0804aa60       fsync_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(flushall.c)
+0804aa90       __flushall_
+0804aad0       flushall_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(sys_open.c)
+0804aae0       sys_open_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(isattlnx.c)
+0804ab10       isatty_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(initfile.c)
+0804ab80       __InitFiles_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(ioexit.c)
+0804ac80*      fcloseall_
+0804ac90       __full_io_exit_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(read.c)
+0804aca0       read_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(getenv.c)
+0804acd0       getenv_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(fputc.c)
+0804ad30       fputc_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(prtf.c)
+0804adc0       __prtf_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(dosseg)
+00001234       __DOSseg__
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(sys_brk.c)
+0804b8e0       sys_brk_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(setenvp.c)
+0804b900       __setenvp_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(mainlnx.c)
+0804c8c0+      ___FirstThreadData
+0804c8c4+      ___GetThreadPtr
+0804c8c8*      __AccessFileH
+0804c8cc*      __ReleaseFileH
+0804c8d0*      __AccessIOB
+0804c8d4*      __ReleaseIOB
+0804c8d8*      __AccessNHeap
+0804c8dc*      __AccessFHeap
+0804c8e0*      __ReleaseNHeap
+0804c8e4*      __ReleaseFHeap
+0804b970*      __threadid_
+0804b9a0*      __LinuxInit_
+0804b9b0       __exit_
+0804c8e8*      __AccessTDList
+0804c8ec*      __ReleaseTDList
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(tcgattr.c)
+0804b9d0       tcgetattr_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(xmsglnx.c)
+0804b9e0+      __exit_with_msg_
+0804ba30       __fatal_runtime_error_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(strncmp.c)
+0804ba50       strncmp_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(itoa.c)
+0804ba80+      utoa_
+0804bad0       itoa_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(strupr.c)
+0804bb00       strupr_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(noefgfmt.c)
+0804c8f0       ___EFG_printf
+0804c8f4*      ___EFG_scanf
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(lltoa.c)
+0804bb70       ulltoa_
+0804bbe0*      lltoa_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(ltoa.c)
+0804bc10       ultoa_
+0804bc60*      ltoa_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(mthrdini.c)
+0804bc90       __InitThreadData_
+0804c8f8*      ___ThreadDataSize
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(sys_exit.c)
+0804bca0       sys_exit_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(ioctl.c)
+0804bcb0       ioctl_
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(enterdb.c)
+0804bcf0       __EnterWVIDEO_
+0804c8fc+      ___WD_Present
+Module: /usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib(alphabet.c)
+0804c004       ___Alphabet
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/usr/src/openwatcom-1.9/rel2/lib386/linux/clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  4d58 (19800.)
+Entry point address: 08049bd2
+Link time: 00:00.00

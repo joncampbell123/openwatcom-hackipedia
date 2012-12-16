@@ -1,0 +1,397 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/12/16 00:04:35
+Executable Image: cw32.exe
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_cwMain                Main code      AUTO           0000:0000       000007d6
+_cwStack               stack          AUTO           007e:0000       00000800
+_cwRaw                 raw kernal code AUTO          00fe:0000       00001dcf
+_cwDPMIEMU             DPMI emulator code AUTO       02db:0000       00005e2a
+_apiCode               API code       AUTO           08be:0000       000074f4
+_Excep                 Exception code AUTO           100e:0000       000022b6
+_Int10h                extension code AUTO           123a:0000       000009da
+_Int21h                extension code AUTO           12d8:0000       00001481
+_Int33h                extension code AUTO           1421:0000       00000c76
+_cwInit                init code      AUTO           14e9:0000       0000270b
+_cwEnd                 end marker     AUTO           175a:0000       00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+s = symbol is static
+
+Address        Symbol
+=======        ======
+
+Module: cw32.obj(/mnt/sda5/.user/root/src/openwatcom-1.9/bld/causeway/asm/cw32.asm)
+0000:0577s     cwOpen
+0000:061as     cwClose
+0000:0788s     Int21hExecPatch
+0000:07c0s     Bordm
+00fe:0ad7s     RawVCPIRealMode
+00fe:0d67s     _fRawSimulateINT
+00fe:0d6bs     _fRawSimulateINT2
+00fe:0d6fs     _fRawSimulateFCALL
+00fe:0d73s     _fRawSimulateFCall2
+00fe:0d77s     _fRawSimulateFCALLI
+00fe:0d7bs     _fPhysicalGetPage
+00fe:0d9as     _fPhysicalGetPages
+00fe:0db9s     _fCR3Flush
+00fe:0dbds     CR3Flush
+00fe:0ec0s     RAWRelXMS
+00fe:0f45s     VCPIRelExtended
+00fe:1126s     Int67h
+00fe:1129s     Int15Rel
+00fe:1194s     RAWReal2Prot
+00fe:122fs     RAWProt2Real
+00fe:128ds     VCPIReal2Prot
+00fe:1311s     VCPIProt2Real
+00fe:1379s     RAWPL02PL3
+00fe:13afs     RAWPL32PL0
+00fe:13dfs     ReleaseINT2F
+00fe:13ebs     Int2FPatch
+00fe:1428s     RawSimulateINT
+00fe:1431s     RawSimulateINT2
+00fe:1437s     RawSimulateFCALL
+00fe:1440s     RawSimulateFCALL2
+00fe:1446s     RawSimulateFCALLI
+00fe:144cs     RAWSimulate
+00fe:16c1s     RawCallBack
+00fe:19b1s     RawICallBack
+00fe:1c28s     InstallA20
+00fe:1c3fs     IsPS2Machine
+00fe:1c5as     A20Handler
+00fe:1d2es     A20_AT
+00fe:1d90s     A20_PS2
+02db:00000000s EmuRawSimulateInt
+02db:0000000ds EmuRawSimulateInt2
+02db:0000001as EmuRawSimulateFCall
+02db:00000027s EmuRawSimulateFCall2
+02db:00000034s EmuRawSimulateFCallI
+02db:00000041s EmuCR3Flush
+02db:000000b4s EmuRAWPL02PL3
+02db:000000e5s EmuRAWPL32PL0
+02db:00000130s RawDPMIPatch
+02db:00000c64s StateSaveCode
+02db:00000cb9s _ffPhysicalGetPage
+02db:00000cbfs _ffPhysicalGetPages
+02db:00000cc5s PhysicalGetPage
+02db:00000d2ds PhysicalGetPages
+02db:00000dcas GetVCPIPage
+02db:00000e37s GetVCPIPages
+02db:00000ea5s GetXMSPage
+02db:00001052s GetXMSPages
+02db:00001297s GetINT15Page
+02db:000014e8s GetINT15Pages
+02db:000016bds GetCONVPage
+02db:000018d2s GetCONVPages
+02db:00001adas EMUMakeDesc
+02db:00001b11s Bin2HexE
+02db:00001b32s Raw2FPatch
+02db:00001db0s InterruptHandler
+02db:000025b0s InterruptTable
+02db:00002bb0s IntNN386Catch
+02db:000033b0s ExceptionTable
+02db:00003470s ExcepNN386Catch
+02db:00003570s RawGetVector
+02db:000035a7s RawGetRVector
+02db:000035d4s RawGetEVector
+02db:0000363as RawSetVector
+02db:0000378cs RawSetRVector
+02db:000037c2s RawSetEVector
+02db:0000382as RawGetCallBack
+02db:000038bas RawRelCallBack
+02db:00003900s IntHandler
+02db:00003a9cs IntStack
+02db:00003bf8s KernalStack
+02db:00003cafs IntDispatch
+02db:00003f5bs IntNN386
+02db:0000405cs ExcepNN386
+02db:000043b1s RawGetDescriptors
+02db:00004440s RawRelDescriptor
+02db:000044bfs RawReal2ProtSel
+02db:0000464ds RawSetSelType
+02db:00004681s RawSetSelLimit
+02db:000046ces RawSetSelBase
+02db:000046ffs RawGetSelBase
+02db:00004730s RawBPutDescriptor
+02db:0000476es RawBGetDescriptor
+02db:000047a2s RawGetMemory
+02db:000048dbs RawResMemory
+02db:00004aeds RawRelMemory
+02db:00004c00s RawDiscardPages
+02db:00004c78s RawMapPhys2Lin
+02db:00004db5s RawUnMapPhys2Lin
+02db:00004db7s RawLockMemory
+02db:00004f3ds RawUnLockMemory
+02db:0000500es RawGetMemoryMax
+02db:000051b6s ExtendLinearMemory
+02db:000054b5s MapPhysical
+02db:000056b9s UnMapPhysical
+02db:00005976s RawLockPage
+02db:000059b6s RawClearPageLock
+02db:000059dcs RawUnLockPage
+02db:00005a1as RawPageLocked
+02db:00005a3cs GetPageStatus
+02db:00005a82s VirtualFault
+02db:00005aecs RawGetDOSMemory
+02db:00005bf2s RawResDOSMemory
+02db:00005d4ds RawRelDOSMemory
+08be:000000abs cwAPIpatch
+08be:0000056ds dpmiAPI_Lock
+08be:000005dds dpmiAPI_UnLock
+08be:0000064ds dpmiAPI_GetCallBack
+08be:000006bas dpmiAPI_RelCallBack
+08be:00000714s cwAPI_UserErrTerm
+08be:0000077fs cwAPI_SetDump
+08be:0000078fs cwAPI_CWErrName
+08be:000007cas cwAPI_UserDump
+08be:00000890s cwAPI_DbgNtfModLoad
+08be:00000891s cwAPI_DbgNtfModUnload
+08be:00000892s cwAPI_ID
+08be:000008d2s cwAPI_GetPatch
+08be:00000900s cwAPI_GetDOSTrans
+08be:0000092fs cwAPI_SetDOSTrans
+08be:0000096es cwAPI_Info
+08be:000009bds cwAPI_IntXX
+08be:00000ad5s cwAPI_FarCallReal
+08be:00000bces cwAPI_GetSel
+08be:00000bfas cwAPI_GetSels
+08be:00000c58s cwAPI_RelSel
+08be:00000c98s cwAPI_CodeSel
+08be:00000cbes cwAPI_AliasSel
+08be:00000d17s cwAPI_GetSelDet
+08be:00000d5fs cwAPI_GetSelDet32
+08be:00000d8ds cwAPI_SetSelDet
+08be:00000dd3s cwAPI_SetSelDet32
+08be:00000dffs cwAPI_GetMem
+08be:00000e9ds cwAPI_GetMemSO
+08be:00000f23s cwAPI_GetMem32
+08be:00000f7cs cwAPI_ResMem
+08be:00000fc7s cwAPI_ResMemSO
+08be:0000107cs cwAPI_ResMem32
+08be:000010bcs cwAPI_RelMem
+08be:0000110as cwAPI_RelMemSO
+08be:000011b6s cwAPI_GetMemLinear
+08be:000011f7s cwAPI_GetMemLinear32
+08be:00001221s cwAPI_ResMemLinear
+08be:00001270s cwAPI_ResMemLinear32
+08be:0000129ds cwAPI_RelMemLinear
+08be:000012cds cwAPI_RelMemLinear32
+08be:000012f2s cwAPI_GetMemNear
+08be:00001331s cwAPI_ResMemNear
+08be:00001387s cwAPI_RelMemNear
+08be:000013c0s cwAPI_Linear2Near
+08be:000013dbs cwAPI_Near2Linear
+08be:000013f6s cwAPI_LockMem
+08be:00001463s cwAPI_LockMem32
+08be:000014d3s cwAPI_UnLockMem
+08be:00001540s cwAPI_UnLockMem32
+08be:000015b0s cwAPI_LockMemNear
+08be:00001635s cwAPI_UnLockMemNear
+08be:000016bas cwAPI_GetMemDOS
+08be:0000171fs cwAPI_ResMemDOS
+08be:0000178as cwAPI_RelMemDOS
+08be:00001802s cwAPI_Exec
+08be:00001846s cwAPI_cwcInfo
+08be:00001872s cwAPI_cwcLoad
+08be:000018a6s cwAPI_LinearCheck
+08be:000018fbs cwAPI_ExecDebug
+08be:00001962s cwAPI_cwLoad
+08be:000019b4s cwAPI_Cleanup
+08be:000019dfs _SetSelector
+08be:00001b12s _RelSelector
+08be:00001bbes _SizeSelector
+08be:00001caas _DetSelector
+08be:00001d4as _CodeSelector
+08be:00001dfcs _DSizeSelector
+08be:00001e8cs cwAPI_GetMCBSize
+08be:00001ea7s cwAPI_SetMCBSize
+08be:00001efbs mcbGetMemLinear32
+08be:0000217es mcbResMemLinear32
+08be:000024b0s mcbRelMemLinear32
+08be:000025d2s mcbSetBiggest
+08be:0000260bs _GetMemory
+08be:000026das _GetMemoryMax
+08be:00002758s _ResMemory
+08be:00002835s _RelMemory
+08be:000028fds RegisterResource
+08be:00002b19s ReleaseResource
+08be:00002f51s FindResource
+08be:00003025s SaveExecState
+08be:000030f6s LoadExecState
+08be:000031f7s CreatePSP
+08be:00003612s DeletePSP
+08be:000036ads FindModule
+08be:00003ad6s UnFindModule
+08be:00003b69s SearchModule
+08be:0000417ds FindFunction
+08be:000041c5s _Exec
+08be:0000442cs ExecModule
+08be:0000471cs Bin2HexA
+08be:0000475as LoseFileHandles
+08be:0000475bs ReadFile
+08be:00004790s PatchExc
+08be:000048acs UnPatchExc
+08be:0000496es CtrlBrkEvent
+08be:00004a19s Int1bHandler
+08be:00004a9as Int23Handler
+08be:00004ab6s Int24Handler
+08be:00004b6ds Load3P
+08be:00005d44s LoadLE
+08be:00006fb4s GetCWCInfo
+08be:00007037s DecodeCWC
+08be:000074b4s __cwAPI_CreatePSP
+08be:000074bas __cwAPI_DeletePSP
+08be:000074c0s __cwAPI_ExecModule
+08be:000074c6s __cwAPI_DSizeSelector
+08be:000074ccs __cwAPI_FindModule
+08be:000074d2s __cwAPI_UnFindModule
+08be:000074d8s __cwAPI_FindFunction
+08be:000074des __cwAPI_GetMemLinear32
+08be:000074e4s __cwAPI_ResMemLinear32
+08be:000074eas __cwAPI_RelMemLinear32
+100e:094fs     ExcepOpen
+100e:0a69s     ExcepClose
+100e:0b90s     Int00Handler
+100e:0c48s     DPMIExc00Patch
+100e:0c58s     DPMIExc01Patch
+100e:0c68s     DPMIExc02Patch
+100e:0c78s     DPMIExc03Patch
+100e:0c88s     DPMIExc04Patch
+100e:0c98s     DPMIExc05Patch
+100e:0ca8s     DPMIExc06Patch
+100e:0cb8s     DPMIExc07Patch
+100e:0cc8s     DPMIExc08Patch
+100e:0cd8s     DPMIExc09Patch
+100e:0ce8s     DPMIExc10Patch
+100e:0cf8s     DPMIExc11Patch
+100e:0d08s     DPMIExc12Patch
+100e:0d18s     DPMIExc13Patch
+100e:0d28s     DPMIExc14Patch
+100e:0d38s     DPMIExc15Patch
+100e:0d48s     DPMIExcPatch
+100e:0f6fs     DebugSegmentDPMI
+100e:0fd2s     DebugDisplay
+100e:225fs     Bin2Hex
+100e:22a5s     DebugTextCopy
+123a:00000000s Int10hOpen
+123a:00000074s Int10hClose
+123a:000000c5s Int10h
+12d8:00000045s Int21h
+12d8:000000b6s Int21hNotOurs
+12d8:000000c5s Int21hInvalid
+12d8:000000c7s Int21hPrintString
+12d8:00000140s Int21hGetString
+12d8:000001b5s Int21hSetDTA
+12d8:000001d0s Int21hSetVect
+12d8:000001e1s Int21hGetDTA
+12d8:000001f6s Int21hGetVect
+12d8:00000209s Int21hGetSetCountry
+12d8:00000319s Int21hCreateDIR
+12d8:0000038ds Int21hCreateFile
+12d8:00000420s Int21hOpenFile
+12d8:00000494s Int21hReadFile
+12d8:00000568s Int21hWriteFile
+12d8:00000632s Int21hIOCTLDispatch
+12d8:0000065as Int21hGetCurDir
+12d8:000006d9s Int21hAllocMem
+12d8:00000762s Int21hRelMem
+12d8:00000785s Int21hResMem
+12d8:000007abs Int21hExecFile
+12d8:000009fds Int21hFindFirstFile
+12d8:00000aaes Int21hFindNextFile
+12d8:00000b25s Int21hSetPSP
+12d8:00000b37s Int21hGetPSP
+12d8:00000b3bs Int21hRenameFile
+12d8:00000bd9s Int21hCreateTemp
+12d8:00000c77s Int21hMSNet
+12d8:00000d0es Int21hSetHandles
+12d8:00000db8s Int21hExtendOpen
+12d8:00000e59s Int21hDOS4GTest
+12d8:00000efas Int21hGetErrorInfo
+12d8:00000fb5s Int21hExtend_DS_ESI
+12d8:00000fcas Int21hExtend_ES_EDI
+12d8:00000fdfs Int21hStringLen
+12d8:00000ff2s Int21hAL2Carry
+12d8:00001404s Int21hOpen
+12d8:00001457s Int21hClose
+1421:00000456s Int33hOpen
+1421:00000502s Int33hClose
+1421:00000570s Int33h
+1421:00000b13s MouseEvent
+1421:00000c46s Int33hDummy
+1421:00000c5bs bord33
+14e9:04abs     Startup
+14e9:1daes     InitError
+14e9:1f49s     InitHardwareInts
+14e9:1fa9s     CheckProcessor
+14e9:1fc7s     CheckDOSVersion
+14e9:1fdds     GetENVStuff
+14e9:23c4s     GetEXECName
+14e9:2418s     GetSystemFlags
+14e9:2555s     GetProtectedType
+14e9:2574s     SetProtectedType
+14e9:25b5s     ChkDPMI
+14e9:25d2s     ChkVCPI
+14e9:2683s     ChkRAW
+14e9:268fs     MakeDesc
+14e9:26c9s     MakeDesc2
+14e9:270as     IDTFlush
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+/mnt/sda5/.user/root/src/openwatcom-1.9/bld/causeway/asm/cw32.asm
+                _cwMain               Main code      0000:0000        000007d6
+                _cwStack              stack          007e:0000        00000800
+                _cwRaw                raw kernal code 00fe:0000       00001dcf
+                _cwDPMIEMU            DPMI emulator code 02db:0000  ! 00005e2a
+                _apiCode              API code       08be:0000  !     000074f4
+                _Excep                Exception code 100e:0000        000022b6
+                _Int10h               extension code 123a:0000  !     000009da
+                _Int21h               extension code 12d8:0000  !     00001481
+                _Int33h               extension code 1421:0000  !     00000c76
+                _cwInit               init code      14e9:0000        0000270b
+                _cwEnd                end marker     175a:0000        00000000
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0800 (2048.)
+Memory size:  000175a0 (95648.)
+Entry point address: 14e9:04ab
+Link time: 00:00.00
