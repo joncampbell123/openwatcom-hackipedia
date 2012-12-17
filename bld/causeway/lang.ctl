@@ -19,6 +19,7 @@ cdsay .
 [ BLOCK <1> rel2 cprel2 ]
 #========================
   [ IFDEF (os_dos "") <2*> ]
+    <PROJDIR>/xzun.sh <PROJDIR>/cwc.exe.xz <PROJDIR>/cwc.exe
     <CPCMD> <PROJDIR>/cwc.exe                 <RELROOT>/binw/
     <CPCMD> <PROJDIR>/cw32/dosi86/cwstub.exe  <RELROOT>/binw/
     <CPCMD> <PROJDIR>/cw32/dos386/cwdll.lib   <RELROOT>/lib386/dos/
