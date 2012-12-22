@@ -108,8 +108,6 @@ echo Bootstrapping compiler using GNU tools...
 #
 #        Starting with the code generators
 #
-#        WOMP must be done before F77, now it is not necessary
-#[ INCLUDE <DEVDIR>/womp/lang.ctl ]
 #        WASM must be done early so that inline assembler users are uptodate
 #        (no longer necessary, can be anywhere)
 [ INCLUDE <DEVDIR>/wasm/lang.ctl ]
