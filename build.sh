@@ -13,6 +13,9 @@ fi
 if [ ! -f $DEVDIR/build/binl/wtouch ]; then
     cp -p `which touch` $DEVDIR/build/binl/wtouch
 fi
+
+mkdir -p bld/w32api/win32s/{directx,ddk}
+
 cd bld/wmake
 $MAKE -f gnumake
 mkdir -p ../builder/$OBJDIR
