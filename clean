@@ -7,6 +7,7 @@ fi
 if [ ! -f $DEVDIR/build/binl/wtouch ]; then
     cp -p `which touch` $DEVDIR/build/binl/wtouch
 fi
+./bootclean.sh
 cd bld
 export BUILDMODE=bootstrap
 builder clean
