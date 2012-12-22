@@ -1,6 +1,0 @@
-++'_BatteryClassInitializeDevice@8'.'BATTC.SYS'..'BatteryClassInitializeDevice'
-++'_BatteryClassIoctl@8'.'BATTC.SYS'..'BatteryClassIoctl'
-++'_BatteryClassQueryWmiDataBlock@28'.'BATTC.SYS'..'BatteryClassQueryWmiDataBlock'
-++'_BatteryClassStatusNotify@4'.'BATTC.SYS'..'BatteryClassStatusNotify'
-++'_BatteryClassSystemControl@20'.'BATTC.SYS'..'BatteryClassSystemControl'
-++'_BatteryClassUnload@4'.'BATTC.SYS'..'BatteryClassUnload'

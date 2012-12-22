@@ -1,5 +1,0 @@
-++'_CryptGetObjectUrl@32'.'CRYPTNET.DLL'..'CryptGetObjectUrl'
-++'_CryptInstallCancelRetrieval@16'.'CRYPTNET.DLL'..'CryptInstallCancelRetrieval'
-++'_CryptRetrieveObjectByUrlA@36'.'CRYPTNET.DLL'..'CryptRetrieveObjectByUrlA'
-++'_CryptRetrieveObjectByUrlW@36'.'CRYPTNET.DLL'..'CryptRetrieveObjectByUrlW'
-++'_CryptUninstallCancelRetrieval@8'.'CRYPTNET.DLL'..'CryptUninstallCancelRetrieval'

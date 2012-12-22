@@ -1,0 +1,61 @@
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wmake/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/builder/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/pmake/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/yacc/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/wres/bootstrp
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/sdk/rc/rc/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/orl/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wstrip/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/re2c/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/nwlib/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/ssl/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/dmpobj/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/ndisasm/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/ncurses/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/ui/unix/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/help/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wsample/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/mad/x86/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/dip/x86/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/aui/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/gui/ui/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wprof/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/trap/lcl/linux/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wv/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wv/linux/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/owl/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/orl/test/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/as/ppc/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/dwarf/dw/bootstrp
+**** CLEAN rule
+rm -f -r /mnt/sda5/.user/root/src/openwatcom-1.9/bld/wl/bootstrp
+rm -f wlsystem.lnk
+rm -f qnx.lnk

@@ -26,7 +26,6 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/w32loadr/prereq.ctl ]
 [ INCLUDE <DEVDIR>/yacc/prereq.ctl ]
 [ INCLUDE <DEVDIR>/re2c/prereq.ctl ]
-# [ INCLUDE <DEVDIR>/wgml/prereq.ctl ]
 [ INCLUDE <DEVDIR>/whpcvt/prereq.ctl ]
 [ INCLUDE <DEVDIR>/helpcomp/prereq.ctl ]
 [ INCLUDE <DEVDIR>/hcdos/prereq.ctl ]
@@ -158,9 +157,7 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/editdll/lang.ctl ]
 #[ INCLUDE <DEVDIR>/browser/lang.ctl ]
 [ INCLUDE <DEVDIR>/idebatch/lang.ctl ]
-#[ INCLUDE <DEVDIR>/viper/lang.ctl ]
 [ INCLUDE <DEVDIR>/mstools/lang.ctl ]
-#[ INCLUDE <DEVDIR>/viprdemo/lang.ctl ]
 #[ INCLUDE <DEVDIR>/online/lang.ctl ]
 [ INCLUDE <DEVDIR>/posix/lang.ctl ]
 [ INCLUDE <DEVDIR>/cpp/lang.ctl ]
@@ -168,7 +165,6 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/dig/lang.ctl ]
 [ INCLUDE <DEVDIR>/uiforms/lang.ctl ]
 [ INCLUDE <DEVDIR>/watcom/lang.ctl ]
-#[ INCLUDE <DEVDIR>/pbide/lang.ctl ]
 [ INCLUDE <DEVDIR>/trmem/lang.ctl ]
 #[ INCLUDE <DEVDIR>/version/lang.ctl ]
 [ INCLUDE <DEVDIR>/dmpobj/lang.ctl ]
@@ -176,11 +172,9 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/cvpack/lang.ctl ]
 [ INCLUDE <DEVDIR>/wic/lang.ctl ]
 [ INCLUDE <DEVDIR>/redist/lang.ctl ]
-#[ INCLUDE <DEVDIR>/wgml/lang.ctl ]
 [ INCLUDE <DEVDIR>/parsedlg/lang.ctl ]
 [ INCLUDE <DEVDIR>/helpcomp/lang.ctl ]
 [ INCLUDE <DEVDIR>/wipfc/lang.ctl ]
-#[ INCLUDE <DOC_ROOT>/lang.ctl ]
 #
 #        Do CDSAY to see end time
 #
