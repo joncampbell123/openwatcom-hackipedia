@@ -1,0 +1,2 @@
+debug dwarf option symfile sys nt_dll initinstance terminstance op stack=40k op map, verbose, static, heapsize=8k
+option description 'Open Watcom Editor DLL for VIW'

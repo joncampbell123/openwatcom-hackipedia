@@ -1,0 +1,5 @@
+debug dwarf option symfile sys os2v2  op map, noredefs
+file stidedrv.obj
+file idemsgfm.obj
+file maindrv.obj
+lib wlinkd.lib

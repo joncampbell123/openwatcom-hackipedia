@@ -1,0 +1,14 @@
+system win_vxd
+name wemu387.386
+option desc 'Win386 WEMU387 Device (Version 1.1 Open Watcom)'
+option modname=WDEBUG
+option map
+segment '_LTEXT'  preload nondiscardable
+segment '_LDATA'  preload nondiscardable
+segment '_ITEXT'  discardable
+segment '_IDATA'  discardable
+segment '_TEXT'   nondiscardable
+segment '_DATA'   nondiscardable
+export WDEBUG_DDB.1
+file /usr/src/openwatcom-1.9/bld/emu/win386/emu387.obj
+file wdebug.obj

@@ -1,0 +1,7 @@
+:strnicmp.c=.obj
+:fdfs386=.obj
+:fsc386=.obj
+:fsfd386=.obj
+:fsi4386=.obj
+:fsn386=.obj
+:i4fs386=.obj

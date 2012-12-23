@@ -1,0 +1,8 @@
+debug dwarf option symfile sys os2v2 dll initinstance terminstance op manyautodata option impfile=mthr19.imp reference __DLLstart_ disable 121
+op map 
+file /usr/src/openwatcom-1.9/bld/clib/startup/library/os2.386/mf_r/clibdo32.obj
+export { @/usr/src/openwatcom-1.9/bld/mathlib/library/os2.386/mf_r.dll/export.def }
+export { @/usr/src/openwatcom-1.9/bld/mathlib/export.386 }
+lib /usr/src/openwatcom-1.9/bld/mathlib/library/os2.386/mf_r.dll/math3r.lib
+lib ../../../clib/os2.386/mf_r/clbrdll.lib
+

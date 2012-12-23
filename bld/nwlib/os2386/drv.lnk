@@ -1,0 +1,5 @@
+debug dwarf sys os2v2  op map, symfile
+file maindrv.obj
+file idedrv.obj
+file idemsgfm.obj
+lib wlibd.lib

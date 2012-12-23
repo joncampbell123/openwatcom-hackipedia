@@ -1,0 +1,17 @@
+ +../../dos386s/graph3s.lib
+ -globals
+ -bit
+ -sqrtf
+ -std
+ -hercfont
+ -cgautils
+ -egautils
+ -vgautils
+ -hgcutils
+ -svgautil
+ -font8x8
+ +../../dos386r/graph3r.lib
+ +../../dos386r/dummy.obj
+ +../../dos386r/fsmath.obj
+ +../../../pgchart/dos386r/chart3r.lib
+ +../../../pgchart/dos386s/chart3s.lib
