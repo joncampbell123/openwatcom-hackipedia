@@ -44,5 +44,5 @@ for i in aliasgen  bmp2eps cdsay hcdos langdat objchg objlist objxref sweep wgre
 (cd bld/wstuba && find -name \*.exe -delete)
 (cd bld/wstuba && find -name \*.sym -delete)
 (cd contrib && find -name \*.obj -delete)
-rm -fv contrib/wattcp/lib/wattcpwl.lib
+rm -fv contrib/wattcp/lib/wattcpwl.lib bld/clean.lo1
 
