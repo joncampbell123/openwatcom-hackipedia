@@ -51,13 +51,11 @@
 #define banner1(p,v) banner1p1(p) " " banner1p2(v)
 #define banner1w(p,v) "Open Watcom " banner1p1(p) " " banner1p2(v)
 
-#define banner2p1(year) "Portions Copyright (c) " year "-2002 Sybase, Inc. All Rights Reserved"
-//#define banner2p2() "All rights reserved"
-//#define banner2(year) banner2p1(year) ". " banner2p2() "."
+#define banner2p1(year) "Portions Copyright (c) " year "-2002 Sybase, Inc. All Rights Reserved; Hackipedia.org Edition"
 #define banner2p2() ""
 #define banner2(year) banner2p1(year) "."
 
-#define banner2a() "Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved."
+#define banner2a() "Portions Copyright (c) 1984-2002 Sybase, Inc. All Rights Reserved. Hackipedia.org Edition."
 
 #define banner3       "Source code is available under the Sybase Open Watcom Public License."
 #define banner3a      "See http://www.openwatcom.org/ for details."
@@ -70,8 +68,6 @@
 #define banner4gui()    "Copyright © 2002-%s Open Watcom Contributors. All Rights Reserved."
 #define banner2agui() "Portions Copyright © 1984-2002 Sybase, Inc. All Rights Reserved."
 
-// the following macros define the delimeters used bythe resource
-// compiler when concatenating strings
 #define _RC_DELIM_LEFT_         [
 #define _RC_DELIM_RIGHT_        ]
 
