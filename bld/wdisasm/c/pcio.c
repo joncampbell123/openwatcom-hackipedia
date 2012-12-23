@@ -83,13 +83,6 @@ void  FPutTxtRec( FILE *txt_file, char *buff, int len )
 /*****************************************************/
 {
     fwrite( buff, len, 1, txt_file );
-#if 0
-#if !defined( __QNX__ )
-    if( txt_file != stdout && txt_file != stderr ) {
-        fputc( '\r', txt_file );        /* see OpenTxtWrite for reason */
-    }
-#endif
-#endif
     fputc( '\n', txt_file );
 }
 

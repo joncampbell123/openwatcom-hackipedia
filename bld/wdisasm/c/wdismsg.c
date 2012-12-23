@@ -118,7 +118,6 @@ void MsgPutUsage()
     char        msg_buff[MAX_RESOURCE_SIZE];
     int         i;
     char        only_newline;
-//    int         previous_null = 0;
 
     for( i = MSG_USE_BASE;; i++ ) {
         only_newline = 0;
@@ -126,35 +125,14 @@ void MsgPutUsage()
         if( (msg_buff[ 0 ] == '~')&&(msg_buff[ 1 ] == 0 ) ) {
             only_newline = 1;
         }
-#if 0
-This section of the code is killed for now.  If, sometime in the future,
-there are multiple pages of usage messages for this program, include the code
-and add a waitforkey() function.
-        if( previous_null ) {
-            if( msg_buff[0] != '\0' ) {
-                waitforkey();
-                if( only_newline ) {
-                    puts( "" );
-                } else {
-                    puts( msg_buff );
-                }
-                previous_null = 0;
-            } else break;
-
-        } else if( msg_buff[0] == '\0' ) {
-            previous_null = 1;
-        } else {
-#else
         if( msg_buff[ 0 ] == 0 ) {
             break;
         }
-#endif
-            if( only_newline ) {
-                puts( "" );
-            } else {
-                puts( msg_buff );
-            }
-//        }
+        if( only_newline ) {
+            puts( "" );
+        } else {
+            puts( msg_buff );
+        }
     }
 }
 

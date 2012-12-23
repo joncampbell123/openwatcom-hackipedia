@@ -46,7 +46,6 @@ hcdos           - help compiler for .ihp help files used by whelp
 hdr             - header files
 help            - whelp character mode help utility
 helpcomp        - whc help compiler, used for doc build
-idebatch        - batch processor for watcom IDE
 lib_misc        - shared library
 mad             - machine architecture definition ( used by debugger)
 mathlib         - math library
@@ -83,8 +82,6 @@ ui              - UI library
 uiforms         -
 version         - DLL Versioning Support
 vi              - VI editor ( character mode & VIW )
-viper           - Watcom IDE
-viprdemo        - three-d demo - IDE demo program
 w16api          - windows 16 bit api
 w32api          - windows 32 bit api
 w32loadr        - 32-bit dos extender stuff
@@ -92,8 +89,6 @@ wasm            - watcom assembler
 watcom          - shared source code
 wclass          - wclass C++ class library - used by IDE, browser
 wdisasm         - old disassembler - source code still used by debugger
-wgml            - reconstruct gendev/wgml source code 
-whpcvt          - convert WHP files (WATCOM Help) into OS dependent help files.
 wic             - watcom interface converter
 win386          - watcom 32-bit windows extender
 wl              - linker

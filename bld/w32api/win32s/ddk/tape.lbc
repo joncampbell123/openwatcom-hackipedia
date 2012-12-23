@@ -1,8 +1,0 @@
-++'_TapeClassAllocateSrbBuffer@8'.'TAPE.SYS'..'TapeClassAllocateSrbBuffer'
-++'_TapeClassCompareMemory@12'.'TAPE.SYS'..'TapeClassCompareMemory'
-++'_TapeClassInitialize@12'.'TAPE.SYS'..'TapeClassInitialize'
-++'_TapeClassLiDiv@16'.'TAPE.SYS'..'TapeClassLiDiv'
-++'_TapeClassLogicalBlockToPhysicalBlock@16'.'TAPE.SYS'..'TapeClassLogicalBlockToPhysicalBlock'
-++'_TapeClassPhysicalBlockToLogicalBlock@16'.'TAPE.SYS'..'TapeClassPhysicalBlockToLogicalBlock'
-++'_TapeClassZeroMemory@8'.'TAPE.SYS'..'TapeClassZeroMemory'
-++'_TapeDebugPrint'.'TAPE.SYS'..'TapeDebugPrint'

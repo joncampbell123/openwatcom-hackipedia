@@ -26,7 +26,7 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/w32loadr/prereq.ctl ]
 [ INCLUDE <DEVDIR>/yacc/prereq.ctl ]
 [ INCLUDE <DEVDIR>/re2c/prereq.ctl ]
-[ INCLUDE <DEVDIR>/whpcvt/prereq.ctl ]
+#[ INCLUDE <DEVDIR>/whpcvt/prereq.ctl ]
 [ INCLUDE <DEVDIR>/helpcomp/prereq.ctl ]
 [ INCLUDE <DEVDIR>/hcdos/prereq.ctl ]
 [ INCLUDE <DEVDIR>/wipfc/prereq.ctl ]
@@ -128,7 +128,7 @@ echo Bootstrapping compiler using GNU tools...
 #        as well as after the C++ compilers
 #
 [ INCLUDE <DEVDIR>/plusplus/cpplib/lang.ctl ]
-[ INCLUDE <DEVDIR>/wclass/lang.ctl ]
+#[ INCLUDE <DEVDIR>/wclass/lang.ctl ]
 #        rtdll must be made after all other libraries
 [ INCLUDE <DEVDIR>/rtdll/lang.ctl ]
 #
@@ -154,7 +154,7 @@ echo Bootstrapping compiler using GNU tools...
 [ INCLUDE <DEVDIR>/wstrip/lang.ctl ]
 [ INCLUDE <DEVDIR>/editdll/lang.ctl ]
 #[ INCLUDE <DEVDIR>/browser/lang.ctl ]
-[ INCLUDE <DEVDIR>/idebatch/lang.ctl ]
+#[ INCLUDE <DEVDIR>/idebatch/lang.ctl ]
 [ INCLUDE <DEVDIR>/mstools/lang.ctl ]
 #[ INCLUDE <DEVDIR>/online/lang.ctl ]
 [ INCLUDE <DEVDIR>/posix/lang.ctl ]

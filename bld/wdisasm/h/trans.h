@@ -29,18 +29,6 @@
 *
 ****************************************************************************/
 
-
-#if 0 /* IBM 370 */
-
-    extern  char            ASC2EBC[];
-    extern  char            EBC2ASC[]
-
-    #define _Trans( ch )            ASC2EBC[ ch ]
-    #define _ToTargChar( ch )       EBC2ASC[ ch ]
-
-#else
-
     #define _Trans( ch )            ( ch )
     #define _ToTargChar( ch )       ( ch )
 
-#endif
