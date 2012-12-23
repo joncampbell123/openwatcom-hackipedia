@@ -37,7 +37,7 @@ BLD=`pwd`
 (cd $BLD/w32api && builder rel2) || die "w32api"
 (cd $BLD/w32api.old && builder rel2) || die "w32api.old"
 (cd $BLD/w16api && builder rel2) || die "w16api"
-(cd $BLD/wclass && builder rel2) || die "wclass"
+#(cd $BLD/wclass && builder rel2) || die "wclass"
 (cd $BLD/clib && builder rel2) || die "clib"
 (cd $BLD/emu86 && builder rel2) || die "emu86"
 (cd $BLD/emu && builder rel2) || die "emu"

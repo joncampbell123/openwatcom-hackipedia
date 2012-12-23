@@ -232,10 +232,18 @@ void __NTFini( void )
         lib_free( _wcmd_ptr );
         _wcmd_ptr = NULL;
     }
+    /* JONATHAN C: While later versions of Windows 3.1 Win32s have FreeEnvironmentStringsA(),
+     *             earlier versions do not. Removing this code for win32s targets allows the
+     *             program to run without complaints about missing symbols.
+     *
+     *             v1.15             NO
+     *             v1.30c            YES */
+#if WINVER >= 0x400
     if( _Envptr != NULL ) {
         FreeEnvironmentStrings( _Envptr );
         _Envptr = NULL;
     }
+#endif
 }
 
 void __NTMainInit( REGISTRATION_RECORD *rr, thread_data *tdata )
