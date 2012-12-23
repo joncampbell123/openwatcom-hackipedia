@@ -74,14 +74,6 @@ void ReadProtoFile (const char *fname)
   }
   rewind (protoFile);
   atexit (endprotoent);
-
-#if 0  /* test */
-  {
-    struct _protoent *p;
-    for (p = _proto0; p; p = p->next)
-      printf ("proto %3d = `%s'\n", p->p_proto,p->p_name);
-  }
-#endif
 }
 
 /*------------------------------------------------------------------*/

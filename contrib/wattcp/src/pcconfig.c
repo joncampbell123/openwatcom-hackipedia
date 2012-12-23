@@ -297,17 +297,6 @@ int parse_config_table (const struct config_table *tab,
 #endif
       }
 
-#if 0  /* test */
-      fprintf (stderr, "ARG_%s, matched `%s' = `%s'\n",
-               tab->type == ARG_ATOI   ? "ATOI  "  :
-               tab->type == ARG_ATON   ? "ATON  "  :
-               tab->type == ARG_ATOX_B ? "ATOX_B"  :
-               tab->type == ARG_ATOX_W ? "ATOX_W"  :
-               tab->type == ARG_STRDUP ? "STRDUP"  :
-               tab->type == ARG_RESOLVE? "RESOLVE" :
-               tab->type == ARG_FUNC   ? "FUNC  "  :
-               "??", keyword, value);
-#endif
       return (1);
     }
   }

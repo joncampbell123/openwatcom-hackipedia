@@ -183,7 +183,6 @@ int extern __export FAR PASCAL EDITLocateError( long lRow, int iCol,
                                     int iLen, int idResource, LPSTR szErrmsg )
 {
     char        szCommand[ 100 ];
-//    int         len;
     BOOL        rc;
 
     if( !bConnected ) {
@@ -192,12 +191,6 @@ int extern __export FAR PASCAL EDITLocateError( long lRow, int iCol,
 
     sprintf( szCommand, "MovAbs %ld %d", lRow, iCol );
     rc = doExecute( szCommand );
-#if 0
-    rc |= doExecute( "MarkBeginSel SELECTION_EXCLUSIVE" );
-    sprintf( szCommand, "MovRight %d", iLen );
-    rc |= doExecute( szCommand );
-    rc |= doExecute( "MarkEndSel" );
-#endif
 
     if( szErrmsg ) {
         sprintf( szCommand, "MsgError %.*s",

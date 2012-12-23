@@ -111,16 +111,6 @@ int main ( int argc, char** argv )
       flip_bit ( bit );
    }
 
-#if 0
-   assert (nOut == nIn);
-   for (i = 0; i < nOut; i++) {
-     if (inbuf[i] != outbuf[i]) {
-        fprintf ( stderr, "difference at %d !\n", i );
-        return 1;
-     }
-   }
-#endif
-
    fprintf ( stderr, "all ok\n" );
    return 0;
 }

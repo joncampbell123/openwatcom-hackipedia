@@ -68,23 +68,6 @@ void ReadNetworksFile (const char *fname)
   }
   rewind (networkFile);
   atexit (endnetent);
-
-#if 0  /* test */
-  {
-    struct _netent *n;
-
-    printf ("%s entries:\n", fname);
-    for (n = network0; n; n = n->next)
-    {
-      int i;
-      printf ("net = %-15.15s name = %-10.10s  alias:",
-              inet_ntoa(inet_makeaddr(n->n_net,0)), n->n_name);
-      for (i = 0; n->n_aliases && n->n_aliases[i]; i++)
-            printf (" %s", n->n_aliases[i]);
-      puts ("");
-    }
-  }
-#endif
 }
 
 /*

@@ -495,12 +495,6 @@ print_dtim(int date, int time)
 static void
 print_time(void)
 {
-#if 0
-    _strtime(buff); // can't be called with SS != DS
-    buff[8] = ' ';
-    buff[9] = '\0';
-    tputs(buff);
-#endif
 }
 
 struct s_func {

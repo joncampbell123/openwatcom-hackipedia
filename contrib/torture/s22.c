@@ -30,19 +30,6 @@ struct defs *pd0;
      if(pd0->flgd != 0) printf(s22er,1);
    }
 
-#if 0
-     /* No more than the first eight characters are sig-
-        nificant, although more may be used.              */
-
-   longname = 8;
-   longname_plus_a_little_bit = 9;
-
-   if (longname != longname_plus_a_little_bit) {
-     rc = rc+2;
-     if (pd0->flgd != 0) printf(s22er,2);
-   }
-#endif
-
    /* Upper and lower case letters are different.     */
 
    A = 2;

@@ -27,12 +27,7 @@ static char   dbg_mode[5] = "w+";
 
 void _sock_debugf (const Socket *sock, const char *fmt, ...)
 {
-#if 0  /* for now, print debug for all sockets */
-  if (sock && !(sock->so_options & SO_DEBUG))
-     return;
-#else
   ARGSUSED (sock);
-#endif
 
   if (dbg_file && dbg_active)
   {

@@ -190,19 +190,11 @@ int main( int argc, char *argv[] )
     if( argc < 3 ) {
         printf( "Usage: w32bind REX_filename new_filename [os2ldr.exe]\n" );
         printf( "w32bind binds REX file with 32-bit loader\n" );
-//      printf( "-c   compresses the executable\n" );
         exit( 1 );
     }
     argc = 1;
     compress = 0;
     file = argv[argc];
-#if 0
-    if( strcmp( file, "-c" ) == 0 ) {
-        compress = 1;
-        ++argc;
-        file = argv[argc];
-    }
-#endif
     ++argc;
     handle = open( file, O_RDONLY | O_BINARY );
     if( handle == -1 ) {
@@ -533,8 +525,6 @@ void filewrite( void )
             missed += count[c];
         }
     }
-  //printf( "Data block: old_size=%u, new_size=%u, chars=%u, unused pairs=%u missed=%u\n",
-  //            old_size, size, chars_used, unused, missed );
 }
 
 void inc_count( int index )
@@ -570,16 +560,6 @@ void CompressBlock( void )
 
         /* Find most frequent pair of chars */
         best_index = 0;
-#if 0
-        for( best = 2, index = 0; index < HASHSIZE; index++ ) {
-            if( count[index] > best ) {
-                best = count[index];
-                leftch = left[index];
-                rightch = right[index];
-                best_index = index;
-            }
-        }
-#else
         for( best = 2, r = 0; r < high_index; r++ ) {
             index = high_count[r];
             if( count[index] > best ) {
@@ -587,7 +567,6 @@ void CompressBlock( void )
                 best_index = index;
             }
         }
-#endif
 
         /* Done if no more compression possible */
         if( best < THRESHOLD )  break;
@@ -622,7 +601,6 @@ void CompressBlock( void )
         rightcode[code] = rightch;
 
         /* Delete pair from hash table */
-//          index = lookup( leftch, rightch );
         count[best_index] = 1;
     }
 }

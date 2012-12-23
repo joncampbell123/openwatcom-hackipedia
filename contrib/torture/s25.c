@@ -28,16 +28,6 @@ struct defs *pd0;
      if(pd0->flgd != 0) printf(s25er,1);
    }
 
-#if 0
-   /* All strings, even when written identically, are distinct. */
-
-   "..."[1] = '?';
-   if( s[1] != '.' ){
-     rc = rc+2;
-     if(pd0->flgd != 0) printf(s25er,2);
-   }
-#endif
-
    /* The compiler places a null byte \0 at the end of each string
       so the program which scans the string can find its end.   */
 
