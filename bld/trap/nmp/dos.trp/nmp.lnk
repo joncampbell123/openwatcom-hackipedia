@@ -1,0 +1,12 @@
+debug dwarf option symfile
+op map name nmp.trp
+sys dos
+op dosseg
+file dosstrt.obj
+file mxutil.obj
+file remote.obj
+file packet.obj
+file nmplink.obj
+file nmpdos.obj
+library dbgstr.lib
+

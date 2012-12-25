@@ -1,0 +1,1 @@
+-kJAPANESE -t8 -f "%+(USAGEJ_MSG_BASE+%#-1), \"%s\"" ../rc/usage.sp usagej.rc

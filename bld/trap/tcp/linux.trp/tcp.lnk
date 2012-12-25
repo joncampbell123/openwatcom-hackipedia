@@ -1,0 +1,10 @@
+debug dwarf option symfile
+op map name tcp.trp
+form windows nt dll opt dosseg libpath /usr/src/openwatcom-1.9/bld/clib/library/linux.386/mf_r export TrapLoad_.1 option description 'Open Watcom Debugger Trap File'
+op dosseg
+file lnxstrt.obj
+file mxutil.obj
+file remote.obj
+file packet.obj
+file tcplink.obj
+

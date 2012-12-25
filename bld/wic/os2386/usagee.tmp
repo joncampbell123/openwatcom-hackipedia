@@ -1,0 +1,1 @@
+-kENGLISH -t8 -f "%+(USAGEE_MSG_BASE+%#-1), \"%s\"" ../rc/usage.sp usagee.rc

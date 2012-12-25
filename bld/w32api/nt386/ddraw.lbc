@@ -1,0 +1,7 @@
+++'_DirectDrawCreate@12'.'DDRAW.DLL'..'DirectDrawCreate'
+++'_DirectDrawCreateClipper@12'.'DDRAW.DLL'..'DirectDrawCreateClipper'
+++'_DirectDrawCreateEx@16'.'DDRAW.DLL'..'DirectDrawCreateEx'
+++'_DirectDrawEnumerateA@8'.'DDRAW.DLL'..'DirectDrawEnumerateA'
+++'_DirectDrawEnumerateExA@12'.'DDRAW.DLL'..'DirectDrawEnumerateExA'
+++'_DirectDrawEnumerateExW@12'.'DDRAW.DLL'..'DirectDrawEnumerateExW'
+++'_DirectDrawEnumerateW@8'.'DDRAW.DLL'..'DirectDrawEnumerateW'

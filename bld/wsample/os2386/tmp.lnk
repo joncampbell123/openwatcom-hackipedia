@@ -1,0 +1,10 @@
+debug dwarf option symfile sys os2v2  op symfile,map
+file sampos22.obj
+file sysinit.obj
+file sampexe.obj
+file sample.obj
+file sampdata.obj
+file io.obj
+file sysio.obj
+file wmsg.obj
+lib /usr/src/openwatcom-1.9/bld/sdk/rc/wres/flat386/mf_r/wres.lib

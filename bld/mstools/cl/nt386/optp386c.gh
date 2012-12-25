@@ -1,0 +1,749 @@
+int OPT_PROCESS( OPT_STORAGE *data )
+{
+    if( OPT_RECOG( 'X' ) ) {
+	data->X = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( 'W' ) ) {
+	if( OPT_RECOG( 'X' ) ) {
+	    data->WX = 1;
+	    return( 0 );
+	}
+	if( OPT_GET_NUMBER( &(data->W_value) ) ) {
+	    check_warn_level( &(data->W_value) );
+	    data->warn_level = OPT_warn_level_W;
+	    handle_warn_level( data, 1 );
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'w' ) ) {
+	data->warn_level = OPT_warn_level_w;
+	handle_warn_level( data, 1 );
+	return( 0 );
+    }
+    if( OPT_RECOG( 'V' ) ) {
+	if( parse_V( &(data->V_value) ) ) {
+	    data->V = 1;
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'u' ) ) {
+	data->u = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( 'U' ) ) {
+	if( parse_U( &(data->U_value) ) ) {
+	    data->U = 1;
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'P' ) ) {
+	data->P = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( 'o' ) ) {
+	if( parse_o( &(data->o_value) ) ) {
+	    data->o = 1;
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'J' ) ) {
+	data->J = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( 'I' ) ) {
+	if( parse_I( &(data->I_value) ) ) {
+	    data->I = 1;
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'H' ) ) {
+	if( OPT_GET_NUMBER( &(data->H_value) ) ) {
+	    data->H = 1;
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'F' ) ) {
+	do {
+	    if( OPT_RECOG( 'r' ) ) {
+		data->Fr = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'R' ) ) {
+		if( OPT_GET_FILE( &(data->FR_value) ) ) {
+		    data->FR = 1;
+		    handle_FR( data, 1 );
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'p' ) ) {
+		if( OPT_GET_FILE( &(data->Fp_value) ) ) {
+		    data->Fp = 1;
+		    handle_Fp( data, 1 );
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'o' ) ) {
+		if( OPT_GET_FILE( &(data->Fo_value) ) ) {
+		    data->Fo = 1;
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'm' ) ) {
+		if( parse_Fm( &(data->Fm_value) ) ) {
+		    data->Fm = 1;
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'I' ) ) {
+		if( parse_FI( &(data->FI_value) ) ) {
+		    data->FI = 1;
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'e' ) ) {
+		if( OPT_GET_FILE( &(data->Fe_value) ) ) {
+		    data->Fe = 1;
+		    handle_Fe( data, 1 );
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'd' ) ) {
+		if( OPT_GET_FILE( &(data->Fd_value) ) ) {
+		    data->Fd = 1;
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'A' ) ) {
+		if( OPT_RECOG( 's' ) ) {
+		    data->FAs = 1;
+		    continue;
+		}
+		if( OPT_RECOG( 'c' ) ) {
+		    if( OPT_RECOG( 's' ) ) {
+			data->FAcs = 1;
+			continue;
+		    }
+		    data->FAc = 1;
+		    continue;
+		}
+		data->FA = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'a' ) ) {
+		if( OPT_GET_PATH( &(data->Fa_value) ) ) {
+		    data->Fa = 1;
+		}
+		continue;
+	    }
+	    if( parse_F( &(data->F_value) ) ) {
+		data->F = 1;
+		handle_F( data, 1 );
+	    }
+	    return( 0 );
+	} while( ! OPT_END() );
+	return( 0 );
+    }
+    if( OPT_RECOG( 'E' ) ) {
+	if( OPT_RECOG( 'P' ) ) {
+	    data->EP = 1;
+	    return( 0 );
+	}
+	data->E = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( 'D' ) ) {
+	if( parse_D( &(data->D_value) ) ) {
+	    data->D = 1;
+	}
+	return( 0 );
+    }
+    if( OPT_RECOG( 'c' ) ) {
+	data->c = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( 'C' ) ) {
+	data->C = 1;
+	return( 0 );
+    }
+    if( OPT_RECOG( '1' ) ) {
+	if( OPT_RECOG( '0' ) ) {
+	    if( OPT_RECOG( 'x' ) ) {
+		if( OPT_RECOG_LOWER( '_' ) ) {
+		    data->_10x = 1;
+		    return( 0 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'G' ) ) {
+	do {
+	    if( OPT_RECOG( 'z' ) ) {
+		data->calling_convention = OPT_calling_convention_Gz;
+		continue;
+	    }
+	    if( OPT_RECOG( 'y' ) ) {
+		data->Gy = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'X' ) ) {
+		data->GX = 1;
+		handle_GX( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 's' ) ) {
+		if( parse_Gs( &(data->Gs_value) ) ) {
+		    data->stack_probes = OPT_stack_probes_Gs;
+		    handle_stack_probes( data, 1 );
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'r' ) ) {
+		data->calling_convention = OPT_calling_convention_Gr;
+		continue;
+	    }
+	    if( OPT_RECOG( 'h' ) ) {
+		data->Gh = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'F' ) ) {
+		data->GF = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'f' ) ) {
+		data->Gf = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'e' ) ) {
+		data->stack_probes = OPT_stack_probes_Ge;
+		handle_stack_probes( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'd' ) ) {
+		data->calling_convention = OPT_calling_convention_Gd;
+		continue;
+	    }
+	    if( OPT_RECOG( 'B' ) ) {
+		data->arch_i86 = OPT_arch_i86_GB;
+		handle_arch_i86( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( '5' ) ) {
+		data->arch_i86 = OPT_arch_i86_G5;
+		handle_arch_i86( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( '4' ) ) {
+		data->arch_i86 = OPT_arch_i86_G4;
+		handle_arch_i86( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( '3' ) ) {
+		data->arch_i86 = OPT_arch_i86_G3;
+		handle_arch_i86( data, 1 );
+		continue;
+	    }
+	    return( 1 );
+	} while( ! OPT_END() );
+	return( 0 );
+    }
+    if( OPT_RECOG( 'L' ) ) {
+	if( OPT_RECOG( 'D' ) ) {
+	    data->LD = 1;
+	    return( 0 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'M' ) ) {
+	if( OPT_RECOG( 'T' ) ) {
+	    if( OPT_RECOG( 'd' ) ) {
+		data->threads_linking = OPT_threads_linking_MTd;
+		handle_threads_linking( data, 1 );
+		return( 0 );
+	    }
+	    data->threads_linking = OPT_threads_linking_MT;
+	    handle_threads_linking( data, 1 );
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'L' ) ) {
+	    if( OPT_RECOG( 'd' ) ) {
+		data->threads_linking = OPT_threads_linking_MLd;
+		handle_threads_linking( data, 1 );
+		return( 0 );
+	    }
+	    data->threads_linking = OPT_threads_linking_ML;
+	    handle_threads_linking( data, 1 );
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'D' ) ) {
+	    if( OPT_RECOG( 'd' ) ) {
+		data->threads_linking = OPT_threads_linking_MDd;
+		handle_threads_linking( data, 1 );
+		return( 0 );
+	    }
+	    data->threads_linking = OPT_threads_linking_MD;
+	    handle_threads_linking( data, 1 );
+	    return( 0 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'O' ) ) {
+	do {
+	    if( OPT_RECOG( 'y' ) ) {
+		data->Oy = 1;
+		handle_Oy( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'x' ) ) {
+		data->opt_level = OPT_opt_level_Ox;
+		handle_opt_level( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'w' ) ) {
+		data->Ow = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 't' ) ) {
+		data->opt_size_time = OPT_opt_size_time_Ot;
+		handle_opt_size_time( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 's' ) ) {
+		data->opt_size_time = OPT_opt_size_time_Os;
+		handle_opt_size_time( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'p' ) ) {
+		data->Op_timestamp = ++(data->timestamp);
+		data->Op = 1;
+		handle_Op( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'i' ) ) {
+		data->Oi = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'g' ) ) {
+		data->Og = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'd' ) ) {
+		data->opt_level = OPT_opt_level_Od;
+		handle_opt_level( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'b' ) ) {
+		if( OPT_GET_NUMBER( &(data->Ob_value) ) ) {
+		    check_inlining_level( &(data->Ob_value) );
+		    data->Ob = 1;
+		    handle_inlining_level( data, 1 );
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'a' ) ) {
+		data->Oa = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( '2' ) ) {
+		data->opt_level = OPT_opt_level_O2;
+		handle_opt_level( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( '1' ) ) {
+		data->opt_level = OPT_opt_level_O1;
+		handle_opt_level( data, 1 );
+		continue;
+	    }
+	    return( 1 );
+	} while( ! OPT_END() );
+	return( 0 );
+    }
+    if( OPT_RECOG( 'Q' ) ) {
+	if( OPT_RECOG( 'I' ) ) {
+	    if( OPT_RECOG( 'f' ) ) {
+		if( OPT_RECOG( 'd' ) ) {
+		    if( OPT_RECOG( 'i' ) ) {
+			if( OPT_RECOG( 'v' ) ) {
+			    data->QIfdiv = 1;
+			    handle_QIfdiv( data, 1 );
+			    return( 0 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 's' ) ) {
+	if( OPT_RECOG( 'h' ) ) {
+	    if( OPT_RECOG( 'o' ) ) {
+		if( OPT_RECOG( 'w' ) ) {
+		    if( OPT_RECOG( 'w' ) ) {
+			if( OPT_RECOG( 'o' ) ) {
+			    if( OPT_RECOG( 'p' ) ) {
+				if( OPT_RECOG( 't' ) ) {
+				    if( OPT_RECOG( 's' ) ) {
+					data->showwopts = 1;
+					return( 0 );
+				    }
+				    return( 1 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'p' ) ) {
+	if( OPT_RECOG( 'a' ) ) {
+	    if( OPT_RECOG( 's' ) ) {
+		if( OPT_RECOG( 's' ) ) {
+		    if( OPT_RECOG( 'w' ) ) {
+			if( OPT_RECOG( 'o' ) ) {
+			    if( OPT_RECOG( 'p' ) ) {
+				if( OPT_RECOG( 't' ) ) {
+				    if( OPT_RECOG( 's' ) ) {
+					if( parse_passwopts( &(data->passwopts_value) ) ) {
+					    data->passwopts = 1;
+					}
+					return( 0 );
+				    }
+				    return( 1 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'n' ) ) {
+	if( OPT_RECOG( 'o' ) ) {
+	    if( OPT_RECOG( 'l' ) ) {
+		if( OPT_RECOG( 'o' ) ) {
+		    if( OPT_RECOG( 'g' ) ) {
+			if( OPT_RECOG( 'o' ) ) {
+			    data->nologo = 1;
+			    return( 0 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    if( OPT_RECOG( 'i' ) ) {
+		if( OPT_RECOG( 'n' ) ) {
+		    if( OPT_RECOG( 'v' ) ) {
+			if( OPT_RECOG( 'o' ) ) {
+			    if( OPT_RECOG( 'k' ) ) {
+				if( OPT_RECOG( 'e' ) ) {
+				    data->noinvoke = 1;
+				    return( 0 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    if( OPT_RECOG( 'w' ) ) {
+		if( OPT_RECOG( 'o' ) ) {
+		    if( OPT_RECOG( 'p' ) ) {
+			if( OPT_RECOG( 't' ) ) {
+			    if( OPT_RECOG( 's' ) ) {
+				data->nowopts = 1;
+				return( 0 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		if( OPT_RECOG( 'w' ) ) {
+		    if( OPT_RECOG( 'a' ) ) {
+			if( OPT_RECOG( 'r' ) ) {
+			    if( OPT_RECOG( 'n' ) ) {
+				data->nowwarn = 1;
+				handle_nowwarn( data, 1 );
+				return( 0 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'l' ) ) {
+	if( OPT_RECOG( 'i' ) ) {
+	    if( OPT_RECOG( 'n' ) ) {
+		if( OPT_RECOG( 'k' ) ) {
+		    if( parse_link( &(data->link_value) ) ) {
+			data->link = 1;
+		    }
+		    return( 0 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	if( OPT_RECOG( 'e' ) ) {
+	    if( OPT_RECOG( 's' ) ) {
+		if( OPT_RECOG( 's' ) ) {
+		    if( OPT_RECOG( 'w' ) ) {
+			if( OPT_RECOG( 'd' ) ) {
+			    data->lesswd = 1;
+			    return( 0 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'T' ) ) {
+	if( OPT_RECOG( 'p' ) ) {
+	    if( parse_Tp( &(data->Tp_value) ) ) {
+		data->Tp = 1;
+	    }
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'P' ) ) {
+	    data->TP = 1;
+	    handle_TP( data, 1 );
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'c' ) ) {
+	    if( parse_Tc( &(data->Tc_value) ) ) {
+		data->Tc = 1;
+	    }
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'C' ) ) {
+	    data->TC = 1;
+	    handle_TC( data, 1 );
+	    return( 0 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'v' ) ) {
+	if( OPT_RECOG( 'd' ) ) {
+	    if( OPT_RECOG( '1' ) ) {
+		data->vd1 = 1;
+		return( 0 );
+	    }
+	    if( OPT_RECOG( '0' ) ) {
+		data->vd0 = 1;
+		return( 0 );
+	    }
+	    return( 1 );
+	}
+	if( OPT_RECOG( 'm' ) ) {
+	    if( OPT_RECOG( 'v' ) ) {
+		data->vmv = 1;
+		return( 0 );
+	    }
+	    if( OPT_RECOG( 's' ) ) {
+		data->vms = 1;
+		return( 0 );
+	    }
+	    if( OPT_RECOG( 'm' ) ) {
+		data->vmm = 1;
+		return( 0 );
+	    }
+	    if( OPT_RECOG( 'g' ) ) {
+		data->vmg = 1;
+		return( 0 );
+	    }
+	    if( OPT_RECOG( 'b' ) ) {
+		data->vmb = 1;
+		return( 0 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'Y' ) ) {
+	if( OPT_RECOG( 'X' ) ) {
+	    if( OPT_GET_FILE_OPT( &(data->YX_value) ) ) {
+		data->precomp_headers = OPT_precomp_headers_YX;
+		handle_precomp_headers( data, 1 );
+	    }
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'u' ) ) {
+	    if( OPT_GET_FILE_OPT( &(data->Yu_value) ) ) {
+		data->precomp_headers = OPT_precomp_headers_Yu;
+		handle_precomp_headers( data, 1 );
+	    }
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'd' ) ) {
+	    data->Yd = 1;
+	    return( 0 );
+	}
+	if( OPT_RECOG( 'c' ) ) {
+	    if( OPT_GET_FILE_OPT( &(data->Yc_value) ) ) {
+		data->precomp_headers = OPT_precomp_headers_Yc;
+		handle_precomp_headers( data, 1 );
+	    }
+	    return( 0 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG( 'Z' ) ) {
+	do {
+	    if( OPT_RECOG( 's' ) ) {
+		data->Zs = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'p' ) ) {
+		if( OPT_GET_NUMBER_DEFAULT( &(data->Zp_value ), 1 ) ) {
+		    check_packing( &(data->Zp_value) );
+		    data->Zp = 1;
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'n' ) ) {
+		data->Zn = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'm' ) ) {
+		if( OPT_GET_NUMBER( &(data->Zm_value) ) ) {
+		    check_maxmem( &(data->Zm_value) );
+		    data->Zm = 1;
+		}
+		continue;
+	    }
+	    if( OPT_RECOG( 'l' ) ) {
+		data->Zl = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'i' ) ) {
+		data->debug_info = OPT_debug_info_Zi;
+		handle_debug_info( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'g' ) ) {
+		data->Zg = 1;
+		continue;
+	    }
+	    if( OPT_RECOG( 'e' ) ) {
+		data->iso = OPT_iso_Ze;
+		continue;
+	    }
+	    if( OPT_RECOG( 'd' ) ) {
+		data->debug_info = OPT_debug_info_Zd;
+		handle_debug_info( data, 1 );
+		continue;
+	    }
+	    if( OPT_RECOG( 'a' ) ) {
+		data->iso_timestamp = ++(data->timestamp);
+		data->iso = OPT_iso_Za;
+		continue;
+	    }
+	    if( OPT_RECOG( '7' ) ) {
+		data->debug_info = OPT_debug_info_Z7;
+		handle_debug_info( data, 1 );
+		continue;
+	    }
+	    return( 1 );
+	} while( ! OPT_END() );
+	return( 0 );
+    }
+    if( OPT_RECOG_LOWER( 'h' ) ) {
+	if( OPT_RECOG_LOWER( 'e' ) ) {
+	    if( OPT_RECOG_LOWER( 'l' ) ) {
+		if( OPT_RECOG_LOWER( 'p' ) ) {
+		    data->help = 1;
+		    return( 0 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    }
+    if( OPT_RECOG_LOWER( '?' ) ) {
+	data->help = 1;
+	return( 0 );
+    }
+    return( 1 );
+}
+void OPT_INIT( OPT_STORAGE *data )
+{
+    memset( data, 0, sizeof( *data ) );
+    data->Zp_value = 1;
+    data->iso = OPT_iso_default;
+    data->debug_info = OPT_debug_info_default;
+    data->precomp_headers = OPT_precomp_headers_default;
+    data->warn_level = OPT_warn_level_default;
+    data->opt_size_time = OPT_opt_size_time_default;
+    data->opt_level = OPT_opt_level_default;
+    data->threads_linking = OPT_threads_linking_default;
+    data->stack_probes = OPT_stack_probes_default;
+    data->calling_convention = OPT_calling_convention_default;
+    data->arch_i86 = OPT_arch_i86_default;
+}
+void OPT_FINI( OPT_STORAGE *data )
+{
+    OPT_CLEAN_STRING( &(data->YX_value) );
+    OPT_CLEAN_STRING( &(data->Yu_value) );
+    OPT_CLEAN_STRING( &(data->Yc_value) );
+    OPT_CLEAN_STRING( &(data->V_value) );
+    OPT_CLEAN_STRING( &(data->U_value) );
+    OPT_CLEAN_STRING( &(data->Tp_value) );
+    OPT_CLEAN_STRING( &(data->Tc_value) );
+    OPT_CLEAN_STRING( &(data->passwopts_value) );
+    OPT_CLEAN_STRING( &(data->o_value) );
+    OPT_CLEAN_STRING( &(data->link_value) );
+    OPT_CLEAN_STRING( &(data->I_value) );
+    OPT_CLEAN_STRING( &(data->Gs_value) );
+    OPT_CLEAN_STRING( &(data->FR_value) );
+    OPT_CLEAN_STRING( &(data->Fp_value) );
+    OPT_CLEAN_STRING( &(data->Fo_value) );
+    OPT_CLEAN_STRING( &(data->Fm_value) );
+    OPT_CLEAN_STRING( &(data->FI_value) );
+    OPT_CLEAN_STRING( &(data->Fe_value) );
+    OPT_CLEAN_STRING( &(data->Fd_value) );
+    OPT_CLEAN_STRING( &(data->Fa_value) );
+    OPT_CLEAN_STRING( &(data->F_value) );
+    OPT_CLEAN_STRING( &(data->D_value) );
+}

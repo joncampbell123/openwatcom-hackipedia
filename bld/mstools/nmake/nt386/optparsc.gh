@@ -1,0 +1,284 @@
+int OPT_PROCESS( OPT_STORAGE *data )
+{
+    switch( OPT_GET_LOWER() ) {
+    case 'v':
+	if( OPT_RECOG_LOWER( 'e' ) ) {
+	    if( OPT_RECOG_LOWER( 'r' ) ) {
+		if( OPT_RECOG_LOWER( 'b' ) ) {
+		    if( OPT_RECOG_LOWER( 'o' ) ) {
+			if( OPT_RECOG_LOWER( 's' ) ) {
+			    if( OPT_RECOG_LOWER( 'e' ) ) {
+				data->verbose = 1;
+				return( 0 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    case 'h':
+	if( OPT_RECOG_LOWER( 'e' ) ) {
+	    if( OPT_RECOG_LOWER( 'l' ) ) {
+		if( OPT_RECOG_LOWER( 'p' ) ) {
+		    data->HELP = 1;
+		    return( 0 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	return( 1 );
+    case 'a':
+	data->A = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'b':
+	data->B = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'c':
+	data->C = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'd':
+	data->D = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'e':
+	data->E = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'f':
+	if( parse_F( &(data->F_value) ) ) {
+	    data->F = 1;
+	}
+	return( 0 );
+    case '?':
+	data->_ = 1;
+	return( 0 );
+    case 'i':
+	data->I = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'k':
+	data->K = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'l':
+	data->L = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'q':
+	data->Q = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'r':
+	data->R = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 't':
+	if( OPT_RECOG_LOWER( '0' ) ) {
+	    if( OPT_RECOG_LOWER( '1' ) ) {
+		if( OPT_RECOG_LOWER( '0' ) ) {
+		    if( OPT_RECOG_LOWER( '1' ) ) {
+			if( OPT_RECOG_LOWER( '0' ) ) {
+			    if( OPT_RECOG_LOWER( '1' ) ) {
+				if( OPT_RECOG_LOWER( '0' ) ) {
+				    if( OPT_RECOG_LOWER( '1' ) ) {
+					if( OPT_RECOG_LOWER( '0' ) ) {
+					    if( OPT_RECOG_LOWER( '1' ) ) {
+						if( OPT_RECOG_LOWER( '0' ) ) {
+						    if( OPT_RECOG_LOWER( '1' ) ) {
+							if( parse_t010101010101( &(data->t010101010101_value) ) ) {
+							    data->t010101010101 = 1;
+							}
+							return( 0 );
+						    }
+						    return( 1 );
+						}
+						return( 1 );
+					    }
+					    return( 1 );
+					}
+					return( 1 );
+				    }
+				    return( 1 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	data->T = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'u':
+	data->U = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'y':
+	data->Y = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'x':
+	if( parse_X( &(data->X_value) ) ) {
+	    data->X = 1;
+	}
+	return( 0 );
+    case 'n':
+	if( OPT_RECOG_LOWER( 'o' ) ) {
+	    if( OPT_RECOG_LOWER( 'w' ) ) {
+		if( OPT_RECOG_LOWER( 'o' ) ) {
+		    if( OPT_RECOG_LOWER( 'p' ) ) {
+			if( OPT_RECOG_LOWER( 't' ) ) {
+			    if( OPT_RECOG_LOWER( 's' ) ) {
+				data->nowopts = 1;
+				return( 0 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		if( OPT_RECOG_LOWER( 'w' ) ) {
+		    if( OPT_RECOG_LOWER( 'a' ) ) {
+			if( OPT_RECOG_LOWER( 'r' ) ) {
+			    if( OPT_RECOG_LOWER( 'n' ) ) {
+				data->nowwarn = 1;
+				handle_nowwarn( data, 1 );
+				return( 0 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    if( OPT_RECOG_LOWER( 'l' ) ) {
+		if( OPT_RECOG_LOWER( 'o' ) ) {
+		    if( OPT_RECOG_LOWER( 'g' ) ) {
+			if( OPT_RECOG_LOWER( 'o' ) ) {
+			    data->NOLOGO = 1;
+			    return( 0 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    if( OPT_RECOG_LOWER( 'i' ) ) {
+		if( OPT_RECOG_LOWER( 'n' ) ) {
+		    if( OPT_RECOG_LOWER( 'v' ) ) {
+			if( OPT_RECOG_LOWER( 'o' ) ) {
+			    if( OPT_RECOG_LOWER( 'k' ) ) {
+				if( OPT_RECOG_LOWER( 'e' ) ) {
+				    data->noinvoke = 1;
+				    return( 0 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	data->N = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 'p':
+	if( OPT_RECOG_LOWER( 'a' ) ) {
+	    if( OPT_RECOG_LOWER( 's' ) ) {
+		if( OPT_RECOG_LOWER( 's' ) ) {
+		    if( OPT_RECOG_LOWER( 'w' ) ) {
+			if( OPT_RECOG_LOWER( 'o' ) ) {
+			    if( OPT_RECOG_LOWER( 'p' ) ) {
+				if( OPT_RECOG_LOWER( 't' ) ) {
+				    if( OPT_RECOG_LOWER( 's' ) ) {
+					if( parse_passwopts( &(data->passwopts_value) ) ) {
+					    data->passwopts = 1;
+					}
+					return( 0 );
+				    }
+				    return( 1 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	data->P = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    case 's':
+	if( OPT_RECOG_LOWER( 'h' ) ) {
+	    if( OPT_RECOG_LOWER( 'o' ) ) {
+		if( OPT_RECOG_LOWER( 'w' ) ) {
+		    if( OPT_RECOG_LOWER( 'w' ) ) {
+			if( OPT_RECOG_LOWER( 'o' ) ) {
+			    if( OPT_RECOG_LOWER( 'p' ) ) {
+				if( OPT_RECOG_LOWER( 't' ) ) {
+				    if( OPT_RECOG_LOWER( 's' ) ) {
+					data->showwopts = 1;
+					return( 0 );
+				    }
+				    return( 1 );
+				}
+				return( 1 );
+			    }
+			    return( 1 );
+			}
+			return( 1 );
+		    }
+		    return( 1 );
+		}
+		return( 1 );
+	    }
+	    return( 1 );
+	}
+	data->S = 1;
+	parse_combining( data, 1 );
+	return( 0 );
+    }
+    OPT_UNGET();
+    return( 1 );
+}
+void OPT_INIT( OPT_STORAGE *data )
+{
+    memset( data, 0, sizeof( *data ) );
+}
+void OPT_FINI( OPT_STORAGE *data )
+{
+    OPT_CLEAN_STRING( &(data->passwopts_value) );
+    OPT_CLEAN_STRING( &(data->X_value) );
+    OPT_CLEAN_STRING( &(data->F_value) );
+    OPT_CLEAN_STRING( &(data->t010101010101_value) );
+}

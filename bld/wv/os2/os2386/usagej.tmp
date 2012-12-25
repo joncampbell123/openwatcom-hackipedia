@@ -1,0 +1,1 @@
+-kJAPANESE -kIS_RC -kos2 -t8 -f "%+(MSG_USE_J_BASE+%#-1), \"%s\"" /usr/src/openwatcom-1.9/bld/wv/h/usage.sp usagej.rc

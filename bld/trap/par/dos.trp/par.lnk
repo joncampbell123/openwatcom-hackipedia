@@ -1,0 +1,13 @@
+debug dwarf option symfile
+op map name par.trp
+sys dos
+op dosseg
+file dosstrt.obj
+file mxutil.obj
+file remote.obj
+file packet.obj
+file parlink.obj
+file pardos.obj
+file dosnoth.obj
+library dbgstr.lib
+

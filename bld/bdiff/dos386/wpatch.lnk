@@ -1,0 +1,10 @@
+debug dwarf option symfile sys dos4g  name wpatch.exe op map
+lib /usr/src/openwatcom-1.9/bld/sdk/rc/wres/small386/ms_r/wres.lib
+file dopatchp.obj
+file msg.obj
+file myio.obj
+file oldfile.obj
+file wpatchio.obj
+file wpatch.obj
+file bdiffmem.obj
+file bpatch.obj

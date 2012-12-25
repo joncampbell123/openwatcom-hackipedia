@@ -1,0 +1,15 @@
+debug dwarf option symfile
+op map name tcpserv.exe
+sys rdos libpath /usr/src/openwatcom-1.9/bld/clib/library/rdos.386/mf_r
+file mxutil.obj
+file serv.obj
+file rdostrio.obj
+file servacc.obj
+file servcmd.obj
+file servname.obj
+file trpsupp.obj
+file trpld.obj
+file rdosnoth.obj
+file packet.obj
+file tcplink.obj
+

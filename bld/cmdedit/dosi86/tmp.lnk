@@ -1,0 +1,14 @@
+debug all system dos name cmdedit option dosseg lib clibs
+op map,verbose,symfile=cmdedit.sym
+file dosstart.obj
+file cmdalias.obj
+file cmddata.obj
+file cmddir.obj
+file cmdedit.obj
+file cmdfile.obj
+file cmdio.obj
+file cmdmain.obj
+file cmdsave.obj
+file cmdscrn.obj
+file cmdstub.obj
+file cmdutil.obj

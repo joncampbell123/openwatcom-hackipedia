@@ -1,0 +1,728 @@
+#include <stddef.h>
+/* file created by DISBUILD.C */
+
+const unsigned char MIPSMaxInsName = 9;
+
+
+const unsigned char DisStringTable[] = {
+/*0000*/ 128,137,'s','y','n','c',' ',' ',' ',' ',' ',132,134,135,'b','g',
+/*0010*/ 'e','z','a',130,'l',130,'l',132,134,135,'b','l','t','z','a','l',
+/*0020*/ 'l',135,'s','y',130,'s','c','a','l','l',135,'f','l','o',130,'o',
+/*0030*/ 'r','.','l',135,'f','l','o','o','r','.','w',135,'r','o','u','n',
+/*0040*/ 'd','.','l',135,'r','o','u','n','d','.','w',135,'t','r','u','n',
+/*0050*/ 132,'c','.','l',135,'t','r','u','n','c','.','w',132,133,134,'d',
+/*0060*/ 131,132,133,'a','d','d','i','u',133,134,'d',131,132,133,'m','u',
+/*0070*/ 'l','t','u',132,134,'d',131,'s','l','l','3','2',132,134,'d',131,
+/*0080*/ 's',130,'r',130,'a','3','2',132,134,'d',131,'s','r','l','3','2',
+/*0090*/ 133,134,'c','.','n','g','l','e',134,'c','e','i','l','.','l',134,
+/*00a0*/ 'c','e','i','l','.','w',132,133,'b','c','0','f','l',132,133,'b',
+/*00b0*/ 'c','0','t','l',133,'b','g','e','z','l',132,133,'b','g','t','z',
+/*00c0*/ 'l',132,133,'b','l','e','z','l',133,'b','l','t','z','l',133,'b',
+/*00d0*/ 'r','e','a','k',133,'c','a','c','h','e',133,'d',132,'a','d','d',
+/*00e0*/ 'u',132,133,'d',131,132,'d','i','v','u',133,'d',132,'m','f','c',
+/*00f0*/ '0',133,'d',132,'m','t','c','0',133,'d',132,'s','l','l','v',133,
+/*0100*/ 'd',132,'s','r','a','v',133,'d',132,'s','r','l','v',132,133,'d',
+/*0110*/ 131,132,'s','u','b','u',131,132,133,'s','l','t','i','u',131,132,
+/*0120*/ 133,'t','g','e','i','u',133,'t','l','b','w','i',133,'t','l','b',
+/*0130*/ 'w','r',131,132,133,'t','l','t','i','u',132,133,'b','c','1','f',
+/*0140*/ 'l',132,133,'b','c','1','t','l',133,'c','.','u','e','q',133,'c',
+/*0150*/ '.','o','l','t',133,'c','.','u','l','t',133,'c','.','o','l','e',
+/*0160*/ 133,'c','.','u','l','e',133,'c','.','s','e','q',133,'c','.','n',
+/*0170*/ 'g','e',133,'c','.','n','g','t',133,'c','v','t','.','d',133,'c',
+/*0180*/ 'v','t','.','l',133,'c','v','t','.','s',133,'c','v','t','.','w',
+/*0190*/ 133,'d',132,'m','f','c','1',133,'d',132,'m','t','c','1',133,'$',
+/*01a0*/ 132,'z','e','r','o',132,'?','?','?','?',131,132,'a','n','d','i',
+/*01b0*/ 131,132,'b','e','q','l',131,132,'b','n','e','l',132,'e','r','e',
+/*01c0*/ 't',129,131,132,'j','a','l','r',130,132,'l','d','c','1',130,132,
+/*01d0*/ 'l','w','c','1',132,'m','f','h','i',132,'m','f','l','o',132,'m',
+/*01e0*/ 't','h','i',132,'m','t','l','o',130,132,'s','d','c','1',130,132,
+/*01f0*/ 's','w','c','1',132,'s','l','t','u',131,132,'t','e','q','i',132,
+/*0200*/ 't','g','e','u',132,'t','l','b','p',132,'t','l','b','r',132,'t',
+/*0210*/ 'l','t','u',131,132,'t','n','e','i',131,132,'x',131,'o','r','i',
+/*0220*/ 132,'c','.','u','n',132,'c','.','e','q',132,'c','.','s','f',132,
+/*0230*/ 'c','.','l','e',132,'c','f','c','1',132,'c','t','c','1',132,'s',
+/*0240*/ 'q','r','t',131,132,'$',130,131,'f','1','0',132,'$',131,'f','1',
+/*0250*/ '1',132,'$',131,'f','1','2',132,'$',131,'f','1','3',132,'$',131,
+/*0260*/ 'f','1','4',132,'$',131,'f','1','5',132,'$',131,'f','1','6',132,
+/*0270*/ '$',131,'f','1','7',132,'$',131,'f','1','8',132,'$',131,'f','1',
+/*0280*/ '9',131,132,'$',130,131,'f','2','0',132,'$',131,'f','2','1',132,
+/*0290*/ '$',131,'f','2','2',132,'$',131,'f','2','3',132,'$',131,'f','2',
+/*02a0*/ '4',132,'$',131,'f','2','5',132,'$',131,'f','2','6',132,'$',131,
+/*02b0*/ 'f','2','7',132,'$',131,'f','2','8',132,'$',131,'f','2','9',131,
+/*02c0*/ 132,'$',130,131,'f','3','0',132,'$',131,'f','3','1',131,'l','b',
+/*02d0*/ 'u',131,'l','d',131,'l',131,'l','d','r',130,131,'l','h','u',131,
+/*02e0*/ 'l','w','l',131,'l','w','r',131,'l','w','u',131,'l','u','i',131,
+/*02f0*/ 'n','o','r',131,'s','c','d',131,'s','d','l',131,'s','d','r',131,
+/*0300*/ 's','w','l',131,'s','w','r',131,'r','f','e',131,'a','b','s',131,
+/*0310*/ 'c','.','f',131,'m','o','v',131,'n','e','g',130,131,'$','1','0',
+/*0320*/ 131,'$','1','1',131,'$','1','2',131,'$','1','3',131,'$','1','4',
+/*0330*/ 131,'$','1','5',131,'$','1','6',131,'$','1','7',131,'$','1','8',
+/*0340*/ 131,'$','1','9',130,131,'$','2','0',131,'$','2','1',131,'$','2',
+/*0350*/ '2',131,'$','2','3',131,'$','2','4',131,'$','2','5',131,'$','2',
+/*0360*/ '6',131,'$','2','7',131,'$','2','8',131,'$','2','9',130,131,'$',
+/*0370*/ '3','0',131,'$','3','1',131,'$',130,'f','0',131,'$',130,'f','4',
+/*0380*/ 131,'$',130,'f','5',131,'$',130,'f','6',131,'$',130,'f','7',131,
+/*0390*/ '$',130,'f','8',131,'$',130,'f','9',131,'$',130,'a','t',131,'$',
+/*03a0*/ 130,'v','0',131,'$',130,'v','1',131,'$',130,'a','0',131,'$',130,
+/*03b0*/ 'a','1',131,'$',130,'a','2',131,'$','a','3',131,'$',130,'t','0',
+/*03c0*/ 131,'$',130,'t','1',131,'$',130,'t','2',131,'$',130,'t','3',131,
+/*03d0*/ '$',130,'t','4',131,'$',130,'t','5',131,'$',130,'t','6',131,'$',
+/*03e0*/ 130,'t','7',131,'$',130,'s','0',131,'$',130,'s','1',131,'$',130,
+/*03f0*/ 's','2',131,'$',130,'s','3',131,'$',130,'s','4',131,'$',130,'s',
+/*0400*/ '5',131,'$',130,'s','6',131,'$',130,'s','7',131,'$',130,'t','8',
+/*0410*/ 131,'$',130,'t','9',131,'$',130,'k','0',131,'$',130,'k','1',131,
+/*0420*/ '$',130,'g','p',131,'$',130,'s','p',131,'$',130,'f','p',131,'$',
+/*0430*/ 'r','a',130,'j','r',130,'s','b',130,'s','h',130,'$','0',130,'$',
+/*0440*/ '4',130,'$','5',130,'$','6',130,'$','7',130,'$','8',130,'$','9',
+};
+
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2U( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranch2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSCode( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSCache( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSJType( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSJType( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSJump2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSJump1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSRegD( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSRegD( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSRegS( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSRegS( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMulDiv( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2U( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUMemory( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSShift( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSCode( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSNull( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSTrap1( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSImmed2U( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSBranchCop( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUCmp( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFGMove( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFGMove( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSReg2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFGMove( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFGMove( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp3( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+extern dis_handler_return MIPSFPUOp2( dis_handle *, void *, dis_dec_ins * );
+
+const dis_ins_descript DisInstructionTable[] = {
+    { 0x01a5, 0x00000001, 0x00000000, NULL },
+
+    /* Machine:MIPS */
+
+    /* Table_1 */
+
+    { 0x0060, 0x00000020, 0xfc0007ff, MIPSReg3 }, /* ADD */
+    { 0x0061, 0x20000000, 0xfc000000, MIPSImmed2 }, /* ADDI */
+    { 0x0062, 0x24000000, 0xfc000000, MIPSImmed2 }, /* ADDIU */
+    { 0x00dc, 0x00000021, 0xfc0007ff, MIPSReg3 }, /* ADDU */
+    { 0x01aa, 0x00000024, 0xfc0007ff, MIPSReg3 }, /* AND */
+    { 0x01ab, 0x30000000, 0xfc000000, MIPSImmed2U }, /* ANDI */
+    { 0x00a6, 0x41000000, 0xffff0000, MIPSBranchCop }, /* BC0F */
+    { 0x00a7, 0x41020000, 0xffff0000, MIPSBranchCop }, /* BC0FL */
+    { 0x00ad, 0x41010000, 0xffff0000, MIPSBranchCop }, /* BC0T */
+    { 0x00ae, 0x41030000, 0xffff0000, MIPSBranchCop }, /* BC0TL */
+    { 0x01b0, 0x10000000, 0xfc000000, MIPSBranch2 }, /* BEQ */
+    { 0x01b1, 0x50000000, 0xfc000000, MIPSBranch2 }, /* BEQL */
+    { 0x000b, 0x04010000, 0xfc1f0000, MIPSBranch1 }, /* BGEZ */
+    { 0x000c, 0x04110000, 0xfc1f0000, MIPSBranch1 }, /* BGEZAL */
+    { 0x000d, 0x04130000, 0xfc1f0000, MIPSBranch1 }, /* BGEZALL */
+    { 0x00b4, 0x04030000, 0xfc1f0000, MIPSBranch1 }, /* BGEZL */
+    { 0x00ba, 0x1c000000, 0xfc1f0000, MIPSBranch3 }, /* BGTZ */
+    { 0x00bb, 0x5c000000, 0xfc1f0000, MIPSBranch3 }, /* BGTZL */
+    { 0x00c1, 0x18000000, 0xfc1f0000, MIPSBranch3 }, /* BLEZ */
+    { 0x00c2, 0x58000000, 0xfc1f0000, MIPSBranch3 }, /* BLEZL */
+    { 0x0017, 0x04000000, 0xfc1f0000, MIPSBranch1 }, /* BLTZ */
+    { 0x0018, 0x04100000, 0xfc1f0000, MIPSBranch1 }, /* BLTZAL */
+    { 0x0019, 0x04120000, 0xfc1f0000, MIPSBranch1 }, /* BLTZALL */
+    { 0x00c8, 0x04020000, 0xfc1f0000, MIPSBranch1 }, /* BLTZL */
+    { 0x01b6, 0x14000000, 0xfc000000, MIPSBranch2 }, /* BNE */
+    { 0x01b7, 0x54000000, 0xfc000000, MIPSBranch2 }, /* BNEL */
+    { 0x00ce, 0x0000000d, 0xfc00003f, MIPSCode }, /* BREAK */
+    { 0x00d4, 0xbc000000, 0xfc000000, MIPSCache }, /* CACHE */
+    { 0x005c, 0x0000002c, 0xfc0007ff, MIPSReg3 }, /* DADD */
+    { 0x005d, 0x60000000, 0xfc000000, MIPSImmed2 }, /* DADDI */
+    { 0x005e, 0x64000000, 0xfc000000, MIPSImmed2 }, /* DADDIU */
+    { 0x00da, 0x0000002d, 0xfc0007ff, MIPSReg3 }, /* DADDU */
+    { 0x00e1, 0x0000001e, 0xfc00ffff, MIPSMulDiv }, /* DDIV */
+    { 0x00e2, 0x0000001f, 0xfc00ffff, MIPSMulDiv }, /* DDIVU */
+    { 0x00e4, 0x0000001a, 0xfc00ffff, MIPSMulDiv }, /* DIV */
+    { 0x00e5, 0x0000001b, 0xfc00ffff, MIPSMulDiv }, /* DIVU */
+    { 0x00ea, 0x40200000, 0xffe007ff, MIPSReg2 }, /* DMFC0 */
+    { 0x00f1, 0x40a00000, 0xffe007ff, MIPSReg2 }, /* DMTC0 */
+    { 0x0068, 0x0000001c, 0xfc00ffff, MIPSMulDiv }, /* DMULT */
+    { 0x0069, 0x0000001d, 0xfc00ffff, MIPSMulDiv }, /* DMULTU */
+    { 0x0073, 0x00000038, 0xffe0003f, MIPSShift }, /* DSLL */
+    { 0x00f8, 0x00000014, 0xfc0007ff, MIPSReg3 }, /* DSLLV */
+    { 0x0074, 0x0000003c, 0xffe0003f, MIPSShift }, /* DSLL32 */
+    { 0x007c, 0x0000003b, 0xffe0003f, MIPSShift }, /* DSRA */
+    { 0x00ff, 0x00000017, 0xfc0007ff, MIPSReg3 }, /* DSRAV */
+    { 0x007d, 0x0000003f, 0xffe0003f, MIPSShift }, /* DSRA32 */
+    { 0x0087, 0x0000003a, 0xffe0003f, MIPSShift }, /* DSRL */
+    { 0x0106, 0x00000016, 0xfc0007ff, MIPSReg3 }, /* DSRLV */
+    { 0x0088, 0x0000003e, 0xffe0003f, MIPSShift }, /* DSRL32 */
+    { 0x010d, 0x0000002e, 0xfc0007ff, MIPSReg3 }, /* DSUB */
+    { 0x010e, 0x0000002f, 0xfc0007ff, MIPSReg3 }, /* DSUBU */
+    { 0x01bc, 0x42000018, 0xffffffff, MIPSNull }, /* ERET */
+    { 0x01c1, 0x08000000, 0xfc000000, MIPSJType }, /* J */
+    { 0x01c2, 0x0c000000, 0xfc000000, MIPSJType }, /* JAL */
+    { 0x01c3, 0x00000009, 0xfc1f07ff, MIPSJump2 }, /* JALR */
+    { 0x0432, 0x00000008, 0xfc1fffff, MIPSJump1 }, /* JR */
+    { 0x0015, 0x80000000, 0xfc000000, MIPSMemory }, /* LB */
+    { 0x02cd, 0x90000000, 0xfc000000, MIPSMemory }, /* LBU */
+    { 0x01c8, 0xdc000000, 0xfc000000, MIPSMemory }, /* LD */
+    { 0x02d1, 0x68000000, 0xfc000000, MIPSMemory }, /* LDL */
+    { 0x02d6, 0x6c000000, 0xfc000000, MIPSMemory }, /* LDR */
+    { 0x02da, 0x84000000, 0xfc000000, MIPSMemory }, /* LH */
+    { 0x02db, 0x94000000, 0xfc000000, MIPSMemory }, /* LHU */
+    { 0x0013, 0xc0000000, 0xfc000000, MIPSMemory }, /* LL */
+    { 0x02d4, 0xd0000000, 0xfc000000, MIPSMemory }, /* LLD */
+    { 0x01ce, 0x8c000000, 0xfc000000, MIPSMemory }, /* LW */
+    { 0x02df, 0x88000000, 0xfc000000, MIPSMemory }, /* LWL */
+    { 0x02e3, 0x98000000, 0xfc000000, MIPSMemory }, /* LWR */
+    { 0x02e7, 0x9c000000, 0xfc000000, MIPSMemory }, /* LWU */
+    { 0x01c9, 0xd4000000, 0xfc000000, MIPSFPUMemory }, /* LDC1 */
+    { 0x01cf, 0xc4000000, 0xfc000000, MIPSFPUMemory }, /* LWC1 */
+    { 0x02eb, 0x3c000000, 0xffe00000, MIPSImmed1 }, /* LUI */
+    { 0x00ec, 0x40000000, 0xffe007ff, MIPSReg2 }, /* MFC0 */
+    { 0x01d4, 0x00000010, 0xffff07ff, MIPSRegD }, /* MFHI */
+    { 0x01d9, 0x00000012, 0xffff07ff, MIPSRegD }, /* MFLO */
+    { 0x00f3, 0x40800000, 0xffe007ff, MIPSReg2 }, /* MTC0 */
+    { 0x01de, 0x00000011, 0xfc1fffff, MIPSRegS }, /* MTHI */
+    { 0x01e3, 0x00000013, 0xfc1fffff, MIPSRegS }, /* MTLO */
+    { 0x006c, 0x00000018, 0xfc00ffff, MIPSMulDiv }, /* MULT */
+    { 0x006d, 0x00000019, 0xfc00ffff, MIPSMulDiv }, /* MULTU */
+    { 0x02ef, 0x00000027, 0xfc0007ff, MIPSReg3 }, /* NOR */
+    { 0x002e, 0x00000025, 0xfc0007ff, MIPSReg3 }, /* OR */
+    { 0x021c, 0x34000000, 0xfc000000, MIPSImmed2U }, /* ORI */
+    { 0x0435, 0xa0000000, 0xfc000000, MIPSMemory }, /* SB */
+    { 0x0024, 0xe0000000, 0xfc000000, MIPSMemory }, /* SC */
+    { 0x02f3, 0xf0000000, 0xfc000000, MIPSMemory }, /* SCD */
+    { 0x01e8, 0xfc000000, 0xfc000000, MIPSMemory }, /* SD */
+    { 0x02f7, 0xb0000000, 0xfc000000, MIPSMemory }, /* SDL */
+    { 0x02fb, 0xb4000000, 0xfc000000, MIPSMemory }, /* SDR */
+    { 0x0438, 0xa4000000, 0xfc000000, MIPSMemory }, /* SH */
+    { 0x01ee, 0xac000000, 0xfc000000, MIPSMemory }, /* SW */
+    { 0x02ff, 0xa8000000, 0xfc000000, MIPSMemory }, /* SWL */
+    { 0x0303, 0xb8000000, 0xfc000000, MIPSMemory }, /* SWR */
+    { 0x01e9, 0xf4000000, 0xfc000000, MIPSFPUMemory }, /* SDC1 */
+    { 0x01ef, 0xe4000000, 0xfc000000, MIPSFPUMemory }, /* SWC1 */
+    { 0x0307, 0x42000010, 0xffffffff, MIPSNull }, /* RFE */
+    { 0x0076, 0x00000000, 0xffe0003f, MIPSShift }, /* SLL */
+    { 0x00fa, 0x00000004, 0xfc0007ff, MIPSReg3 }, /* SLLV */
+    { 0x0116, 0x0000002a, 0xfc0007ff, MIPSReg3 }, /* SLT */
+    { 0x0117, 0x28000000, 0xfc000000, MIPSImmed2 }, /* SLTI */
+    { 0x0118, 0x2c000000, 0xfc000000, MIPSImmed2 }, /* SLTIU */
+    { 0x01f4, 0x0000002b, 0xfc0007ff, MIPSReg3 }, /* SLTU */
+    { 0x007f, 0x00000003, 0xffe0003f, MIPSShift }, /* SRA */
+    { 0x0101, 0x00000007, 0xfc0007ff, MIPSReg3 }, /* SRAV */
+    { 0x008a, 0x00000002, 0xffe0003f, MIPSShift }, /* SRL */
+    { 0x0108, 0x00000006, 0xfc0007ff, MIPSReg3 }, /* SRLV */
+    { 0x0110, 0x00000022, 0xfc0007ff, MIPSReg3 }, /* SUB */
+    { 0x0111, 0x00000023, 0xfc0007ff, MIPSReg3 }, /* SUBU */
+    { 0x0001, 0x0000000f, 0xffffffff, MIPSNull }, /* SYNC */
+    { 0x0021, 0x0000000c, 0xfc00003f, MIPSCode }, /* SYSCALL */
+    { 0x01f9, 0x00000034, 0xfc00003f, MIPSTrap2 }, /* TEQ */
+    { 0x01fa, 0x040c0000, 0xfc1f0000, MIPSTrap1 }, /* TEQI */
+    { 0x011e, 0x00000030, 0xfc00003f, MIPSTrap2 }, /* TGE */
+    { 0x011f, 0x04080000, 0xfc1f0000, MIPSTrap1 }, /* TGEI */
+    { 0x0120, 0x04090000, 0xfc1f0000, MIPSTrap1 }, /* TGEIU */
+    { 0x01ff, 0x00000031, 0xfc00003f, MIPSTrap2 }, /* TGEU */
+    { 0x0204, 0x42000008, 0xffffffff, MIPSNull }, /* TLBP */
+    { 0x0209, 0x42000001, 0xffffffff, MIPSNull }, /* TLBR */
+    { 0x0126, 0x42000002, 0xffffffff, MIPSNull }, /* TLBWI */
+    { 0x012c, 0x42000006, 0xffffffff, MIPSNull }, /* TLBWR */
+    { 0x0132, 0x00000032, 0xfc00003f, MIPSTrap2 }, /* TLT */
+    { 0x0133, 0x040a0000, 0xfc1f0000, MIPSTrap1 }, /* TLTI */
+    { 0x0134, 0x040b0000, 0xfc1f0000, MIPSTrap1 }, /* TLTIU */
+    { 0x020e, 0x00000033, 0xfc00003f, MIPSTrap2 }, /* TLTU */
+    { 0x0213, 0x00000036, 0xfc00003f, MIPSTrap2 }, /* TNE */
+    { 0x0214, 0x040e0000, 0xfc1f0000, MIPSTrap1 }, /* TNEI */
+    { 0x0219, 0x00000026, 0xfc0007ff, MIPSReg3 }, /* XOR */
+    { 0x021a, 0x38000000, 0xfc000000, MIPSImmed2U }, /* XORI */
+    { 0x030b, 0x46000005, 0xfe00003f, MIPSFPUOp2 }, /* ABS_f */
+    { 0x0060, 0x46000000, 0xfe00003f, MIPSFPUOp3 }, /* ADD_f */
+    { 0x013a, 0x45000000, 0xffff0000, MIPSBranchCop }, /* BC1F */
+    { 0x013b, 0x45020000, 0xffff0000, MIPSBranchCop }, /* BC1FL */
+    { 0x0141, 0x45010000, 0xffff0000, MIPSBranchCop }, /* BC1T */
+    { 0x0142, 0x45030000, 0xffff0000, MIPSBranchCop }, /* BC1TL */
+    { 0x030f, 0x46000030, 0xfe00003f, MIPSFPUCmp }, /* C_F_f */
+    { 0x0220, 0x46000031, 0xfe00003f, MIPSFPUCmp }, /* C_UN_f */
+    { 0x0225, 0x46000032, 0xfe00003f, MIPSFPUCmp }, /* C_EQ_f */
+    { 0x0148, 0x46000033, 0xfe00003f, MIPSFPUCmp }, /* C_UEQ_f */
+    { 0x014e, 0x46000034, 0xfe00003f, MIPSFPUCmp }, /* C_OLT_f */
+    { 0x0154, 0x46000035, 0xfe00003f, MIPSFPUCmp }, /* C_ULT_f */
+    { 0x015a, 0x46000036, 0xfe00003f, MIPSFPUCmp }, /* C_OLE_f */
+    { 0x0160, 0x46000037, 0xfe00003f, MIPSFPUCmp }, /* C_ULE_f */
+    { 0x022a, 0x46000038, 0xfe00003f, MIPSFPUCmp }, /* C_SF_f */
+    { 0x0091, 0x46000039, 0xfe00003f, MIPSFPUCmp }, /* C_NGLE_f */
+    { 0x0166, 0x4600003a, 0xfe00003f, MIPSFPUCmp }, /* C_SEQ_f */
+    { 0x0090, 0x4600003b, 0xfe00003f, MIPSFPUCmp }, /* C_NGL_f */
+    { 0x022f, 0x4600003c, 0xfe00003f, MIPSFPUCmp }, /* C_LE_f */
+    { 0x0050, 0x4600003d, 0xfe00003f, MIPSFPUCmp }, /* C_LT_f */
+    { 0x016c, 0x4600003e, 0xfe00003f, MIPSFPUCmp }, /* C_NGE_f */
+    { 0x0172, 0x4600003f, 0xfe00003f, MIPSFPUCmp }, /* C_NGT_f */
+    { 0x0098, 0x4600000a, 0xfe00003f, MIPSFPUOp3 }, /* CEIL_L_f */
+    { 0x009f, 0x4600000e, 0xfe00003f, MIPSFPUOp3 }, /* CEIL_W_f */
+    { 0x0234, 0x44400000, 0xffe007ff, MIPSFGMove }, /* CFC1 */
+    { 0x0239, 0x44c00000, 0xffe007ff, MIPSFGMove }, /* CTC1 */
+    { 0x0178, 0x46000021, 0xfe00003f, MIPSFPUOp2 }, /* CVT_D_f */
+    { 0x017e, 0x46000025, 0xfe00003f, MIPSFPUOp2 }, /* CVT_L_f */
+    { 0x0184, 0x46000020, 0xfe00003f, MIPSFPUOp2 }, /* CVT_S_f */
+    { 0x018a, 0x46000024, 0xfe00003f, MIPSFPUOp2 }, /* CVT_W_f */
+    { 0x00e4, 0x46000003, 0xfe00003f, MIPSFPUOp3 }, /* DIV_f */
+    { 0x0190, 0x44200000, 0xffe007ff, MIPSReg2 }, /* DMFC1 */
+    { 0x0197, 0x44a00000, 0xffe007ff, MIPSReg2 }, /* DMTC1 */
+    { 0x002a, 0x4600000b, 0xfe00003f, MIPSFPUOp2 }, /* FLOOR_L_f */
+    { 0x0033, 0x4600000f, 0xfe00003f, MIPSFPUOp2 }, /* FLOOR_W_f */
+    { 0x0192, 0x44000000, 0xffe007ff, MIPSFGMove }, /* MFC1 */
+    { 0x0313, 0x46000006, 0xfe00003f, MIPSFPUOp2 }, /* MOV_f */
+    { 0x0199, 0x44800000, 0xffe007ff, MIPSFGMove }, /* MTC1 */
+    { 0x006b, 0x46000002, 0xfe00003f, MIPSFPUOp3 }, /* MUL_f */
+    { 0x0317, 0x46000007, 0xfe00003f, MIPSFPUOp2 }, /* NEG_f */
+    { 0x003b, 0x46000008, 0xfe00003f, MIPSFPUOp2 }, /* ROUND_L_f */
+    { 0x0043, 0x4600000c, 0xfe00003f, MIPSFPUOp2 }, /* ROUND_W_f */
+    { 0x023e, 0x46000004, 0xfe00003f, MIPSFPUOp2 }, /* SQRT_f */
+    { 0x0110, 0x46000001, 0xfe00003f, MIPSFPUOp3 }, /* SUB_f */
+    { 0x004b, 0x46000009, 0xfe00003f, MIPSFPUOp2 }, /* TRUNC_L_f */
+    { 0x0054, 0x4600000d, 0xfe00003f, MIPSFPUOp2 }, /* TRUNC_W_f */
+
+};
+
+const unsigned short DisRegisterTable[] = {
+    0x0000,
+    0x0378,
+    0x0246,
+    0x0284,
+    0x02c2,
+    0x037d,
+    0x0382,
+    0x0387,
+    0x038c,
+    0x0391,
+    0x0396,
+    0x0247,
+    0x024d,
+    0x0253,
+    0x0259,
+    0x025f,
+    0x0265,
+    0x026b,
+    0x0271,
+    0x0277,
+    0x027d,
+    0x0285,
+    0x028b,
+    0x0291,
+    0x0297,
+    0x029d,
+    0x02a3,
+    0x02a9,
+    0x02af,
+    0x02b5,
+    0x02bb,
+    0x02c3,
+    0x02c9,
+    0x043b,
+    0x031b,
+    0x0344,
+    0x036d,
+    0x043e,
+    0x0441,
+    0x0444,
+    0x0447,
+    0x044a,
+    0x044d,
+    0x031c,
+    0x0320,
+    0x0324,
+    0x0328,
+    0x032c,
+    0x0330,
+    0x0334,
+    0x0338,
+    0x033c,
+    0x0340,
+    0x0345,
+    0x0349,
+    0x034d,
+    0x0351,
+    0x0355,
+    0x0359,
+    0x035d,
+    0x0361,
+    0x0365,
+    0x0369,
+    0x036e,
+    0x0372,
+    0x01a0,
+    0x039b,
+    0x03a0,
+    0x03a5,
+    0x03aa,
+    0x03af,
+    0x03b4,
+    0x0083,
+    0x03bd,
+    0x03c2,
+    0x03c7,
+    0x03cc,
+    0x03d1,
+    0x03d6,
+    0x03db,
+    0x03e0,
+    0x03e5,
+    0x03ea,
+    0x03ef,
+    0x03f4,
+    0x03f9,
+    0x03fe,
+    0x0403,
+    0x0408,
+    0x040d,
+    0x0412,
+    0x0417,
+    0x041c,
+    0x0421,
+    0x0426,
+    0x042b,
+    0x0081,
+    0x0376,
+    0x0243,
+    0x0281,
+    0x02bf,
+    0x037b,
+    0x0380,
+    0x0385,
+    0x038a,
+    0x038f,
+    0x0394,
+    0x0244,
+    0x024b,
+    0x0251,
+    0x0257,
+    0x025d,
+    0x0263,
+    0x0269,
+    0x026f,
+    0x0275,
+    0x027b,
+    0x0282,
+    0x0289,
+    0x028f,
+    0x0295,
+    0x029b,
+    0x02a1,
+    0x02a7,
+    0x02ad,
+    0x02b3,
+    0x02b9,
+    0x02c0,
+    0x02c7,
+    0x043b,
+    0x031b,
+    0x0344,
+    0x036d,
+    0x043e,
+    0x0441,
+    0x0444,
+    0x0447,
+    0x044a,
+    0x044d,
+    0x031c,
+    0x0320,
+    0x0324,
+    0x0328,
+    0x032c,
+    0x0330,
+    0x0334,
+    0x0338,
+    0x033c,
+    0x0340,
+    0x0345,
+    0x0349,
+    0x034d,
+    0x0351,
+    0x0355,
+    0x0359,
+    0x035d,
+    0x0361,
+    0x0365,
+    0x0369,
+    0x036e,
+    0x0372,
+    0x019e,
+    0x0399,
+    0x039e,
+    0x03a3,
+    0x03a8,
+    0x03ad,
+    0x03b2,
+    0x03b7,
+    0x03bb,
+    0x03c0,
+    0x03c5,
+    0x03ca,
+    0x03cf,
+    0x03d4,
+    0x03d9,
+    0x03de,
+    0x03e3,
+    0x03e8,
+    0x03ed,
+    0x03f2,
+    0x03f7,
+    0x03fc,
+    0x0401,
+    0x0406,
+    0x040b,
+    0x0410,
+    0x0415,
+    0x041a,
+    0x041f,
+    0x0424,
+    0x0429,
+    0x042e,
+};
+
+const unsigned short DisRefTypeTable[] = {
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+    0x0000,
+};
+
+const dis_range MIPSRangeTable[] = {
+
+    /* Table_1 */
+
+    { 0x3f, 0x1a, 0x0000 },
+    { 0x3f, 0x00, 0x0040 },
+    { 0x1f, 0x10, 0x0080 },
+    { 0x01, 0x15, 0x00a0 },
+    { 0x7f, 0x19, 0x00a2 },
+    { 0xff, 0x17, 0x0122 },
+    { 0x01, 0x17, 0x0222 },
+    { 0xff, 0x15, 0x0224 },
+    { 0x3f, 0x00, 0x0324 },
+    { 0x03, 0x10, 0x0364 },
+    { 0x1f, 0x00, 0x0368 },
+    { 0x03, 0x10, 0x0388 },
+};
+
+const int MIPSRangeTablePos[] = {
+    0,
+    -1
+};
+
+const dis_selector DisSelectorTable[] = {
+/*0000*/  -1,  -2,  53,  54,  11,  25,  19,  17,   2,   3, 100, 101,   6,  83, 128,  72,
+/*0010*/  -3,  -4,   0,   0,  12,  26,  20,  18,  30,  31,  60,  61,   0,   0,   0,   0,
+/*0020*/  57,  62,  67,  66,  58,  63,  68,  69,  84,  90,  92,  91,  88,  89,  93,  28,
+/*0030*/  64,  71,   0,   0,  65,  70,   0,  59,  85,  95,   0,   0,  86,  94,   0,  87,
+/*0040*/  97,   0, 105, 103,  98,   0, 106, 104,  56,  55,   0,   0, 110,  27,   0, 109,
+/*0050*/  74,  77,  75,  78,  42,   0,  48,  45,  79,  80,  35,  36,  39,  40,  33,  34,
+/*0060*/   1,   4, 107, 108,   5,  82, 127,  81,   0,   0,  99, 102,  29,  32,  50,  51,
+/*0070*/ 113, 116, 121, 124, 111,   0, 125,   0,  41,   0,  47,  44,  43,   0,  49,  46,
+/*0080*/  21,  13,  24,  16,   0,   0,   0,   0, 114, 115, 122, 123, 112,   0, 126,   0,
+/*0090*/  22,  14,  23,  15,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00a0*/  -5,  -6,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00b0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00c0*/   0,   0,   0,   0,  -7,  -8,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00d0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00e0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*00f0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0100*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0110*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0120*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0130*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0140*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0150*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0160*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0170*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0180*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0190*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01a0*/   0,   0,  73,  76,  -9,   0, -10,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01b0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01c0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01d0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01e0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*01f0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0200*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0210*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0220*/   0,   0,  37,  38,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0230*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0240*/   0,   0,   0,   0, 164, 160, 153,   0, 166, 161, 154,   0, -11,   0,   0,   0,
+/*0250*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0260*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0270*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0280*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0290*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*02a0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*02b0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*02c0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*02d0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*02e0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*02f0*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0300*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0310*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0320*/   0,   0,   0,   0, 130, 172, 167, 159, 171, 129, 165, 168, 169, 173, 151, 162,
+/*0330*/ 170, 174, 152, 163,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+/*0340*/   0,   0,   0,   0, 157, 155,   0,   0, 158, 156,   0,   0,   0,   0,   0,   0,
+/*0350*/   0,   0,   0,   0, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146,
+/*0360*/ 147, 148, 149, 150,   7,   9,   8,  10,   0, 118, 119,   0,   0,   0, 120,   0,
+/*0370*/ 117,   0,   0,   0,   0,   0,   0,   0,  96,   0,   0,   0,   0,   0,   0,   0,
+/*0380*/  52,   0,   0,   0,   0,   0,   0,   0, 131, 133, 132, 134,};

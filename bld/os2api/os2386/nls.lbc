@@ -1,0 +1,8 @@
+++'DOS16CASEMAP'.'NLS'.'1'
+++'DOS16GETCOLLATE'.'NLS'.'2'
+++'DOS16GETCTRYINFO'.'NLS'.'3'
+++'DOS16GETDBCSEV'.'NLS'.'4'
+++'DosQueryCtryInfo'.'NLS'.'5'
+++'DosQueryDBCSEnv'.'NLS'.'6'
+++'DosMapCase'.'NLS'.'7'
+++'DosQueryCollate'.'NLS'.'8'

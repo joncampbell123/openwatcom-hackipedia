@@ -1,0 +1,21 @@
+debug dwarf option symfile
+op map name cwhelp.exe
+sys causeway op stub=/usr/src/openwatcom-1.9/bld/causeway/cw32/dosi86/cwdstub.exe
+file mxutil.obj
+file autolock.obj
+file cwacc.obj
+file cwintr.obj
+file dosxlink.obj
+file dosxserv.obj
+file dosxtrio.obj
+file dosxstub.obj
+file dosxrmod.obj
+file core.obj
+file supp.obj
+file packet.obj
+file dosexc.obj
+file dosredir.obj
+file x86cpu.obj
+file misc7386.obj
+library dbgstr.lib
+

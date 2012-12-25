@@ -1,0 +1,36 @@
+typedef struct opt_string OPT_STRING;
+struct opt_string {
+    OPT_STRING *next;
+    char data[1];
+};
+typedef struct opt_number OPT_NUMBER;
+struct opt_number {
+    OPT_NUMBER *next;
+    unsigned number;
+};
+typedef struct opt_storage OPT_STORAGE;
+struct opt_storage {
+    unsigned     timestamp;
+    OPT_STRING   *passwopts_value;
+    OPT_STRING   *l_value;
+    OPT_STRING   *i_value;
+    OPT_STRING   *fo_value;
+    OPT_STRING   *d_value;
+    OPT_STRING   *c_value;
+    unsigned     x : 1;
+    unsigned     v : 1;
+    unsigned     nowwarn : 1;
+    unsigned     nowopts : 1;
+    unsigned     nologo : 1;
+    unsigned     noinvoke : 1;
+    unsigned     passwopts : 1;
+    unsigned     showwopts : 1;
+    unsigned     r : 1;
+    unsigned     l : 1;
+    unsigned     i : 1;
+    unsigned     fo : 1;
+    unsigned     help : 1;
+    unsigned     gotlongoption : 1;
+    unsigned     d : 1;
+    unsigned     c : 1;
+};

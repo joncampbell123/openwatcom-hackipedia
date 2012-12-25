@@ -1,0 +1,450 @@
+
+
+
+        
+        pick( STR_WARNING )
+
+        
+        pick( STR_ERROR )
+
+        
+        pick( STR_FATAL_ERROR )
+
+        
+        pick( STR_END_OF_FILE )
+
+        
+        pick( STR_APP_NAME )
+
+        
+        pick( ERR_CANT_OPEN_FILE )
+
+        
+        pick( ERR_RENAMEING_TMP_FILE )
+
+        
+        pick( ERR_NOT_ICON_FILE )
+
+        
+        pick( ERR_NOT_CURSOR_FILE )
+
+        
+        pick( ERR_NOT_BITMAP_FILE )
+
+        
+        pick( ERR_NONNT_RES_TO_NT_EXE )
+
+        
+        pick( ERR_NONWIN_RES_TO_WIN_EXE )
+
+        
+        pick( ERR_PE_HEADER_SIZE_CHANGE )
+
+        
+        pick( ERR_OLD_RESOURCE_OBJECT )
+
+        
+        pick( ERR_READING_EXE )
+
+        
+        pick( ERR_UNEXPECTED_EOF )
+
+        
+        pick( ERR_WRITTING_FILE )
+
+        
+        pick( ERR_READING_ICON )
+
+        
+        pick( ERR_READING_CURSOR )
+
+        
+        pick( ERR_READING_BITMAP )
+
+        
+        pick( ERR_READING_FONT )
+
+        
+        pick( ERR_READING_DATA )
+
+        
+        pick( ERR_READING_RES )
+
+        
+        pick( ERR_READING_TMP )
+
+        
+        pick( ERR_WRITTING_TMP )
+
+        
+        pick( ERR_OPENING_TMP )
+
+        
+        pick( ERR_READING_FILE )
+
+        
+        pick( ERR_BAD_RES_VER )
+
+        
+        pick( ERR_INVALID_RES )
+
+        
+        pick( ERR_INTERNAL )
+
+        
+        pick( ERR_WRITTING_RES_FILE )
+
+        
+        pick( ERR_CLOSING_FILE )
+
+        
+        pick( ERR_CLOSING_TMP )
+
+        
+        pick( ERR_NO_MSG )
+
+        
+        pick( ERR_NO_RCINCLUDES )
+
+        
+        pick( ERR_UNKNOWN_CHAR )
+
+        
+        pick( ERR_RUNAWAY_STRING )
+
+        
+        pick( ERR_EXPECTING_CHAR )
+
+        
+        pick( ERR_TOO_MANY_ARGS )
+
+        
+        pick( ERR_FILENAME_NEEDED )
+
+        
+        pick( ERR_UNKNOWN_OPTION )
+
+        
+        pick( ERR_NO_OPT_SPECIFIED )
+
+        
+        pick( ERR_OUT_OF_MEMORY )
+
+        
+        pick( ERR_ACCEL_NO_TYPE )
+
+        
+        pick( ERR_ACCEL_KEYWORD_IGNORED )
+
+        
+        pick( ERR_DUPLICATE_RESOURCE )
+
+        
+        pick( ERR_PARSER_INTERNAL )
+
+
+        
+        pick( ERR_SYNTAX_INT )
+
+        
+        pick( ERR_SYNTAX_STR )
+
+        
+        pick( ERR_DUPLICATE_STRING_CONST )
+
+        
+        pick( ERR_RAW_DATA_TOO_BIG )
+
+        
+        pick( ERR_RAW_DATA_TOO_SMALL )
+
+        
+        pick( ERR_FONT_NAME )
+
+        
+        pick( ERR_RCINCLUDE_TOO_DEEP )
+
+        
+        pick( ERR_INVALID_CPP )
+
+        
+        pick( ERR_INVALID_CPP_LINE )
+
+        
+        pick( ERR_UNKNOWN_MULT_OPTION )
+
+        
+        pick( ERR_NOT_VALID_EXE )
+
+        
+        pick( ERR_NO_GANGLOAD )
+
+        
+        pick( ERR_CANT_FIND_FILE )
+
+        
+        pick( ERR_UNKNOWN_TARGET_OS )
+
+        
+        pick( ERR_TEXT_FROM_CPP )
+
+        
+        pick( ERR_NT_KEYWORD )
+
+        
+        pick( ERR_UNSUPPORTED )
+
+
+        
+        pick( ERR_RCSTR_NOT_FOUND )
+
+        
+        pick( ERR_CANT_FIND_CHAR_FILE )
+
+        
+        pick( ERR_CANT_OPEN_CHAR_FILE )
+
+        
+        pick( ERR_READING_CHAR_FILE )
+
+        
+        pick( ERR_BAD_CHAR_FILE )
+
+        
+        pick( ERR_WRONG_CHAR_FILE_VER )
+
+        
+        pick( ERR_OPT_NOT_VALID_FOR_NT )
+
+        
+        pick( ERR_LSTRING_IGNORED_FOR_WINDOWS )
+
+        
+        pick( ERR_OPT_NOT_VALID_TOGETHER )
+
+        
+        pick( ERR_ENV_VAR_NOT_FOUND )
+
+        
+        pick( ERR_OPT_NOT_VALID_FOR_WINDOWS )
+
+       
+       pick( ERR_MISSING_MENUITEM_ID )
+
+       
+       pick( ERR_MENUEX_POPUP_OPTIONS )
+
+       
+       pick( ERR_MENU_POPUP_OPTIONS )
+
+       
+       pick( ERR_MENUEX_NORMAL_OPTIONS )
+
+       
+       pick( ERR_MENU_NORMAL_OPTIONS )
+
+       
+       pick( ERR_DIALOG_HELPID )
+
+       
+       pick( ERR_FONT_ITALIC )
+
+       
+       pick( ERR_FONT_WEIGHT )
+
+       
+       pick( ERR_DIALOG_CONTROL_HELPID )
+
+       
+       pick( ERR_DATA_ELEMENTS )
+
+       
+       pick( ERR_BAD_RES_ID )
+
+        
+        pick( ERR_STOP_REQUESTED )
+
+        
+        pick( ERR_TYPE_GT_7FFF )
+
+        
+        pick( ERR_NAME_GT_7FFF )
+
+        
+        pick( ERR_UNMATCHED_QUOTE_ON_CMD_LINE )
+
+        
+        pick( ERR_DUPLICATE_RESOURCE_IN_FILE )
+
+        
+        pick( ERR_DUPLICATE_NUM_RESOURCE_IN_FILE )
+
+        
+        pick( ERR_FR_NOT_VALID_FOR_WIN )
+
+        
+        pick( ERR_RES_OS_MISMATCH )
+
+        
+        pick( ERR_DUPLICATE_RES )
+
+        
+        pick( ERR_DUPLICATE_RES_FILE )
+
+        
+        pick( ERR_DUPLICATE_STR_TABLE )
+
+        
+        pick( ERR_DUPLICATE_STR_TABLE_FILE )
+
+        
+        pick( ERR_RCVARIABLE_RECURSIVE )
+
+        
+        pick( ERR_NONOS2_RES_TO_OS2_EXE )
+
+       
+       pick( ERR_BAD_RES_TYPE )
+
+        
+        pick( ERR_WIN16_TOO_MANY_CONTROLS )
+
+        
+        pick( ERR_SYMBOL_NOT_DEFINED )
+
+        
+        pick( USAGE_MSG_FIRST )
+
+        
+        pick( USAGE_MSG_1 )
+
+        
+        pick( USAGE_MSG_2 )
+
+        
+        pick( USAGE_MSG_3 )
+
+        
+        pick( USAGE_MSG_4 )
+
+        
+        pick( USAGE_MSG_5 )
+
+        
+        pick( USAGE_MSG_6 )
+
+        
+        pick( USAGE_MSG_7 )
+
+
+        
+        pick( USAGE_MSG_8 )
+
+
+
+        
+        pick( USAGE_MSG_9 )
+
+
+
+        
+        pick( USAGE_MSG_10 )
+
+
+        
+        pick( USAGE_MSG_11 )
+
+        
+        pick( USAGE_MSG_12 )
+
+        
+        pick( USAGE_MSG_13 )
+
+        
+        pick( USAGE_MSG_14 )
+
+        
+        pick( USAGE_MSG_15 )
+
+        
+        pick( USAGE_MSG_16 )
+
+        
+        pick( USAGE_MSG_17 )
+
+        
+        pick( USAGE_MSG_18 )
+
+        
+        pick( USAGE_MSG_19 )
+
+        
+        pick( USAGE_MSG_20 )
+
+        
+        pick( USAGE_MSG_21 )
+
+        
+        pick( USAGE_MSG_22 )
+
+        
+        pick( USAGE_MSG_23 )
+
+        
+        pick( USAGE_MSG_24 )
+
+        
+        pick( USAGE_MSG_25 )
+
+        
+        pick( USAGE_MSG_26 )
+
+        
+        pick( USAGE_MSG_27 )
+
+        
+        pick( USAGE_MSG_28 )
+
+
+        
+        pick( USAGE_MSG_29 )
+
+
+
+        
+        pick( USAGE_MSG_30 )
+
+
+
+        
+        pick( USAGE_MSG_31 )
+
+        
+        pick( USAGE_MSG_32 )
+
+
+        
+        pick( USAGE_MSG_33 )
+
+        
+        pick( USAGE_MSG_34 )
+
+        
+        pick( USAGE_MSG_35 )
+
+        
+        pick( USAGE_MSG_36 )
+
+        
+        pick( USAGE_MSG_37 )
+
+        
+        pick( USAGE_MSG_38 )
+
+        
+        pick( USAGE_MSG_39 )
+
+        
+        pick( USAGE_MSG_LAST )
+
+

@@ -1,0 +1,11 @@
+debug dwarf option symfile sys linux  op symfile,map
+file samplnx.obj
+file sysinit.obj
+file sampexe.obj
+file lnxutl.obj
+file sample.obj
+file sampdata.obj
+file io.obj
+file sysio.obj
+file wmsg.obj
+lib /usr/src/openwatcom-1.9/bld/sdk/rc/wres/linux386/mf_r/wres.lib

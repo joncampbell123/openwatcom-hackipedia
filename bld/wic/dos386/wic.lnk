@@ -1,0 +1,26 @@
+option map, quiet
+debug all
+option symfile
+lib /usr/src/openwatcom-1.9/bld/sdk/rc/wres/small386/ms_r/wres.lib
+file cmdline.obj
+file cparse.obj
+file ctree.obj
+file dupzap.obj
+file exptok.obj
+file gentypes.obj
+file globals.obj
+file hash.obj
+file main.obj
+file outfort.obj
+file outasm.obj
+file output.obj
+file preparse.obj
+file symtab.obj
+file tables.obj
+file token.obj
+file trandecl.obj
+file wicgener.obj
+file wicstr.obj
+file fmem.obj
+file carver.obj
+name wic.exe

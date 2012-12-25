@@ -1,0 +1,17 @@
+debug dwarf option symfile
+op map name serserv.exe
+sys nt op modname=serserv, desc 'Open Watcom Debug Server'
+file mxutil.obj
+file serv.obj
+file nttrio.obj
+file servacc.obj
+file servcmd.obj
+file servname.obj
+file trpsupp.obj
+file trpld.obj
+file ntnoth.obj
+file packet.obj
+file serlink.obj
+file sernt.obj
+file busywait.obj
+

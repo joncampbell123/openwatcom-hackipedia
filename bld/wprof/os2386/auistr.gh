@@ -1,0 +1,8 @@
+#define LITERAL_Busy 402
+#define LITERAL_Not_Found 403
+#define LITERAL_Search_Wrapped 404
+#define LITERAL_End_Of_Window 405
+#define LITERAL_Top_Of_Window 406
+#define LITERAL_Match_Mode 407
+#define LITERAL_New_OK 408
+#define LITERAL_New_Cancel 409

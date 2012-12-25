@@ -1,0 +1,14 @@
+debug dwarf option symfile
+op map name nov.trp
+sys dos
+op dosseg
+file dosstrt.obj
+file mxutil.obj
+file remote.obj
+file packet.obj
+file novlink.obj
+file novdos.obj
+file spx.obj
+file ipx.obj
+library dbgstr.lib
+
