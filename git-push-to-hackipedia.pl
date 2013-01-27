@@ -53,11 +53,11 @@ my $what = '';
 
 my $filename = "../".($as ne "" ? $as : $project)."-$lcdate-commit-$lcommit-src.tar";
 die unless -f "$filename.xz";
-$what .= "$filename.xz ";
+$what .= "'$filename.xz' ";
 
 my $filename = "../".($as ne "" ? $as : $project)."-$lcdate-commit-$lcommit-binary.tar";
 die unless -f "$filename.xz";
-$what .= "$filename.xz ";
+$what .= "'$filename.xz' ";
 
-$x = system("scp -p -P 52222 $what root\@192.168.250.1:/mnt/main/jmc-storage/docs/Projects/Open Watcom Hackipedia Edition/v1.9/");
+$x = system("scp -p -P 52222 $what 'root\@192.168.250.1:/mnt/main/jmc-storage/docs/Projects/Open\\ Watcom\\ Hackipedia\\ Edition/v1.9/'");
 
