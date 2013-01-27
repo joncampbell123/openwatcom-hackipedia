@@ -1,3 +1,0 @@
-debug dwarf option symfile sys dos4g option stack=12k option map,symfile
-file { main.obj write.obj fatal.obj womputil.obj direct.obj posndir.obj asmeval.obj asmalloc.obj asmmsg.obj wasmmsg.obj macro.obj condasm.obj breakout.obj asmstruc.obj fpfixup.obj asmexpnd.obj mangle.obj for.obj objio.obj carve.obj genmsomf.obj objrec.obj queue.obj fixup.obj lifix.obj asmins.obj asmscan.obj asmline.obj asmsym.obj tbyte.obj asmlabel.obj asmfixup.obj asmmatch.obj asmdata.obj asmjump.obj autodept.obj queues.obj finger.obj  }
-name wasm.exe

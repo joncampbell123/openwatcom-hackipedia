@@ -1,4 +1,0 @@
-++'_capCreateCaptureWindowA@32'.'AVICAP32.DLL'..'capCreateCaptureWindowA'
-++'_capCreateCaptureWindowW@32'.'AVICAP32.DLL'..'capCreateCaptureWindowW'
-++'_capGetDriverDescriptionA@20'.'AVICAP32.DLL'..'capGetDriverDescriptionA'
-++'_capGetDriverDescriptionW@20'.'AVICAP32.DLL'..'capGetDriverDescriptionW'

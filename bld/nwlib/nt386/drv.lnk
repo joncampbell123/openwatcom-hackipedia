@@ -1,5 +1,0 @@
-debug dwarf sys nt  op map, symfile
-file maindrv.obj
-file idedrv.obj
-file idemsgfm.obj
-lib wlibd.lib

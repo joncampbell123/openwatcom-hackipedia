@@ -54,7 +54,7 @@ if (!( -f "$filename.xz" )) {
 	print "Packing binary (all build files except LIB,OBJ,etc.)\n";
 	print "  to: $filename\n";
 
-	$x = system("tar --exclude=.git --exclude=\\\*.cmd --exclude=\\\*.obj --exclude=\\\*.lib --exclude=\\\*.rex -cvf $filename rel2");
+	$x = system("tar --exclude=.git -cvf $filename rel2");
 	die unless $x == 0;
 	print "Packing to XZ\n";
 	$x = system("xz -6e $filename");

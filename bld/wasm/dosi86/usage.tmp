@@ -1,1 +1,0 @@
--t8 -f "pick((MSG_USE_BASE+%#%+), \"%s\")" usage.u usage.msg

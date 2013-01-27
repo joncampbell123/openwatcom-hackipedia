@@ -1,7 +1,0 @@
-debug dwarf option symfile sys dos4g  name bdiff.exe op map
-lib /usr/src/openwatcom-1.9/bld/sdk/rc/wres/small386/ms_r/wres.lib
-file bdiff.obj
-file bdiffmem.obj
-file dopatchd.obj
-file msg.obj
-file myio.obj

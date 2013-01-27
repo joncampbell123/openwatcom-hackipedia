@@ -1,2 +1,0 @@
-debug dwarf option symfile sys windows_dll initinstance memory op stack=20k, rwr lib ddeml export WEP RESIDENT op map, verbose, static, heapsize=8k
-option description 'Open Watcom Editor DLL for VIW'

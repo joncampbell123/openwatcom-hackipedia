@@ -1,7 +1,0 @@
-++'_DhcpCApiCleanup@0'.'DHCPCSVC.DLL'..'DhcpCApiCleanup'
-++'_DhcpCApiInitialize@4'.'DHCPCSVC.DLL'..'DhcpCApiInitialize'
-++'_DhcpDeRegisterParamChange@12'.'DHCPCSVC.DLL'..'DhcpDeRegisterParamChange'
-++'_DhcpRegisterParamChange@28'.'DHCPCSVC.DLL'..'DhcpRegisterParamChange'
-++'_DhcpRemoveDNSRegistrations@0'.'DHCPCSVC.DLL'..'DhcpRemoveDNSRegistrations'
-++'_DhcpRequestParams@44'.'DHCPCSVC.DLL'..'DhcpRequestParams'
-++'_DhcpUndoRequestParams@16'.'DHCPCSVC.DLL'..'DhcpUndoRequestParams'

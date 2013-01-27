@@ -1,2 +1,0 @@
-debug dwarf option symfile sys windows_dll library ddeml op stack=8k, rwr segment _TEXT PRELOAD FIXED segment CLASS 'CODE' LOADONCALL MOVEABLE DISCARDABLE export WEP RESIDENT op map, elim, verbose, static
-option description 'Open Watcom Editor DLL for Codewright'
