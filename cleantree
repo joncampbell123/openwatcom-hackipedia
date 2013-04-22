@@ -6,6 +6,7 @@ fi
 
 find -name \*~ -delete
 find -name \*.o -delete
+find -name \*.dll -delete
 find -name \*.log -delete
 find -name \*.lo1 -delete
 . setvars.sh
